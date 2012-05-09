@@ -12,14 +12,14 @@
        More info: h5bp.com/i/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title></title>
+  <title>Thien Duong Cave in Animated 3D Stereo Images</title>
   <meta name="description" content="">
 
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width">
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
+  <link rel="image_src"
+        href="http://labs.int3ractive.com/javascript/effects/stereo-images/img/DSC_0198.jpg"/>
   <link rel="stylesheet" href="css/style.css">
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -36,12 +36,12 @@
   <header>
     <div class="vi-title">
       <h2><a href="http://vi.wikipedia.org/wiki/%C4%90%E1%BB%99ng_Thi%C3%AAn_%C4%90%C6%B0%E1%BB%9Dng" target="_blank">ĐỘNG THIÊN ĐƯỜNG</a></h2>
-      <p>Rê chuột lên hình để "thấy" được chiều thứ 3.</p>
+      <p>Rê chuột lên hình để thấy được "chiều thứ 3".</p>
     </div>
 
     <div class="en-title">
       <h2><a href="http://en.wikipedia.org/wiki/Thien_Duong_Cave" target="_blank">THIEN DUONG CAVE</a></h2>
-      <p>Roll over the photo to see 3rd dimention (<a href="http://www.cambridgeincolour.com/tutorials/animated-3d-stereo-photography.htm" target="_blank">animated 3D stereo images</a>).</p>
+      <p>Roll mouse over the photo to see 3rd dimention (<a href="http://www.cambridgeincolour.com/tutorials/animated-3d-stereo-photography.htm" target="_blank">animated 3D stereo images</a>).</p>
     </div>
     
   </header>
@@ -55,6 +55,7 @@
     <div class="image7 stereo-img"><span class="caption">Thác Thiên Hà</span></div>
   </div>
   <footer>
+    <hr>
     <p>Photos taken from my trip to the central provinces of Viet Nam in 2012.<br>&copy; 2012 Thanh Tran - <a href="http://int3ractive.com" target="_blank">int3ractive.com</a></p>
   </footer>
 
@@ -66,17 +67,21 @@
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
   <!-- scripts concatenated and minified via build script -->
-  <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
   <!-- end scripts -->
 
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
        mathiasbynens.be/notes/async-analytics-snippet -->
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4430452-10']);
+    _gaq.push(['_setDomainName', 'int3ractive.com']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
   </script>
 </body>
 </html>

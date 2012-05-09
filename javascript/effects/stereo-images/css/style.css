@@ -284,7 +284,7 @@ header, footer, .container {
 }
 
 .stereo-img {
-  margin: 20px auto;
+  margin: 40px auto;
   display: block;
   position: relative;
   overflow: hidden;
@@ -300,6 +300,7 @@ header, footer, .container {
 }
 
 .caption {
+  display: block;
   position: absolute;
   width: 100%;
   bottom: 5px;
@@ -307,6 +308,16 @@ header, footer, .container {
   color: #DDDDDD;
 }
 
+footer {
+  font-size: 0.8em;
+}
+
+footer > hr {
+  position: relative;
+  width: 400px;
+  margin-left: -200px;
+  left: 50%;
+}
 
 
 
