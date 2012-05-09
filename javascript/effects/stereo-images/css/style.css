@@ -217,7 +217,29 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author: Thanh Tran <trongthanh@gmail.com>
    ========================================================================== */
+body {
+  background: url(../img/bg.png);
+}
 
+header, footer, .container {
+  text-align: center;
+}
+
+.vi-title, .en-title {
+  min-width: 400px;
+  margin: 0 10px;
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.vi-title {
+  text-align: right;
+}
+
+.en-title {
+  text-align: left;
+}
 
 .image1 {
   background: url(../img/DSC_0192.jpg);
@@ -237,11 +259,44 @@ td { vertical-align: top; }
   height: 773px;
 }
 
+.image4 {
+  background: url(../img/DSC_0200.jpg);
+  width: 800px;
+  height: 526px;
+}
+
+.image5 {
+  background: url(../img/DSC_0202.jpg);
+  width: 800px;
+  height: 519px;
+}
+
+.image6 {
+  background: url(../img/DSC_0209.jpg);
+  width: 800px;
+  height: 526px;
+}
+
+.image7 {
+  background: url(../img/DSC_0214.jpg);
+  width: 512px;
+  height: 729px;
+}
+
 .stereo-img {
-  margin: 20px;
-  display: inline-block;
+  margin: 20px auto;
+  display: block;
   position: relative;
   overflow: hidden;
+  border: 2px solid #FFFFFF;
+}
+
+.stereo-img:hover {
+  border: 2px solid #FFFF00;
+}
+
+.translate-bg {
+  background-position: 100% 0;
 }
 
 .caption {
@@ -252,9 +307,7 @@ td { vertical-align: top; }
   color: #DDDDDD;
 }
 
-.translate-bg {
-  background-position: 100% 0;
-}
+
 
 
 
