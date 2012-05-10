@@ -1,0 +1,108 @@
+body {
+	background:#000;
+	color:#fff;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+	font-family:sans-serif;
+	text-align:center;
+}
+a:link, a:visited, a:active {color: #f57936; text-decoration: none;}
+a:hover {text-decoration: underline;}
+canvas { pointer-events:none; z-index:1; position:relative; }
+#info { text-align:left; font: 12px/1.2 Verdana, Arial, Helvetica, Sans-Serif; margin:0.5em 0 0 0.4em; z-index:12; position:absolute; color:#fff; background: #121212; opacity:0.8; border-radius:20px; padding: 20px }
+#infobutton { text-align:left; margin:0; z-index:100; position:absolute; display:block; padding: 8px }
+#popout {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color:#fff;
+  padding: 10px 10px 8px 10px;
+  display: none;
+  min-height: 1px; /*fix box height doesn't reduced*/
+}
+.popout-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #121212;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.popout-content {
+  position: relative;
+}
+.member-info {
+  width: 150px;
+}
+.thumb-container {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+.name-tag {
+  color: #f5622d;
+  font-weight: bold;
+  font-size: 1em;
+}
+.role-tag {
+  font-size: 0.8em;
+}
+.marker {
+  z-index: 98;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  cursor: pointer;
+  /*margin-left: -50px;*/
+  margin-top: -35px;
+  overflow: visible;
+  /*display: none;*/
+}
+.marker-symbol {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-image: url("../img/sprite_marker.png");
+  overflow: hidden;
+}
+.marker-label {
+	font-family: 'Century Gothic', 'URW Gothic L', 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #f5622d;
+  /*padding: 2px 5px;
+  border-radius: 3px;
+  background-color: rgba(0,0,0,0.5);*/
+  text-shadow: 1px 1px 1px #000000;
+  filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+
+.navigate-point {
+  z-index: 97;
+  position: absolute;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+  background-image: url("../img/panorama-icon-sprite-sheet.png");
+  cursor: pointer;
+}
+
+#loading-box {
+  z-index: 100;
+  position: absolute;
+  width: 400px;
+  height: 50px;
+  margin-left: -200px;
+  margin-top: -25px;
+  top: 50%;
+  left: 50%;
+  font-size: 1.3em;
+  display: block;
+}
