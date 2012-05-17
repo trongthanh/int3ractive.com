@@ -244,6 +244,17 @@ header, footer, .container {
   height:806px;
 }
 
+.unsupport {
+  position: relative;
+  color: #FF0000;
+  background-color: #1A1E39;
+  margin: 0 200px;
+  text-align: center;
+  font-size: 16px;
+  top: 50%;
+  
+
+}
 
 
 
