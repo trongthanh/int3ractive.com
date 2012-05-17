@@ -32,8 +32,11 @@ BoidScene.prototype = {
       if (isFish) {
         //reduce maxspeed & steer force
         boid = boids[ i ] = new Boid(2, 0.02);
+        //the actual 3D object
+        bird = birds[ i ] = new FishMesh();
       } else {
         boid = boids[ i ] = new Boid(4, 0.1);
+        bird = birds[ i ] = new BirdMesh();
       }
       
       boid.position.x = Math.random() * 500 - 250;
@@ -45,12 +48,6 @@ BoidScene.prototype = {
       boid.setAvoidWalls( true );
       boid.setWorldSize( 500, 500, 400 );
 
-      if(isFish) {
-        bird = birds[ i ] = new FishMesh();
-      } else {
-        bird = birds[ i ] = new BirdMesh();
-      }
-
       bird.position = boids[ i ].position;
       bird.doubleSided = true;
 
@@ -61,7 +58,8 @@ BoidScene.prototype = {
 
     renderer.setSize( viewWidth, viewHeight );
 
-    document.addEventListener( 'mousemove', this.onDocumentMouseMove.bind(this), false );
+    document.addEventListener( 'mousemove', this.documentMouseMoveHandler.bind(this), false );
+    window.addEventListener('resize', this.windowResizeHandler.bind(this),false);
     /* debug 
      var materials = [];
      for ( var j = 0; j < 6; j ++ ) {
@@ -95,13 +93,13 @@ BoidScene.prototype = {
     this.camera = camera;
     this.scene = scene;
     this.renderer = renderer;
-    this.offset = {x:0, y:0};
+    this.offset = {x:containerRect.left, y:containerRect.top};
     this.birds = birds;
     this.boids = boids;
 
   },
 
-  onDocumentMouseMove: function ( e ) {
+  documentMouseMoveHandler: function ( e ) {
     var boid,
         offset = this.offset,
         boids = this.boids,
@@ -120,6 +118,13 @@ BoidScene.prototype = {
       boid.repulse( vector );
     }
 
+  },
+
+  windowResizeHandler: function (e) {
+    var containerRect = this.container.getBoundingClientRect();
+
+    this.offset.x = containerRect.left;
+    this.offset.y = containerRect.top;
   },
 
   render: function() {
