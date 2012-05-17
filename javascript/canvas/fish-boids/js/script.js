@@ -152,7 +152,15 @@ var Main = function (win) {
   }
   
   var doc = win.document,
+      mainEl = doc.getElementById('main-container'),
       that = this;
+
+  //canvas check
+  if (!Modernizr.canvas) {
+    mainEl.innerHTML = '<p class="unsupport">Your browser doesn\'t support HTML5 Canvas. This demo requires a modern browser which support HTML5 Canvas to run.<br> Please consider using <a href="https://www.google.com/chrome">Google Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>.</p>';
+    return;
+  }
+
 
   var stats = new Stats();
   stats.domElement.style.position = 'absolute';
@@ -160,7 +168,7 @@ var Main = function (win) {
   stats.domElement.style.top = '0px';
   win.stats = stats;
 
-  doc.getElementById( 'main-container' ).appendChild(stats.domElement);
+  mainEl.appendChild(stats.domElement);
 
   var boidScene = new BoidScene();
   boidScene.init(doc.getElementById('fish-frame'), 50, true);
