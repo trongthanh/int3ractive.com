@@ -1,0 +1,1 @@
+Từ kinh nghiệm làm việc trong nhiều nhóm phát triển phần mềm lớn nhỏ khác nhau, tôi nhận ra rằng việt thiết lập hệ kỹ thuật cơ sở cũng quan trọng không kém 
