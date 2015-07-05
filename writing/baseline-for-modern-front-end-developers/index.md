@@ -5,7 +5,7 @@ Without a doubt, raising team members' skills (esp. juniors) to a standard will 
 
 When forming up my front-end team at Nau Studio, I thought a lot about what are the most essential skills and technical knowledge which will become my team's baseline and focus of basic training.
 
-Inspired by this popular article by Rebecca Murphey, A Baseline for Front-End Developers, I'm presenting Baseline for Modern Front End Developers (Not-Just-JavaScript edition) which is tailored to target juniors and more updated with latest trends:
+Inspired by this popular article by Rebecca Murphey, [A Baseline for Front-End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/), I'm presenting Baseline for Modern Front End Developers (Not-Just-JavaScript edition) which is tailored to target juniors and more updated with latest trends:
 
 To begin, let's talk about the three pillars of Web Front End:
 
