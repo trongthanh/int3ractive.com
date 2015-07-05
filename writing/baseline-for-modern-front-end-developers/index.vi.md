@@ -1,6 +1,6 @@
 ![Front End tag cloud](front-end-baseline.png)
 
-Đưởng cơ sở (baseline) là gì:
+Đường cơ sở (baseline) là gì:
 
 
 Tại sao phải có đường cơ sở cho Front End:
@@ -22,13 +22,36 @@ Thực tế cho thấy có rất nhiều lập trình viên xem nhẹ HTML. Qua 
 
 Khi làm càng nhiều, bạn sẽ sớm nhận ra rằng HTML được viết gọn gàng và súc tích sẽ giúp ích rất nhiều cho việc xủ lý CSS và cải thiện tốc độ website trên trình duyệt (đặt biệt là trên thiết bị di động). Để làm được như vậy đòi hỏi một kỹ năng tuyệt vời, và tôi dám nói rằng viết HTML là cả một nghệ thuật.
 
-Vì vậy, để trở thành một lập trình viên HTML thành công, bạn phải có khả năng kết hợp các phần tử (element) HTML để đạt yêu cầu cả về ngữ nghĩa và hiệu suất. Điều này có nghĩa bạn phải nắm vững các quy luật layout mặc định và ý nghĩa sử dụng của tất cả các thẻ HTML.
+Vì vậy, để trở thành một lập trình viên HTML thành công, bạn phải có khả năng kết hợp các phần tử (element) HTML để đạt yêu cầu cả về ngữ nghĩa và tính tối ưu. Điều này có nghĩa bạn phải nắm vững các quy luật layout mặc định và ý nghĩa sử dụng của tất cả các thẻ HTML.
 
 Ngoài việc tiến bộ dần thông qua kinh nghiệm thực tế, bạn có thể tăng tốc kỹ năng HTML của mình nếu được đào tạo bài bản từ những cái căn bản.
 
 Các tài liệu hỗ trợ:
+
 - HTML5 Doctor: [http://html5doctor.com/](http://html5doctor.com/) 
 - HTML basic tutorial: [https://docs.webplatform.org/wiki/html/tutorials](https://docs.webplatform.org/wiki/html/tutorials) 
+
+## CSS
+
+Rất nhiều người mới bắt đầu với Web, đặc biệt là sinh viên CNTT ở Việt Nam, được học rất sơ sài về CSS trên lớp và các sách giáo trình liên quan đều lỗi thời. Đa số các bạn sẽ học CSS bằng phép sai-và-thử và đó là một quá trình tiến bộ cực kỳ kém hiệu quả.
+
+Điều này không tồn tại trong team của Nâu. Những khái niệm căn bản của CSS như thứ tự kiểu thác nước (cascading), luật về độ ưu tiên (specificity), bộ chọn lọc (selectors), sự thừa kế, mô hình hộp (box model), và ngữ cảnh xếp chồng (stacking context) phải được các bạn hiểu rõ.
+
+Sau những kiến thức căn bản, bạn nên bắt đầu tìm hiểu về [CSS hướng đối tượng (OOCSS)](https://github.com/stubbornella/oocss/wiki) hoặc bắt đầu thực hành những chỉ dẫn trong tài liệu [Những nguyên tắc về CSS](http://cssguidelin.es/)
+
+Ngoài ra, một lập trình viên front end giỏi luôn thủ sẵn một số thủ thuật về CSS. Chẳng hạn, bạn phải biết tất cả các mẹo canh giữa nội theo chiều dọc khác nhau khi mà Flexbox vẫn chưa được áp dụng rộng rãi. Bạn cũng phải biết khi nào cần dùng pseudo-elements, các khối hình học bằng CSS thuần, icon từ webfont, hoặc sprite sheet... để hiện thực giao diện với hiệu suất và độ tương thích tốt nhất.
+
+Cuối cùng, một lập trình viên front end hiện đại phải biết sử dụng một ngôn ngữ biên dịch sang CSS (preprocessor) để cải thiện khả năng bảo trì và hiệu suất làm việc với CSS.
+
+Một khi nền tảng đã được nắm vững, bạn sẽ thấy việc học thêm hoặc ứng dụng những tính năng mới của CSS3 sẽ chẳng có chút khó khăn.
+
+Tài liệu tham khảo:
+
+- Hướng dẫn CSS căn bản: [https://docs.webplatform.org/wiki/css/tutorials](https://docs.webplatform.org/wiki/css/tutorials)
+- OOCSS: [https://github.com/stubbornella/oocss/wiki](https://github.com/stubbornella/oocss/wiki) 
+- Những nguyên tắc CSS: [http://cssguidelin.es/](http://cssguidelin.es/) 
+- Các thủ thuật CSS: [http://css-tricks.com/](http://css-tricks.com/) 
+
 
 
 
