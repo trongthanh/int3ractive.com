@@ -52,6 +52,19 @@ Tài liệu tham khảo:
 - Những nguyên tắc CSS: [http://cssguidelin.es/](http://cssguidelin.es/) 
 - Các thủ thuật CSS: [http://css-tricks.com/](http://css-tricks.com/) 
 
+## JavaScript
+
+Nếu như cách đây vài năm trước, jQuery là yêu cầu bắt buộc để nhập môn Web Front End thì bây giờ [không còn nữa](http://youmightnotneedjquery.com/). Tuy nhiên theo tôi nó vẫn rất hữu ích cho những người mới bắt đầu thực hành JavaScript trong bối cảnh tính năng và sự tương thích giữa các trình duyệt vẫn chưa đồng nhất.
+
+Tiếp theo sau jQuery, việc nắm vũng kiến thức về JavaScript thuần vẫn là mục tiêu tối quan trọng cho người làm Front End. Bên cạnh học từ quyển sách kinh điển [JavaScript: The Good Parts](http://www.amazon.com/exec/obidos/ASIN/0596517742/wrrrldwideweb) do Rebecca giới thiệu, ngày nay bạn có thêm những lựa chọn miễn phí nhưng không kém chất lượng như quyển Eloquent JavaScript hoặc JavaScript Enlightenment.
+
+Từ kinh nghiệm thực tiễn, tôi tin rằng những đặc tính của ngôn ngữ JavaScript sau đây cần được nắm bất kể trình độ bạn đang ở đâu, đó là chuỗi prototype (prototype chain), sự bao đóng (closure), và từ khoá `this`. Ngoài ra những đặc tính độc đáo khác của JS mà lập trình viên cũng cần phải biết như chuyển đổi kiểu động, xây dựng đối tượng trực tiếp từ giá trị (literal), sự dịch chuyển lên trên vị trí khai báo của biến và hàm (variable and function hoisting)...
+
+
+
+
+
+
 
 
 
