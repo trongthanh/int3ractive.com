@@ -40,7 +40,7 @@ CSS Tricks: http://css-tricks.com/
 
 ## JavaScript
 
-jQuery may be not an entrance requirement to Web Front End any more but I think it is still a very helpful lead-in for beginners to the fragmented world of web browsers scripting.
+jQuery may be [not an entrance requirement](http://youmightnotneedjquery.com/) to Web Front End any more but I think it is still a very helpful lead-in for beginners to the fragmented world of web browsers scripting.
 
 Like Rebecca has made it clear, learning vanilla (pure) JavaScript is essential and if you haven’t read JavaScript: The Good Parts, it’s totally fine as long as you’ll learn from Eloquent Javascript or JavaScript Enlightenment and the like.
 
@@ -52,12 +52,12 @@ When you get more advanced in JS, and wanting to get a more structured and maint
 
 In my opinion, NodeJS is not in the baseline of Front End developers. Eventually, however, you will get to know it by using one of its many tool in the workflow or have to do some server-side coding using JS.
 
-Eloquent JavaScript: Very good book for JS newbie, and it’s free.
-JavaScript Enlightenment: Another good book for newbie.
-Idiomatic JavaScript: Sometimes you read other’s JS code and can’t get it. Those “cypher” may be decoded here. ;)
-TodoMVC: A go-to site for MVC frameworks evaluation and comparison
-Writing Modular JS: More details on modern JS modules
-Understanding ES6: Learn ECMAScript 6 with Nicholas C. Zakas
+- [Eloquent JavaScript](http://eloquentjavascript.net/): Very good book for JS newbie, and it’s free.
+- [JavaScript Enlightenment](http://www.javascriptenlightenment.com/): Another good book for newbie.
+- [Idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js/): Sometimes you read other’s JS code and can’t get it. Those “cypher” may be decoded here. ;)
+- [TodoMVC](http://todomvc.com/): A go-to site for MVC frameworks evaluation and comparison
+- [Writing Modular JS](http://addyosmani.com/writing-modular-js/): More details on modern JS modules
+- [Understanding ES6](https://leanpub.com/understandinges6): Learn ECMAScript 6 with Nicholas C. Zakas
 
 ## The Modern Workflow
 As I mentioned before, good team work is also affected by how well team members comply to conventions and coding style guides. In this modern age, however, it is not necessary for new joiners to learn by heart all those rules as long as they use linters (JSHint, CSSLint, SCSS-lint) and code styles checkers (JSCS), to impose and shape their coding styles.

@@ -1,6 +1,6 @@
 ![Front End tag cloud](front-end-baseline.png)
 
-Đường cơ sở (baseline) là gì:
+Hệ thống kiến thức tối thiểu (baseline) là gì:
 
 
 Tại sao phải có đường cơ sở cho Front End:
@@ -60,7 +60,25 @@ Tiếp theo sau jQuery, việc nắm vũng kiến thức về JavaScript thuần
 
 Từ kinh nghiệm thực tiễn, tôi tin rằng những đặc tính của ngôn ngữ JavaScript sau đây cần được nắm bất kể trình độ bạn đang ở đâu, đó là chuỗi prototype (prototype chain), sự bao đóng (closure), và từ khoá `this`. Ngoài ra những đặc tính độc đáo khác của JS mà lập trình viên cũng cần phải biết như chuyển đổi kiểu động, xây dựng đối tượng trực tiếp từ giá trị (literal), sự dịch chuyển lên trên vị trí khai báo của biến và hàm (variable and function hoisting)...
 
+Khi đã thành thạo với JavaScript thuần, và muốn tiếp cận cách viết có cấu trúc để dễ mở rộng vả bảo trì, bạn sẽ nghiên cứu các đặc ngữ của JS (idiom), mẫu thiết kế (design pattern), cách viết module, và các framework MV* phổ biến hiện nay.
 
+Năm 2015 là năm mà phiên bản tiếp theo của JavaScript, ECMAScript 6 (hay còn gọi là ECMASCript 2015) được thống nhất và thông qua về đặc tả để tiến hành hiện thực dần trong các phiên bản trình duyệt tiếp theo. Đi kèm đó là [xu hướng](https://www.youtube.com/watch?v=PlmsweSNhTw) sử dụng công cụ biên dịch từ ES6 sang ES5. Để không đứng ngoài xu hướng, bạn cần trang bị kiến thức về ECMAScript 6 ngay bây giờ và nên thử nghiệm quy trình viết bằng ES6 và biên dịch thành ES5 để chạy trên các trình duyệt hiện tại.
+
+Nói về NodeJS, theo tôi nó không thuộc hệ thống kiến thức tối thiểu cho người lập trình Front End (trừ khi bạn viết cả back end bằng NodeJS). Tuy nhiên, bạn sẽ dần làm quen với nó như một hệ quả tất yếu khi bạn sử dụng những công cụ trong quy trình Front End (xem bên dưới) mà hầu hết đều được viết bằng NodeJS.
+
+Các link tham khảo:
+- [Eloquent JavaScript](http://eloquentjavascript.net/): tài liệu dành cho người mới học JavaScript rất hay, và miễn phí.
+- [JavaScript Enlightenment](http://www.javascriptenlightenment.com/): Một quyển sách khác dành cho người học JS từ đầu.
+- [Idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js/): Đôi khi bạn đọc những đoạn code JS người khác viết mà không hiểu. Những đoạn “mật mã” đó sẽ được giải mã tại đây. ;)
+- [TodoMVC](http://todomvc.com/): Website không thể bỏ qua cho những bạn cần tham khảo và so sánh kiến trúc của những framework MV* khác nhau.
+- [Writing Modular JS](http://addyosmani.com/writing-modular-js/): Thông tin hữu ích về về các mẫu thiết kế module.
+- [Understanding ES6](https://leanpub.com/understandinges6): Học ECMAScript 6 với Nicholas C. Zakas
+
+## Quy Trình Front End Hiện Đại
+
+Như tôi đã đề cập, kết quả làm việc nhóm có tốt hay không một phần phụ thuộc vào việc các thành viên có tuân thủ quy ước viết code của nhóm (coding style convention). Tuy nhiên, để nhớ hết tất cả các quy tắc đó không phải là việc dễ dàng và có thể đạt được trong một sớm một chiều. 
+
+Trong nhóm của tôi 
 
 
 
