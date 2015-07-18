@@ -9,7 +9,7 @@ Inspired by this popular article by Rebecca Murphey, [A Baseline for Front-End D
 
 To begin, let's talk about the three pillars of Web Front End:
 
-HTML
+## HTML
 
 Many developers take HTML for granted. But the more they work with it, the more they'll realize that authoring HTML that is clear and lean requires great skills and I dare to say that it is kind of an art.
 
@@ -18,7 +18,9 @@ To become a successful developer with HTML, you must knows how to combine elemen
 Helper resources:
 - HTML5 Doctor: http://html5doctor.com/ 
 - HTML basic tutorial: https://docs.webplatform.org/wiki/html/tutorials 
-CSS
+
+## CSS
+
 Many CSS beginners, especially IT students in Viet Nam, have very brief lessons about CSS at web dev classes and related textbooks are outdated. Most will practice trial-and-error tinkering and master CSS very inefficiently. (Or at least it was my case at the beginning)
 
 In my team, it is not the case. Fundamental concepts of CSS like cascading, specificity rules, selectors, inheritance, box model and stacking context must be well understood.
@@ -35,7 +37,9 @@ CSS Tutorials: https://docs.webplatform.org/wiki/css/tutorials
 OOCSS: https://github.com/stubbornella/oocss/wiki 
 CSS Guidelines: http://cssguidelin.es/ 
 CSS Tricks: http://css-tricks.com/ 
-JavaScript
+
+## JavaScript
+
 jQuery may be not an entrance requirement to Web Front End any more but I think it is still a very helpful lead-in for beginners to the fragmented world of web browsers scripting.
 
 Like Rebecca has made it clear, learning vanilla (pure) JavaScript is essential and if you haven’t read JavaScript: The Good Parts, it’s totally fine as long as you’ll learn from Eloquent Javascript or JavaScript Enlightenment and the like.
@@ -55,7 +59,7 @@ TodoMVC: A go-to site for MVC frameworks evaluation and comparison
 Writing Modular JS: More details on modern JS modules
 Understanding ES6: Learn ECMAScript 6 with Nicholas C. Zakas
 
-The Modern Workflow
+## The Modern Workflow
 As I mentioned before, good team work is also affected by how well team members comply to conventions and coding style guides. In this modern age, however, it is not necessary for new joiners to learn by heart all those rules as long as they use linters (JSHint, CSSLint, SCSS-lint) and code styles checkers (JSCS), to impose and shape their coding styles.
 
 In my team, we have a dotfiles repository which covers editor’s defaults and plugins, code linter config, most frequently used code snippets and some command line aliases and functions.
@@ -73,14 +77,17 @@ Automation with Grunt tutorial (in Vietnamese): I’ll guide you through using o
 Front End Project Settings & Linters (in Vietnamese): Part of our scaffolding workflow, semi-manual for now, but will automated with Yeoman later.
 Modern Front End workflow from start to finish: An insightful read or current Front End workflow.
 
-Progressive Enhancement 
+## Progressive Enhancement 
+
 Knowing progressive enhancement is now a must for modern Front End developers. It is not about the knowledge to implement websites exactly the same across browsers anymore, but ability to leverage the capability of each browser to provide the best experience on it. This requires developers to know how to use caniuse.com, modernizr, html5boilerplate as well as knowing when a polyfill / fallback is required.
 
 Progressive Enhancement 2.0 by Nicholas Zakas:
 https://youtu.be/hdTxeR90_1E
 Progressive Enhancement: What Is It and How to Use It:
 http://www.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/ 
-UI Skill set 
+
+## UI Skill set 
+
 You should have some understanding of typography, UI and animation concepts and can speak UI jargon fluently with your UX/UI designer fellows. (i.e: hamburger button, hero banner, the fold…)
 
 Besides, you should be able to open a Photoshop file to get the necessary assets for your UI development as well as extracting parameters (opacity, gradient, colors…) that are applicable for CSS authoring. These manual tasks may finally be replaced by auto CSS extraction by modern design tools (Photoshop CC 2014, Sketch…) but those know-hows will still benefit you that one day you are able to make some minor adjustment to the PSD without the help of designers. 
@@ -92,7 +99,7 @@ There you go. If you are a Front End rookie or a back-end-to-front-end convert, 
 
 My 2 cents, not every programmer is suitable with the web front end path. What makes a good front end dev different from back end or full stack one, I believe, is that we are more visual sensitive, we can work with pixels painstakingly and carry some characters of perfectionists.
 
-Addendum:
+## Addendum:
 During the time I was writing this blog, Murphey published a new blog post about baseline for 2015 front end developers. I told myself not to read it until I finish this article to see how our ideas may collide or differ from one another.
 
 I read Murphey’s post and I’m still glad I wrote this down. My target audience of this article are mostly mid-weight and below and to give you a good head start into Front End development and to collaborate better within a team. By all means, you will learn more advanced techniques through your progress with this career, but you can get away without first knowing how to write a NodeJS package or writing unit tests with Karma. Anyway, I hope both articles can give very good insights of this career path that is quite picky of its followers (And it is very new and demanding  in Viet Nam too).
