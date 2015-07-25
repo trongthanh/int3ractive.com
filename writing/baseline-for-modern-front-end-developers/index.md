@@ -66,16 +66,17 @@ In my team, we have a dotfiles repository which covers editor’s defaults and p
 
 Since you develop for the Web, the browsers are undoubtedly your best sidekicks. Two know-hows I would strongly recommend are using the in-browser developer tools and so-called live reload software. Modern browsers all have decent built-in devtools, but the most sophisticated and useful one, to me, is Chrome's. For live reload software, I recommend looking at Browsersync.
 
-Next to browsers, the code editor plays an as much important role. Whatever you choose, make sure it has decent code completion with live feedback linting. The other highly recommended features of modern front end editors are multiple cursors and fuzzy file search. If you ask me, I suggest checking Sublime Text or Atom. Besides, don’t miss out Emmet, the plugin that will “greatly improves HTML & CSS workflow”.
+Next to browsers, the code editor plays an as much important role. Whatever you choose, make sure it has decent code completion with live feedback linting. The other highly recommended features of modern front end editors are multiple cursors and fuzzy file search. If you ask me, I suggest checking [Sublime Text](http://www.sublimetext.com/) or [Atom](https://atom.io/). Besides, don’t miss out Emmet, the plugin that will “greatly improves HTML & CSS workflow”.
 
 The Front End workflow can't be completed without mentioning automation tools like the command-line-based Grunt or Gulp or the GUI-based counter parts that are CodeKit or LiveReload. Modern web front end process targeting performance is becoming so complicated that it is very tedious to handle manually. Being able to use a process automation tool is becoming the baseline standard.
 
 Other skills and knowledge that are too obvious to talk into details: version control system, software development process, agile methodologies, communication tooling and the OS platform you choose to work on.
 
-Nau's Front End Dotfiles: A set of tools and config for our team’s workflow.
-Automation with Grunt tutorial (in Vietnamese): I’ll guide you through using one of the most popular automation tools for Front End dev.
-Front End Project Settings & Linters (in Vietnamese): Part of our scaffolding workflow, semi-manual for now, but will automated with Yeoman later.
-Modern Front End workflow from start to finish: An insightful read or current Front End workflow.
+- [Nau's Front End Dotfiles](https://github.com/naustudio/dotfiles): A set of tools and config for our team’s workflow.
+- [Automation with Grunt tutorial](https://youtu.be/38D6SW26mn0) (in Vietnamese): I’ll guide you through using one of the most popular automation tools for Front End dev.
+- [Front End Project Settings & Linters](https://youtu.be/sBNkiuDkILA) (in Vietnamese): Part of our scaffolding workflow, semi-manual for now, but will automated with Yeoman later.
+- [Modern Front End workflow from start to finish](http://blog.chartbeat.com/2014/01/30/modern-front-end-workflow-start-finish/): An insightful read or current Front End workflow.
+- [JavaScript Development Workflow of 2013](https://youtu.be/f7AU2Ozu8eo) by Paul Irish. Although it's 2 year old, there are a lot of demos of tools that are still applicable by now.
 
 ## Progressive Enhancement 
 

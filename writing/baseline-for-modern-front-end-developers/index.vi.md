@@ -76,11 +76,27 @@ Các link tham khảo:
 
 ## Quy Trình Front End Hiện Đại
 
-Như tôi đã đề cập, kết quả làm việc nhóm có tốt hay không một phần phụ thuộc vào việc các thành viên có tuân thủ quy ước viết code của nhóm (coding style convention). Tuy nhiên, để nhớ hết tất cả các quy tắc đó không phải là việc dễ dàng và có thể đạt được trong một sớm một chiều. 
+Như tôi đã đề cập, kết quả làm việc nhóm có tốt hay không một phần phụ thuộc vào việc các thành viên có tuân thủ quy ước viết code (coding style convention) và quy trình làm việc (workflow) của nhóm. Tuy nhiên, để nhớ hết tất cả các quy tắc đó không phải là việc đơn giản.
 
-Trong nhóm của tôi 
+Trong đội lập trình viên của Nâu, chúng tôi sử dụng [....TBC]
 
+Không cần phải bàn cãi, trình duyệt là công cụ không thể thiếu của người làm Front End. Có hai kỹ năng mà tôi muốn nhấn mạnh tầm quan trọng đó là khả năng sử dụng công cụ cho người lập trình (developer tools) có sẵn trong trình duyệt và khả năng sử dụng phần mềm tự động nạp lại trang web (live reload). Tất cả các trình duyệt hiện đại đều có dev-tools đi kèm, tuy nhiên theo tôi, dev-tools trên trình duyệt Chrome là tốt nhất cho cho đến bây giờ. Về phần mềm tự nạp trang, bạn có thể thử dùng [Browsersync](http://www.browsersync.io/).
 
+Bên cạnh trình duyệt, trình soạn thảo code đóng vai trò quan trọng không kém. Bất kể bạn chọn phần mềm gì, hãy bảo đảm rằng nó có khả năng tự hoàn tất code cũng như là khả năng kiểm lỗi tức thì cho ngôn ngữ lập trình bạn viết. Trình soạn thảo cho Front End hiện đại cũng rất cần khả năng sửa văn bản trên nhiều con trỏ và mở file nhanh bằng tìm kiếm. Nếu bạn hỏi tôi, tôi sẽ đề thử dùng [Sublime Text](http://www.sublimetext.com/) hoặc [Atom](https://atom.io/). Ngoài ra, đừng bỏ qua [Emmet](http://emmet.io/), một công cụ bổ sung cho các trình soạn thảo "giúp cải thiện hiệu suất làm việc với HTML và CSS một cách đáng kể".
+
+Quy trình Front End hiện đại sẽ rất thiếu sót nếu không nhắc đến những công cụ tự động hoá chạy bằng dòng lệnh (command line) như Grunt, Gulp hoặc những công cụ tương tự có giao diện (GUI) như Codekit, LiveReload. Việc xử lý từng bước và tối ưu hoá sản phẩm Front End đã trở nên rất phức tạp để có thể làm bằng tay. Khả năng vận dụng các công cụ tự động hoá đã trở thành yêu cầu cơ bản của lập trình viên Front End.
+
+Các kỹ năng và kiến thức hiển nhiên khác mà bạn cần phải có: sử dụng phần mềm quản lý phiên bản, quy trình phát triển phần mềm, mô hình phát triển phần mềm agile, công cụ hỗ trợ giao tiếp (email, nhắn tin, gọi video...), và hiểu biết tối thiểu về hệ điều hành mà bạn dùng để làm việc.
+
+- [Nau Front End Dotfiles](https://github.com/naustudio/dotfiles): Một số cài đặt và công cụ cho quy trình của Nâu.
+- [Tự động hoá với Grunt (video)](https://youtu.be/38D6SW26mn0): Tôi sẽ hướng dẫn các bạn sử dụng một trong những công cụ tự động hoá Front End phổ biến nhất .
+- [Khởi tạo dự án Front End với các công cụ kiểm tra lỗi tự động (video)](https://youtu.be/sBNkiuDkILA): Đây là một phần của quy trình khởi tạo dự án mới mà chúng tôi đang áp dụng.
+- [Quy trình phát triển Front End hiện đại từ đầu đến cuối](http://blog.chartbeat.com/2014/01/30/modern-front-end-workflow-start-finish/).
+- [Quy trình phát triển dự án JavaScript (video)](https://youtu.be/f7AU2Ozu8eo) bởi Paul Irish. Mặc dù đã được trình bày cách đây 2 năm, nhưng những công cụ được đề cập vẫn được áp dụng trong thời điểm hiện tại.
+
+## Sự Cải Tiến Tăng Dần (Progressive Enhancement)
+
+Hiểu biết về sự cải tiến tăng dần đã trở thành một yêu cầu bắt buộc đối với các lập trình viên Front End hiện đại. 
 
 
 
