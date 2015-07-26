@@ -78,7 +78,7 @@ Các link tham khảo:
 
 Như tôi đã đề cập, kết quả làm việc nhóm có tốt hay không một phần phụ thuộc vào việc các thành viên có tuân thủ quy ước viết code (coding style convention) và quy trình làm việc (workflow) của nhóm. Tuy nhiên, để nhớ hết tất cả các quy tắc đó không phải là việc đơn giản.
 
-Trong đội lập trình viên của Nâu, chúng tôi sử dụng [....TBC]
+Trong đội lập trình của Nâu, chúng tôi sử dụng các công cụ kiểm lỗi tự động được tích hợp trong quy trình từ lúc soạn thảo cho đến biên dịch, giúp định hình 
 
 Không cần phải bàn cãi, trình duyệt là công cụ không thể thiếu của người làm Front End. Có hai kỹ năng mà tôi muốn nhấn mạnh tầm quan trọng đó là khả năng sử dụng công cụ cho người lập trình (developer tools) có sẵn trong trình duyệt và khả năng sử dụng phần mềm tự động nạp lại trang web (live reload). Tất cả các trình duyệt hiện đại đều có dev-tools đi kèm, tuy nhiên theo tôi, dev-tools trên trình duyệt Chrome là tốt nhất cho cho đến bây giờ. Về phần mềm tự nạp trang, bạn có thể thử dùng [Browsersync](http://www.browsersync.io/).
 
@@ -86,7 +86,7 @@ Bên cạnh trình duyệt, trình soạn thảo code đóng vai trò quan trọ
 
 Quy trình Front End hiện đại sẽ rất thiếu sót nếu không nhắc đến những công cụ tự động hoá chạy bằng dòng lệnh (command line) như Grunt, Gulp hoặc những công cụ tương tự có giao diện (GUI) như Codekit, LiveReload. Việc xử lý từng bước và tối ưu hoá sản phẩm Front End đã trở nên rất phức tạp để có thể làm bằng tay. Khả năng vận dụng các công cụ tự động hoá đã trở thành yêu cầu cơ bản của lập trình viên Front End.
 
-Các kỹ năng và kiến thức hiển nhiên khác mà bạn cần phải có: sử dụng phần mềm quản lý phiên bản, quy trình phát triển phần mềm, mô hình phát triển phần mềm agile, công cụ hỗ trợ giao tiếp (email, nhắn tin, gọi video...), và hiểu biết tối thiểu về hệ điều hành mà bạn dùng để làm việc.
+Các kỹ năng và kiến thức hiển nhiên khác mà bạn cần phải có: sử dụng phần mềm quản lý phiên bản, quy trình phát triển phần mềm, mô hình phát triển phần mềm agile, công cụ hỗ trợ giao tiếp (email, nhắn tin, gọi video...), và hiểu biết tối thiểu về hệ điều hành mà bạn dùng để làm việc.d
 
 - [Nau Front End Dotfiles](https://github.com/naustudio/dotfiles): Một số cài đặt và công cụ cho quy trình của Nâu.
 - [Tự động hoá với Grunt (video)](https://youtu.be/38D6SW26mn0): Tôi sẽ hướng dẫn các bạn sử dụng một trong những công cụ tự động hoá Front End phổ biến nhất .
@@ -96,7 +96,14 @@ Các kỹ năng và kiến thức hiển nhiên khác mà bạn cần phải có
 
 ## Sự Cải Tiến Tăng Dần (Progressive Enhancement)
 
-Hiểu biết về sự cải tiến tăng dần đã trở thành một yêu cầu bắt buộc đối với các lập trình viên Front End hiện đại. 
+Hiểu biết về Sự Cải Tiến Tăng Dần đã trở thành một yêu cầu bắt buộc đối với các lập trình viên Front End hiện đại. Đã qua rồi cái thời mà lập trình viên phải cố gắng hiện thực trang web cho giống y đúc trên mọi trình duyệt hoặc loại bỏ hoàn toàn những trình duyệt mà đặc tả không yêu cầu hỗ trợ. Phương pháp được khuyến khích như là chuẩn mực hiện nay đó là Cải Tiến Tăng Dần (Progressive Enhancement), trong đó lập trình viên Front End sẽ hiện thực website với trải nghiệm tốt nhất có thể tuỳ theo khả năng của từng loại trình duyệt. Điều này yêu cầu bạn phải có hiểu biết về các phiên bản chính của JS / CSS / HTML được các trình duyệt hỗ trợ; biết sử dụng caniuse.com, modernizr, HTML5BoilerPlate; cũng như biết khi nào cần áp dụng polyfill hoặc bỏ qua một hiệu ứng (nhưng nội dung vẫn đầy đủ) trên một trình duyệt nào đó.
+
+Tham khảo thêm:
+- [Progressive Enhancement 2.0](https://youtu.be/hdTxeR90_1E) trình bày bởi Nicholas Zakas
+- [Progressive Enhancement: What Is It and How to Use It](http://www.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/)
+
+
+ 
 
 
 
