@@ -39,7 +39,7 @@ Rất nhiều người mới bắt đầu với Web, đặc biệt là sinh viê
 
 Sau những kiến thức căn bản, bạn nên bắt đầu tìm hiểu về [CSS hướng đối tượng (OOCSS)](https://github.com/stubbornella/oocss/wiki) hoặc bắt đầu thực hành những chỉ dẫn trong tài liệu [Những nguyên tắc về CSS](http://cssguidelin.es/)
 
-Ngoài ra, một lập trình viên front end giỏi luôn thủ sẵn một số thủ thuật về CSS. Chẳng hạn, bạn phải biết tất cả các mẹo canh giữa nội theo chiều dọc khác nhau khi mà Flexbox vẫn chưa được áp dụng rộng rãi. Bạn cũng phải biết khi nào cần dùng pseudo-elements, các khối hình học bằng CSS thuần, icon từ webfont, hoặc sprite sheet... để hiện thực giao diện với hiệu suất và độ tương thích tốt nhất.
+Ngoài ra, một lập trình viên front end giỏi luôn thủ sẵn một số thủ thuật về CSS. Chẳng hạn, bạn phải biết tất cả các mẹo canh giữa nội theo chiều dọc khác nhau khi mà Flexbox vẫn chưa được áp dụng rộng rãi. Bạn cũng phải biết khi nào cần dùng pseudo-elements, các khối hình học bằng CSS thuần, icon từ webfont, hoặc sprite sheet… để hiện thực giao diện với hiệu suất và độ tương thích tốt nhất.
 
 Cuối cùng, một lập trình viên front end hiện đại phải biết sử dụng một ngôn ngữ biên dịch sang CSS (preprocessor) để cải thiện khả năng bảo trì và hiệu suất làm việc với CSS.
 
@@ -58,7 +58,7 @@ Nếu như cách đây vài năm trước, jQuery là yêu cầu bắt buộc đ
 
 Tiếp theo sau jQuery, việc nắm vũng kiến thức về JavaScript thuần vẫn là mục tiêu tối quan trọng cho người làm Front End. Bên cạnh học từ quyển sách kinh điển [JavaScript: The Good Parts](http://www.amazon.com/exec/obidos/ASIN/0596517742/wrrrldwideweb) do Rebecca giới thiệu, ngày nay bạn có thêm những lựa chọn miễn phí nhưng không kém chất lượng như quyển Eloquent JavaScript hoặc JavaScript Enlightenment.
 
-Từ kinh nghiệm thực tiễn, tôi tin rằng những đặc tính của ngôn ngữ JavaScript sau đây cần được nắm bất kể trình độ bạn đang ở đâu, đó là chuỗi prototype (prototype chain), sự bao đóng (closure), và từ khoá `this`. Ngoài ra những đặc tính độc đáo khác của JS mà lập trình viên cũng cần phải biết như chuyển đổi kiểu động, xây dựng đối tượng trực tiếp từ giá trị (literal), sự dịch chuyển lên trên vị trí khai báo của biến và hàm (variable and function hoisting)...
+Từ kinh nghiệm thực tiễn, tôi tin rằng những đặc tính của ngôn ngữ JavaScript sau đây cần được nắm bất kể trình độ bạn đang ở đâu, đó là chuỗi prototype (prototype chain), sự bao đóng (closure), và từ khoá `this`. Ngoài ra những đặc tính độc đáo khác của JS mà lập trình viên cũng cần phải biết như chuyển đổi kiểu động, xây dựng đối tượng trực tiếp từ giá trị (literal), sự dịch chuyển lên trên vị trí khai báo của biến và hàm (variable and function hoisting)…
 
 Khi đã thành thạo với JavaScript thuần, và muốn tiếp cận cách viết có cấu trúc để dễ mở rộng vả bảo trì, bạn sẽ nghiên cứu các đặc ngữ của JS (idiom), mẫu thiết kế (design pattern), cách viết module, và các framework MV* phổ biến hiện nay.
 
@@ -76,17 +76,15 @@ Các link tham khảo:
 
 ## Quy Trình Front End Hiện Đại
 
-Như tôi đã đề cập, kết quả làm việc nhóm có tốt hay không một phần phụ thuộc vào việc các thành viên có tuân thủ quy ước viết code (coding style convention) và quy trình làm việc (workflow) của nhóm. Tuy nhiên, để nhớ hết tất cả các quy tắc đó không phải là việc đơn giản.
+Như tôi đã đề cập, kết quả làm việc nhóm có tốt hay không một phần phụ thuộc vào việc các thành viên có tuân thủ quy ước viết code (coding style convention) và quy trình làm việc (workflow) của nhóm. Tuy nhiên, để nhớ hết tất cả các quy tắc đó không phải là việc đơn giản. Trong đội lập trình của Nâu, chúng tôi sử dụng các công cụ kiểm lỗi được tích hợp trong quy trình từ lúc soạn thảo cho đến biên dịch, giúp duy trì quy ước và hình thành thói quen cho các thành viên.
 
-Trong đội lập trình của Nâu, chúng tôi sử dụng các công cụ kiểm lỗi tự động được tích hợp trong quy trình từ lúc soạn thảo cho đến biên dịch, giúp định hình 
-
-Không cần phải bàn cãi, trình duyệt là công cụ không thể thiếu của người làm Front End. Có hai kỹ năng mà tôi muốn nhấn mạnh tầm quan trọng đó là khả năng sử dụng công cụ cho người lập trình (developer tools) có sẵn trong trình duyệt và khả năng sử dụng phần mềm tự động nạp lại trang web (live reload). Tất cả các trình duyệt hiện đại đều có dev-tools đi kèm, tuy nhiên theo tôi, dev-tools trên trình duyệt Chrome là tốt nhất cho cho đến bây giờ. Về phần mềm tự nạp trang, bạn có thể thử dùng [Browsersync](http://www.browsersync.io/).
+Không cần phải bàn cãi, trình duyệt là công cụ không thể thiếu của người làm Front End. Có hai kỹ năng mà tôi muốn nhấn mạnh ở đây đó là khả năng sử dụng công cụ cho người lập trình (developer tools) có sẵn trong trình duyệt và khả năng sử dụng phần mềm tự động nạp lại trang web (live reload). Tất cả các trình duyệt hiện đại đều có dev-tools đi kèm, tuy nhiên theo tôi, dev-tools trên trình duyệt Chrome là tốt nhất cho cho đến bây giờ. Về phần mềm tự nạp trang, bạn có thể thử dùng [Browsersync](http://www.browsersync.io/).
 
 Bên cạnh trình duyệt, trình soạn thảo code đóng vai trò quan trọng không kém. Bất kể bạn chọn phần mềm gì, hãy bảo đảm rằng nó có khả năng tự hoàn tất code cũng như là khả năng kiểm lỗi tức thì cho ngôn ngữ lập trình bạn viết. Trình soạn thảo cho Front End hiện đại cũng rất cần khả năng sửa văn bản trên nhiều con trỏ và mở file nhanh bằng tìm kiếm. Nếu bạn hỏi tôi, tôi sẽ đề thử dùng [Sublime Text](http://www.sublimetext.com/) hoặc [Atom](https://atom.io/). Ngoài ra, đừng bỏ qua [Emmet](http://emmet.io/), một công cụ bổ sung cho các trình soạn thảo "giúp cải thiện hiệu suất làm việc với HTML và CSS một cách đáng kể".
 
 Quy trình Front End hiện đại sẽ rất thiếu sót nếu không nhắc đến những công cụ tự động hoá chạy bằng dòng lệnh (command line) như Grunt, Gulp hoặc những công cụ tương tự có giao diện (GUI) như Codekit, LiveReload. Việc xử lý từng bước và tối ưu hoá sản phẩm Front End đã trở nên rất phức tạp để có thể làm bằng tay. Khả năng vận dụng các công cụ tự động hoá đã trở thành yêu cầu cơ bản của lập trình viên Front End.
 
-Các kỹ năng và kiến thức hiển nhiên khác mà bạn cần phải có: sử dụng phần mềm quản lý phiên bản, quy trình phát triển phần mềm, mô hình phát triển phần mềm agile, công cụ hỗ trợ giao tiếp (email, nhắn tin, gọi video...), và hiểu biết tối thiểu về hệ điều hành mà bạn dùng để làm việc.d
+Các kỹ năng và kiến thức hiển nhiên khác mà bạn cần phải có: sử dụng phần mềm quản lý phiên bản, quy trình phát triển phần mềm, mô hình phát triển phần mềm agile, công cụ hỗ trợ giao tiếp (email, nhắn tin, gọi video…), và hiểu biết tối thiểu về hệ điều hành mà bạn dùng để làm việc.d
 
 - [Nau Front End Dotfiles](https://github.com/naustudio/dotfiles): Một số cài đặt và công cụ cho quy trình của Nâu.
 - [Tự động hoá với Grunt (video)](https://youtu.be/38D6SW26mn0): Tôi sẽ hướng dẫn các bạn sử dụng một trong những công cụ tự động hoá Front End phổ biến nhất .
@@ -96,17 +94,18 @@ Các kỹ năng và kiến thức hiển nhiên khác mà bạn cần phải có
 
 ## Sự Cải Tiến Tăng Dần (Progressive Enhancement)
 
-Hiểu biết về Sự Cải Tiến Tăng Dần đã trở thành một yêu cầu bắt buộc đối với các lập trình viên Front End hiện đại. Đã qua rồi cái thời mà lập trình viên phải cố gắng hiện thực trang web cho giống y đúc trên mọi trình duyệt hoặc loại bỏ hoàn toàn những trình duyệt mà đặc tả không yêu cầu hỗ trợ. Phương pháp được khuyến khích như là chuẩn mực hiện nay đó là Cải Tiến Tăng Dần (Progressive Enhancement), trong đó lập trình viên Front End sẽ hiện thực website với trải nghiệm tốt nhất có thể tuỳ theo khả năng của từng loại trình duyệt. Điều này yêu cầu bạn phải có hiểu biết về các phiên bản chính của JS / CSS / HTML được các trình duyệt hỗ trợ; biết sử dụng caniuse.com, modernizr, HTML5BoilerPlate; cũng như biết khi nào cần áp dụng polyfill hoặc bỏ qua một hiệu ứng (nhưng nội dung vẫn đầy đủ) trên một trình duyệt nào đó.
+Hiểu biết về Cải Tiến Tăng Dần đã trở thành một yêu cầu bắt buộc đối với các lập trình viên Front End hiện đại. Đã qua rồi cái thời mà lập trình viên phải cố gắng hiện thực trang web cho giống y đúc trên mọi trình duyệt hoặc loại bỏ hoàn toàn những trình duyệt mà đặc tả không yêu cầu hỗ trợ. Phương pháp được khuyến khích như là chuẩn mực hiện nay đó là Cải Tiến Tăng Dần (Progressive Enhancement), trong đó lập trình viên Front End sẽ hiện thực website với trải nghiệm tốt nhất có thể tuỳ theo khả năng của từng loại trình duyệt khác nhau. Điều này yêu cầu bạn phải có hiểu biết về các phiên bản khác nhau của JS / CSS / HTML mà các trình duyệt hỗ trợ; biết sử dụng caniuse.com, modernizr, HTML5BoilerPlate; cũng như biết khi nào cần áp dụng polyfill hoặc bỏ qua một hiệu ứng (nhưng nội dung vẫn đầy đủ) trên một trình duyệt nào đó.
 
 Tham khảo thêm:
 - [Progressive Enhancement 2.0](https://youtu.be/hdTxeR90_1E) trình bày bởi Nicholas Zakas
 - [Progressive Enhancement: What Is It and How to Use It](http://www.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/)
 
+## Kỹ Năng Về Giao Diện
 
- 
+Bạn cần có chút hiểu biết về hiệu ứng kiểu chữ (typography), các khái niệm giao diện (UI) và chuyển động (animation) và biết những thuật ngữ chuyên sâu để có thể trao đổi một cách dễ dàng với các bạn thiết kế. Ví dụ: nút hamburger, hero banner, the fold…
 
+Bên cạnh đó, bạn cũng cần có kỹ năng sử dụng Photoshop ở mức cơ bản để có thể trích xuất được những hình ảnh cần thiết cho việc hiện thực cũng như tham khảo các giá trị cho CSS (độ trong suốt, chuyển tiếp màu, màu sắc…). Những thao tác bằng tay này có thể sẽ được thay thế hoàn toàn bằng những công cụ hiện đại (Photoshop CC 2014, Sketch…) tuy nhiên kỹ năng về phần mềm đồ hoạ vẫn hữu ích cho bạn khi thỉnh thoảng bạn sẽ cần tự mình chỉnh sửa lên file mà không cần sự hỗ trợ của người thiết kế.
 
+Bước vào năm 2015, một kỹ năng nữa mà bạn cũng cần biết, đó là sử dụng công cụ xử lý ảnh vector (Illustrator, Inkscape…) để hiệu chỉnh và trích xuất các icon và thành phần giao diện bằng vector cho thiết kế phẳng (flat design) đang là xu hướng của cả thế giới.
 
-
-
-
+## Kết Luận
