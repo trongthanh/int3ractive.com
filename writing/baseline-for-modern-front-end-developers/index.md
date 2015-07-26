@@ -94,7 +94,8 @@ You should have some understanding of typography, UI and animation concepts and 
 Besides, you should be able to open a Photoshop file to get the necessary assets for your UI development as well as extracting parameters (opacity, gradient, colors…) that are applicable for CSS authoring. These manual tasks may finally be replaced by auto CSS extraction by modern design tools (Photoshop CC 2014, Sketch…) but those know-hows will still benefit you that one day you are able to make some minor adjustment to the PSD without the help of designers. 
 
 In 2015, a new skill you should also get a gasp of is using a vector graphics editing tool (Illustrator, Inkscape…) to manipulate and extract vector images which are essential for scalable graphics in modern flat designs.
-Conclusion
+
+## Conclusion
 
 There you go. If you are a Front End rookie or a back-end-to-front-end convert, you may feel there are a lot to learn just to meet the baseline. It is indeed. Some even compare us with kind of programming masochists. But we still go for it because we enjoy making beautiful and useful UI and we feel greatly rewarded when our creations are released to the whole world to see and experience.
 
