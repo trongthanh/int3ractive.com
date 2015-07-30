@@ -1,30 +1,30 @@
 ![Front End tag cloud](front-end-baseline.png)
 
-Hệ thống kiến thức tối thiểu (baseline) là gì:
+### Mức (kiến thức) tối thiểu (baseline) là gì?
 
+Là hệ thống kỹ năng và kiến thức tối thiểu của một nhân viên kỹ thuật cần có để có làm việc trong nhóm một cách hiệu quả và không cần nhiều sự trợ giúp.
 
-Tại sao phải có đường cơ sở cho Front End:
+### Tại sao phải có mức tối thiểu cho lập trình viên Front End?
 
+Từ kinh nghiệm làm việc trong nhiều nhóm phát triển phần mềm lớn nhỏ khác nhau, tôi nhận ra rằng việc thiết lập hệ thống kiến thức tối thiểu cũng quan trọng không kém việc đề ra quy ước và kiểu viết code chuẩn của nhóm.
 
-Từ kinh nghiệm làm việc trong nhiều nhóm phát triển phần mềm lớn nhỏ khác nhau, tôi nhận ra rằng việc thiết lập hệ thống kiến thức cơ sở (baseline) cũng quan trọng không kém những quy ước lập trình trong nhóm.
+Rõ ràng việc nâng chuẩn kiến thức và kỹ năng của từng thành viên lên không chỉ cải thiện sự hợp tác nhóm mà còn cải thiện hiệu suất làm việc của họ.
 
-Rõ ràng việc phát triển kiến thức và kỹ năng của từng thành viên lên để đạt chuẩn không chỉ cải thiện sự hợp tác nhóm mà còn cải thiện hiệu suất làm việc của họ.
+Khi xây dựng đội phát triển Front End tại [Nâu Studio](https://naustud.io), tôi đã nghiên cứu thật kỹ về những kỹ năng và kiến thức chuyên môn tối cần thiết mà sẽ được đưa vào hệ thống kiến thức cơ sở của nhóm và là tâm điểm của việc huấn luyện căn bản.
 
-Khi xây dựng nhóm phát triển front end ỏ Nâu Studio, tôi đã nghiên cứu thật kỹ về những kỹ năng và kiến thức chuyên môn tối cần thiết mà sẽ được đưa vào hệ thống kiến thức cơ sở của nhóm và là tâm điểm của việc huấn luyện căn bản.
-
-Lấy cảm hứng từ bài viết [Đường cơ sở về kiến thức cho các lập trình viên Front End](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/) của Rebecca Murphey, tôi sẽ ghi lại Đường cơ sở về kiến thức cho các lập trình viên Front End hiện đại với hệ thống phù hợp hơn cho người mới bắt đầu cũng như cập nhật những xu hướng mới nhất của năm 2015.
+Lấy cảm hứng từ bài viết [A Baseline for Front End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/) của Rebecca Murphey, tôi sẽ ghi lại dưới đây mức tối thiểu về kiến thức cho các lập trình viên Front End hiện đại với hệ thống phù hợp hơn cho người mới bắt đầu cũng như cập nhật những xu hướng mới nhất của năm 2015.
 
 Để bắt đầu, tôi sẽ bàn về 3 trụ cột của Web Front End:
 
 ## HTML
 
-Thực tế cho thấy có rất nhiều lập trình viên xem nhẹ HTML. Qua quan sát của tôi, nhiều lập trình viên dùng tag HTML rất tuỳ tiện, thêm các tag bao (wrapper) một cách vô tội vạ và kết quả là việc xử lý giao diện tuỳ ứng (responsive) cũng như canh lề rất vất vả và chắp vá.
+Thực tế cho thấy có rất nhiều lập trình viên xem nhẹ HTML. Theo quan sát của tôi, nhiều lập trình viên dùng tag HTML rất tuỳ tiện, thêm các tag bao (wrapper) một cách vô tội vạ và kết quả là việc xử lý giao diện tuỳ ứng (responsive) cũng như canh lề rất vất vả và chắp vá.
 
 Khi làm càng nhiều, bạn sẽ sớm nhận ra rằng HTML được viết gọn gàng và súc tích sẽ giúp ích rất nhiều cho việc xủ lý CSS và cải thiện tốc độ website trên trình duyệt (đặt biệt là trên thiết bị di động). Để làm được như vậy đòi hỏi một kỹ năng tuyệt vời, và tôi dám nói rằng viết HTML là cả một nghệ thuật.
 
 Vì vậy, để trở thành một lập trình viên HTML thành công, bạn phải có khả năng kết hợp các phần tử (element) HTML để đạt yêu cầu cả về ngữ nghĩa và tính tối ưu. Điều này có nghĩa bạn phải nắm vững các quy luật layout mặc định và ý nghĩa sử dụng của tất cả các thẻ HTML.
 
-Ngoài việc tiến bộ dần thông qua kinh nghiệm thực tế, bạn có thể tăng tốc kỹ năng HTML của mình nếu được đào tạo bài bản từ những cái căn bản.
+Ngoài việc tiến bộ dần thông qua kinh nghiệm thực tế, bạn có thể tăng tốc kỹ năng HTML của mình nếu được đào tạo bài bản từ những cái cơ bản.
 
 Các tài liệu hỗ trợ:
 
@@ -39,9 +39,9 @@ Rất nhiều người mới bắt đầu với Web, đặc biệt là sinh viê
 
 Sau những kiến thức căn bản, bạn nên bắt đầu tìm hiểu về [CSS hướng đối tượng (OOCSS)](https://github.com/stubbornella/oocss/wiki) hoặc bắt đầu thực hành những chỉ dẫn trong tài liệu [Những nguyên tắc về CSS](http://cssguidelin.es/)
 
-Ngoài ra, một lập trình viên front end giỏi luôn thủ sẵn một số thủ thuật về CSS. Chẳng hạn, bạn phải biết tất cả các mẹo canh giữa nội theo chiều dọc khác nhau khi mà Flexbox vẫn chưa được áp dụng rộng rãi. Bạn cũng phải biết khi nào cần dùng pseudo-elements, các khối hình học bằng CSS thuần, icon từ webfont, hoặc sprite sheet… để hiện thực giao diện với hiệu suất và độ tương thích tốt nhất.
+Ngoài ra, một lập trình viên Front End giỏi luôn thủ sẵn một số thủ thuật về CSS. Chẳng hạn, bạn phải biết tất cả các mẹo canh giữa nội theo chiều dọc khác nhau khi mà Flexbox vẫn chưa được áp dụng rộng rãi. Bạn cũng phải biết khi nào cần dùng pseudo-elements, tạo các khối hình học bằng CSS thuần, icon từ webfont, hoặc sprite sheet… để hiện thực giao diện với hiệu suất và độ tương thích tốt nhất.
 
-Cuối cùng, một lập trình viên front end hiện đại phải biết sử dụng một ngôn ngữ biên dịch sang CSS (preprocessor) để cải thiện khả năng bảo trì và hiệu suất làm việc với CSS.
+Cuối cùng, một lập trình viên Front End hiện đại phải biết sử dụng một ngôn ngữ biên dịch sang CSS (preprocessor) để cải thiện khả năng bảo trì và hiệu suất làm việc với CSS.
 
 Một khi nền tảng đã được nắm vững, bạn sẽ thấy việc học thêm hoặc ứng dụng những tính năng mới của CSS3 sẽ chẳng có chút khó khăn.
 
@@ -56,7 +56,7 @@ Tài liệu tham khảo:
 
 Nếu như cách đây vài năm trước, jQuery là yêu cầu bắt buộc để nhập môn Web Front End thì bây giờ [không còn nữa](http://youmightnotneedjquery.com/). Tuy nhiên theo tôi nó vẫn rất hữu ích cho những người mới bắt đầu thực hành JavaScript trong bối cảnh tính năng và sự tương thích giữa các trình duyệt vẫn chưa đồng nhất.
 
-Tiếp theo sau jQuery, việc nắm vũng kiến thức về JavaScript thuần vẫn là mục tiêu tối quan trọng cho người làm Front End. Bên cạnh học từ quyển sách kinh điển [JavaScript: The Good Parts](http://www.amazon.com/exec/obidos/ASIN/0596517742/wrrrldwideweb) do Rebecca giới thiệu, ngày nay bạn có thêm những lựa chọn miễn phí nhưng không kém chất lượng như quyển Eloquent JavaScript hoặc JavaScript Enlightenment.
+Tiếp theo sau jQuery, việc nắm vũng kiến thức về JavaScript thuần vẫn là mục tiêu tối quan trọng cho người làm Front End. Bên cạnh học từ quyển sách kinh điển [JavaScript: The Good Parts](http://www.amazon.com/exec/obidos/ASIN/0596517742/wrrrldwideweb) do Rebecca giới thiệu, ngày nay bạn có thêm những lựa chọn miễn phí nhưng nội dung vẫn chất lượng như quyển [Eloquent JavaScript](http://eloquentjavascript.net/) hoặc [JavaScript Enlightenment](http://www.javascriptenlightenment.com/).
 
 Từ kinh nghiệm thực tiễn, tôi tin rằng những đặc tính của ngôn ngữ JavaScript sau đây cần được nắm bất kể trình độ bạn đang ở đâu, đó là chuỗi prototype (prototype chain), sự bao đóng (closure), và từ khoá `this`. Ngoài ra những đặc tính độc đáo khác của JS mà lập trình viên cũng cần phải biết như chuyển đổi kiểu động, xây dựng đối tượng trực tiếp từ giá trị (literal), sự dịch chuyển lên trên vị trí khai báo của biến và hàm (variable and function hoisting)…
 
@@ -82,7 +82,7 @@ Không cần phải bàn cãi, trình duyệt là công cụ không thể thiế
 
 Bên cạnh trình duyệt, trình soạn thảo code đóng vai trò quan trọng không kém. Bất kể bạn chọn phần mềm gì, hãy bảo đảm rằng nó có khả năng tự hoàn tất code cũng như là khả năng kiểm lỗi tức thì cho ngôn ngữ lập trình bạn viết. Trình soạn thảo cho Front End hiện đại cũng rất cần khả năng sửa văn bản trên nhiều con trỏ và mở file nhanh bằng tìm kiếm. Nếu bạn hỏi tôi, tôi sẽ đề thử dùng [Sublime Text](http://www.sublimetext.com/) hoặc [Atom](https://atom.io/). Ngoài ra, đừng bỏ qua [Emmet](http://emmet.io/), một công cụ bổ sung cho các trình soạn thảo "giúp cải thiện hiệu suất làm việc với HTML và CSS một cách đáng kể".
 
-Quy trình Front End hiện đại sẽ rất thiếu sót nếu không nhắc đến những công cụ tự động hoá chạy bằng dòng lệnh (command line) như Grunt, Gulp hoặc những công cụ tương tự có giao diện (GUI) như Codekit, LiveReload. Việc xử lý từng bước và tối ưu hoá sản phẩm Front End đã trở nên rất phức tạp để có thể làm bằng tay. Khả năng vận dụng các công cụ tự động hoá đã trở thành yêu cầu cơ bản của lập trình viên Front End.
+Quy trình Front End hiện đại sẽ rất thiếu sót nếu không nhắc đến những công cụ tự động hoá chạy bằng dòng lệnh (command line) như [Grunt](http://gruntjs.com/), [Gulp](http://gulpjs.com/) hoặc những công cụ tương tự có giao diện (GUI) như [Codekit](http://incident57.com/codekit/), [LiveReload](http://livereload.com/). Việc xử lý từng bước và tối ưu hoá sản phẩm Front End đã trở nên [rất phức tạp](https://developers.google.com/speed/docs/insights/rules) để có thể làm bằng tay. Khả năng vận dụng các công cụ tự động hoá đã trở thành yêu cầu cơ bản của lập trình viên Front End.
 
 Các kỹ năng và kiến thức hiển nhiên khác mà bạn cần phải có: sử dụng phần mềm quản lý phiên bản, quy trình phát triển phần mềm, mô hình phát triển phần mềm agile, công cụ hỗ trợ giao tiếp (email, nhắn tin, gọi video…), và hiểu biết tối thiểu về hệ điều hành mà bạn dùng để làm việc.d
 
@@ -94,7 +94,7 @@ Các kỹ năng và kiến thức hiển nhiên khác mà bạn cần phải có
 
 ## Sự Cải Tiến Tăng Dần (Progressive Enhancement)
 
-Hiểu biết về Cải Tiến Tăng Dần đã trở thành một yêu cầu bắt buộc đối với các lập trình viên Front End hiện đại. Đã qua rồi cái thời mà lập trình viên phải cố gắng hiện thực trang web cho giống y đúc trên mọi trình duyệt hoặc loại bỏ hoàn toàn những trình duyệt mà đặc tả không yêu cầu hỗ trợ. Phương pháp được khuyến khích như là chuẩn mực hiện nay đó là Cải Tiến Tăng Dần (Progressive Enhancement), trong đó lập trình viên Front End sẽ hiện thực website với trải nghiệm tốt nhất có thể tuỳ theo khả năng của từng loại trình duyệt khác nhau. Điều này yêu cầu bạn phải có hiểu biết về các phiên bản khác nhau của JS / CSS / HTML mà các trình duyệt hỗ trợ; biết sử dụng caniuse.com, modernizr, HTML5BoilerPlate; cũng như biết khi nào cần áp dụng polyfill hoặc bỏ qua một hiệu ứng (nhưng nội dung vẫn đầy đủ) trên một trình duyệt nào đó.
+Hiểu biết về [Cải Tiến Tăng Dần](http://en.wikipedia.org/wiki/Progressive_enhancement) đã trở thành một yêu cầu bắt buộc đối với các lập trình viên Front End hiện đại. Đã qua rồi cái thời mà lập trình viên phải cố gắng hiện thực trang web cho giống y đúc trên mọi trình duyệt hoặc loại bỏ hoàn toàn những trình duyệt mà đặc tả không yêu cầu hỗ trợ. Phương pháp được khuyến khích như là chuẩn mực hiện nay đó là Cải Tiến Tăng Dần (Progressive Enhancement), trong đó lập trình viên Front End sẽ hiện thực website với trải nghiệm tốt nhất có thể tuỳ theo khả năng của từng loại trình duyệt khác nhau. Điều này yêu cầu bạn phải có hiểu biết về các phiên bản khác nhau của JS / CSS / HTML mà các trình duyệt hỗ trợ; biết sử dụng [caniuse.com](http://caniuse.com/), [Modernizr](http://modernizr.com/), [html5boilerplate](https://html5boilerplate.com/); cũng như biết khi nào cần áp dụng polyfill hoặc bỏ qua một hiệu ứng (nhưng nội dung vẫn đầy đủ) trên một trình duyệt nào đó.
 
 Tham khảo thêm:
 - [Progressive Enhancement 2.0](https://youtu.be/hdTxeR90_1E) trình bày bởi Nicholas Zakas
@@ -109,3 +109,8 @@ Bên cạnh đó, bạn cũng cần có kỹ năng sử dụng Photoshop ở m�
 Bước vào năm 2015, một kỹ năng nữa mà bạn cũng cần biết, đó là sử dụng công cụ xử lý ảnh vector (Illustrator, Inkscape…) để hiệu chỉnh và trích xuất các icon và thành phần giao diện bằng vector cho thiết kế phẳng (flat design) đang là xu hướng của cả thế giới.
 
 ## Kết Luận
+
+Đến đây, nếu bạn là một lính mới của Front End hoặc là một người mới chuyển từ backend qua, bạn sẽ cảm thấy có quá nhiều thứ để học để đạt được mức tối thiểu của Front End. Đúng là như vậy. Nhưng những người làm Front End như tôi và bạn vẫn chọn con đường không mấy dễ dàng này bởi đơn giản chúng ta yêu thích việc tạo ra những giao diện đẹp và hữu dụng và cảm thấy tự hào khi thành quả đó được đưa lên web cho cả thế giới đến xem và trải nghiệm.
+
+Theo tôi, không phải lập trình viên nào cũng phù hợp với con đường Front End. Những phẩm chất tạo nên sự khách biệt giữa người yêu thích front end với người yêu thích back end, đó là họ có sự nhạy cảm những với thiết kế trực quan, có khả làm việc tỉ mỉ chi tiết đến từng pixel, và có phẩm chất của một người yêu thích sự hoàn hảo.
+
