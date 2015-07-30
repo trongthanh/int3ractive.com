@@ -80,12 +80,11 @@ Other skills and knowledge that are too obvious to talk into details: version co
 
 ## Progressive Enhancement 
 
-Knowing progressive enhancement is now a must for modern Front End developers. It is not about the knowledge to implement websites exactly the same across browsers anymore, but ability to leverage the capability of each browser to provide the best experience on it. This requires developers to know how to use caniuse.com, modernizr, html5boilerplate as well as knowing when a polyfill / fallback is required.
+Knowing progressive enhancement is now a must for modern Front End developers. It is not about the knowledge to implement websites exactly the same across browsers anymore, but ability to leverage the capability of each browser to provide the best experience on it. This requires developers to know how to use [caniuse.com](http://caniuse.com/), [Modernizr](http://modernizr.com/), [html5boilerplate](https://html5boilerplate.com/) as well as knowing when a polyfill / fallback is required.
 
-Progressive Enhancement 2.0 by Nicholas Zakas:
-https://youtu.be/hdTxeR90_1E
-Progressive Enhancement: What Is It and How to Use It:
-http://www.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/ 
+
+- [Progressive Enhancement 2.0](https://youtu.be/hdTxeR90_1E) by Nicholas Zakas.
+- [Progressive Enhancement: What Is It and How to Use It](http://www.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/)
 
 ## UI Skill set 
 
