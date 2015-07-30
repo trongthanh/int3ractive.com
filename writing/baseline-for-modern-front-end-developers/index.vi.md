@@ -1,16 +1,16 @@
 ![Front End tag cloud](front-end-baseline.png)
 
-### Mức (kiến thức) tối thiểu (baseline) là gì?
+### Mức kỹ năng tối thiểu (baseline) là gì?
 
 Là hệ thống kỹ năng và kiến thức tối thiểu của một nhân viên kỹ thuật cần có để có làm việc trong nhóm một cách hiệu quả và không cần nhiều sự trợ giúp.
 
 ### Tại sao phải có mức tối thiểu cho lập trình viên Front End?
 
-Từ kinh nghiệm làm việc trong nhiều nhóm phát triển phần mềm lớn nhỏ khác nhau, tôi nhận ra rằng việc thiết lập hệ thống kiến thức tối thiểu cũng quan trọng không kém việc đề ra quy ước và kiểu viết code chuẩn của nhóm.
+Từ kinh nghiệm làm việc trong nhiều nhóm phát triển phần mềm lớn nhỏ khác nhau, tôi nhận ra rằng việc thiết lập hệ thống kỹ năng tối thiểu cũng quan trọng không kém việc đề ra quy ước và kiểu viết code chuẩn của nhóm.
 
-Rõ ràng việc nâng chuẩn kiến thức và kỹ năng của từng thành viên lên không chỉ cải thiện sự hợp tác nhóm mà còn cải thiện hiệu suất làm việc của họ.
+Rõ ràng việc nâng chuẩn kiến thức và kỹ năng của từng thành viên lên không chỉ giúp công việc được phối hợp nhịp nhàng hơn mà còn cải thiện hiệu suất làm việc của các bạn.
 
-Khi xây dựng đội phát triển Front End tại [Nâu Studio](https://naustud.io), tôi đã nghiên cứu thật kỹ về những kỹ năng và kiến thức chuyên môn tối cần thiết mà sẽ được đưa vào hệ thống kiến thức cơ sở của nhóm và là tâm điểm của việc huấn luyện căn bản.
+Khi xây dựng đội phát triển Front End tại [Nâu Studio](https://naustud.io), tôi đã nghiên cứu thật kỹ về những kỹ năng và kiến thức chuyên môn tối cần thiết để được đưa vào hệ thống kiến thức cơ sở của nhóm và là tâm điểm của việc huấn luyện căn bản.
 
 Lấy cảm hứng từ bài viết [A Baseline for Front End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/) của Rebecca Murphey, tôi sẽ ghi lại dưới đây mức tối thiểu về kiến thức cho các lập trình viên Front End hiện đại với hệ thống phù hợp hơn cho người mới bắt đầu cũng như cập nhật những xu hướng mới nhất của năm 2015.
 
@@ -18,13 +18,13 @@ Lấy cảm hứng từ bài viết [A Baseline for Front End Developers](http:/
 
 ## HTML
 
-Thực tế cho thấy có rất nhiều lập trình viên xem nhẹ HTML. Theo quan sát của tôi, nhiều lập trình viên dùng tag HTML rất tuỳ tiện, thêm các tag bao (wrapper) một cách vô tội vạ và kết quả là việc xử lý giao diện tuỳ ứng (responsive) cũng như canh lề rất vất vả và chắp vá.
+Thực tế cho thấy có rất nhiều lập trình viên xem nhẹ HTML. Theo quan sát của tôi, nhiều lập trình viên dùng tag HTML rất tuỳ tiện, thêm các thẻ bao ngoài một cách vô tội vạ và kết quả là việc xử lý giao diện tuỳ ứng (responsive) cũng như canh lề rất vất vả.
 
-Khi làm càng nhiều, bạn sẽ sớm nhận ra rằng HTML được viết gọn gàng và súc tích sẽ giúp ích rất nhiều cho việc xủ lý CSS và cải thiện tốc độ website trên trình duyệt (đặt biệt là trên thiết bị di động). Để làm được như vậy đòi hỏi một kỹ năng tuyệt vời, và tôi dám nói rằng viết HTML là cả một nghệ thuật.
+Khi làm càng nhiều, bạn sẽ nhận ra rằng HTML được viết gọn gàng và súc tích sẽ giúp ích rất nhiều cho việc xủ lý CSS và cải thiện tốc độ website trên trình duyệt (đặt biệt là trên thiết bị di động). Để làm được như vậy đòi hỏi một kỹ năng tuyệt vời, và tôi dám nói rằng viết HTML là cả một nghệ thuật.
 
 Vì vậy, để trở thành một lập trình viên HTML thành công, bạn phải có khả năng kết hợp các phần tử (element) HTML để đạt yêu cầu cả về ngữ nghĩa và tính tối ưu. Điều này có nghĩa bạn phải nắm vững các quy luật layout mặc định và ý nghĩa sử dụng của tất cả các thẻ HTML.
 
-Ngoài việc tiến bộ dần thông qua kinh nghiệm thực tế, bạn có thể tăng tốc kỹ năng HTML của mình nếu được đào tạo bài bản từ những cái cơ bản.
+Ngoài việc tiến bộ dần thông qua kinh nghiệm thực tế, bạn có thể tăng tốc kỹ năng HTML của mình nếu được đào tạo bài bản.
 
 Các tài liệu hỗ trợ:
 
@@ -35,7 +35,7 @@ Các tài liệu hỗ trợ:
 
 Rất nhiều người mới bắt đầu với Web, đặc biệt là sinh viên CNTT ở Việt Nam, được học rất sơ sài về CSS trên lớp và các sách giáo trình liên quan đều lỗi thời. Đa số các bạn sẽ học CSS bằng phép sai-và-thử và đó là một quá trình tiến bộ cực kỳ kém hiệu quả.
 
-Điều này không tồn tại trong team của Nâu. Những khái niệm căn bản của CSS như thứ tự kiểu thác nước (cascading), luật về độ ưu tiên (specificity), bộ chọn lọc (selectors), sự thừa kế, mô hình hộp (box model), và ngữ cảnh xếp chồng (stacking context) phải được các bạn hiểu rõ.
+Điều này không tồn tại trong team của Nâu. Những khái niệm căn bản của CSS như thứ tự thác nước (cascading), luật về độ ưu tiên (specificity), bộ chọn lọc (selectors), sự thừa kế, mô hình hộp (box model), và ngữ cảnh xếp chồng (stacking context) phải được các bạn hiểu rõ.
 
 Sau những kiến thức căn bản, bạn nên bắt đầu tìm hiểu về [CSS hướng đối tượng (OOCSS)](https://github.com/stubbornella/oocss/wiki) hoặc bắt đầu thực hành những chỉ dẫn trong tài liệu [Những nguyên tắc về CSS](http://cssguidelin.es/)
 
