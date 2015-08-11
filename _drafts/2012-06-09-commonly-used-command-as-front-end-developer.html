@@ -1,0 +1,47 @@
+---
+layout: post
+title: Commonly used command as front-end developer
+date: '2012-06-09T23:03:00.000+07:00'
+author: Trọng Thanh Trần
+tags: 
+modified_time: '2012-06-09T23:03:19.882+07:00'
+blogger_id: tag:blogger.com,1999:blog-5363322361445724369.post-7487784767145724437
+---
+
+Except Git, Google apps<br />
+<br />
+<br />
+Convert a pdf to multiple photos:<br />
+<br />
+$ convert -scale 2048x1447 "your_book.pdf" page%d.jpg --&gt; SLOW<br />
+<br />
+Faster: &nbsp;GhostScript:<br />
+gs -sDEVICE=png16m -o book/page-%d.png -r600x600 book.pdf<br />
+THEN:<br />
+<br />
+convert -resize 1024x1024 -quality 95% book/* book/page%d.jpg<br />
+<div>
+<br /></div>
+CONVERT IMAGES<br />
+<br />
+<div style="text-align: left;">
+<span style="text-align: -webkit-auto;">convert -limit memory 512 -resize 1024x1024 -quality 95% book/* book/page%d.jpg</span></div>
+<strong style="background-color: white; font-family: tahoma, arial, sans-serif; font-size: 14px; text-align: left;"><br /></strong><br />
+<span style="background-color: white; text-align: left;"></span><br />
+<span style="font-family: tahoma, arial, sans-serif;"><span style="font-size: 14px;">env MAGICK_TMPDIR=/media/Windows/var&nbsp;convert -limit memory 512MiB -limit map 1000MiB -resize 507x507 -quality 90% ./*.jpg resized/photo%02d.jpg</span></span><br />
+<div style="font-family: tahoma, arial, sans-serif; font-size: 14px;">
+<br /></div>
+MAKING SAME-SIZE THUMBNAILS<br />
+<br />
+<br />
+convert -limit memory 512MiB -limit map 1000MiB -thumbnail "50x50^&gt;" -gravity center -crop 50x50+0+0 +repage -quality 80% ./*.jpg thumbs/thumbs%02d.jpg<br />
+<div>
+<br />
+use %02d instead of %d to insert leading zeros (fixed 2 digits)</div>
+<br />
+Ref:&nbsp;<a href="http://www.imagemagick.org/Usage/files/">http://www.imagemagick.org/Usage/files/</a><br />
+<br />
+<span style="background-color: white; font-family: tahoma, arial, sans-serif; font-size: 14px; text-align: left;"><br /></span><br />
+<span style="background-color: white; font-family: tahoma, arial, sans-serif; font-size: 14px; text-align: left;">Start a http server at any folder</span><br />
+<span style="background-color: white; font-family: tahoma, arial, sans-serif; font-size: 14px; text-align: left;"><br /></span><br />
+<span style="background-color: white; font-family: tahoma, arial, sans-serif; font-size: 14px; text-align: left;">python -m SimpleHTTPServer [port]</span>
