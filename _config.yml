@@ -1,0 +1,23 @@
+# Site settings
+title: Int3ractive
+header-img: img/home-bg.jpg
+email: trongthanh@gmail.com
+description: "Write your site description here. It will be used as your sites meta description as well!"
+baseurl: ""
+url: "http://labs.int3ractive.com"
+twitter_username: trongthanh
+github_username:  trongthanh
+facebook_username:  trongthanh
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: :year/:month/:title.html
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", "flash","javascript"]
+keep_files: []
+
+# Markdown Processors
+
+framdown:
+  input: GFM

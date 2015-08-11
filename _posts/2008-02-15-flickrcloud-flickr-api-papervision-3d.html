@@ -1,0 +1,26 @@
+---
+layout: post
+title: 'FlickrCloud: Flickr API & Papervision 3D'
+date: '2008-02-15T23:32:00.015+07:00'
+author: Trọng Thanh Trần
+tags:
+- Labs
+- Flash 3D
+- Flash
+modified_time: '2011-05-06T11:06:02.626+07:00'
+blogger_id: tag:blogger.com,1999:blog-5363322361445724369.post-8370620686026215137
+blogger_orig_url: http://blog.int3ractive.com/2008/02/flickrcloud-flickr-api-papervision-3d.html
+---
+
+Let me start my fisrt blog post with my rencent demo:<br />
+In a few days free from client projects, I have done some studies and made this demo. With this embeddable flash application, you can browse your and your friends' flickr public photos with a stunning 3D experience. (up to 50 latest photos) I named it <strong>FlickrCloud</strong> (Flickr + PaperCloud). <br />
+<embed align="middle" allowfullscreen="true" bgcolor="#000000" flashvars="flickrid=9803330@N04" height="428" src="http://www.fileden.com/files/2009/8/2/2530043/flash/FlickrCloud.swf" type="application/x-shockwave-flash" width="570"></embed><br />
+Technical info: This application is the combination of<br />
+<ul><li>Flash Player 9 (Action Script 3)</li>
+<li><a href="http://www.flickr.com/services/api/">Flickr API</a> (with the help of Adobe <a href="http://labs.adobe.com/wiki/index.php/ActionScript_3:resources:apis:libraries#Flickr">AS3 Flickr Library</a>)</li>
+<li><a href="http://blog.papervision3d.org/">Papervision3D</a> engine.</li>
+<li>Original 3D effect from <strong>PaperCloud</strong> demo (included in Papervision3D classes and examples).</li>
+</ul>Get the source <a href="http://thanhtran-sources.googlecode.com/files/FlickrCloud_PV3D.zip">here</a>.<br />
+Try this application yourself: put these codes into your blog html<br />
+<span style="font-family: 'courier new';"><span style="font-family: 'courier new';">&lt;embed src="http://www.fileden.com/files/2009/8/2/2530043/flash/FlickrCloud.swf" bgcolor="#000000" type="application/x-shockwave-flash" flashvars="" flickrid="<span style="color: #cc33cc;">9803330@N04</span>" allowscriptaccess="none" align="middle" height="480" width="640" /&gt;</span></span><br />
+That <em>flashvars</em> thing is used to inform the application the startup user ID. Remember to replace my flickr ID (9803330@N04) with your choice of user. (Don't know your flickr ID? Log into your flickr account and look at the URL on your browser's address bar, you will find the ID that looks like mine.)
