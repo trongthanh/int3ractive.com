@@ -4,10 +4,12 @@ header-img: img/home-bg.jpg
 email: trongthanh@gmail.com
 description: "Write your site description here. It will be used as your sites meta description as well!"
 baseurl: ""
-url: "http://labs.int3ractive.com"
+url: "http://blog.int3ractive.com"
 twitter_username: trongthanh
 github_username:  trongthanh
-facebook_username:  trongthanh
+facebook_username:
+linkedin_username: trongthanh
+googleplus_userid: +TrọngThanhTrần
 
 # Build settings
 markdown: kramdown
