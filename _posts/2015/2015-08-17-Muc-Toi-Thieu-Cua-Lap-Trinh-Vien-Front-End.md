@@ -1,8 +1,9 @@
 ---
 layout: post
 title: 'Mức Tối Thiểu Của Lập Trình Viên Front End'
+subtitle: Có rất nhiều thứ phải học để làm được Front End, bạn có muốn đi đến cùng?
 date: '2015-08-17T14:55:00.000+07:00'
-author: Trọng Thanh Trần
+author: Thanh Tran
 tags:
 - Thoughts
 - Front End
@@ -56,7 +57,7 @@ Tài liệu tham khảo:
 
 - [CSS basic tutorials](https://docs.webplatform.org/wiki/css/tutorials): Hướng dẫn CSS căn bản
 - [OOCSS](https://github.com/stubbornella/oocss/wiki): Các khái niệm về CSS hướng đối tượng
-- [CSS Guidelines: [http://cssguidelin.es/](http://cssguidelin.es/): Những nguyên tắc CSS
+- [CSS Guidelines](http://cssguidelin.es/): Những nguyên tắc CSS
 - [CSS Tricks](http://css-tricks.com/): Các thủ thuật CSS
 
 ## JavaScript
