@@ -15,7 +15,7 @@ googleplus_userid: +TrọngThanhTrần
 markdown: kramdown
 highlighter: pygments
 permalink: :year/:month/:title.html
-paginate: 5
+paginate: 10
 exclude: ["README.md"]
 keep_files: ["flash","javascript"]
 
