@@ -2,7 +2,7 @@
 title: Int3ractive
 header-img: img/home-bg.jpg
 email: trongthanh@gmail.com
-description: "Write your site description here. It will be used as your sites meta description as well!"
+description: "The writing playground and technical journey of Trần Trọng Thanh, front-end architect, js developer, husband and father, from Ho Chi Minh city, Vietnam"
 baseurl: ""
 url: "http://blog.int3ractive.com"
 twitter_username: trongthanh
@@ -10,6 +10,8 @@ github_username:  trongthanh
 facebook_username:
 linkedin_username: trongthanh
 googleplus_userid: +TrọngThanhTrần
+#gaid: UA-4430452-4
+disqus_site_id: conansblog
 
 # Build settings
 markdown: kramdown
