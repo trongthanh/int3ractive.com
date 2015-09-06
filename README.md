@@ -1,3 +1,7 @@
-Source code of my labs experiment, serving at http://labs.int3ractive.com.
+Source code of my blog at int3ractive.com
 
-License: Folder specific. If not, contents are licensed under MIT license.
+All blog posts remain copyright of Tran Trong Thanh
+
+Note: My old labs site is still in here, with licenses as per each folder.
+
+© 2015 Tran Trong Thanh. All rights reserved. 
