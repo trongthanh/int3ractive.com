@@ -1,6 +1,6 @@
 # Site settings
 title: Int3ractive
-header-img: img/home-bg.jpg
+header-img: img/default-bg.jpg
 email: trongthanh@gmail.com
 description: "The writing playground and technical journey of Trần Trọng Thanh, front-end architect, js developer, husband and father, from Ho Chi Minh city, Vietnam"
 baseurl: ""
