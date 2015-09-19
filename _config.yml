@@ -20,6 +20,8 @@ permalink: :year/:month/:title.html
 paginate: 10
 exclude: ["README.md"]
 keep_files: ["flash","javascript"]
+gems:
+  - jekyll-feed
 
 # Markdown Processors
 
