@@ -5,11 +5,8 @@ subtitle: Có rất nhiều thứ phải học để làm được Front End, b�
 meta-description: Hệ thống kỹ năng và kiến thức tối thiểu của một lập trình viên Front End cần có để có làm việc trong nhóm một cách hiệu quả và không cần nhiều sự trợ giúp.
 date: 2015-08-17T14:55:00.000+07:00
 author: Thanh Tran
-tags:
-- Thoughts
-- Front End
-- Process
-modified_time: 2015-09-08T10:08:14+07:00
+tags: [Thoughts, Front End, Process]
+modified: 2015-09-08T10:08:14+07:00
 ---
 ![Tag Cloud](http://2.bp.blogspot.com/-mF8YcFrCO8Q/VXPniJnFrZI/AAAAAAAABDY/T7PQ5bKPoYs/s640/front-end-baseline.png "Tag Cloud được tạo bằng Wordle.net")
 
