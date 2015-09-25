@@ -140,7 +140,7 @@ var WORDLEJS = WORDLEJS || {};
                 });
             }
 
-            s.color = '#' + fillColor;
+            s.color = '#' + fillColor.replace(/^#/, '');
             s.font = 'normal normal ' + this.fontSize + 'px/' + this.fontSize + 'px ' + this.fontFamily;
             
             if (this._rotated) {
