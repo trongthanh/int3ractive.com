@@ -243,8 +243,8 @@ var WORDLEJS = WORDLEJS || {};
                     weight: wordObject.count,
                     url: urlPrefix + wordObject.text,
                     //strokeColor: Random.getRandomColor(), //no use
-                    fillColor: Random.getRandomColor(0x44, 0xff),
-                    fontFamily: wordObject.color ? wordObject.color : Random.getRandomBoolean() ? 'sans-serif' : 'serif',
+                    fillColor: wordObject.color ? wordObject.color : Random.getRandomColor(0x44, 0xff),
+                    fontFamily: Random.getRandomBoolean() ? 'sans-serif' : 'serif',
                     onClick: wordObject.onclick,
                     rotated: this.allowRotate && Random.getRandomBoolean() // half chances of rotation if allowRotate is true
                 };
