@@ -69,6 +69,7 @@ var WORDLEJS = WORDLEJS || {};
         this.fillColor = initObj.fillColor; //Color
         this.strokeColor = initObj.strokeColor; //Color
         this.url = initObj.url;
+        this.onClick = initObj.onClick;
 
         this.sprite = null; //considered later
         this.bounds = null; //bounds of the rendered text
@@ -130,6 +131,15 @@ var WORDLEJS = WORDLEJS || {};
             anchor.target = '_blank';
             anchor.textContent = text;
             anchor.className = 'word';
+
+            var self = this;
+            if (this.onClick) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    return self.onClick.call(self, e);
+                });
+            }
+
             s.color = '#' + fillColor;
             s.font = 'normal normal ' + this.fontSize + 'px/' + this.fontSize + 'px ' + this.fontFamily;
             
@@ -168,12 +178,21 @@ var WORDLEJS = WORDLEJS || {};
     /*
      * Wordle class
      */
-    WORDLEJS.Wordle = function (elContainer) {
+    WORDLEJS.Wordle = function (elContainer, options) {
         var container = document.createElement('div');
         container.className = 'wordle';
         elContainer.appendChild(container);
         
         var canvas = document.createElement('canvas');
+
+        options = options || {};
+        for (var key in this.defaultSettings) {
+            if (options.hasOwnProperty(key)) {
+                this[key] = options[key];
+            } else {
+                this[key] = this.defaultSettings[key];
+            }
+        }
 
         this.ctx = canvas.getContext('2d'); //canvas used to measure text only
         this.parent = elContainer;
@@ -182,24 +201,27 @@ var WORDLEJS = WORDLEJS || {};
 
     WORDLEJS.Wordle.prototype = {
         //member
-        biggestSize: 80,
-        smallestSize: 12,
-        words: null,
-        dRadius: 10.0,
-        dDeg: 10,
-        sortType: '', 
-        allowRotate: true,
-        ctx: null,
-        container: null,
-        center: null,
-        current: null,
-        first: null,
-        wl: 0,
-        startTime: 0,
-        runTime: 0,
-        curIdx: 0,
-        keepCenter: false,
-        urlPrefix: 'http://google.com/search?q=',
+        defaultSettings: {
+            biggestSize: 80,
+            smallestSize: 12,
+            words: null,
+            dRadius: 10.0,
+            dDeg: 10,
+            sortType: '',
+            allowRotate: true,
+            ctx: null,
+            container: null,
+            center: null,
+            current: null,
+            first: null,
+            wl: 0,
+            startTime: 0,
+            runTime: 0,
+            curIdx: 0,
+            keepCenter: false,
+            urlPrefix: 'http://google.com/search?q=',
+            balance: false
+        },
 
         //methods
         constructor: WORDLEJS.Wordle,
@@ -223,8 +245,9 @@ var WORDLEJS = WORDLEJS || {};
                     url: urlPrefix + wordObject.text,
                     //strokeColor: Random.getRandomColor(), //no use
                     fillColor: Random.getRandomColor(0x44, 0xff),
-                    fontFamily: Random.getRandomBoolean() ? 'sans-serif' : 'serif',
-                    rotated: Random.getRandomBoolean() // half chances of rotation
+                    fontFamily: wordObject.color ? wordObject.color : Random.getRandomBoolean() ? 'sans-serif' : 'serif',
+                    onClick: wordObject.onclick,
+                    rotated: this.allowRotate && Random.getRandomBoolean() // half chances of rotation if allowRotate is true
                 };
 
                 this.words.push(new WORDLEJS.Word(w));
