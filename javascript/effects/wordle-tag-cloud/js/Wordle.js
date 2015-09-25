@@ -220,7 +220,6 @@ var WORDLEJS = WORDLEJS || {};
             curIdx: 0,
             keepCenter: false,
             urlPrefix: 'http://google.com/search?q=',
-            balance: false
         },
 
         //methods
