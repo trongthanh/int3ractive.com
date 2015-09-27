@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Moving My Blog to GitHub Pages
+title: Goodbye Blogger, hello GitHub Pages.
 subtitle: Time for a new refresh
 author: Thanh Tran
 meta-description: I just migrate this blog to GitHub Pages. Here's why...
@@ -41,10 +41,23 @@ Lastly, Jekyll does have a Blogger migration tool [link?] and it has well docume
 
 ### Nothing is perfect!
 
-GitHub Pages has the shortcomings of any static website. But in this era of SaaS, many of them can be addressed easily, at no cost:
+GitHub Pages has the shortcomings of any static websites. But in this era of SaaS, many of them can be addressed easily, even at no cost:
 
-- Comments
-- Site search
-- RSS
-- No tags & categories 
-- 
+#### Comments
+
+By using a commenting / discussion service like [Disqus](http://), [Facebook Comments](http://), [G+ Comments](http://), etc... my static blog pages can accept readers' comments and feedbacks in no time. In fact, I have swapped Blogger's comment dialogs with Disqus for a long time since the latter accepts users with accounts from multiple social networks.
+
+#### Site search
+
+For this, we can use Google's [Custome Search Engine](https://cse.google.com) which can be easily installed on any static HTML pages. The service provides full text search with Google-grade algorithm. Worry about indexing latency and late result arrival of new posts? You can force CSE to update your page index in its management page.
+
+Besides my preference to navigate a new blog site is through a big list of previously posted titles so that I can grasp a quick glance at the topics and contents a blogger frequently writes about. So I did an archive page for my own blog.
+
+#### RSS
+
+This can be solved by an RSS/Atom template which outputs an updated feed XML every time I push new blog post. However, the trouble has been recently taken away when GitHub Pages start rolling out [built-in support](http://) for feed XML.
+
+#### Tags & categories 
+
+Currently, Jekyll in GitHub Pages does not support auto tag or category pages generation. You can implement a [custom template](http://) for tags and categories, however, but it involves some manual preparation.
+
