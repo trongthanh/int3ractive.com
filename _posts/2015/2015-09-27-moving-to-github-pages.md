@@ -1,27 +1,27 @@
 ---
 layout: post
 title: Goodbye Blogger, hello GitHub Pages.
-subtitle: Time for a new refresh
+subtitle: Time for a new refresh.
 author: Thanh Tran
 meta-description: I just migrate this blog to GitHub Pages. Here's why...
-date: 2015-09-11T22:33:44+07:00
+date: 2015-09-27T13:56:17+07:00
 tags: [Thoughts]
 modified: 
 
 ---
 [Hero banner use an empty sublime text window]
 
-I have just migrated my blog from Blogger to GitHub Pages and adopted a minimalist theme which was created by [Clean Blog author]. I am so far happy with it.
+I have migrated my blog from Blogger to GitHub Pages and adopted a minimalist theme called Clean Blog created by [Start Bootstrap](http://startbootstrap.com/). I am so far happy with it.
 
 ## Why The Change?
 
 My ultimate motivation of this move is the frustration of maintaining a long post's format and hierarchy across multiple platforms and editors. The blog post needed reviewing and editing from different people, so I used Google Doc as the collaborating platform. But its rich format didn't play nice with Blogger's WYSWYG editor, so I had to paste the content as plain text and did the formating and URL linking all over again. 
 
-It was when I realized that, rich text editors are great nuisances to long and serious writing, and why some new blog platforms adopting plain text editor (read: Markdown) exclusively. Editing in plain text actually encourages me to focus on the ideas and contents. Besides, by using [Markdown](https://help.github.com/articles/github-flavored-markdown/) syntax, I can maintain the intended hierarchy, web links and images, etc. without compromising the convenience of version tracking (read Git) or any means of editing collaboration (Google Docs, emails, GitHub itself).
+It was when I realized that, rich text editors are great nuisances to long and serious writing, and why some new blog platforms adopting plain text editor (read: Markdown) exclusively. Editing in plain text, in fact, encourages me to focus on the ideas and contents. Besides, by using [Markdown](https://help.github.com/articles/github-flavored-markdown/) syntax, I can maintain the intended hierarchy, web links and images, etc. without compromising the convenience of version tracking or any means of writing collaboration.
 
 Besides, here are other reasons of the move: 
 
-- Blogger's WYSWYG editor is way out-dated and lousy. It handles new lines poorly and makes my posts, underneath, like a single paragraph with just line breaks. You can say that I should write in HTML since I'm a Front End developer, but authoring HTML will be a distraction to my focus on writing the content. Not to mention that editing a draft in Blogger's HTML editor is somewhere near a torture. [Blogger's editor screenshot?]
+- Blogger's WYSWYG editor is way out-dated and lousy. It handles new lines poorly and makes my posts, underneath, like a single paragraph with just line breaks. You can say that I could write in HTML since I'm a Front End developer, but authoring HTML is a distraction to my focus on writing.
 - Blogger XML-based template format is difficult to use and customize. Besides it doesn't provide a separate CSS storage but inlining to the output HTML. This has kept me from rewriting my blog's theme for a long time.
 - There is no static file storage for the blog post's extras. Although it come with handy photo uploading service, for other stuff like downloadable assets and code demos, I had to reside on other services like Github or FileDen which often have cross domain issues or risk of service termination.
 
