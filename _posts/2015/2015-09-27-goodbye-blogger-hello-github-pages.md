@@ -6,7 +6,7 @@ author: Thanh Tran
 meta-description: I just migrate my blog from Blogger to GitHub Pages. Here's why...
 date: 2015-09-27T13:56:17+07:00
 tags: [Thoughts]
-modified: 
+modified: 2015-09-29T21:13:04+07:00
 header-img: img/2015/markdown-editing.jpg
 
 ---
@@ -22,7 +22,7 @@ It was when I realized that, rich text editors are a nuisance to long and seriou
 Besides, here are other reasons of the move: 
 
 - Blogger's WYSWYG editor is way out-dated and lousy. It handles new lines poorly and makes my posts, underneath the markups, like a single paragraph with just line breaks. You can suggest that I could write in HTML since I'm a Front End developer, but authoring HTML is a distraction to my focus on writing.
-- Blogger's XML-based template format is difficult to use and customize. Besides it doesn't provide a separate CSS files but inlining to the output HTML. This has kept me from rewriting my blog's theme for a long time.
+- Blogger's XML-based template format is difficult to use and customize. Besides it doesn't provide a separate CSS file but inlining to the output HTML. This has kept me from rewriting my blog's theme for a long time.
 - There is no static file storage for the blog post's extras. Although it come with handy photo uploading service, for other stuff like downloadable assets and code demos, I had to reside on other services like Github or FileDen which often have cross domain issues or risk of service termination.
 
 ## Moving to GitHub Pages
@@ -63,5 +63,5 @@ Currently, Jekyll in GitHub Pages does not support auto tag or category pages ge
 
 I have found a nice minimalist blog theme called [Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/) created by [Start Bootstrap](http://startbootstrap.com/) and [modified](https://github.com/trongthanh/startbootstrap-clean-blog-jekyll) it to fit with GitHub Pages and my preferences. You can find the source code and my comments on the changes of this blog theme [here](https://github.com/trongthanh/startbootstrap-clean-blog-jekyll).
 
-At the end of the day, moving my blog from Blogger to GitHub Pages is a smooth transition and returning visitors may only notice the change in theme and a much faster loading time.
+At the end of the day, moving my blog from Blogger ([archive site](http://int3ractive.blogspot.com)) to GitHub Pages ([source code](https://github.com/trongthanh/trongthanh.github.com)) is a smooth transition and returning visitors may only notice the change in theme and a much faster loading time.
 
