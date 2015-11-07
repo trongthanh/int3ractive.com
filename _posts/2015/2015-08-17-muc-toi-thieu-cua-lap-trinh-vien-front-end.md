@@ -6,7 +6,7 @@ meta-description: Hệ thống kỹ năng và kiến thức tối thiểu của 
 date: 2015-08-17T14:55:00.000+07:00
 author: Thanh Tran
 tags: [Thoughts, Front End, Process]
-modified: 2015-09-08T10:08:14+07:00
+modified: 2015-11-07T12:42:30+07:00
 ---
 ![Tag Cloud](http://2.bp.blogspot.com/-mF8YcFrCO8Q/VXPniJnFrZI/AAAAAAAABDY/T7PQ5bKPoYs/s640/front-end-baseline.png "Tag Cloud được tạo bằng Wordle.net")
 
@@ -122,9 +122,15 @@ Bước vào năm 2015, một kỹ năng nữa mà bạn cũng cần biết, đ�
 
 ## Kỹ Năng về Tiếng Anh
 
-Mức tiếng Anh tối thiểu, theo tôi, không cần phải là trình độ A, B, C hay bao nhiêu điểm TOEIC, mà  là thái độ tích cực và quyết tâm cải thiện kỹ năng giao tiếp bằng tiếng Anh của bạn.
+Mức tiếng Anh tối thiểu, theo tôi, không cần phải là trình độ A, B, C hay bao nhiêu điểm TOEIC, mà là thái độ tích cực và quyết tâm cải thiện kỹ năng giao tiếp bằng tiếng Anh của bạn.
 
 Không sớm thì muộn, bạn sẽ nhận ra rằng tiếng Anh là yếu tố tối cần thiết đối với môi trường làm việc hiện đại và chuyên sâu về kỹ thuật. Công nghệ phần mềm nói chung và Web Front End nói riêng đang phát triển với tốc độ vũ bão mà nếu không có ngoại ngữ, bạn sẽ không thể nào bắt kịp. Bạn phải đọc tài liệu về các xu hướng mới, nghe các bài thuyết trình về kỹ thuật và nói chuyện với khách hàng trực tiếp hoặc qua chat/email rất thường xuyên để làm việc… Cũng có nhiều lập trình viên cho rằng chỉ cần đọc và viết tốt tiếng Anh là đủ. Tuy nhiên, bạn sẽ bỏ lỡ rất nhiều cơ hội tốt khi khả năng nghe hiểu và giao tiếp bằng tiếng Anh còn hạn chế. Vì vậy nếu tiếng Anh của bạn chưa đủ để giao tiếp, thì ngay từ bây giờ hãy không ngừng trau dồi và cải thiện.
+
+Lý Quang Diệu khi đến thăm Việt Nam đã chia sẻ về [tầm quan trọng của tiếng Anh](http://vietnamnet.vn/vn/giao-duc/227059/ly-quang-dieu-noi-ve-giao-duc-viet-nam.html):
+    
+> Trả lời cho câu hỏi "Làm thế nào để không tụt hậu?" __chỉ có một cách là phải giỏi tiếng Anh__. Đây là điều ông Lý Quang Diệu nhấn mạnh. [...] 
+> 
+> Ông Lý Quang Diệu gợi ý: "Đại học Việt Nam nên có sách giáo khoa tiếng Anh ở các ngành quan trọng như kỹ thuật, công nghệ... bởi nếu chỉ dùng sách Việt Nam thì chắc chắn sẽ tụt hậu". [...] Ông cảnh báo, nếu tất cả sinh viên Việt Nam sau này "không thể nghe và nói tiếng Anh trôi chảy, chỉ có thể đọc thôi cũng đã là tụt hậu".
 
 ## Kết Luận
 

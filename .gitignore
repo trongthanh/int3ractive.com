@@ -5,3 +5,5 @@ node_modules
 ~*
 .idea
 *.geany
+*.sublime-project
+*.sublime-workspace
