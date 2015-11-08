@@ -25,5 +25,5 @@ gems:
 
 # Markdown Processors
 
-framdown:
+kramdown:
   input: GFM
