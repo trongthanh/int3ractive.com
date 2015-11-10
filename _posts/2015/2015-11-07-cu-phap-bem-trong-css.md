@@ -135,9 +135,9 @@ Ngoài ra, khi bạn đọc trong ngữ cảnh HTML, bạn sẽ khó thấy đư
 
 ### "Tôi đơn giản là không thích ký pháp này"
 
-Nhiều người khi nhìn thấy cách đặt tên BEM đã ngay lập tức bác bỏ nó. Họ không thích BEM, đó là quyền của họ, tuy nhiên sẽ không ai phản bác việc cần có một số quy tắc đặt tên để dễ dàng hiểu và quản lý CSS khi nó trở nên phức tạp hơn.
+Nhiều người khi nhìn thấy cách đặt tên BEM đã ngay lập tức bác bỏ nó. Họ không thích BEM, đó là quyền của họ, tuy nhiên sẽ là vô lý nếu phản bác việc cần có một số quy tắc đặt tên để dễ dàng nắm bắt và quản lý CSS trong dự án trung và lớn.
 
-Hơn nữa, bạn hoàn toàn có thể nghĩ ra cho mình một cách đặt tên khác cho hợp "khẩu vị", nhưng vẫn dựa trên nguyên tắc của BEM đã đề ra. Thực tế là các đề xuất của BEM không phải vô tình lại có một số mẫu số chung với các phương pháp quản lý CSS khác như SMACSS hay OOCSS. Lấy ví dụ khái niệm module của SMACSS:
+Hơn nữa, bạn hoàn toàn có thể nghĩ ra cho mình một cách đặt tên khác cho hợp "khẩu vị", nhưng vẫn dựa trên nguyên tắc của BEM đã đề ra. Là kết quả đúc kết từ những kiến trúc CSS lớn và phức tạp trước đây, đề xuất của BEM không phải vô tình lại có một số điểm chung với các phương pháp quản lý CSS khác như SMACSS hay OOCSS. Lấy ví dụ khái niệm module của SMACSS:
 
 ```css
 /* Ví dụ một module */
@@ -154,21 +154,47 @@ Trong cách phương pháp quản lý CSS vừa kể trên thì chỉ có BEM l�
  
 ## Câu hỏi thường gặp:
 
-1. Element có modifier hay không?
-2. Có cần phải đặt tên class cho tất cả element (thẻ HTML) trong block hay không?
-3. Một thẻ HTML có thể là element của 2 block khác nhau không?
-Được. 
++ __Hỏi:__ Element có modifier hay không?
+    __Đáp:__ Có. Element có thể có modifier riêng của nó. Ví dụ:
 
-VD: Trong button có biểu tượng $
-
-```html
-<a class="btn btn--big btn--orange" href="http://int3ractive.com">
-    <span class="btn__price"><i class="icon icon--dollar-sign btn__icon"></i>9.99</span>
-    <span class="btn__text">Subscribe</span>
-</a>
+```css    
+    .accordion__copy--open {
+        display: block;
+    }
 ```
 
-4.
++ __Hỏi:__ Có cần phải đặt tên class cho tất cả element (thẻ HTML) trong block hay không?
+    __Đáp:__ Không cần thiết, chỉ những element cần có style riêng được viết trong CSS. Tuy nhiên cũng không nên lạm dụng những thẻ wrapper (phổ biến nhất là DIV) một cách vô tội vạ và không có chức năng vai trò cụ thể nào. Như vậy việc đặt tên element con cũng khiến bạn phải suy nghĩ một tag nào đó có thật sự cần thiết thêm vào trong block hay không.
+
++ __Hỏi:__ Bên trong element con `foo` có một tag đóng vai trò một element con `bar` khác của block, vậy việc đặt tên class cho element `bar` này như thế nào? Có nên đặt là `.block__foo__bar`?
+    __Đáp:__ Vẫn đặt bằng tên block và hai gạch dưới rồi đến tên element `.block__bar`, không chen giữa bằng `foo__`. Nói tóm lại, tên của element chỉ cần thể hiện quan hệ phụ thuộc với block, không cần phải chỉ rõ sự lồng bên trong nhau của các element con. (Xem thêm ví dụ trong câu hỏi tiếp theo)
+
++ __Hỏi:__ Một thẻ HTML có thể là element của 2 block khác nhau không?
+    __Đáp:__ Hoàn toàn có thể. Trong ví dụ bên dưới, button có biểu tượng dollar-sign là một block `.icon`. Có thể trong block `.btn`, biểu tượng dollar-sign cần được style riêng, nên cần có một cái tên xác định rõ vai trò và style cho element này là `.btn__icon`. Nếu block `.icon.icon--dollar-sign` được dùng ở một ngữ cảnh khác, thì rõ ràng nó không cần class `.btn__icon` nữa vì tên class đã chỉ rõ sự ràng buộc với block `.btn` và chỉ được thêm vào khi ở bên trong nó.
+
+```html
+    <a class="btn btn--big btn--orange" href="http://int3ractive.com">
+        <span class="btn__price"><i class="icon icon--dollar-sign btn__icon"></i>9.99</span>
+        <span class="btn__text">Subscribe</span>
+    </a>
+```
+
++ __Hỏi:__ Một element con có thể đóng vai trò là block của riêng nó không? Có thể xây dựng chuỗi component phụ thuộc nhau như `.a__b__c` không?
+    __Đáp:__ Câu hỏi này thật sự ngoài tầm hiểu biết và kinh nghiệm của tôi. Theo tôi là có thể có những hoàn cảnh đặt biệt như vậy. Tuy nhiên, theo tôi, nếu có cũng không nên quá 2 cấp, tức là element con chỉ đặt đến `.a__b__c` là tối đa. Điều này là để sự phụ thuộc không quá sâu, làm giảm khả năng dùng lại của block (portability) và sự linh hoạt của các đối tượng CSS theo tinh thần OOCSS. Xem ví dụ bên dưới.
+
+```css
+    /* block list */
+    .list { }
+    /* item là con của list */
+    .list__item { }
+    /* link là con của block list__item, để phân biệt với list__link hoặc chỉ rõ mối quan hệ phụ thuộc giữa item và link*/
+    .list__item__link { }
+```
+
+
+
+
+
 
 
 
