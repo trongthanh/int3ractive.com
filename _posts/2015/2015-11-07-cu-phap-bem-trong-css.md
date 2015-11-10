@@ -70,9 +70,9 @@ Tổng hợp lại, ký pháp BEM, nếu áp dụng triệt để, sẽ giúp c�
 
 ## Sử dụng BEM với SASS
 
-Với phiên bản Ruby SASS mới nhất hiện nay cũng như kể từ bản LibSass 3.3 (tương đương Node-sass 3.4) trở đi, việc viết theo ký pháp BEM trong SCSS dễ dàng và thuận tiện hơn bao giờ hết.
+Với phiên bản SASS mới nhất hiện nay, việc viết theo ký pháp BEM trong SCSS dễ dàng và thuận tiện hơn bao giờ hết.
 
-Bạn vẫn sẽ sử dụng cách viết lồng để cô lập khối component và kết hợp với biểu tượng _parent_ `&` của SASS để đặt tên cho Element và Modifier một cách ngắn gọn. VD:
+Bạn vẫn sẽ sử dụng cách viết lồng để cô lập khối component và kết hợp với biểu tượng _parent_ `&` của SASS để đặt tên cho Element và Modifier mà không phải đánh lại tên của Block. VD:
 
 ```scss
 .block {
@@ -122,7 +122,7 @@ Họ đặt vấn đề rằng tại sao không viết như thế này:
 ```css
 .site-search        {}
 .site-search input  {}
-.site-search.full   {} /*Tôi có viết lại cho đúng mục đích modifier*/
+.site-search.full   {}
 ```
 
 Rõ ràng cả hai cách viết đều có thể giúp hiện thực được component cụ thể này và cách thứ hai có vẻ "gọn gàng" hơn. Tuy nhiên khi CSS của toàn bộ dự án trở nên lớn và phức tạp hơn, thì rất khó tránh khỏi các kiểu được định nghĩa chồng chéo lên nhau ngoài tầm kiểm soát. 
@@ -131,11 +131,29 @@ Thử tưởng tượng `.site-search` cũng nằm trong một container tên `.
 
 Tương tự, nếu như `.full` trong ví dụ trên hoặc một tên phổ biến như `.label` được dùng để , thì sẽ có rủi ro (rất cao) là một ngày nào đó một lập trình viên khác định nghĩa một class global trùng tên và sẽ làm hỏng style của element kia.
 
-Ngoài ra, khi bạn đọc trong ngữ cảnh HTML, bạn sẽ khó thấy được quan hệ ràng buộc giữa `input` và `.full` với block `.site-search` 
+Ngoài ra, khi bạn đọc trong ngữ cảnh HTML, bạn sẽ khó thấy được quan hệ ràng buộc giữa `input` và `.full` với block `.site-search`.
+
+### "Tôi đơn giản là không thích ký pháp này"
+
+Nhiều người khi nhìn thấy cách đặt tên BEM đã ngay lập tức bác bỏ nó. Họ không thích BEM, đó là quyền của họ, tuy nhiên sẽ không ai phản bác việc cần có một số quy tắc đặt tên để dễ dàng hiểu và quản lý CSS khi nó trở nên phức tạp hơn.
+
+Hơn nữa, bạn hoàn toàn có thể nghĩ ra cho mình một cách đặt tên khác cho hợp "khẩu vị", nhưng vẫn dựa trên nguyên tắc của BEM đã đề ra. Thực tế là các đề xuất của BEM không phải vô tình lại có một số mẫu số chung với các phương pháp quản lý CSS khác như SMACSS hay OOCSS. Lấy ví dụ khái niệm module của SMACSS:
+
+```css
+/* Ví dụ một module */
+.btn { }
+
+/* Modifier của một module */
+.btn-primary { }
+
+/* Btn Module với State */
+.btn.is-collapsed { }
+```
+
+Trong cách phương pháp quản lý CSS vừa kể trên thì chỉ có BEM là làm rõ được mối quan hệ với các thành phần con bên trong. Tóm lại, mỗi phương pháp đều có ưu nhược điểm. Quan trọng là cả team phải có phương pháp tiếp cận khoa học và áp dụng triệt để thì kiến trúc CSS của cả dự án mới vững và dễ bảo trì.
  
 ## Câu hỏi thường gặp:
 
-1. 
 1. Element có modifier hay không?
 2. Có cần phải đặt tên class cho tất cả element (thẻ HTML) trong block hay không?
 3. Một thẻ HTML có thể là element của 2 block khác nhau không?
