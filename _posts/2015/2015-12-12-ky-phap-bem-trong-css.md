@@ -6,7 +6,7 @@ author: Thanh Tran
 meta-description: 
 created: 2015-11-08T14:39:06+07:00
 date: 2015-12-12T11:41:33+07:00
-tags: [HTML, CSS, Front End, Process]
+tags: [CSS, Front End, ]
 header-img: img/2015/bem-intro-cover.jpg
 modified: 
 ---
