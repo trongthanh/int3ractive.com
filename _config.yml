@@ -22,6 +22,9 @@ exclude: ["README.md"]
 keep_files: ["flash","javascript"]
 gems:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
 
 # Markdown Processors
 
