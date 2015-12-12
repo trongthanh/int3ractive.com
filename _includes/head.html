@@ -5,6 +5,7 @@
 
 	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<meta name="description" content="{% if page.meta-description %}{{ page.meta-description }}{% else %}{{ site.description }}{% endif %}">
+	<meta property="fb:app_id" content="114538691920839" />
 
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="icon" type="image/png" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
