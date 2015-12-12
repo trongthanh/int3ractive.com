@@ -9,6 +9,7 @@ date: 2015-12-12T11:41:33+07:00
 tags: [CSS, Front End, ]
 header-img: img/2015/bem-intro-cover.jpg
 modified: 
+redirect_from: "/2015/12/cu-phap-bem-trong-css.html"
 ---
 
 > Bài viết này được dịch một phần từ bài viết [BEM 101](https://css-tricks.com/bem-101/) của CSS Tricks cùng với một số ý kiến và giải thích của cá nhân.
