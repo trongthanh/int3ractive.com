@@ -3,7 +3,7 @@ layout: post
 title: Sử dụng ký pháp BEM cho CSS
 subtitle: Một phương pháp đặt tên class mới cho Front End
 author: Thanh Tran
-meta-description: 
+meta-description: BEM viết tắt của Blocks, Elements, Modifiers, là một phương pháp đặt tên class cho HTML và CSS. Được phát triển tại Yandex giúp lập trình viên hiểu rõ hơn mối quan hệ giữa HTML và CSS trong dự án front end.
 created: 2015-11-08T14:39:06+07:00
 date: 2015-12-12T11:41:33+07:00
 tags: [CSS, Front End, ]
