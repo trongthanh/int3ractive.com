@@ -8,7 +8,7 @@ created: 2015-11-08T14:39:06+07:00
 date: 2015-12-12T11:41:33+07:00
 tags: [CSS, HTML, Process, Vietnamese, Front End]
 header-img: img/2015/bem-intro-cover.jpg
-modified: 2015-12-12T13:56:24+07:00
+modified: 2015-12-16T22:06:16+07:00
 redirect_from: "/2015/12/cu-phap-bem-trong-css.html"
 ---
 
@@ -195,3 +195,4 @@ Xem thêm:
 - Bài viết [giới thiệu BEM của CSSWizadry](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 - Bài viết [giới thiệu BEM của Smashing Magazine](http://www.smashingmagazine.com/2012/04/a-new-front-end-methodology-bem/)
 - [Sử dụng BEM và @extend của SASS](http://webuniverse.io/css-organization-naming-conventions-and-safe-extend-without-preprocessors/)
+- Bài viết [5 sai lầm phổ biến với BEM](https://medium.com/fed-or-dead/battling-bem-5-common-problems-and-how-to-avoid-them-5bbd23dee319)

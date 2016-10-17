@@ -24,6 +24,8 @@ gems:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-seo-tag
   - jemoji
 
 # Markdown Processors
