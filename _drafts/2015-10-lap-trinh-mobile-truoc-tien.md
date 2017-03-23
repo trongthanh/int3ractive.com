@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Lập trình CSS theo hướng mobile first
-subtitle: 
+subtitle:
 author: Thanh Tran
-meta-description: 
+description:
 date: 2015-11-04T09:55:22+07:00
 tags: [CSS]
-modified: 
+modified:
 ---
 
 Lập trình CSS theo hướng mobile first là gì?

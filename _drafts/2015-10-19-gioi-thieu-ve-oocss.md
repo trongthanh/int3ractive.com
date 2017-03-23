@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Giới Thiệu về OOCSS
-subtitle: 
+subtitle:
 author: Thanh Tran
-meta-description: 
+description:
 date: 2015-10-19T23:02:17+07:00
 tags: []
 modified: 2015-10-19T23:02:23+07:00
@@ -23,7 +23,7 @@ modified: 2015-10-19T23:02:23+07:00
 
 OOCSS vừa là một [framework CSS](link?) (đã không còn được phát triển), vừa là phương pháp tiếp cận CSS theo hướng đối đượng.
 
-Đối tượng CSS 
+Đối tượng CSS
 
 
 
@@ -77,7 +77,7 @@ OOCSS vừa là một [framework CSS](link?) (đã không còn được phát tr
 
 ```css
     .header {
- 
+
 
         .logo {
 
@@ -101,7 +101,7 @@ OOCSS vừa là một [framework CSS](link?) (đã không còn được phát tr
 
 
 
-- Hạn chế sử dụng element selector. VD: 
+- Hạn chế sử dụng element selector. VD:
     ```css
         ul {
             list-style: none;

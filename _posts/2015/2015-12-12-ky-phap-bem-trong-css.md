@@ -3,11 +3,11 @@ layout: post
 title: Sử dụng ký pháp BEM cho CSS
 subtitle: Một phương pháp đặt tên class mới cho Front End
 author: Thanh Tran
-meta-description: BEM viết tắt của Blocks, Elements, Modifiers, là một phương pháp đặt tên class cho HTML và CSS. Được phát triển tại Yandex giúp lập trình viên hiểu rõ hơn mối quan hệ giữa HTML và CSS trong dự án front end.
+description: BEM viết tắt của Blocks, Elements, Modifiers, là một phương pháp đặt tên class cho HTML và CSS. Được phát triển tại Yandex giúp lập trình viên hiểu rõ hơn mối quan hệ giữa HTML và CSS trong dự án front end.
 created: 2015-11-08T14:39:06+07:00
 date: 2015-12-12T11:41:33+07:00
 tags: [CSS, HTML, Process, Vietnamese, Front End]
-header-img: img/2015/bem-intro-cover.jpg
+image: img/2015/bem-intro-cover.jpg
 modified: 2015-12-16T22:06:16+07:00
 redirect_from: "/2015/12/cu-phap-bem-trong-css.html"
 ---
@@ -24,11 +24,11 @@ Ví dụ sau đây sẽ minh hoạ cách sử dụng ký pháp BEM:
 /* Một Block (khối) độc lập */
 .btn {}
 
-/* Element (phần tử) con, phụ thuộc vào Block ở trên */ 
+/* Element (phần tử) con, phụ thuộc vào Block ở trên */
 .btn__price {}
 
 /* Modifier (bộ điều chỉnh) thay đổi trạng thái của Block */
-.btn--orange {} 
+.btn--orange {}
 .btn--big {}
 
 ```
@@ -68,10 +68,10 @@ Bạn vẫn sẽ sử dụng cách viết lồng để cô lập khối componen
 
 ```scss
 .block {
-    
+
     &__element {}
 
-    &--mod {} 
+    &--mod {}
 }
 ```
 
@@ -79,10 +79,10 @@ Mặc dù viết lồng cấp, khi được biên dịch thành CSS, chúng vẫ
 
 ```css
 .block {}
-    
+
 .block__element {}
- 
-.block--mod {} 
+
+.block--mod {}
 ```
 
 Nếu bạn sử dụng LibSass (nhanh hơn rất nhiều lần bản gốc Ruby) để biên dịch SASS, thì hãy đảm bảo các công cụ wrapper được cập nhật các phiên bản tương đương hoặc mới hơn như sau: node-sass [3.4.0](https://github.com/sass/node-sass/releases/tag/v3.4.0), gulp-sass [2.1.0](https://github.com/dlmanning/gulp-sass/releases/tag/v2.1.0) (nếu sử dụng [GulpJS](https://github.com/gulpjs/gulp)) và grunt-sass [1.1.0](https://github.com/sindresorhus/grunt-sass/releases/tag/v1.1.0) (nếu sử dụng [GruntJS](https://github.com/gruntjs/grunt))
@@ -91,7 +91,7 @@ Thế còn LESS? Vì tôi không sử dụng LESS nên sẽ không đề cập �
 
 ## Các ý kiến không đồng tình
 
-Vẫn có một số ý kiến hoài nghi và không đồng tình với phương pháp đặt tên này. 
+Vẫn có một số ý kiến hoài nghi và không đồng tình với phương pháp đặt tên này.
 
 ### Tên class quá xấu
 
@@ -117,7 +117,7 @@ Họ đặt vấn đề rằng tại sao không viết như thế này:
 .site-search.full   {}
 ```
 
-Rõ ràng cả hai cách viết đều có thể giúp hiện thực được component cụ thể này và cách thứ hai có vẻ "gọn gàng" hơn. Tuy nhiên khi CSS của toàn bộ dự án trở nên lớn và phức tạp hơn, thì rất khó tránh khỏi các kiểu được định nghĩa chồng chéo lên nhau ngoài tầm kiểm soát. 
+Rõ ràng cả hai cách viết đều có thể giúp hiện thực được component cụ thể này và cách thứ hai có vẻ "gọn gàng" hơn. Tuy nhiên khi CSS của toàn bộ dự án trở nên lớn và phức tạp hơn, thì rất khó tránh khỏi các kiểu được định nghĩa chồng chéo lên nhau ngoài tầm kiểm soát.
 
 Thử tưởng tượng `.site-search` cũng nằm trong một container tên `.main` và những `input` bên trong `.main` cần được style với `.main input`. Như vậy, `input` bên trong `.site-search` sẽ bị điều chỉnh một cách không mong muốn.
 
@@ -142,10 +142,10 @@ Hơn nữa, bạn hoàn toàn có thể nghĩ ra cho mình một cách đặt t�
 .btn.is-collapsed { }
 ```
 
-Trong các phương pháp quản lý CSS vừa kể trên thì chỉ có BEM là làm rõ được mối quan hệ với các thành phần con bên trong. 
+Trong các phương pháp quản lý CSS vừa kể trên thì chỉ có BEM là làm rõ được mối quan hệ với các thành phần con bên trong.
 
 Tóm lại, mỗi phương pháp đều có ưu nhược điểm. Quan trọng là cả team phải có phương pháp tiếp cận khoa học và áp dụng triệt để thì kiến trúc CSS của cả dự án mới vững và dễ bảo trì.
- 
+
 ## Câu hỏi thường gặp:
 
 ❓__Hỏi:__ Element có modifier hay không?<br>💬️ __Đáp:__ Có. Element có thể có modifier riêng của nó. Ví dụ:
@@ -179,7 +179,7 @@ Button có biểu tượng dollar-sign là một block `.icon`. Có thể trong 
 .list { }
 /* item là con của list */
 .list__item { }
-/* link là con của block list__item, để phân biệt với list__link 
+/* link là con của block list__item, để phân biệt với list__link
 hoặc chỉ rõ mối quan hệ phụ thuộc giữa item và link*/
 .list__item__link { }
 ```

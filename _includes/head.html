@@ -1,14 +1,11 @@
 <head>
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-	<meta name="description" content="{% if page.meta-description %}{{ page.meta-description }}{% else %}{{ site.description }}{% endif %}">
-	<meta property="fb:app_id" content="114538691920839" />
+	{% seo %}
 
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-	<link rel="icon" type="image/png" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
 
 	<!-- Main CSS with custom Bootstrap-->
 	<link rel="stylesheet" href="{{ "/css/clean-blog.min.css" | prepend: site.baseurl }}">
@@ -19,8 +16,6 @@
 	<!-- Web Fonts -->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700|Source+Sans+Pro:300,600&amp;subset=latin-ext,vietnamese" rel="stylesheet">
-
-	{% seo %}
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

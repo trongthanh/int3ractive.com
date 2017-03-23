@@ -1,10 +1,10 @@
 # Site settings
 title: Int3ractive
-header-img: img/default-bg.jpg
+image: img/default-bg.jpg
 email: trongthanh@gmail.com
 description: "The writing playground and technical journey of Trần Trọng Thanh, front-end architect, js developer, husband and father, from Ho Chi Minh city, Vietnam"
 baseurl: ""
-url: "http://blog.int3ractive.com"
+url: "https://blog.int3ractive.com"
 twitter_username: trongthanh
 github_username:  trongthanh
 facebook_username:
@@ -13,9 +13,17 @@ googleplus_userid: +TrọngThanhTrần
 gaid: UA-4430452-4
 disqus_site_id: conansblog
 
+# SEO & Social networks
+author: Thanh Tran (int3ractive.com)
+logo: img/favicon.png
+twitter:
+  username: trongthanh
+
 # Build settings
 markdown: kramdown
-highlighter: pygments
+kramdown:
+  input: GFM
+highlighter: rouge
 permalink: :year/:month/:title.html
 paginate: 10
 exclude: ["README.md"]
@@ -28,7 +36,3 @@ gems:
   - jekyll-seo-tag
   - jemoji
 
-# Markdown Processors
-
-kramdown:
-  input: GFM
