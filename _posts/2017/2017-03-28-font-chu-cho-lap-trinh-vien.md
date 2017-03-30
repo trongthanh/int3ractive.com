@@ -7,7 +7,7 @@ description:
 date: 2017-03-28T06:37:03+07:00
 tags: [Tools, Vietnamese, Front End]
 image: img/2017/ligature-vscode.png
-modified: 2017-03-28T06:37:03+07:00
+modified: 2017-03-31T00:09:38+07:00
 ---
 
 Bạn có biết trình soạn code của mình đang dùng font chữ gì không? Ít người quan tâm đến điều này nhưng việc lựa chọn font chữ cho [code editor](https://en.wikipedia.org/wiki/Source_code_editor) cũng ảnh hưởng ít nhiều đến hiệu suất công việc của lập trình viên vì bạn phải nhìn những dòng code nhiều giờ trong một ngày làm việc.
@@ -15,11 +15,11 @@ Bạn có biết trình soạn code của mình đang dùng font chữ gì khôn
 Sau nhiều năm làm việc với nhiều code editor và font khác nhau, tôi rút ra được một số đặc điểm của một **font chữ tốt** dành cho trình soạn code như sau:
 
 - **Monospace**: tất cả các ký tự và khoảng trắng đều cùng một cỡ, điều này cho phép canh cột và lề dễ dàng và code dễ đọc hơn với những đoạn logic lặp lại. Các font mặc định cho code editor và terminal đều là monospace.
-- **Dễ dàng phân biệt các ký tự** `Il1iL, 0Oo, CQG`: có nhiều font monospace hiển thị các ký tự kể trên rất giống nhau, khiến cho việc đọc code khó khăn hơn. Với tiêu chí này, tôi đã loại một số font monospace khá phổ biến như _Courier New, Noto Mono, Droid Sans Mono..._
+- **Dễ dàng phân biệt các ký tự** `Il1i, 0Oo, CG`: có nhiều font monospace hiển thị các ký tự kể trên rất giống nhau, khiến cho việc đọc code khó khăn hơn. Với tiêu chí này, tôi đã loại một số font monospace khá phổ biến như _Courier New, Noto Mono, Droid Sans Mono..._
 - Các ký tự đặc biệt cho cú pháp phải **rõ, dễ đọc**: `() [] {} =+-<>:;,."'`
 - Và riêng đối với người Việt mình, thì font cho code cũng cần **hỗ trợ tiếng Việt Unicode** để hiển thị các chuỗi văn bản hoặc ghi chú bằng tiếng Việt (nếu có). Tiêu chí này cũng loại khá nhiều font mono đẹp và phổ biến khác như: _Ubuntu Mono, Menlo, Operator Mono..._ Nếu bạn không lo vấn đề tiếng Việt, bạn có thể tìm và thử các font kể trên.
 
-Sau đây tôi sẽ liệt một số font tiêu biểu cho code editor [wiki link needed] đáp ứng tất cả các tiêu chí trên:
+Sau đây tôi sẽ liệt kê một số font tiêu biểu cho code editor đáp ứng tất cả các tiêu chí trên:
 
 ### Consolas
 Font này không miễn phí nhưng có sẵn trong Windows hoặc được cài theo bộ Microsoft Office.
@@ -61,11 +61,11 @@ Một số font code mới đây đã bắt đầu hỗ trợ ligature cho tổ 
 
 ![Fira Code ligature in VSCode](/img/2017/ligature-vscode.png)_Font Fira Code và ligature_
 
-Tuy nhiên Fira Code không có các ký tự tiếng Việt Unicode. Để khắc phục, bạn có thể sử dụng một font khác làm fallback khá giống Fira Code đó là **Roboto Mono**.
+Tuy nhiên Fira Code (và cả Fira Mono mà nó dựa trên) không có các ký tự tiếng Việt Unicode. Để khắc phục, bạn có thể sử dụng một font khác làm fallback khá giống Fira Code đó là **Roboto Mono**.
 
-Hiện nay đã có một số code editor hỗ trợ ligature, trong đó có [VSCode](https://code.visualstudio.com/) và [Atom](https://atom.io/). Rất tiếc là Sublime Text 3 chưa hỗ trợ, và tính năng này chỉ mới được đặt hàng cho nhà phá triển ST3.
+Hiện nay đã có một số code editor hỗ trợ ligature, trong đó có [VSCode](https://code.visualstudio.com/) và [Atom](https://atom.io/). Rất tiếc là Sublime Text 3 chưa hỗ trợ, và tính năng này đang được đặt hàng cho nhà phát triển ST3.
 
-Sau khi cài Fira Code vào hệ thống, thì với **VSCode**, cần cài đặt các settings sau để bật ligature và font Fira Code với Roboto Mono làm fallback:
+Sau khi cài Fira Code vào hệ thống, với **VSCode**, cần cài đặt các settings sau để bật ligature và font Fira Code với Roboto Mono làm fallback:
 
 ```json
 {
