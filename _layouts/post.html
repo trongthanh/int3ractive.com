@@ -24,9 +24,12 @@ layout: default
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
+				<!-- Begin post content -->
 				{{ content }}
-
+				<!-- End post content -->
+				{% if page.modified %}
+				<p class="text-right update-note"><small class="text-muted">Updated on {{ page.modified | date:"%d/%m/%Y" }}.</small></p>
+				{% endif %}
 				<hr>
 
 				<ul class="pager">
@@ -44,7 +47,7 @@ layout: default
 
 			</div>
 		</div>
-	</div>
+	</div><!-- /.container -->
 
 	{% include disqus.html %}
 </article>

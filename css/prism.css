@@ -6,7 +6,8 @@
  */
 
 code[class*="language-"],
-pre[class*="language-"] {
+pre[class*="language-"],
+[data-language] {
 	color: black;
 	text-shadow: 0 1px white;
 	font-family: Monaco, Consolas, "Liberation Mono", Menlo, monospace;
@@ -141,7 +142,11 @@ pre[class*="language-"] {
 	position: relative;
 }
 
-[data-language]::before {
+.highlighter-rouge {
+	position: relative;
+}
+
+.highlighter-rouge[data-language]::before {
 	content: attr(data-language);
 	color: black;
 	background-color: #CFCFCF;
@@ -153,8 +158,8 @@ pre[class*="language-"] {
 	right: 0;
 	width: auto;
 	height: auto;
-	font-size: 0.9em;
-	border-radius: 0 0 0 5px;
+	font-size: 0.8em;
+	border-radius: 0 5px;
 	padding: 0 0.5em;
 	text-shadow: none;
 	z-index: 1;
