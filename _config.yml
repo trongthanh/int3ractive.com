@@ -26,7 +26,7 @@ kramdown:
 highlighter: rouge
 permalink: :year/:month/:title.html
 paginate: 10
-exclude: ["README.md"]
+exclude: ["README.md", "css/**/*"]
 keep_files: ["flash","javascript"]
 gems:
   - jekyll-feed
