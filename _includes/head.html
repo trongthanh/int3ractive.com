@@ -3,7 +3,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	{% seo %}
+	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.seo_title }} </title>
+	{% seo title=false %}
 
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
