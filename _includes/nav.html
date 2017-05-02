@@ -18,16 +18,10 @@
                 <li>
                     <a href="{{ site.baseurl }}/">Home</a>
                 </li>
-                {% for page in site.pages %}
-                {% if page.title == 'Search' %}
-                <li>
-                    <a href="{{ page.url | prepend: site.baseurl }}"><i class="fa fa-search hidden-xs"></i><span class="visible-xs">Search</span></a>
-                </li>
-                {% elsif page.title %}
-                <li>
-                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-                </li>
-                {% endif %}{% endfor %}
+                <li><a href="{{ 'about.html' | prepend: site.baseurl }}">About</a></li>
+                <li><a href="{{ 'speaking.html' | prepend: site.baseurl }}">Speaking</a></li>
+                <li><a href="{{ 'archive.html' | prepend: site.baseurl }}">Archive</a></li>
+                <li><a href="{{ 'search.html' | prepend: site.baseurl }}"><i class="fa fa-search hidden-xs"></i><span class="visible-xs">Search</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

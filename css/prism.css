@@ -144,6 +144,7 @@ pre[class*="language-"] {
 
 .highlighter-rouge {
 	position: relative;
+	white-space: normal; /*fix extra height at the code wrappers*/
 }
 
 .highlighter-rouge[data-language]::before {
@@ -172,3 +173,49 @@ pre[class*="language-"] {
 	-o-transform: none;
 	transform: none;
 }
+
+/*FIXME: move to clean-blog.css*/
+.footnotes {
+	font-size: 0.8em;
+}
+
+.events {
+	list-style: none;
+	padding: 0;
+}
+
+.events__section {
+	padding: 0.2em 0.5em;
+	background-color: #eee;
+	margin: -1px -0.5em 0 -0.5em; /*-1px to cover the bottom border*/
+}
+
+.events__section h2 {
+	margin: 0;
+}
+
+.events__item {
+	border-bottom: 1px solid #eee;
+	margin-top: 0.5em;
+}
+
+.events__item__desc {
+	overflow: hidden;
+}
+
+.events__item__title {
+	margin: 0.5em 0;
+}
+
+@media screen and (min-width: 768px) {
+	.events__item {
+		margin-top: 0;
+	}
+
+	.events__item__time {
+		float: left;
+		margin-right: 1em;
+	}
+}
+
+
