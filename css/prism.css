@@ -187,7 +187,7 @@ pre[class*="language-"] {
 .events__section {
 	padding: 0.2em 0.5em;
 	background-color: #eee;
-	margin: -1px -0.5em 0 -0.5em; /*-1px to cover the bottom border*/
+	margin: -1px -15px 1em -15px; /*-1px to cover the bottom border*/
 }
 
 .events__section h2 {
@@ -208,10 +208,6 @@ pre[class*="language-"] {
 }
 
 @media screen and (min-width: 768px) {
-	.events__item {
-		margin-top: 0;
-	}
-
 	.events__item__time {
 		float: left;
 		margin-right: 1em;
