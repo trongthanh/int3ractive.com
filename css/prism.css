@@ -197,6 +197,7 @@ pre[class*="language-"] {
 .events__item {
 	border-bottom: 1px solid #eee;
 	margin-top: 0.5em;
+	position: relative;
 }
 
 .events__item__desc {
@@ -207,10 +208,27 @@ pre[class*="language-"] {
 	margin: 0.5em 0;
 }
 
+.events__item__logo {
+	position: absolute;
+	width: 100px;
+	height: auto;
+	right: 0;
+	top: -5px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
 @media screen and (min-width: 768px) {
 	.events__item__time {
 		float: left;
 		margin-right: 1em;
+		width: 120px;
+	}
+
+	.events__item__logo {
+		width: 120px;
+		left: 0;
+		top: initial;
+		bottom: 20px;
 	}
 }
 
