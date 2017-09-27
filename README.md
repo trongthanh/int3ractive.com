@@ -4,6 +4,10 @@ All blog posts remain __copyrighted__ by Tran Trong Thanh. If you like this blog
 
 To preview locally, install Ruby gem `bundler`, `jekyll` and execute: `bundle exec jekyll serve`.
 
+#### Additional notes on the `kramdown` markdown syntax:
+
+- Link with target blank: `[link](http://example.com){:target="_blank"}`
+
 Note: my labs site is moved [over here](https://github.com/trongthanh/labs.int3ractive.com), with licenses as per each folder.
 
 ---
