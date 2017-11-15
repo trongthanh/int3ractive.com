@@ -172,7 +172,7 @@ Tới đây, chúng ta đã có thể chạy thử app bằng lệnh `node keyst
 
 Với những bước cài đặt vừa rồi, bạn đã có thể chạy app cho môi trường STAGING hoặc UAT và có thể demo với khách hàng. Để giữ cho app demo tiếp tục chạy sau khi thoát SSH, bạn có thể dùng dòng lệnh `screen` (xem [hướng dẫn](https://askubuntu.com/questions/904373/how-to-use-screen-command)).
 
-Trong phần tiếp theo tôi sẽ hướng dẫn chạy app như service, đưa ra ngoài port chuẩn của web, bật mã hóa TLS/SSL... để sẵn sáng cho Production.
+Trong phần tiếp theo tôi sẽ hướng dẫn chạy app như service, đưa ra ngoài port chuẩn của web, bật mã hóa TLS/SSL... để sẵn sàng cho Production.
 
 (còn tiếp...)
 
