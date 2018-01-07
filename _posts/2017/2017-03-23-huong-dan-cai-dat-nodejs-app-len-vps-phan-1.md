@@ -111,7 +111,7 @@ Trong hướng dẫn này, chúng ta sẽ lấy mã nguồn của app từ một
 Trước tiên, chúng ta sẽ tạo khóa SSH mặc định trên server bằng các bước sau (Enter mặc định với tất cả các câu hỏi):
 
 ```shell
-$ ssh-keygen -t rsa
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
 Xuất nội dung của public key ra terminal để copy:
