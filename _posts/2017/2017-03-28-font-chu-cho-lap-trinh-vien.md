@@ -63,7 +63,7 @@ Một số font code mới đây đã bắt đầu hỗ trợ ligature cho tổ 
 
 Tuy nhiên Fira Code (và cả Fira Mono mà nó dựa trên) không có các ký tự tiếng Việt Unicode. Để khắc phục, bạn có thể sử dụng một font khác làm fallback khá giống Fira Code đó là **Roboto Mono**.
 
-Hiện nay đã có một số code editor hỗ trợ ligature, trong đó có [VSCode](https://code.visualstudio.com/) và [Atom](https://atom.io/). ~Rất tiếc là Sublime Text 3 chưa hỗ trợ, và tính năng này đang được đặt hàng cho nhà phát triển ST3.~ Sublime Text 3 kể từ build 3145 cũng [đã hỗ trợ ligature](https://news.ycombinator.com/item?id=15413543).
+Hiện nay đã có một số code editor hỗ trợ ligature, trong đó có [VSCode](https://code.visualstudio.com/) và [Atom](https://atom.io/). <del>Rất tiếc là Sublime Text 3 chưa hỗ trợ, và tính năng này đang được đặt hàng cho nhà phát triển ST3.</del> Sublime Text 3 kể từ build 3145 cũng [đã hỗ trợ ligature](https://news.ycombinator.com/item?id=15413543).
 
 Sau khi cài Fira Code vào hệ thống, với **VSCode**, cần cài đặt các settings sau để bật ligature và font Fira Code với Roboto Mono làm fallback:
 
