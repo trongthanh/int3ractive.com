@@ -7,7 +7,7 @@ description:
 date: 2017-03-28T06:37:03+07:00
 tags: [Tools, Vietnamese, Front End]
 image: img/2017/ligature-vscode.png
-modified: 2017-03-31T00:09:38+07:00
+modified: 2018-02-23T15:34:47+07:00
 ---
 
 Bạn có biết trình soạn code của mình đang dùng font chữ gì không? Ít người quan tâm đến điều này nhưng việc lựa chọn font chữ cho [code editor](https://en.wikipedia.org/wiki/Source_code_editor) cũng ảnh hưởng ít nhiều đến hiệu suất công việc của lập trình viên vì bạn phải nhìn những dòng code nhiều giờ trong một ngày làm việc.
@@ -63,7 +63,7 @@ Một số font code mới đây đã bắt đầu hỗ trợ ligature cho tổ 
 
 Tuy nhiên Fira Code (và cả Fira Mono mà nó dựa trên) không có các ký tự tiếng Việt Unicode. Để khắc phục, bạn có thể sử dụng một font khác làm fallback khá giống Fira Code đó là **Roboto Mono**.
 
-Hiện nay đã có một số code editor hỗ trợ ligature, trong đó có [VSCode](https://code.visualstudio.com/) và [Atom](https://atom.io/). Rất tiếc là Sublime Text 3 chưa hỗ trợ, và tính năng này đang được đặt hàng cho nhà phát triển ST3.
+Hiện nay đã có một số code editor hỗ trợ ligature, trong đó có [VSCode](https://code.visualstudio.com/) và [Atom](https://atom.io/). ~Rất tiếc là Sublime Text 3 chưa hỗ trợ, và tính năng này đang được đặt hàng cho nhà phát triển ST3.~ Sublime Text 3 kể từ build 3145 cũng [đã hỗ trợ ligature](https://news.ycombinator.com/item?id=15413543).
 
 Sau khi cài Fira Code vào hệ thống, với **VSCode**, cần cài đặt các settings sau để bật ligature và font Fira Code với Roboto Mono làm fallback:
 
