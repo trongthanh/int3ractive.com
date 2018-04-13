@@ -174,7 +174,7 @@ pre[class*="language-"] {
 	transform: none;
 }
 
-/*FIXME: move to clean-blog.css*/
+/* Custom CSS for speaking section */
 .footnotes {
 	font-size: 0.8em;
 }
@@ -231,5 +231,3 @@ pre[class*="language-"] {
 		bottom: 20px;
 	}
 }
-
-
