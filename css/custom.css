@@ -6,6 +6,30 @@
 	font-size: 0.8em;
 }
 
+/* Illustrated video block */
+.video {
+	display: block;
+	margin: auto;
+	max-height: 80vh;
+}
+
+@media screen and (min-width: 768px) {
+	.video {
+		margin: 5px;
+		max-height: 500px;
+	}
+	.video--right {
+		float: right;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.video--right {
+		margin-right: -100px;
+	}
+}
+
+
 /* Custom CSS for speaking section */
 .events {
 	list-style: none;
