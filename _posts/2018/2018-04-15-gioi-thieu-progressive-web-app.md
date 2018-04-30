@@ -126,8 +126,13 @@ Với PWA có sử dụng Web Share, khi bạm bấm vào nút share ngay trong 
 
 ### Quản lý đăng nhập và tự động đăng nhập
 
-Một tính năng đang dần trở thành
+Một tính năng đang dần trở thành yêu cầu phải có của trình duyệt đó là khả năng đồng bộ giữa các thiết bị và hệ điều hành khác nhau (nhưng cùng một loại trình duyệt). Hiện nay bạn đã có thể tạo một tài khoản đồng bộ trên Firefox, Opera, MS Edge và Chrome. Bạn sẽ thấy việc đồng bộ tạo sự tiện lợi cho người dùng rất nhiều đặc biệt là những ai lướt web trên nhiều thiết bị khác nhau: bookmarks, lịch sử, các tab đang mở, thông tin nhập form và đặc biệt là thông tin đăng nhập (username & password) của các website.
 
+Với tính năng trên, người dùng sẽ dễ dàng đăng nhập vào các website trên nhiều thiết bị nhờ vào việc trình duyệt sẽ tự điền vào form đăng nhập. Tuy nhiên, một đặc tả mới dành riêng cho PWA với tên gọi Credential Management API cho phép web app thực hiện thao tác đăng nhập cho người dùng chỉ với một cú click chuột và không cần phải nhập lại mật khẩu.
+
+[chèn video minh họa đăng nhập một chạm]
+
+[chèn hình danh sách các trình duyệt hỗ trợ]
 
 ### Quản lý thanh toán và hỗ trợ thanh toán trực tuyến
 s
