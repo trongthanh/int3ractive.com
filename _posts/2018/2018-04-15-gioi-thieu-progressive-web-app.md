@@ -10,7 +10,7 @@ image: img/2018/pwa/pwa-logo.png
 ---
 <center><small><em>(Hình cover: Logo <a href="https://medium.com/samsung-internet-dev/we-now-have-a-community-approved-progressive-web-apps-logo-823f212f57c9">không chính thức</a> của PWA)</em></small></center>
 
-Progressive Web App (PWA) là một dạng ứng dụng web (web app) mới đang thu hút rất nhiều sự quan tâm từ các nhà phát triển web khắp thế giới và các doanh nghiệp hoạt động trực tuyến, tuy nhiên nó vẫn còn khá mới mẻ tại Việt Nam.
+**P**{:.drop-cap}rogressive Web App (PWA) là một dạng ứng dụng web (web app) mới đang thu hút rất nhiều sự quan tâm từ các nhà phát triển web khắp thế giới đặc biệt là các doanh nghiệp hoạt động trực tuyến, tuy nhiên nó vẫn còn khá mới mẻ tại Việt Nam.
 
 Đã có nhiều bài viết liên quan đến PWA dành cho [lập](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/) [trình](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) [viên](https://www.smashingmagazine.com/2016/08/a-beginners-guide-to-progressive-web-apps/), cho nên trong bài viết này tôi sẽ cố gắng giải thích PWA cho người dùng Web phổ thông.
 
@@ -51,15 +51,17 @@ Nhờ những cải tiến của phần cứng thiết bị, hệ điều hành 
 
 ![Web app showcase](/img/2018/pwa/web-apps-showcase.jpg)_Từ trái qua, các web app nổi tiếng đã chứng minh được sự thành công của web app trên mobile: <a href="https://app.ft.com">app.ft.com</a>, <a href="https://flipboard.com">flipboard.com</a>, <a href="https://m.aliexpress.com">m.aliexpress.com</a>_
 
-Dù vậy, web app vẫn còn một số hạn chế so với native app và hybrid app điển hình như offline mode, push notification,
-
-Sau đây là những điểm khác biệt của PWA so với những ứng dụng mobile web thông thường:
+Dù vậy, web app vẫn còn một số hạn chế so với native app. Chúng ta hãy xem PWA đã được bổ sung những khả năng gì để có thể xóa dần khoảng cách giữa web và native:
 
 ### Shortcut trên home screen và hỗ trợ theme từ trình duyệt
 
-Ngay từ những thế hệ iPhone đầu tiên, iOS Safari đã có chức năng cho phép người dùng lưu shortcut của một website vào home screen (add to home screen) để truy cập nhanh vào lần sau. Và với những website được người dùng mở từ home screen, chúng có thể có giao diện toàn màn hình (không còn thanh địa chỉ và phần giao diện của Safari), đem tới trải nghiệm như mobile app.
+<figure class="figure figure--right">
+    <img class="figure__image" src="/img/2018/pwa/safari-add-to-home-screen.jpg" alt="Chức năng Add to Home Screen trên Safari">
+    <figcaption class="figure__caption">Chức năng Add to Home Screen trên Safari. Ảnh từ <a href="https://www.any-data-recovery.com/iphone-data/how-to-change-safari-default-homepage-on-mac-iphone-and-ipad.html">any-data-recovery.com</a>.
+    </figcaption>
+</figure>
 
-[Chèn hình của web app FT, của Safari add to home screen]
+Ngay từ những thế hệ iPhone đầu tiên, iOS Safari đã có chức năng cho phép người dùng lưu shortcut của một website vào home screen (add to home screen) để truy cập nhanh vào lần sau. Và với những website được người dùng mở từ home screen, chúng có thể có giao diện toàn màn hình (không còn thanh địa chỉ và phần giao diện của Safari), đem tới trải nghiệm như mobile app.
 
 Tuy nhiên những khả năng trên vẫn chỉ là sự hỗ trợ đơn lẻ từ nhà phát triển Apple cho những chiếc iPhone của mình. Giờ đây, tổ chức W3C đã thống nhất đặc tả cho web app với file khai báo **manifest.json** (tên chính thức: Web App Manifest) cho phép lập trình viên có thể tùy chỉnh:
 
@@ -92,8 +94,11 @@ Kể từ Chrome cho Android phiên bản 57, khi một PWA được lưu lại,
 
 ### Hoạt động offline
 
-<video class="video video--right" src="/img/2018/pwa/offline-viewing.mp4" poster="/img/2018/pwa/offline-viewing.png" controls onclick="this.paused ? this.play() : this.pause();"
-></video>
+<figure class="figure figure--right">
+    <video class="figure__image" src="/img/2018/pwa/offline-viewing.mp4" poster="/img/2018/pwa/offline-viewing.png" controls onclick="this.paused ? this.play() : this.pause();"
+    ></video>
+    <figcaption class="figure__caption">Offline demo. Click lên hình để play.</figcaption>
+</figure>
 
 Một trong những hạn chế của web app so với native app khiến nó chưa thật sự hữu dụng và được triển khai rộng rãi đó chính là khả năng hoạt động ngay cả khi người dùng offline. Khi người dùng mất kết nối (tắt mobile data, tắt wifi, bật flight mode...) hoặc kết nối Internet chậm, web app sẽ không thể sử dụng được do nó phải lấy dữ liệu từ máy chủ trung tâm, và người dùng sẽ nhanh chóng bỏ cuộc hoặc tìm đến native app.
 
