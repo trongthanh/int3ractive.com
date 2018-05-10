@@ -2,6 +2,16 @@
  * Int3ractive.com custom CSS
  */
 
+/* avoid floating figure image leaked into other sections */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
 .drop-cap {
 	color: #0070cf;
 	float: left;
@@ -26,6 +36,7 @@
 
 .figure__image {
 	max-height: 80vh;
+	max-width: 100%;
 }
 
 .figure__caption {
@@ -36,7 +47,7 @@
 
 @media screen and (min-width: 768px) {
 	.figure {
-		margin: 10px;
+		margin: 10px 0;
 	}
 
 	.figure__image {
@@ -45,11 +56,13 @@
 
 	.figure--left {
 		float: left;
+		margin: 10px;
 		max-width: 50%;
 	}
 
 	.figure--right {
 		float: right;
+		margin: 10px;
 		max-width: 50%;
 	}
 }

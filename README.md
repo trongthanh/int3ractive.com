@@ -7,6 +7,8 @@ To preview locally, install Ruby gem `bundler`, then install the `github-pages` 
 #### Additional notes on the `kramdown` markdown syntax:
 
 - Link with target blank: `[link](http://example.com){:target="_blank"}`
+- Add class to previous elements: {: .drop-cap}
+- Footnotes: `in body text[^1]` --> at bottom `[^1]: foot note`
 
 Note: my labs site is moved [over here](https://github.com/trongthanh/labs.int3ractive.com), with licenses as per each folder.
 
