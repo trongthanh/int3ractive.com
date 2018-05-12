@@ -20,6 +20,17 @@ h6 {
 	margin-right: 0.1em;
 }
 
+[data-figure] {
+	cursor: zoom-in;
+}
+
+/* For image caption but image is wrapped with anchor link*/
+[data-figure] + em {
+	display: block;
+	text-align: center;
+	font-size: 0.8em;
+}
+
 .footnotes {
 	font-size: 0.8em;
 }

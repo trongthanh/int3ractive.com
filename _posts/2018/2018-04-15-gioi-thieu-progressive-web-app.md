@@ -44,7 +44,8 @@ Khi tôi tư vấn và phát triển app cho khách hàng, rất nhiều lần d
 Nhờ những cải tiến của phần cứng thiết bị, hệ điều hành di động, trình duyệt, và nhất là đặc tả Web trong vài năm gần đây mà web app đã thêm những khả năng không thua kém native app như:
 
 - Giao diện tương tác mượt mà hơn, đặt biệt là hỗ trợ đồ họa 3D, animation từ phần cứng (hardware accelerated)
-- Bàn phím ảo thích ứng với trường nhập thông tin khác nhau: email, URL, telephone...
+- Khản năng chơi video, audio thông qua trình duyệt mobile đã hoàn thiện và định dạng gần như đã thống nhất.
+- Bàn phím ảo thích ứng với trường nhập web form khác nhau: email, URL, telephone...
 - Có khả năng truy xuất các sensor của thiết bị: tọa độ GPS, con quay hồi chuyển, trạng thái pin, network, camera, microphone...
 - Cơ sở dữ liệu (CSDL) tại trình duyệt cho phép tìm kiếm và truy cập nhanh lượng dữ liệu lớn và cho phép người dùng trở lại trang web app nhanh hơn.
 - Đặc tả mới về CSS cho phép designer và front end developer tạo giao diện tùy ứng (responsive design) và giao diện giống app dễ dàng hơn.
@@ -71,12 +72,12 @@ Tuy nhiên những khả năng trên vẫn chỉ là sự hỗ trợ đơn lẻ 
 - Khóa hướng xoay màn hình
 - Và một số tùy chỉnh kỹ thuật khác...
 
-[![Một số tùy chỉnh có thể thấy được từ manifest.json](/img/2018/pwa/manifest-customizations.jpg)_Ảnh chụp từ một app demo do tôi viết để minh họa cho một bài thuyết trình về PWA._](/img/2018/pwa/manifest-customizations.jpg){: target="_blank"}
+[![Một số tùy chỉnh có thể thấy được từ manifest.json](/img/2018/pwa/manifest-customizations.jpg)](/img/2018/pwa/manifest-customizations.jpg){: target="_blank" data-figure="" } _Ảnh chụp từ một [app demo do tôi viết](https://pwa-shop.firebaseapp.com/) để minh họa cho một bài thuyết trình về PWA._
 
 ### Banner cài đặt web app và tích hợp sâu hơn trong Android
 
 <figure class="figure figure--right">
-    <video class="figure__image" src="/img/2018/pwa/native-add-to-home-screen.mp4" poster="/img/2018/pwa/native-add-to-home-screen.png" controls onclick="this.paused ? this.play() : this.pause();"
+    <video class="figure__image" src="/img/2018/pwa/native-add-to-home-screen.mp4" poster="/img/2018/pwa/native-add-to-home-screen.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
     <figcaption class="figure__caption" style="width:300px">Banner cài đặt web app. Click lên hình để play.</figcaption>
 </figure>
@@ -90,9 +91,9 @@ Theo [Addy Osmani](https://addyosmani.com/blog/getting-started-with-progressive-
 - Có sử dụng service worker (xem tiếp mục sau)
 - Được ghé thăm it nhất hai lần, với mỗi lần cách nhau ít nhất 5 phút
 
-Ngoài ra Chrome và cả Android đang được cải thiện để tích hợp PWA tốt hơn. Kể từ Chrome cho Android phiên bản 57, khi một PWA được lưu lại, icon của nó không chỉ xuất hiện tại home screen mà ở cả trong app drawer (trang danh sách tất cả app) và trang tìm kiếm app. Không những thế, Android sẽ hỗ trợ PWA của bạn có riêng một "Intent Filter" để khi có bất kỳ app khác trên Android link đến URL của web app của bạn, PWA sẽ được mở ra thay vì URL mở ở trình duyệt mặc định. [Xem thêm tại đây.](https://developers.google.com/web/updates/2017/02/improved-add-to-home-screen)
+Ngoài ra Chrome và Android đang được cải thiện để tích hợp PWA tốt hơn. Kể từ Chrome cho Android phiên bản 57, khi một PWA được lưu lại, icon của nó không chỉ xuất hiện tại home screen mà ở cả trong app drawer (trang danh sách tất cả app) và kết quả tìm kiếm app. Không những thế, Android sẽ hỗ trợ PWA của bạn có riêng một "Intent Filter" để khi có bất kỳ app khác trên Android link đến URL của web app của bạn, PWA sẽ được mở ra thay vì URL mở ở trình duyệt mặc định. [Xem thêm tại đây.](https://developers.google.com/web/updates/2017/02/improved-add-to-home-screen)
 
-[![Một số cải tiến tích hợp của PWA trên Chrome 57 cho Android](/img/2018/pwa/pwa-integrated.jpg)](/img/2018/pwa/pwa-integrated.jpg){: target="_blank"}
+[![Một số cải tiến tích hợp vào Android của PWA trên Chrome 57](/img/2018/pwa/pwa-integrated.jpg)](/img/2018/pwa/pwa-integrated.jpg){: target="_blank" data-figure=""} _Một số cải tiến tích hợp vào Android của PWA trên Chrome 57_
 
 ### Hoạt động offline
 
@@ -108,9 +109,9 @@ Nhờ một đặc tả mới của Web với tên gọi là **Service Worker**,
 
 ### Nhận push notification
 
-Một tính năng đáng chú ý nữa của native app mà web app trước đây không thể làm được, đó chính là việc nhận push notification (thông báo chủ động). Push notification là một công cụ khá quan trọng cho các nhà phát hành mobile app, kích thích người dùng quay trở lại hoặc suy trì sự tương tác giữa người dùng và app của mình. Push notification cũng đang nhận được sự chú ý đặc biệt của bộ phận marketing cho những doanh nghiệp có mobile app.
+Một tính năng đáng chú ý nữa của native app mà web app trước đây không thể làm được, đó chính là việc nhận push notification (thông báo chủ động). Push notification là một công cụ khá quan trọng cho các nhà phát hành mobile app, kích thích người dùng quay trở lại hoặc suy trì sự tương tác giữa người dùng và app của mình. Push notification cũng đang nhận được sự chú ý đặc biệt của bộ phận marketing cho những doanh nghiệp có mobile app của mình.
 
-Cũng nhờ **Service Worker**, là một chương trình nhỏ viết bằng ngôn ngữ Web JavaScript nhưng nó chạy ngầm và độc lập với web app chính, PWA có khả năng nhận push notification như native app. Điều này đồng nghĩa với việc ngay cả khi web app và trình duyệt đã được đóng hẳn, chúng vẫn có thể nhận được notification.
+Cũng nhờ **Service Worker**, là một chương trình nhỏ viết bằng ngôn ngữ Web JavaScript nhưng nó chạy ngầm và độc lập với web app chính, PWA có khả năng nhận push notification như native app. Điều này đồng nghĩa với việc ngay cả khi web app và trình duyệt đã được đóng hẳn, chúng vẫn có thể nhận được notification[^5].
 
 <figure class="figure">
     <video class="figure__image" src="/img/2018/pwa/push-notification-demo.mp4" poster="/img/2018/pwa/push-notification-demo.jpg" controls onclick="this.paused ? this.play() : this.pause();"
@@ -149,7 +150,7 @@ Với PWA có sử dụng Web Share, khi bạm bấm vào nút share ngay trong 
 <figure class="figure figure--right">
     <video class="figure__image" src="/img/2018/pwa/credential-management.mp4" poster="/img/2018/pwa/credential-management.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
-    <figcaption class="figure__caption" style="width:300px">Demo login vào app với "1 chạm". Click lên hình để play.</figcaption>
+    <figcaption class="figure__caption" style="width:300px"><a href="https://credential-management-sample.appspot.com/">Demo login vào app với "1 chạm"</a>. Click lên hình để play.</figcaption>
 </figure>
 
 Một tính năng đang dần trở thành yêu cầu phải có của trình duyệt đó là khả năng đồng bộ giữa các thiết bị và hệ điều hành khác nhau (nhưng cùng một loại trình duyệt). Hiện nay bạn đã có thể tạo một tài khoản đồng bộ trên Firefox, Opera, MS Edge và Chrome. Bạn sẽ thấy việc đồng bộ tạo sự tiện lợi cho người dùng rất nhiều đặc biệt là những ai lướt web trên nhiều thiết bị khác nhau: bookmarks, lịch sử, các tab đang mở, thông tin nhập form và đặc biệt là thông tin đăng nhập (username & password) của các website.
@@ -161,7 +162,7 @@ Với tính năng trên, người dùng sẽ dễ dàng đăng nhập vào các 
 <figure class="figure figure--right">
     <video class="figure__image" src="/img/2018/pwa/web-payment.mp4" poster="/img/2018/pwa/web-payment.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
-    <figcaption class="figure__caption" style="width:300px">Demo Payment Request API. Click lên hình để play.</figcaption>
+    <figcaption class="figure__caption" style="width:300px"><a href="https://emerald-eon.appspot.com/">Demo Payment Request API</a>. Click lên hình để play.</figcaption>
 </figure>
 
 Nếu như thanh toán trên mobile và bằng mobile đang trở thanh xu hướng và đem đến sự tiện lợi chưa từng có cho người dùng, thì Web App cũng không đứng ngoài cuộc.
@@ -170,15 +171,29 @@ Với tên gọi **Payment Request API**, một đặc tả mới nữa của W3
 
 Một khi chuẩn Web này được áp dụng rộng rãi trên tất cả các HĐH mobile, việc xây dựng web app cho các platform thương mại điện tử sẽ trở nên dễ dàng và thuận tiện hơn bao giờ hết.
 
-## Tiến độ hỗ trợ PWA từ các trình duyệt:
+## Tiến độ hỗ trợ PWA từ các trình duyệt
 
-Đến đây chắc hẳn các bạn đã rất hứng thú với PWA
+Đến đây chắc hẳn bạn cũng đã rất hào hứng với PWA. Tuy nhiên, một số bạn am hiểu về Web cũng sẽ có thắc mắc rằng khi nào thì những tính năng  trên của PWA sẽ đến được với đa số người dùng?
 
-Đa số những tính năng dưới đây đã được hỗ trợ rộng rãi bởi các trình duyệt và HĐH mobile chính, và một số vẫn còn khá mới. Tuy nhiên với bản chất là progressive, người dùng vẫn trải nghiệm được tất cả những tính năng cần thiết nhất của app [...]
+Tin tốt lành là đến thời điểm tôi viết bài này, các trình duyệt phổ biến nhất[^4] đã hỗ trợ **Service Worker**, đặc tả quan trọng nhất của PWA. Bảng bên dưới tóm tắt tiến độ hỗ trợ từng tính năng riêng rẽ của PWA tại các trình duyệt khác nhau.
+
+![Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau.](/img/2018/pwa/state-of-pwa-2018.jpg)_Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau. Ảnh chụp từ slide [giới thiệu PWA tại Google I/O 2018](https://www.youtube.com/watch?v=NITk4kXMQDw)_
+
+Tuy nhiên tôi muốn nhắc lại rằng với cơ chế Cải Tiến Tăng Dần, PWA có thể được áp dụng ngay từ bây giờ bất kể tính năng bạn cần chưa được hỗ trợ rộng rãi. Và với tiến độ hiện tại, những tính năng vừa nêu trên sẽ được hỗ trợ hoàn toàn trên hai nền tảng di động quan trọng và phổ biến nhất (Chrome trên Android và Safari trên iOS) trong vài tháng tới đây.
 
 ## Hiệu quả của PWA
 
-[Alibaba PWA showcase](https://developers.google.com/web/showcase/2016/alibaba)
+PWA có được thế mạnh của cả hai giải pháp Web và Native. Điểm mạnh của Web đó là sự tiện lợi và dễ truy cập khi mà người dùng chỉ việc mở trình duyệt và tìm đến địa chỉ của trang web app hoặc mở từ đường link được chia sẻ thông qua mạng xã hội hoặc tin nhắn. Một khi người dùng thấy app hữu dụng và có nhu cầu quay lại, họ sẽ lưu lại shortcut của app tại home screen. Và lúc này, người dùng sẽ có được trải nghiệm của PWA như một native app thực thụ mà không phải cất công vào app store để tải về.
+
+PWA đã chứng minh được hiệu quả của mình thông qua một vài con số thống kê với những app đã được triển khai thực tế:
+
+- **02 lần** là [số lượt sử dụng tăng](https://blog.chromium.org/2018/05/the-state-of-web-at-google-io-2018.html) sau khi Starbucks chuyển từ web app sang PWA.
+- **76%** là số [giao dịch thành công (conversions) tăng](https://developers.google.com/web/showcase/2016/alibaba) sau khi Alibaba.com triển khai PWA.
+- **90%** là [chênh lệch kích thước giữa](https://medium.com/@addyosmani/a-tinder-progressive-web-app-performance-case-study-78919d98ece0) Tinder PWA nhỏ hơn so với native app của nó trên Android.
+- **12%** là số [thanh toán thành công nhờ push notification](https://developers.google.com/web/showcase/2017/lancome) nhắc nhở người dùng quay lại giỏ hàng của mình tại trang PWA mới của thương hiệu Lancôme (lancome-usa.com).
+- **20%** là số [lượt xem bài tăng](http://www.niemanlab.org/2017/03/forbes-rebuilt-its-new-mobile-website-as-a-progressive-web-app/) trên trang PWA mới của Forbes so với mobile site cũ.
+
+Xem thêm những con số thống kê về hiệu quả của PWA tại: [PWAStats.com](https://www.pwastats.com/).
 
 ## Kết luận:
 
@@ -192,10 +207,14 @@ Với sự chuyển dịch thời gian trực tuyến của người dùng từ 
 #### Ghi chú:
 
 [^1]: Xin tóm tắt lại một số thuật ngữ về **"app"** trên thiết bị di động:
-    - Mobile app hoặc native app: (ở Việt Nam thường gọi tắt là "app") là ứng dụng được cài đặt từ app store, được viết bằng ngôn ngữ lập trình dành riêng cho từng hệ điều hành di động khác nhau.
+    - Mobile app hoặc native app: (ở Việt Nam thường gọi tắt là "app") là ứng dụng được cài đặt từ app store, được vi`ết bằng ngôn ngữ lập trình dành riêng cho từng hệ điều hành di động khác nhau.
     - (Mobile) web app: là website chạy trên trình duyệt của smart phone nhưng có trải nghiệm giống app và thường trao đổi nhiều dữ liệu giữa người dùng và website.
     - Hybrid app: là ứng dụng được cài đặt từ app store, tuy nhiên được viết bằng cùng ngôn ngữ lập trình với web app. Dù hybrid app có thể cài được trên nhiều HĐH khác nhau nhưng nó chỉ cần được viết cùng một bộ mã nguồn với một ít điều chỉnh riêng cho mỗi loại HĐH mà nó hỗ trợ.
 
 [^2]: Tổ chức World Wide Web Consortium có trách nhiệm chuẩn hóa các đặc tả về Web và khuyến khích các trình duyệt khác nhau phải tuân theo để các website hoạt động một cách đồng nhất bất kể trình duyệt dùng để hiển thị.
 
 [^3]: URL là đường link đến một trang web bất kỳ
+
+[^4]: Tại Việt Nam, trình duyệt phổ biến thứ 2 sau Chrome là CocCoc. Tuy nhiên CocCoc cũng là một trình duyệt biến thể từ mã nguồn mở của Chrome nên những tính năng của PWA cũng sẽ được hỗ trợ.
+
+[^5]: Người dùng sẽ vẫn nhận được push notification cho dù họ không lưu app về home screen chỉ cần họ đã bấm đồng ý nhận push notification. Việc yêu cầu gửi push notification cần thận trọng và chỉ thực hiện khi người dùng đã thể hiện sự quan tâm đến dịch vụ của bạn. (Nếu không khả năng người dùng từ chối nhận push notification là rất cao)
