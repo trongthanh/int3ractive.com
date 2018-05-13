@@ -4,11 +4,11 @@ title: Giới thiệu Progressive Web App
 subtitle: Tương lai của web app trên thiết bị di động.
 author: Thanh Tran
 description:
-date: 2018-05-05T15:58:23+07:00
+date: 2018-05-13T17:43:06+07:00
 tags: [Vietnamese, Front End, JavaScript, Mobile Web, Web App]
 image: img/2018/pwa/pwa-logo.png
 ---
-<center><small><em>(Hình cover: Logo <a href="https://medium.com/samsung-internet-dev/we-now-have-a-community-approved-progressive-web-apps-logo-823f212f57c9">không chính thức</a> của PWA)</em></small></center>
+<center><small><em>(Hình cover: logo <a href="https://medium.com/samsung-internet-dev/we-now-have-a-community-approved-progressive-web-apps-logo-823f212f57c9">không chính thức</a> của PWA)</em></small></center>
 
 **P**{:.drop-cap}rogressive Web App (PWA) là một dạng ứng dụng web (web app) mới đang thu hút rất nhiều sự quan tâm từ các nhà phát triển web khắp thế giới đặc biệt là các doanh nghiệp hoạt động trực tuyến, tuy nhiên nó vẫn còn khá mới mẻ tại Việt Nam.
 
@@ -16,7 +16,7 @@ image: img/2018/pwa/pwa-logo.png
 
 ## Progressive Web App là gì?
 
-**PWA là ứng dụng web được viết để tận dụng những tính năng mới nhất của trình duyệt Web trên máy tính lẫn điện thoại thông minh, nhưng đồng thời vẫn chạy được trên những trình duyệt và thiết bị cũ hơn. PWA lấy phương pháp [Cải Tiến Tăng Dần (Progressive Enhancement)](insert link to PA presentation) làm cốt lõi (nên mới có chữ Progressive).**
+**PWA là ứng dụng web được viết để tận dụng những tính năng mới nhất của trình duyệt Web trên máy tính để bàn (desktop) lẫn điện thoại thông minh, nhưng đồng thời vẫn chạy được trên những trình duyệt và thiết bị cũ hơn. PWA lấy phương pháp [Cải Tiến Tăng Dần (Progressive Enhancement)](https://www.youtube.com/watch?v=5oUSzo1oRv0) làm cốt lõi (nên mới có chữ Progressive).**
 
 Đối với những trình duyệt và thiết bị cũ, PWA hoạt động như một mobile website thông thường. Nhưng với những trình duyệt trên thiết bị di động mới nhất, PWA hoạt động như một _mobile app_[^1] thực thụ.
 
@@ -29,24 +29,24 @@ Những tác giả của khái niệm PWA (đến từ nhóm phát triển trìn
 * **Fresh** - Dù nó hoạt động như mobile app, nhưng tính năng và giao diện luôn được cập nhật tức thời nhờ nền tảng Web (không cần người dùng update từ Apple App Store hay Google Play - gọi chung là app store).
 * **Safe** - PWA phải được tải thông qua giao thức TLS (hay nôm na là HTTPS), để đảm bảo việc trao đổi dữ liệu không bị bên thứ ba can thiệp.
 * **Discoverable** - Thông qua file khai báo chuẩn (được thống nhất bởi tổ chức W3C), mà các PWA dễ dàng được các cỗ máy tìm kiếm đánh dấu và thông báo cho người dùng.
-* **Re-engageable** - PWA cho phép việc tái tiếp cận người dùng dễ dàng hơn nhờ những tính năng đặc biệt như là push notification (thông báo đẩy).
+* **Re-engageable** - PWA cho phép việc tái tiếp cận người dùng dễ dàng hơn nhờ những tính năng đặc biệt như là push notification (thông báo chủ động).
 * **Installable** - PWA cho phép người dùng dễ dàng lưu lại web app trên điện thoại (thường là trên màn hình home screen) mà không cần phải vào app store
 * **Linkable** - Dễ dàng share app chỉ với đường link và không cần người nhận phải cài đặt phức tạp chỉ để xem được nội dung bạn muốn share.
 
 ## Những điểm khác biệt của Progressive Web App?
 
-Sự tiến hóa của mobile web app cần sự hợp tác của rất nhiều người và tổ chức khác nhau và thường đi cùng với sự phát triển và chuẩn hóa của nền tảng Web do tổ chức **W3C**[^2] chịu trách nhiệm.
+Trước tiên cần hiểu rằng, sự tiến hóa của mobile web app cần sự hợp tác của rất nhiều bên liên quan trong đó có các nhà phát triển trình duyệt, hệ điều hành di động, và cả những chuyên gia về ngôn ngữ lập trình cho Web. Sự tiến hóa của mobile web thường đi cùng với sự phát triển và chuẩn hóa của nền tảng Web do tổ chức **W3C**[^2] chịu trách nhiệm.
 
 [![Sự tiến hóa của nền tảng Web](/img/2018/pwa/evolutionoftheweb.jpg)_Sự tiến hóa của nền tảng Web_](http://www.evolutionoftheweb.com)
 
-Khi tôi tư vấn và phát triển app cho khách hàng, rất nhiều lần doanh nghiệp từ chối lựa chọn giải pháp Web app hoặc hybrid app với lý do chính là _"HTML5 không nhanh bằng native"_. Tuy nhiên điều này không còn đúng tại thời điểm hiện tại.
+Khi tôi tư vấn và phát triển app cho khách hàng, rất nhiều lần doanh nghiệp từ chối lựa chọn giải pháp web app hoặc hybrid app với lý do chính là _"HTML5 không nhanh bằng native"_. Tuy nhiên điều này không còn đúng tại thời điểm hiện tại.
 
 Nhờ những cải tiến của phần cứng thiết bị, hệ điều hành di động, trình duyệt, và nhất là đặc tả Web trong vài năm gần đây mà web app đã thêm những khả năng không thua kém native app như:
 
 - Giao diện tương tác mượt mà hơn, đặt biệt là hỗ trợ đồ họa 3D, animation từ phần cứng (hardware accelerated)
-- Khản năng chơi video, audio thông qua trình duyệt mobile đã hoàn thiện và định dạng gần như đã thống nhất.
+- Khả năng chơi video, audio thông qua trình duyệt mobile đã hoàn thiện và định dạng gần như đã thống nhất.
 - Bàn phím ảo thích ứng với trường nhập web form khác nhau: email, URL, telephone...
-- Có khả năng truy xuất các sensor của thiết bị: tọa độ GPS, con quay hồi chuyển, trạng thái pin, network, camera, microphone...
+- Có khả năng truy xuất các sensor và bộ phận đa phương tiện của thiết bị: định vị GPS, con quay hồi chuyển, trạng thái pin, network, camera, microphone...
 - Cơ sở dữ liệu (CSDL) tại trình duyệt cho phép tìm kiếm và truy cập nhanh lượng dữ liệu lớn và cho phép người dùng trở lại trang web app nhanh hơn.
 - Đặc tả mới về CSS cho phép designer và front end developer tạo giao diện tùy ứng (responsive design) và giao diện giống app dễ dàng hơn.
 
@@ -72,7 +72,7 @@ Tuy nhiên những khả năng trên vẫn chỉ là sự hỗ trợ đơn lẻ 
 - Khóa hướng xoay màn hình
 - Và một số tùy chỉnh kỹ thuật khác...
 
-[![Một số tùy chỉnh có thể thấy được từ manifest.json](/img/2018/pwa/manifest-customizations.jpg)](/img/2018/pwa/manifest-customizations.jpg){: target="_blank" data-figure="" } _Ảnh chụp từ một [app demo do tôi viết](https://pwa-shop.firebaseapp.com/) để minh họa cho một bài thuyết trình về PWA._
+[![Một số tùy chỉnh có thể thấy được từ manifest.json](/img/2018/pwa/manifest-customizations.jpg)](/img/2018/pwa/manifest-customizations.jpg){: target="_blank" data-figure="" } _Ảnh chụp từ một [PWA demo do tôi viết](https://pwa-shop.firebaseapp.com/) để minh họa cho một bài thuyết trình về PWA._
 
 ### Banner cài đặt web app và tích hợp sâu hơn trong Android
 
@@ -87,9 +87,9 @@ Ngoài chức năng "Add To Home Screen" bằng tay đã được hỗ trợ b�
 Theo [Addy Osmani](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/), người dùng sẽ được gợi ý cài web app lên home screen của Android nếu:
 
 - Web app có khai báo manifest.json
-- Đươc tải bằng giao thức HTTPS
+- Được tải bằng giao thức HTTPS
 - Có sử dụng service worker (xem tiếp mục sau)
-- Được ghé thăm it nhất hai lần, với mỗi lần cách nhau ít nhất 5 phút
+- Được ghé thăm ít nhất hai lần, với mỗi lần cách nhau ít nhất 5 phút
 
 Ngoài ra Chrome và Android đang được cải thiện để tích hợp PWA tốt hơn. Kể từ Chrome cho Android phiên bản 57, khi một PWA được lưu lại, icon của nó không chỉ xuất hiện tại home screen mà ở cả trong app drawer (trang danh sách tất cả app) và kết quả tìm kiếm app. Không những thế, Android sẽ hỗ trợ PWA của bạn có riêng một "Intent Filter" để khi có bất kỳ app khác trên Android link đến URL của web app của bạn, PWA sẽ được mở ra thay vì URL mở ở trình duyệt mặc định. [Xem thêm tại đây.](https://developers.google.com/web/updates/2017/02/improved-add-to-home-screen)
 
@@ -141,7 +141,7 @@ Lấy ví dụ: ứng dụng nhắn tin tức thời, người dùng gửi một
 
 Một tính năng tương đối hữu dụng nữa của PWA đó chính là **Web Share**. Để dễ hình dung, nếu bạn đang đọc bài viết này trên điện thoại, cách duy nhất để bạn chia sẻ nó là copy URL[^3] của nó và paste vào app bạn muốn share, hoặc bạn sẽ mở menu của trình duyệt ra, và bấm vào nút share. Chức năng Web Share của PWA sẽ giống như cách thứ hai vừa nêu.
 
-Với PWA có sử dụng Web Share, khi bạm bấm vào nút share ngay trong trang web, banner chia sẻ mặc định của HĐH sẽ hiện ra với tất cả các app và thao tác mà bạn có thể thực hiện với một chuỗi URL hoặc chuỗi băn bản. Một sự tiện lợi giúp tăng sự tương tác trên thiết bị di động.
+Với PWA có sử dụng Web Share, khi bạn bấm vào nút share ngay trong trang web, banner chia sẻ mặc định của HĐH sẽ hiện ra với tất cả các app và thao tác mà bạn có thể thực hiện với một chuỗi URL hoặc chuỗi băn bản. Một sự tiện lợi giúp tăng sự tương tác trên thiết bị di động.
 
 Để tiếp cận Web Share theo cách Progressive, lập trình viên sẽ kiểm tra nếu trình duyệt không hỗ trợ Web Share, nút share sẽ gọi các widget chia sẻ thông thường như trên máy tính.
 
@@ -153,9 +153,9 @@ Với PWA có sử dụng Web Share, khi bạm bấm vào nút share ngay trong 
     <figcaption class="figure__caption" style="width:300px"><a href="https://credential-management-sample.appspot.com/">Demo login vào app với "1 chạm"</a>. Click lên hình để play.</figcaption>
 </figure>
 
-Một tính năng đang dần trở thành yêu cầu phải có của trình duyệt đó là khả năng đồng bộ giữa các thiết bị và hệ điều hành khác nhau (nhưng cùng một loại trình duyệt). Hiện nay bạn đã có thể tạo một tài khoản đồng bộ trên Firefox, Opera, MS Edge và Chrome. Bạn sẽ thấy việc đồng bộ tạo sự tiện lợi cho người dùng rất nhiều đặc biệt là những ai lướt web trên nhiều thiết bị khác nhau: bookmarks, lịch sử, các tab đang mở, thông tin nhập form và đặc biệt là thông tin đăng nhập (username & password) của các website.
+Một tính năng đang dần trở thành yêu cầu phải có của trình duyệt đó là khả năng đồng bộ giữa các thiết bị và hệ điều hành khác nhau (nhưng cùng một loại trình duyệt). Hiện nay bạn đã có thể tạo một tài khoản đồng bộ trên Firefox, Opera, MS Edge và Chrome. Bạn sẽ thấy việc đồng bộ tạo sự tiện lợi cho người dùng rất nhiều đặc biệt là những ai lướt web trên nhiều thiết bị khác nhau: bookmark, lịch sử, các tab đang mở, thông tin nhập form và đặc biệt là thông tin đăng nhập (username & password) của các website.
 
-Với tính năng trên, người dùng sẽ dễ dàng đăng nhập vào các website trên nhiều thiết bị nhờ vào việc trình duyệt sẽ tự điền vào form đăng nhập. Tuy nhiên, một đặc tả mới dành riêng cho PWA với tên gọi Credential Management API cho phép web app thực hiện thao tác đăng nhập cho người dùng chỉ với một cú click chuột và không cần phải nhập lại mật khẩu.
+Với tính năng trên, người dùng sẽ dễ dàng đăng nhập vào các website trên nhiều thiết bị nhờ vào việc trình duyệt sẽ tự điền vào form đăng nhập. Tuy nhiên, một đặc tả mới dành riêng cho PWA với tên gọi **Credential Management API** cho phép web app thực hiện thao tác đăng nhập cho người dùng chỉ với một cú click chuột và không cần phải nhập lại mật khẩu. Đây là một trong những tiện lợi của native app với tài khoản lưu sẵn mà giờ đây web app cũng có thể làm được.
 
 ### Quản lý thanh toán và hỗ trợ thanh toán trực tuyến
 
@@ -177,7 +177,7 @@ Một khi chuẩn Web này được áp dụng rộng rãi trên tất cả các
 
 Tin tốt lành là đến thời điểm tôi viết bài này, các trình duyệt phổ biến nhất[^4] đã hỗ trợ **Service Worker**, đặc tả quan trọng nhất của PWA. Bảng bên dưới tóm tắt tiến độ hỗ trợ từng tính năng riêng rẽ của PWA tại các trình duyệt khác nhau.
 
-![Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau.](/img/2018/pwa/state-of-pwa-2018.jpg)_Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau. Ảnh chụp từ slide [giới thiệu PWA tại Google I/O 2018](https://www.youtube.com/watch?v=NITk4kXMQDw)_
+[![Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau.](/img/2018/pwa/state-of-pwa-2018.jpg)](/img/2018/pwa/state-of-pwa-2018.jpg){: target="_blank" data-figure=""}_Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau. Ảnh chụp từ slide [giới thiệu PWA tại Google I/O 2018](https://www.youtube.com/watch?v=NITk4kXMQDw)_
 
 Tuy nhiên tôi muốn nhắc lại rằng với cơ chế Cải Tiến Tăng Dần, PWA có thể được áp dụng ngay từ bây giờ bất kể tính năng bạn cần chưa được hỗ trợ rộng rãi. Và với tiến độ hiện tại, những tính năng vừa nêu trên sẽ được hỗ trợ hoàn toàn trên hai nền tảng di động quan trọng và phổ biến nhất (Chrome trên Android và Safari trên iOS) trong vài tháng tới đây.
 
@@ -188,26 +188,26 @@ PWA có được thế mạnh của cả hai giải pháp Web và Native. Điể
 PWA đã chứng minh được hiệu quả của mình thông qua một vài con số thống kê với những app đã được triển khai thực tế:
 
 - **02 lần** là [số lượt sử dụng tăng](https://blog.chromium.org/2018/05/the-state-of-web-at-google-io-2018.html) sau khi Starbucks chuyển từ web app sang PWA.
-- **76%** là số [giao dịch thành công (conversions) tăng](https://developers.google.com/web/showcase/2016/alibaba) sau khi Alibaba.com triển khai PWA.
-- **90%** là [chênh lệch kích thước giữa](https://medium.com/@addyosmani/a-tinder-progressive-web-app-performance-case-study-78919d98ece0) Tinder PWA nhỏ hơn so với native app của nó trên Android.
-- **12%** là số [thanh toán thành công nhờ push notification](https://developers.google.com/web/showcase/2017/lancome) nhắc nhở người dùng quay lại giỏ hàng của mình tại trang PWA mới của thương hiệu Lancôme (lancome-usa.com).
-- **20%** là số [lượt xem bài tăng](http://www.niemanlab.org/2017/03/forbes-rebuilt-its-new-mobile-website-as-a-progressive-web-app/) trên trang PWA mới của Forbes so với mobile site cũ.
+- Sau khi [Alibaba.com triển khai PWA](https://developers.google.com/web/showcase/2016/alibaba), số giao dịch thành công (conversions) tăng **76%**, số lượt truy cập tăng **14%** trên iOS, **30%** trên Android và tỉ lệ tương tác với app sau khi Add to home screen tăng gấp **4 lần**.
+- Sau khi triển khai PWA, lượt truy cập Tinder trên mobile web tăng. Và [Tinder PWA có kích thước tải về nhỏ hơn](https://medium.com/@addyosmani/a-tinder-progressive-web-app-performance-case-study-78919d98ece0) so với native app của nó trên Android đến **90%**.
+- Thương hiệu Lancôme đã cho thiết kế lại trang web mobile (lancome-usa.com) và [sử dụng một số tính năng của PWA](https://developers.google.com/web/showcase/2017/lancome) với kết quả: conversions tăng **17%**, số lượt sử dụng trên mobile tăng **51%**, và đặc biệt là số lượt người dùng quay lại giỏ hàng và hoàn tất thanh toán nhờ push notification gửi nhắc nhở lên đến **12%**.
+- [Trang PWA thử nghiệm của Forbes](http://www.niemanlab.org/2017/03/forbes-rebuilt-its-new-mobile-website-as-a-progressive-web-app/) nhận được gấp **2 lần** thời gian sử dụng trung bình của người dùng so với mobile site cũ, dẫn đến số lượt bài đăng được đọc tăng đến **6 lần**...
 
 Xem thêm những con số thống kê về hiệu quả của PWA tại: [PWAStats.com](https://www.pwastats.com/).
 
-## Kết luận:
+![PWA showcase](/img/2018/pwa/pwa-showcase.jpg)_Một số PWA đã chứng minh được hiệu quả, từ trái qua: <a href="https://m.alibaba.com">m.alibaba.com</a>, <a href="https://tinder.com">tinder.com</a>, <a href="https://m.forbes.com">m.forbes.com</a>_
 
-<!-- Rõ ràng, Web chưa bao giờ lỗi thời, và nếu như bạn đang làm việc nhiều trên máy tính, ứng dụng mà bạn dùng nhiều nhất, tôi dám cá đó chính là trình duyệt trên desktop của bạn.
+## Kết luận
 
-Với sự chuyển dịch thời gian trực tuyến của người dùng từ máy tính để bàn sang thiết bị di động, Web vẫn luôn là giải pháp quan trọng và không thể thiếu -->
+Được giới thiệu chính thức [từ 2015](https://en.wikipedia.org/wiki/Progressive_Web_Apps), PWA đã trải qua thời gian thử nghiệm và trưởng thành đủ lâu để giờ đây chúng ta có thể khẳng định PWA chính là tương lai của Web và Web App.
 
-
+PWA đóng góp thêm một giải pháp ứng dụng di động nhiều hứa hẹn, giải phóng doanh nghiệp khỏi sự lệ thuộc vào app store, những hạn chế của native app. Và nếu được thiết kế hợp lý, PWA sẽ là giải pháp hợp nhất cho "mọi nền tảng" từ desktop đến mobile.
 
 ---
 #### Ghi chú:
 
 [^1]: Xin tóm tắt lại một số thuật ngữ về **"app"** trên thiết bị di động:
-    - Mobile app hoặc native app: (ở Việt Nam thường gọi tắt là "app") là ứng dụng được cài đặt từ app store, được vi`ết bằng ngôn ngữ lập trình dành riêng cho từng hệ điều hành di động khác nhau.
+    - Mobile app hoặc native app: (ở Việt Nam thường gọi tắt là "app") là ứng dụng được cài đặt từ app store, được viết bằng ngôn ngữ lập trình dành riêng cho từng hệ điều hành di động khác nhau.
     - (Mobile) web app: là website chạy trên trình duyệt của smart phone nhưng có trải nghiệm giống app và thường trao đổi nhiều dữ liệu giữa người dùng và website.
     - Hybrid app: là ứng dụng được cài đặt từ app store, tuy nhiên được viết bằng cùng ngôn ngữ lập trình với web app. Dù hybrid app có thể cài được trên nhiều HĐH khác nhau nhưng nó chỉ cần được viết cùng một bộ mã nguồn với một ít điều chỉnh riêng cho mỗi loại HĐH mà nó hỗ trợ.
 
@@ -215,6 +215,6 @@ Với sự chuyển dịch thời gian trực tuyến của người dùng từ 
 
 [^3]: URL là đường link đến một trang web bất kỳ
 
-[^4]: Tại Việt Nam, trình duyệt phổ biến thứ 2 sau Chrome là CocCoc. Tuy nhiên CocCoc cũng là một trình duyệt biến thể từ mã nguồn mở của Chrome nên những tính năng của PWA cũng sẽ được hỗ trợ.
+[^4]: Các trình duyệt phổ biến nhất bao gồm: Chrome, Firefox, Safari, MS Edge, Opera, Samsung Internet, UC Browser. Tại Việt Nam, trình duyệt phổ biến thứ 2 sau Chrome là CocCoc. Tuy nhiên CocCoc cũng là một trình duyệt biến thể từ mã nguồn mở của Chrome nên những tính năng của PWA cũng sẽ được hỗ trợ.
 
 [^5]: Người dùng sẽ vẫn nhận được push notification cho dù họ không lưu app về home screen chỉ cần họ đã bấm đồng ý nhận push notification. Việc yêu cầu gửi push notification cần thận trọng và chỉ thực hiện khi người dùng đã thể hiện sự quan tâm đến dịch vụ của bạn. (Nếu không khả năng người dùng từ chối nhận push notification là rất cao)
