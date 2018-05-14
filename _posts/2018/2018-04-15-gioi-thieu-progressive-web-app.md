@@ -3,7 +3,7 @@ layout: post
 title: Giới thiệu Progressive Web App
 subtitle: Tương lai của web app trên thiết bị di động.
 author: Thanh Tran
-description:
+description: Progressive Web App (PWA) là một dạng ứng dụng web mới đang thu hút rất nhiều sự quan tâm, tuy nhiên nó vẫn còn khá mới mẻ tại Việt Nam. Trong bài viết này tôi sẽ cố gắng giải thích PWA cho những ai không phải lập trình viên vẫn có thể hiểu.
 date: 2018-05-13T17:43:06+07:00
 tags: [Vietnamese, Front End, JavaScript, Mobile Web, Web App]
 image: img/2018/pwa/pwa-logo.png
@@ -12,7 +12,7 @@ image: img/2018/pwa/pwa-logo.png
 
 **P**{:.drop-cap}rogressive Web App (PWA) là một dạng ứng dụng web (web app) mới đang thu hút rất nhiều sự quan tâm từ các nhà phát triển web khắp thế giới đặc biệt là các doanh nghiệp hoạt động trực tuyến, tuy nhiên nó vẫn còn khá mới mẻ tại Việt Nam.
 
-Đã có nhiều bài viết liên quan đến PWA dành cho [lập](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/) [trình](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) [viên](https://www.smashingmagazine.com/2016/08/a-beginners-guide-to-progressive-web-apps/), cho nên trong bài viết này tôi sẽ cố gắng giải thích PWA cho người dùng Web phổ thông.
+Đã có nhiều bài viết liên quan đến PWA dành cho [lập](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/) [trình](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) [viên](https://www.smashingmagazine.com/2016/08/a-beginners-guide-to-progressive-web-apps/), cho nên trong bài viết này tôi sẽ cố gắng giải thích PWA để người dùng Web phổ thông vẫn có thể hiểu.
 
 ## Progressive Web App là gì?
 
@@ -79,7 +79,7 @@ Tuy nhiên những khả năng trên vẫn chỉ là sự hỗ trợ đơn lẻ 
 <figure class="figure figure--right">
     <video class="figure__image" src="/img/2018/pwa/native-add-to-home-screen.mp4" poster="/img/2018/pwa/native-add-to-home-screen.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
-    <figcaption class="figure__caption" style="width:300px">Banner cài đặt web app. Click lên hình để play.</figcaption>
+    <figcaption class="figure__caption" style="width:300px">Banner cài đặt web app. Bấm lên hình để play.</figcaption>
 </figure>
 
 Ngoài chức năng "Add To Home Screen" bằng tay đã được hỗ trợ bởi đa số trình duyệt di động hiện nay, một số trình duyệt mới hiện nay còn có thể **chủ động** hiện một banner mời gọi user cài web app lên home screen.
@@ -100,7 +100,7 @@ Ngoài ra Chrome và Android đang được cải thiện để tích hợp PWA 
 <figure class="figure figure--right">
     <video class="figure__image" src="/img/2018/pwa/offline-viewing.mp4" poster="/img/2018/pwa/offline-viewing.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
-    <figcaption class="figure__caption" style="width:300px">Offline demo. Click lên hình để play.</figcaption>
+    <figcaption class="figure__caption" style="width:300px">Offline demo. Bấm lên hình để play.</figcaption>
 </figure>
 
 Một trong những hạn chế của web app so với native app khiến nó chưa thật sự hữu dụng và được triển khai rộng rãi đó chính là khả năng hoạt động ngay cả khi người dùng offline. Khi người dùng mất kết nối (tắt mobile data, tắt wifi, bật flight mode...) hoặc kết nối Internet chậm, web app sẽ không thể sử dụng được do nó phải lấy dữ liệu từ máy chủ trung tâm, và người dùng sẽ nhanh chóng bỏ cuộc hoặc tìm đến native app.
@@ -116,7 +116,7 @@ Cũng nhờ **Service Worker**, là một chương trình nhỏ viết bằng ng
 <figure class="figure">
     <video class="figure__image" src="/img/2018/pwa/push-notification-demo.mp4" poster="/img/2018/pwa/push-notification-demo.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
-    <figcaption class="figure__caption">Push notification demo. Click lên hình để play.</figcaption>
+    <figcaption class="figure__caption">Push notification demo. Bấm lên hình để play.</figcaption>
 </figure>
 
 ### Tự động đồng bộ khi có mạng trở lại
@@ -128,7 +128,7 @@ Lấy ví dụ: ứng dụng nhắn tin tức thời, người dùng gửi một
 <figure class="figure">
     <video class="figure__image" src="/img/2018/pwa/background-sync.mp4" poster="/img/2018/pwa/background-sync.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
-    <figcaption class="figure__caption">Demo tự động gửi tin sau khi online. Video lấy từ <a href="https://www.youtube.com/watch?v=cmGr0RszHc8">bài thuyết trình của Jake Archibald</a>. Click lên hình để play.</figcaption>
+    <figcaption class="figure__caption">Demo tự động gửi tin sau khi online. Video lấy từ <a href="https://www.youtube.com/watch?v=cmGr0RszHc8">bài thuyết trình của Jake Archibald</a>. Bấm lên hình để play.</figcaption>
 </figure>
 
 ### Chia sẻ bằng native banner của hệ điều hành
@@ -136,7 +136,7 @@ Lấy ví dụ: ứng dụng nhắn tin tức thời, người dùng gửi một
 <figure class="figure figure--right">
     <video class="figure__image" src="/img/2018/pwa/web-share.mp4" poster="/img/2018/pwa/web-share.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
-    <figcaption class="figure__caption" style="width:300px">Demo share bằng banner native của Android. Click lên hình để play.</figcaption>
+    <figcaption class="figure__caption" style="width:300px">Demo share bằng banner native của Android. Bấm lên hình để play.</figcaption>
 </figure>
 
 Một tính năng tương đối hữu dụng nữa của PWA đó chính là **Web Share**. Để dễ hình dung, nếu bạn đang đọc bài viết này trên điện thoại, cách duy nhất để bạn chia sẻ nó là copy URL[^3] của nó và paste vào app bạn muốn share, hoặc bạn sẽ mở menu của trình duyệt ra, và bấm vào nút share. Chức năng Web Share của PWA sẽ giống như cách thứ hai vừa nêu.
@@ -150,19 +150,19 @@ Với PWA có sử dụng Web Share, khi bạn bấm vào nút share ngay trong 
 <figure class="figure figure--right">
     <video class="figure__image" src="/img/2018/pwa/credential-management.mp4" poster="/img/2018/pwa/credential-management.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
-    <figcaption class="figure__caption" style="width:300px"><a href="https://credential-management-sample.appspot.com/">Demo login vào app với "1 chạm"</a>. Click lên hình để play.</figcaption>
+    <figcaption class="figure__caption" style="width:300px"><a href="https://credential-management-sample.appspot.com/">Demo login vào app với "1 chạm"</a>. Bấm lên hình để play.</figcaption>
 </figure>
 
 Một tính năng đang dần trở thành yêu cầu phải có của trình duyệt đó là khả năng đồng bộ giữa các thiết bị và hệ điều hành khác nhau (nhưng cùng một loại trình duyệt). Hiện nay bạn đã có thể tạo một tài khoản đồng bộ trên Firefox, Opera, MS Edge và Chrome. Bạn sẽ thấy việc đồng bộ tạo sự tiện lợi cho người dùng rất nhiều đặc biệt là những ai lướt web trên nhiều thiết bị khác nhau: bookmark, lịch sử, các tab đang mở, thông tin nhập form và đặc biệt là thông tin đăng nhập (username & password) của các website.
 
-Với tính năng trên, người dùng sẽ dễ dàng đăng nhập vào các website trên nhiều thiết bị nhờ vào việc trình duyệt sẽ tự điền vào form đăng nhập. Tuy nhiên, một đặc tả mới dành riêng cho PWA với tên gọi **Credential Management API** cho phép web app thực hiện thao tác đăng nhập cho người dùng chỉ với một cú click chuột và không cần phải nhập lại mật khẩu. Đây là một trong những tiện lợi của native app với tài khoản lưu sẵn mà giờ đây web app cũng có thể làm được.
+Với tính năng trên, người dùng sẽ dễ dàng đăng nhập vào các website trên nhiều thiết bị nhờ vào việc trình duyệt sẽ tự điền vào form đăng nhập. Tuy nhiên, một đặc tả mới dành riêng cho PWA với tên gọi **Credential Management API** cho phép web app thực hiện thao tác đăng nhập cho người dùng chỉ với một cú chạm và không cần phải nhập lại mật khẩu. Đây là một trong những tiện lợi của native app với tài khoản lưu sẵn mà giờ đây web app cũng có thể làm được.
 
 ### Quản lý thanh toán và hỗ trợ thanh toán trực tuyến
 
 <figure class="figure figure--right">
     <video class="figure__image" src="/img/2018/pwa/web-payment.mp4" poster="/img/2018/pwa/web-payment.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
-    <figcaption class="figure__caption" style="width:300px"><a href="https://emerald-eon.appspot.com/">Demo Payment Request API</a>. Click lên hình để play.</figcaption>
+    <figcaption class="figure__caption" style="width:300px"><a href="https://emerald-eon.appspot.com/">Demo Payment Request API</a>. Bấm lên hình để play.</figcaption>
 </figure>
 
 Nếu như thanh toán trên mobile và bằng mobile đang trở thanh xu hướng và đem đến sự tiện lợi chưa từng có cho người dùng, thì Web App cũng không đứng ngoài cuộc.
