@@ -7,6 +7,8 @@
 	{% seo title=false %}
 
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="pingback" href="https://webmention.io/int3ractive.com/xmlrpc" />
+	<link rel="webmention" href="https://webmention.io/int3ractive.com/webmention" />
 
 	<!-- Main CSS with custom Bootstrap, Prism -->
 	<link rel="stylesheet" href="{{ "/css/clean-blog.min.css" | prepend: site.baseurl }}">
