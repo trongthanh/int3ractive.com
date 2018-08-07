@@ -14,7 +14,7 @@ $ gem install bundler
 $ bundle install
 
 # and finally execute:
-$ bundle exec jekyll serve --incremental
+$ bundle exec jekyll serve --incremental --livereload
 ```
 
 #### Linux / Ubuntu:
@@ -27,7 +27,7 @@ $ sudo apt install ruby ruby-dev ruby-bundler
 $ bundle install
 
 # and finally execute:
-$ bundle exec jekyll serve --incremental
+$ bundle exec jekyll serve --incremental --livereload
 ```
 
 ### Additional notes on the `kramdown` markdown syntax:
