@@ -12,6 +12,15 @@ h6 {
 	clear: both;
 }
 
+h2 > a, h2 > a:hover,
+h3> a, h3 > a:hover {
+	text-decoration: none;
+}
+
+hr {
+	clear: both;
+}
+
 /* Fixed nav bar in mobile screen (maybe port this back to cleanblog theme?) */
 .navbar-custom {
 	position: fixed;
@@ -62,6 +71,10 @@ h6 {
 }
 
 @media screen and (min-width: 768px) {
+	.media-thumbnail {
+		margin-bottom: 1em;
+	}
+
 	.navbar-custom {
 		position: absolute;
 	}
