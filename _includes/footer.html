@@ -62,6 +62,16 @@
 						</a>
 					</li>
 					{% endif %}
+					{% if site.codepen_username %}
+					<li>
+						<a href="https://codepen.io/{{ site.codepen_username }}" target="_blank" title="Follow me on CodePen" rel="me">
+							<span class="fa-stack">
+								<i class="fa fa-square fa-stack-2x"></i>
+								<i class="fa fa-codepen fa-lg fa-inverse"></i>
+							</span>
+						</a>
+					</li>
+					{% endif %}
 					<li>
 						<a href="https://ko-fi.com/trongthanh" target="_blank" title="I will never include ads on this site. So if you find my posts useful, please support me on Ko-fi." rel="me">
 							<span class="fa-stack">
