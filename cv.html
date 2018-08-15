@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta name="robots" content="noindex">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+<title>Tran Trong Thanh's résumé</title>
+<meta name="viewport" content="width=device-width">
+<style>
+
+/* reset */
+* { margin: 0; }
+
+h1, h2, .date {
+	font-family: FreeSerif, Georgia, Times New Roman, serif;
+	font-weight: normal;
+}
+
+h1,
+header > h1 > span,
+header > ul > li:before {
+	color: #111;
+}
+
+html {
+	background: #9BA2B0;
+	font-size: 14px;
+}
+
+body {
+	width: 65em;
+	padding: 7em 8%;
+	box-sizing: border-box;
+	margin: 1em auto;
+	background: white;
+	box-shadow: 1px 1px 5px 2px rgba(0,0,0,.3);
+	font-family: -apple-system, BlinkMacSystemFont, DejaVu Sans, Segoe UI, Verdana, Helvetica, sans-serif;
+	font-size: 100%/1.6;
+
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-o-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+
+	-moz-transition: .5s font-size;
+	-ms-transition: .5s font-size;
+	-o-transition: .5s font-size;
+	-webkit-transition: .5s font-size;
+	transition: .5s font-size;
+}
+
+h1, h2 {
+	page-break-after: avoid;
+	margin-bottom: .4em;
+}
+
+h1 {
+	margin-top: 1.2em;
+	font-size: 200%;
+}
+
+h2 {
+	margin-top: 1em;
+	font-size: 160%;
+	color: #17c;
+}
+
+a {
+	color:#5F8CFE;
+	text-decoration-skip: ink;
+}
+
+p {
+	margin: .6em 0;
+}
+
+h1 + p,
+h2 + p {
+	margin-top: 0;
+}
+
+ul {
+	list-style: square;
+	padding-left: 15px;
+}
+
+	ul ul {
+		padding-left: 3em;
+	}
+
+header {
+	margin-left: -20px;
+}
+
+	header h1 {
+		color: #17c;
+		margin: 0;
+		font-size: 350%;
+		line-height: 1.05;
+		font-variant: normal;
+	}
+
+		header h1 > span {
+			display: inline-block;
+			margin-left: 0em;
+			vertical-align: super;
+			font-size: 50%;
+		}
+
+	header h2 {
+		font-variant: normal;
+		color: inherit;
+		font-weight: normal;
+		margin: 0.5em 0;
+	}
+
+	.h-list {
+		display: block;
+		margin-bottom: .5em;
+		padding: 0;
+	}
+
+		.h-list > li {
+			display: inline;
+			list-style: none;
+		}
+
+		.h-list > li:before {
+			content: '• ';
+		}
+
+		.h-list > li:first-child:before {
+			content: none;
+		}
+
+	address {
+		font-style: normal;
+	}
+
+section {
+	page-break-inside: avoid;
+}
+
+	section > h1 {
+		background-color: #D1E7FE;
+		margin: 1.2em -20px 0.4em;
+		font-size: 190%;
+    	padding: 4px 20px 4px 20px;
+    	line-height: 1;
+	}
+	section > h2 {
+		border-bottom: 3px #D1E7FE solid;
+	}
+
+li {
+	page-break-inside: avoid;
+}
+
+.timeline {
+	padding: 0;
+	border: 0 solid #ddd;
+	/*border-width: 0;*/
+}
+
+	.timeline > li {
+		list-style: none;
+		padding: .4em 0;
+		border: 0;
+	}
+
+	.timeline > li:first-child {
+		border-top: 0;
+	}
+
+		.timeline > li > p {
+			margin: 0;
+		}
+
+		.timeline > li > .date {
+			float: left;
+			margin-left: .1em;
+			max-width: 8rem;
+			color: gray;
+			font-size: 110%;
+		}
+
+		.timeline > li > .date ~ p {
+			margin-left: 8rem;
+		}
+
+/* ====== media object ====== */
+.media,
+.media__body {
+	overflow:hidden;
+}
+
+.media__img {
+	float:left;
+	margin-right: 20px;
+	display:block;
+}
+
+.note {
+	margin-top: .4em;
+	font-size: 75%;
+}
+
+	.note a:not(:hover):not(:active) {
+		color: inherit;
+	}
+
+footer {
+	margin-top: 3em;
+	font-style: italic;
+}
+
+.amp {
+	font-style: italic;
+}
+
+#projects .timeline li p:nth-of-type(2) a:first-of-type {
+	font-weight: bold;
+}
+
+@media (max-width:950px) {
+	html { font-size: 12px; }
+}
+
+@media (max-width:700px) {
+	html { font-size: 11px; }
+}
+
+@media (max-width:600px) {
+	body {
+		width: auto;
+		margin: 1em;
+	}
+}
+
+@media print {
+	@page {
+		size: A4;
+		margin: 1.5cm 1cm;
+	}
+
+	html {
+		background: none;
+		font-size: 12pt;
+	}
+
+	body {
+		box-shadow: none;
+		padding: 0;
+	}
+
+	header h1 {
+		font-size: 300%;
+	}
+
+	header h2 {
+		font-size: 140%;
+	}
+
+	.u-print-hidden {
+		display: none !important;
+	}
+}
+</style>
+
+</head>
+<body>
+<header class="media">
+	<img class="media__img" src="/img/thanh-cv-head-shot.jpg" width="150" alt="Thanh Tran profile photo">
+	<div class="media__body">
+		<h1>Tran Trong Thanh <span>résumé</span></h1>
+		<h2>Front End-oriented Full Stack JavaScript Developer</h2>
+		<ul class="h-list">
+			<li>Email: <a href="mailto:trongthanh@gmail.com" target="_blank">trongthanh@gmail.com</a></li>
+			<li>Home page: <a href="https://int3ractive.com/" target="_blank">int3ractive.com</a></li>
+		</ul>
+		<ul class="h-list">
+			<li><a href="https://www.linkedin.com/in/trongthanh/" target="_blank">linkedin.com/in/trongthanh</a></li>
+			<li><a href="https://github.com/trongthanh" target="_blank">github.com/trongthanh</a></li>
+			<li class="u-print-hidden"><a href="https://twitter.com/trongthanh" target="_blank">twitter.com/trongthanh</a></li>
+		</ul>
+	</div>
+</header>
+
+<section id="summary">
+	<h1>Summary</h1>
+	<p>I started my career with Flash, then Front End and now as <strong>full stack JavaScript developer</strong>. My 10+ year career is an <strong>intensive focus on UI and Front End</strong> and I'm <strong>passionated about Web standards, developer experience, good UI, animation and user interaction</strong>. I have worked in small and large Web projects, which all leveraged <strong>JavaScript</strong> as the core programming language. I also enjoy sharing knowledge through <a href="https://int3ractive.com" target="_blank">my blog</a>, <a href="https://www.youtube.com/playlist?list=PLbO5JeIJXIxY1EmY6uYL9uLDE8OhKWOy7" target="_blank">team training</a>, and <a href="https://int3ractive.com/speaking" target="_blank">speaking</a> at conference. Currently, I'm expanding my technical knowledge in both fronts: front end with data visualization, new frameworks, Web XR; and back end with new NodeJS frameworks, SQL (back to), GraphQL, JAM stack.
+	</p>
+</section>
+
+<section id="work-experience">
+	<h1>Work experience</h1>
+	<ol class="timeline">
+		<li>
+			<p class="date">2014 – present<br>Vietnam</p>
+			<p>Co-founder and CTO cum Front End Architect • <a href="https://naustud.io" target="_blank">Nau Studio</a></p>
+			<p class="note">
+				Define and oversee developer standards and development process. Research and train JavaScript, Front End technologies for the team. Set up Front End architecture for medium and large scale web apps. Take part in full stack JavaScript development. Handle devops tasks including: deploy web apps, set up AWS, set up dev infrastructure.
+			</p>
+		</li>
+		<li>
+			<p class="date">2012 – 2014<br>Singapore</p>
+			<p>Front End Developer • <a href="http://aleph-labs.com" target="_blank">Aleph Labs</a></p>
+			<p class="note">Produce front-end parts for banking websites (clients: OCBC, Standard Chartered...). Develop mobile web applications (for Phonegap, standalone iPad web app)</p>
+		</li>
+		<li>
+			<p class="date">2011 – 2012<br>Singapore</p>
+			<p>Front End Developer • <a href="http://in2ideas.com" target="_blank">In2 Marketing & Consulting</a></p>
+			<p class="note">Develop websites (Flash, HTML, CSS, JavaScript), event mini-games (Adobe AIR), EDM... for clients (Intel, Dell, Microsoft Xbox...). Research and explore web standards, front-end technologies & social media. Perform web & social media consultancy for creative / servicing executives & managers.</p>
+		</li>
+		<li>
+			<p class="date">2007 – 2011<br>Vietnam</p>
+			<p>Senior Flash Developer • <a href="https://www.pycogroup.com" target="_blank">Pyramid Consulting Vietnam</a></p>
+			<p class="note">Develop flash sites, flash games, desktop apps (mostly in ActionScript 3, Flex, AIR). Lead Flash projects and research new technologies & processes. Manage Flash team's production and resource planning for 12 members.</p>
+		</li>
+	</ol>
+</section>
+
+<section id="speaking">
+	<h1>Industry recognition</h1>
+
+	<h2>Speaking</h2>
+
+	<p>I have given numerous talks and workshops from internal team to local developer conferences. Some of the talks were at big web development events, such as:</p>
+
+	<ol class="timeline">
+		<li>
+			<p class="date">12 Jan 2018</p>
+			<p>Talk: Mobile-first Mindset</p>
+			<p><a href="https://www.facebook.com/events/753104714884481" target="_blank">Faculty of Design and Art</a>, Hoa Sen University, Ho Chi Minh city, VN</p>
+			<p class="note">I was invited as special guess speaker on the topic. Audience were future UI and digital designers.</p>
+		</li>
+		<li>
+			<p class="date">01 Dec 2017</p>
+			<p>Talk: Final Solution For Web Layout</p>
+			<p><a href="https://vietnamwebsummit.com/en/homepage/" target="_blank">Vietnam Web Summit 2017</a>, Ho Chi Minh city, VN</p>
+			<p class="note">Largest Web development conference in Vietnam which took place across country in 3 cities, with hundreds of attendees as developers.</p>
+		</li>
+		<li>
+			<p class="date">20 May 2017</p>
+			<p>Talk: Future of Mobile Web App</p>
+			<p><a href="https://mobileday.vn/en/home/" target="_blank">Vietnam Mobile Day 2017</a>, Ho Chi Minh city, VN</p>
+			<p class="note">The largest annual festival day for developers and marketers relating to Mobile industry.</p>
+		</li>
+		<li>
+			<p class="date">11 May 2017</p>
+			<p>Talk: Universal Applications with ReactJS</p>
+			<p><a href="https://www.facebook.com/events/1402477403144281" target="_blank">Ansarada Tech Meetup</a>, Ho Chi Minh city, VN</p>
+		</li>
+	</ol>
+
+	<p>For more information, please refer to my website at <a href="https://int3ractive.com/speaking" target="_blank">int3ractive.com/speaking</a>.</p>
+
+	<h2>Interviews</h2>
+
+	<ul>
+		<li>Interviewed for <a href="https://topdev.vn/blog/ux-tips-web-tot-phai-load-nhanh-duoi-2-giay/" target="_blank">TopDev.vn</a>, in which I discussed current web development practice at Nau Studio, career path for Front End developer, how to transit to UX expert.</li>
+		<li>Joined panel discussion at Codecamp's <a href="https://www.facebook.com/events/132056970774241">Frontend Conf 2017: Render</a> in which I hosted the panel as well as gave a brief presentation of my thoughts about Front End scene in Vietnam in 2018</li>
+	</ul>
+</section>
+
+<section id="projects">
+	<h1>Selected Projects</h1>
+
+	<h2>Client Projects</h2>
+	<ol class="timeline">
+		<li>
+			<p class="date">04/17 – 01/18</p>
+			<p><a href="https://goalify.plus" target="_blank">Goalify Web App</a>: HRM and OKR SaaS product</p>
+			<p class="note">A build-from-scratch product wich relevage GraphQL as the API communication protocol. Back end using Loopback and a custom Relay server; front end using React, Relay. My role: Front End architect, NodeJS developer. Number of dev (average): 05.</p>
+		</li>
+		<li>
+			<p class="date">08/17 – 12/17</p>
+			<p><a href="https://livbyaia.com" target="_blank">Liv by AIA</a>: lifestyle and fitness publishing platform</p>
+			<p class="note">A new publishing platform for AIA Vietnam, built upon Loopback, admin-on-rest, NextJS & React with article editor based on <a href="https://quilljs.com/" target="_blank">Quilljs</a>. My role: Front End architect, NodeJS developer. Number of dev: 04.</p>
+		</li>
+		<li>
+			<p class="date">12/15 – 10/16</p>
+			<p><a href="https://www.cimbclicks.com.my/clicks/" target="_blank">CIMB Clicks</a>: Internet banking platform</p>
+			<p class="note">A revamped iBanking platform for CIMB, biggest bank in Malaysia. We delivered the Front End using Angular 2 and IBM Mobile First framework. My role: Front End architect, lead Front End developer. Number of dev: 04.</p>
+		</li>
+		<li>
+			<p class="date">06/15 – 12/15</p>
+			<p><a href="https://vib.com.vn" target="_blank">VIB Public Site</a>: new front page for a commercial bank in Vietnam</p>
+			<p class="note">Produce Front End delivery to integrate with IBM Webphere. Backend is provided by another vendor. The project used handlebars and grunt script to componentize parts and easily generate static HTML pages. My role: lead Front End developer. Number of dev: 03.</p>
+		</li>
+	</ol>
+	<h2>Open Source</h2>
+	<ol class="timeline">
+		<li>
+			<p class="date">01/18 – 02/18</p>
+			<p><a href="https://github.com/naustudio/node-vn-payments" target="_blank">node-vn-payments</a>: Vietnamese payment gateways helper</p>
+			<p class="note">An npm package that help NodeJS apps exchange data with some common Vietnamese payment gateways with more confidence. The library uses Jest as unit test framework with 100% coverage. My role: API designer, NodeJS developer.</p>
+		</li>
+		<li>
+			<p class="date">Sep 2017</p>
+			<p><a href="https://date-fns.org/" target="_blank">date-fns</a> vi locale</p>
+			<p class="note">One of my projects used <code>date-fns</code> because it has better tree-shaking. However, by the time I looked at it, it didn’t have Vietnamese locale yet so I has contributed the <a href="https://github.com/date-fns/date-fns/tree/v2.0.0-alpha.7/src/locale/vi" target="_blank">vi locale package</a> for this library (more than 11,000 GitHub stars)</p>
+		</li>
+		<li>
+			<p class="date">09/14 – on&nbsp;going</p>
+			<p><a href="https://github.com/naustudio/nau-jukebox" target="_blank">Nau Jukebox</a>: A real-time online jukebox built with MeteorJS</p>
+			<p class="note">In which users can collectively book songs from various sources to listen together. This web app is live at <a href="https://jukebox.naustud.io" target="_blank">jukebox.naustud.io</a> and our team is using it regularly.</p>
+		</li>
+	</ol>
+	<p>More of my open source and side projects can be found at my website at <a href="https://int3ractive.com/open-source" target="_blank">int3ractive.com/open-source</a>.
+</p></section>
+
+<section id="technical-skills">
+	<h1>Technical skills</h1>
+	<p>I have a broad understanding and experience with Open Web technologies and full stack JavaScript development:</p>
+
+	<h2>Front End</h2>
+	<ul>
+		<li>Methodologies: progressive enhancement, mobile first, progressive web app</li>
+		<li>CSS: vanilla CSS, Sass SCSS, PostCSS, BEM notation, CSS frameworks...</li>
+		<li>HTML: HTML5 and related APIs, Handlebars, Google SEO, social network metadata</li>
+		<li>JavaScript: ES5, ES6+, DOM &amp; related APIs</li>
+		<li>Libraries: lodash, momentjs, greensock, three.js, d3.js, and a lot more</li>
+		<li>Framework: Angular 2 (was), React.js, Redux, React Router, Relay...</li>
+		<li>Tooling: Grunt (was), Gulp (was), Webpack, npm scripts, bash script</li>
+		<li>Testing: Karma (was), Jest, Mocha</li>
+		<li>Mobile app: Phonegap, Mobile First</li>
+		<li>Other: XML, SVG, JSON, YAML, AMD/UMD, ESM, Web extension</li>
+	</ul>
+
+	<h2>Back End</h2>
+	<ul>
+		<li>Web applications: Express, KeystoneJS, Loopback</li>
+		<li>Web app framework: MeteorJS, Next.js</li>
+		<li>Back end stuff: esm, payment gateways, OAuth, passport.js, GraphQL...</li>
+		<li>Database: MongoDB</li>
+		<li>JAM stack: jekyll, hexo, netlify</li>
+	</ul>
+
+	<h2>Devops</h2>
+	<p>Since we are a small team, I had to get involved in many devops tasks including:</p>
+	<ul>
+		<li>CI configuration: Jenkins (was), Gitlab, Bitbucket, Travis</li>
+		<li>AWS: CloudFront, S3, EC2, Route 53, IAM</li>
+		<li>Cloud VPS configuration: Ubuntu, CentOS, Windows Server</li>
+		<li>HTTP server configuration: Nginx, Apache</li>
+		<li>Let's Encrypt certification application</li>
+	</ul>
+
+	<h2>Other computer skills</h2>
+	<ul>
+		<li>OS: macOS (very proficient), Linux (OK)</li>
+		<li>Source control: SVN (was), Git</li>
+		<li>Office suites: MS Office, Libre Office, Google Docs</li>
+		<li>Presentation tools: Power Point, Keynote, Reveal.js</li>
+		<li>Graphic tools: Photoshop, Illustrator, Sketch app, and am learning to use GIMP, Inkscape</li>
+		<li>Other: Adobe Audition, Adobe Premiere</li>
+	</ul>
+
+	<p>Besides technical skills, I have developed other inter-personal and management skills including: team work, task assignment, presentation, mentoring, training, skill assessment...</p>
+</section>
+
+<section id="education">
+	<h1>Education</h1>
+	<ol class="timeline">
+		<li>
+			<p class="date">2006 – 2008</p>
+			<p><strong>Professional Diploma in IT, DNIIT</strong> • Outstanding, GPA: 3.75/4</p>
+			<p><a href="http://niit.edu.vn" target="_blank">NIIT Institute, Ho Chi Minh city, VN</a></p>
+		</li>
+		<li>
+			<p class="date">2002 – 2006</p>
+			<p><strong>Bachelor of Foreign Language</strong> • Fairly Good, GPA: 6.79/10</p>
+			<p><a href="http://hcmup.edu.vn" target="_blank">University of Pedagogy, Ho Chi Minh city, VN</a></p>
+			<p class="note">TESOL equivalent.</p>
+		</li>
+	</ol>
+</section>
+
+<section id="languages">
+	<h1>Languages</h1>
+	<ul>
+		<li><strong>Vietnamese</strong>: Native</li>
+		<li><strong>English</strong>: Fluent
+		<p class="note">IELTS 6.5 (2005); worked in an English-speaking country (Singapore) for 2.5 years</p>
+		</li>
+	</ul>
+</section>
+
+<section id="interests">
+	<h1>Interest</h1>
+
+	<h2>Professional interests</h2>
+	<p>Developer experience, open web standards, front end web development, web accessibility, web animation, web 3D, data visualization, user experience, UI design, technical writing, knowledge sharing.</p>
+
+	<h2>Hobbies</h2>
+	<p>Movies, music, reading, gaming (was), photography, playing guitar, relax walking.</p>
+
+	<h2>Personality Type</h2>
+	<p>My personality type: <a href="http://www.16personalities.com/intp-personality">“The Logician” (INTP-A)</a></p>
+</section>
+
+<footer>
+	<p>References are available upon request.</p>
+</footer>
+
+</body></html>
