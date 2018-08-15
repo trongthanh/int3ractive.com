@@ -15,9 +15,7 @@ Here are some of my open source or contributed-to projects through out my career
 
 [![Data viz collection screenshot](/img/projects/data-viz.png){: align="left" width="200" class="media-thumbnail"}](https://viz.int3ractive.com)
 
-My next interest in Web Front End is data visualization in which it demands key expertises of a FE engineer such as drawing, animation, interaction and layout.
-
-I'm practicing _data viz_ and show them at [viz.int3ractive.com](https://viz.int3ractive.com).
+My next interest in Web Front End is data visualization in which it demands key expertises of a FE engineer such as drawing, animation, interaction and layout. I'm practicing _data viz_ and show them at [viz.int3ractive.com](https://viz.int3ractive.com).
 
 ---
 
