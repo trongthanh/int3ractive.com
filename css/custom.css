@@ -2,21 +2,7 @@
  * Int3ractive.com custom CSS
  */
 
-/* avoid floating figure image leaked into other sections */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
-}
-
-h2 > a, h2 > a:hover,
-h3> a, h3 > a:hover {
-	text-decoration: none;
-}
-
+/* Unsured if this is desired for all <hr>, so I'm keeping it in custom */
 hr {
 	clear: both;
 }
@@ -47,6 +33,11 @@ hr {
 
 .footnotes {
 	font-size: 0.8em;
+}
+
+.copyright a {
+	/* avoid wrapping of copyright hyperlink */
+	white-space: nowrap;
 }
 
 /* Illustrated figure block */
