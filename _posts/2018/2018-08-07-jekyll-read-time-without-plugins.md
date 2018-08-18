@@ -33,9 +33,9 @@ So I have revised the solution with my own as following:
 </span>{% endraw %}
 ```
 
-Since Liquid filter `divided_by` will round down the input integer (0.5 to 0, etc.), adding back 1 will correct this, with the only flaw that all fractions of minute will now be rounded up to one minute.
+Since Liquid filter `divided_by` will round down the result if input is integer (0.5 to 0, etc.), adding back 1 will correct this, with the only flaw that any fractions of minute will now be rounded up to one minute.
 
-Besides the new word-to-read-time algorithm, I've also added the `strip_html` filter to the partial and use [include parameter](https://jekyllrb.com/docs/includes/#passing-parameters-to-includes) so that it'll work correctly with consistent `min read` value regardless of the context it is used. For example, if it is placed in **post** layout, we will add the partial like so:
+Besides the new read-time algorithm, I've also added the `strip_html` filter to the partial and use [include parameter](https://jekyllrb.com/docs/includes/#passing-parameters-to-includes) so that it'll work correctly with consistent `min read` value regardless of the context it is used. For example, if it is placed in **post** layout, we will add the partial like so:
 
 ```liquid
 {% raw %}<p class="meta">
