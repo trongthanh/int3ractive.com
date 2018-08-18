@@ -4,9 +4,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{% if page.layout == 'post'
-	%}<title>{{ page.title }} - {{ site.title}}</title>
+	%}<title>{{ page.title | strip_html }} - {{ site.title}}</title>
 	{% else
-	%}<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.seo_title }}</title>
+	%}<title>{% if page.title %}{{ page.title | strip_html }} - {% endif %}{{ site.seo_title }}</title>
 	{% endif %}
 	{% seo title=false %}
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

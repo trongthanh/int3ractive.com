@@ -19,7 +19,7 @@ description: "Home page and blog of Trần Trọng Thanh. Here is archive of all
 				<ul>
 			{% endif %}
 		{% endunless %}
-			<li><time>{{ post.date | date:"%d/%m" }}</time>: <a href="{{ post.url | prepend: site.baseurl  }}">{{ post.title }}</a></li>
+			<li><time>{{ post.date | date:"%d/%m" }}</time>: <a href="{{ post.url | prepend: site.baseurl  }}">{{ post.title | strip_html }}</a></li>
 	{% endfor %}
 	</ul>
 </section>
