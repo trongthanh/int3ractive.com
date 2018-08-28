@@ -3,7 +3,7 @@ layout: post
 title: On dual booting Linux on a Macbook Air
 subtitle: And on choosing a modern Ubuntu desktop environment
 author: Thanh Tran
-description:
+description: I have been using a MacBook Air for both personal use and work since 2012. But in 2018, Apple is not itself anymore. I'm dual booting a Linux distro along with macOS on my MBA, to get familiar with modern Linux desktop experience, and to explore the tools and software that can replace my current ones on macOS.
 date: 2018-08-28T01:19:44+07:00
 tags: [Linux, macOS, Macbook Air]
 ---
@@ -60,7 +60,7 @@ I was curious about Elementary OS which has minimalist and similar UI to macOS, 
 - Files explorer with column view similar to macOS Finder
 - Nice and clean app store
 
-### Dislike:
+#### Dislike:
 - Terminal lack of customization (other shortcuts, color theme....)
 - No global menu, so most of the top panel space is also wasted
 - Old system tray icons won't show at top bar (iBus, Fcitx, Electron apps...). This is show-stopper for me.
