@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Making the best of MacBook Air touchpad on Ubuntu
-subtitle: A guide to mtrack driver and make use of the multi-touch touch pad on Linux
+subtitle: A guide to mtrack driver and make use of the multi-touch touchpad on Linux
 author: Thanh Tran
-description: In this post, I'm detailing my touch pad setup that I feel best so far and that it is as close to MacOS experience as I can get on Ubuntu 18.04 dual booted on a MacBook Air
+description: In this post, I'm detailing my touchpad setup that I feel best so far and that it is as close to MacOS experience as I can get on Ubuntu 18.04 dual booted on a MacBook Air
 date: 2018-09-17T00:07:16+07:00
-tags: [Linux, Macbook Air, Ubuntu, touch pad]
+tags: [Linux, Macbook Air, Ubuntu, touchpad]
 image: img/2018/macbookair-touchpad.jpg
 ---
 <center><small><em>Cover photo by Katarina Šikuljak on Unsplash</em></small></center>
 
-If you are a long time MacBook (Air) user and recently switch to Linux, I bet one of the things you'll miss most is the multi-touch touch pad. As I have [blogged earlier](https://int3ractive.com/2018/08/on-dual-booting-linux-on-a-macbook-air.html) that I decided to dual boot Ubuntu on this MacBook Air, at first, I also struggled to find the best setup for the touch pad to retain my productivity while not having to rely much on mouse.
+If you are a long time MacBook (Air) user and recently switch to Linux, I bet one of the things you'll miss most is the multi-touch touchpad. As I have [blogged earlier](https://int3ractive.com/2018/08/on-dual-booting-linux-on-a-macbook-air.html) that I decided to dual boot Ubuntu on this MacBook Air, at first, I also struggled to find the best setup for the touchpad to retain my productivity while not having to rely much on mouse.
 
-In this post, I'm detailing my touch pad setup that I feel best so far and that it is as close to MacOS experience as I can get.
+In this post, I'm detailing my touchpad setup that I feel best so far and that it is as close to MacOS experience as I can get.
 
 Although **libinput** is the default driver on latest Linux distros, we'll switch to **mtrack**[^1] driver which supports many more of multi-touch gestures with flexible configurations, especially the three finger drag, which is also the main reasons for my move. Thanks to this [blog post](https://williambharding.com/blog/technology/toward-a-linux-touchpad-as-smooth-as-macbook-pro/), I got a much faster head start, but there were still a lot of other things I did to get to my current setup.
 
@@ -48,7 +48,7 @@ Finally, install the driver into system:
 sudo make install
 ```
 
-## Configure the new touch pad driver
+## Configure the new touchpad driver
 
 The new driver won't be used until there's a proper config file set up. Create the config file at `/usr/share/X11/xorg.conf.d/50-mtrack.conf` (root or admin permission needed) and edit it with your favorite text editor. Or use these commands:
 
@@ -78,7 +78,7 @@ Section "InputClass"
         Option          "IgnoreThumb" "false"
         Option          "ThumbRatio" "70"
         Option          "ThumbSize" "25"
-        # Ignore palm, with palm takes up to 30% of your touch pad
+        # Ignore palm, with palm takes up to 30% of your touchpad
         Option          "IgnorePalm" "true"
         Option          "PalmSize" "30"
         # Trigger mouse button when tap: 1 finger - left click, 2 finger - right click, 3 - middle click
@@ -89,7 +89,7 @@ Section "InputClass"
         Option          "ClickTime" "25"
         # Disable tap-to-drag, we're using three finger drag instead
         Option          "TapDragEnable" "false"
-        # While touching the touch pad with fingers, press the touchpad physical click button
+        # While touching the touchpad with fingers, press the touchpad physical click button
         Option          "ClickFinger1" "1"
         Option          "ClickFinger2" "3"
         Option          "ClickFinger3" "2"
@@ -138,15 +138,15 @@ Few things to note from above config file:
 - You can tweak 2 finger scrolling sensitivity at `ScrollDistance`.
 - These scroll and swipe are natural, so you may swap the button number if you want the reverse.
 - Click on tap is enabled. If you don't want that, set those `TapButton#` value to "0"
-- My config doesn't ignore thumb. I often press the physical touch pad button with thumb. If you want to ignore thumb, set `IgnoreThumb` to "true".
+- My config doesn't ignore thumb. I often press the physical touchpad button with thumb. If you want to ignore thumb, set `IgnoreThumb` to "true".
 
 If you want further tweaks, head to [the driver's Github README](https://github.com/p2rkw/xf86-input-mtrack) and read the configuration instructions.
 
-After that, log out and log in to your desktop. You'll know the driver is being used if you can drag or make selection immediately with three fingers on the touch pad.
+After that, log out and log in to your desktop. You'll know the driver is being used if you can drag or make selection immediately with three fingers on the touchpad.
 
-## Disable touch pad while typing with `dispad`
+## Disable touchpad while typing with `dispad`
 
-After using **mtrack** for a while, I notice one of the annoying things is that touch pad is not disabled while typing which make the caret jump if you accidentally tap on it (and because I enabled tap to click). If you have troubles with this, install the `dispad` daemon from the original author of `mtrack`:
+After using **mtrack** for a while, I notice one of the annoying things is that touchpad is not disabled while typing which make the caret jump if you accidentally tap on it (and because I enabled tap to click). If you have troubles with this, install the `dispad` daemon from the original author of `mtrack`:
 
 ```sh
 cd /tmp
@@ -185,7 +185,7 @@ sudo apt install xbindkeys xdotool
 
 ### So what are xbindkeys & xdotool?
 
-`xbindkeys` is a daemon listening to your inputs from any input devices including keyboard, mouse and touch pad. You'll define a rule at which, if an input or combination of inputs matches, some command can be executed. That's where `xdotool` come in. `xdotool` is the command line tool which is able to simulate other key inputs. So by combining `xbindkeys` and `xdotool`, we'll be able to map high mouse buttons (> 9) to certain shortcuts that suit our needs.
+`xbindkeys` is a daemon listening to your inputs from any input devices including keyboard, mouse and touchpad. You'll define a rule at which, if an input or combination of inputs matches, some command can be executed. That's where `xdotool` come in. `xdotool` is the command line tool which is able to simulate other key inputs. So by combining `xbindkeys` and `xdotool`, we'll be able to map high mouse buttons (> 9) to certain shortcuts that suit our needs.
 
 To define the rules, you'll need to open `xbindkeys-config` GUI app, from which you'll define the keys listened and the actions (command). I won't give the how-to here (which you can [look it up here](https://wiki.archlinux.org/index.php/Xbindkeys)), but will provide my current xbindkeys config which you can copy and save it at `~/.xbindkeysrc`:
 
@@ -232,10 +232,10 @@ Finally, don't forget to add this command `/usr/bin/xbindkeys_autostart` to **St
 
 ## Final words
 
-That's my whole setup for multi-touch touch pad and it has made my life on Linux a lot easier! However, this may just be temporary since `libinput` and Wayland are already chosen to be the future and they are actively developed. I will revisit `libinput` once it get better multi-touch support and more configurations, but `mtrack` is the way to go, for now.
+That's my whole setup for multi-touch touchpad and it has made my life on Linux a lot easier! However, this may just be temporary since `libinput` and Wayland are already chosen to be the future and they are actively developed. I will revisit `libinput` once it get better multi-touch support and more configurations, but `mtrack` is the way to go, for now.
 
 ---
-[^1]: Here's a brief touch pad driver 101: There are three known drivers for laptop touch pad on Linux, i.e. **synaptics** (discontinued), **libinput** and **mtrack**. For latest Ubuntu and other popular distros, libinput is the chosen driver because it has decent multi touch support (and being improved) and most importantly, it supports [Wayland](https://en.wikipedia.org/wiki/Wayland_(display_server_protocol)) environment. There are few flaws with current libinput driver though, for example: I cannot adjust the sensitive of scroll with two fingers, I cannot disable tap-and-drag easily (some manual commands involved), I cannot drag with three fingers...
+[^1]: Here's a brief touchpad driver 101: There are three known drivers for laptop touchpad on Linux, i.e. **synaptics** (discontinued), **libinput** and **mtrack**. For latest Ubuntu and other popular distros, libinput is the chosen driver because it has decent multi touch support (and being improved) and most importantly, it supports [Wayland](https://en.wikipedia.org/wiki/Wayland_(display_server_protocol)) environment. There are few flaws with current libinput driver though, for example: I cannot adjust the sensitive of scroll with two fingers, I cannot disable tap-and-drag easily (some manual commands involved), I cannot drag with three fingers...
 
 [^2]: The `~/` sign means this file is stored at current user's home folder.
 
