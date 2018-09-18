@@ -14,9 +14,9 @@ If you are a long time MacBook (Air) user and recently switch to Linux, I bet on
 
 In this post, I'm detailing my touchpad setup that I feel best so far and that it is as close to MacOS experience as I can get.
 
-Although **libinput** is the default driver on latest Linux distros, we'll switch to **mtrack**[^1] driver which supports many more of multi-touch gestures with flexible configurations, especially the three finger drag, which is also the main reasons for my move. Thanks to this [blog post](https://williambharding.com/blog/technology/toward-a-linux-touchpad-as-smooth-as-macbook-pro/), I got a much faster head start, but there were still a lot of other things I did to get to my current setup.
+Although **libinput** is the default driver on latest Linux distros, we'll switch to **mtrack**[^1] driver which supports many more of multi-touch gestures with flexible configurations, especially the three finger drag, which is also the main reason for my move. Thanks to this [blog post](https://williambharding.com/blog/technology/toward-a-linux-touchpad-as-smooth-as-macbook-pro/), I got a much faster head start, but there were still a lot of other things I did to get to my current setup.
 
-Before we begin, please noted that mtrack currently and will only support Xorg environment, which I am fine since I don't find Wayland is any better in terms of performance and resource usage on current Ubuntu 18.04. I'm staying with Xorg for now (which is default session of Ubuntu 18.04 by the way).
+Before we begin, please be noted that mtrack currently and will only support Xorg environment, which I am fine since I don't find Wayland is any better in terms of performance and resource usage on current Ubuntu 18.04. I'm staying with Xorg for now (which is default session of Ubuntu 18.04 by the way).
 
 ## Compile and install mtrack driver
 
@@ -25,6 +25,8 @@ Compile a Linux package by yourself might be a little scary for newbies so you j
 First, open terminal and install the necessary tools and dependencies for the compilation of the driver:
 
 ```sh
+# Update Ubuntu to latest packages
+sudo apt update && sudo apt upgrade
 # These dependencies were noted by me on default Ubuntu 18.04
 sudo apt install build-essential git libmtdev-dev mtdev-tools xserver-xorg-dev xutils-dev
 ```
@@ -40,7 +42,7 @@ cd xf86-input-mtrack
 sudo make
 ```
 
-You are most likely not be able to compile the package at the `sudo make` command. Look carefully at the error messages which will tell the missing dependencies for it. If you are stuck, post a comment here and I'll see if I can help.
+You are most li kely not be able to compile the package at the `sudo make` command. Look carefully at the error messages which will tell the missing dependencies for it. If you are stuck, post a comment here and I'll see if I can help.
 
 Finally, install the driver into system:
 
@@ -142,6 +144,13 @@ Few things to note from above config file:
 
 If you want further tweaks, head to [the driver's Github README](https://github.com/p2rkw/xf86-input-mtrack) and read the configuration instructions.
 
+**Updated 2018-09-18**: There's another key point in my notes that I forgot to include: During my first setup with `mtrack`, the driver didn't work until I add my current Linux user to the `input` group. Do so with following command:
+
+```sh
+sudo adduser "`whoami`" input
+```
+
+
 After that, log out and log in to your desktop. You'll know the driver is being used if you can drag or make selection immediately with three fingers on the touchpad.
 
 ## Disable touchpad while typing with `dispad`
@@ -232,7 +241,10 @@ Finally, don't forget to add this command `/usr/bin/xbindkeys_autostart` to **St
 
 ## Final words
 
-That's my whole setup for multi-touch touchpad and it has made my life on Linux a lot easier! However, this may just be temporary since `libinput` and Wayland are already chosen to be the future and they are actively developed. I will revisit `libinput` once it get better multi-touch support and more configurations, but `mtrack` is the way to go, for now.
+That's my whole setup for multi-touch touchpad and it has made my life on Linux a lot easier! However, I discovered some issues with `mtrack` driver after a lot
+
+
+This may just be temporary since `libinput` and Wayland are already chosen to be the future and they are actively developed. I will revisit `libinput` once it get better multi-touch support and more configurations, but `mtrack` is the way to go, for now.
 
 ---
 [^1]: Here's a brief touchpad driver 101: There are three known drivers for laptop touchpad on Linux, i.e. **synaptics** (discontinued), **libinput** and **mtrack**. For latest Ubuntu and other popular distros, libinput is the chosen driver because it has decent multi touch support (and being improved) and most importantly, it supports [Wayland](https://en.wikipedia.org/wiki/Wayland_(display_server_protocol)) environment. There are few flaws with current libinput driver though, for example: I cannot adjust the sensitive of scroll with two fingers, I cannot disable tap-and-drag easily (some manual commands involved), I cannot drag with three fingers...
