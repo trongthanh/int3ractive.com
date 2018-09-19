@@ -27,8 +27,9 @@ First, open terminal and install the necessary tools and dependencies for the co
 ```sh
 # Update Ubuntu to latest packages
 sudo apt update && sudo apt upgrade
+
 # These dependencies were noted by me on default Ubuntu 18.04
-sudo apt install build-essential git libmtdev-dev mtdev-tools xserver-xorg-dev xutils-dev
+sudo apt install build-essential git pkg-config libmtdev-dev mtdev-tools xserver-xorg-dev xutils-dev
 ```
 
 Then we'll clone source code and compile the mtrack driver from its currently active [repo](https://github.com/p2rkw/xf86-input-mtrack):
@@ -239,12 +240,29 @@ I haven't found a use case for rotating gesture (button 14 & 15) so I currently 
 
 Finally, don't forget to add this command `/usr/bin/xbindkeys_autostart` to **Startup Applications** so that it is automatically started at reboot.
 
+## Bonus: pixel perfect scrolling on Firefox
+
+**Updated 2018-08-19:** FWIW, GTK3+ has started support for pixel perfect scrolling (no jumping, pixel by pixel scrolling) for many of its applications. That has greatly enhanced UX for laptop users or users with trackpad. However, Firefox, the default browser on many Linux distros, still uses the jumping scroll (or fake smooth with easing movement). I have searched a lot for how Firefox will support pixel perfect scrolling, like it does on macOS, but only found answers to current fake smooth option.
+
+Thankfully, I've got a hint from a Redditor replying on my post on [Reddit](https://www.reddit.com/r/Ubuntu/comments/9ggqv6/make_the_best_of_macbook_touchpad_on_ubuntu/). The reply points to [this post](https://np.reddit.com/r/linux/comments/72mfv8/psa_for_firefox_users_set_moz_use_xinput21_to/?st=jm8n2iqu&sh=5e7163c1) which I'll quote here:
+
+> I know this works for Firefox 55 or newer, but don't know the earliest version which supports it. I assume it will be enabled by default at some point, but it isn't yet in Firefox 58 (the current nightly).
+> 1. Run this command: 
+>    `echo export MOZ_USE_XINPUT2=1 | sudo tee /etc/profile.d/use-xinput2.sh`
+> 2. Log out and back in.
+> 3. Firefox should now use xinput 2.
+> 4. (optional) Open Firefox and go to about:preferences -> Advanced (or about:preferences -> Browsing for Firefox Nightly), and uncheck "Use smooth scrolling". This disables the old style "smooth scrolling", which just causes an annoying delay when using xinput2 style scrolling imo.
+
+So by following above steps, pixel pefect scrolling is turned on for latest Firefox 62 and it's working great.
+
 ## Final words
 
-That's my whole setup for multi-touch touchpad and it has made my life on Linux a lot easier! However, I discovered some issues with `mtrack` driver after a lot
+That's my whole setup for multi-touch touchpad and it has made my life on Linux a lot easier! However, I discovered some issues with `mtrack` driver after a lot of use, but they are trivial and won't dismiss the whole experience:
 
+- Scroll coast are sometimes sticky and make scroll move quickly in subsequence scroll gestures
+- Dispad sometimes doesn't detect typing and lets the caret jump
 
-This may just be temporary since `libinput` and Wayland are already chosen to be the future and they are actively developed. I will revisit `libinput` once it get better multi-touch support and more configurations, but `mtrack` is the way to go, for now.
+Finally, this may just be temporary since `libinput` and Wayland are already chosen to be the future and they are actively developed. I will revisit `libinput` once it get better multi-touch support and more configurations, but `mtrack` is the way to go, for now.
 
 ---
 [^1]: Here's a brief touchpad driver 101: There are three known drivers for laptop touchpad on Linux, i.e. **synaptics** (discontinued), **libinput** and **mtrack**. For latest Ubuntu and other popular distros, libinput is the chosen driver because it has decent multi touch support (and being improved) and most importantly, it supports [Wayland](https://en.wikipedia.org/wiki/Wayland_(display_server_protocol)) environment. There are few flaws with current libinput driver though, for example: I cannot adjust the sensitive of scroll with two fingers, I cannot disable tap-and-drag easily (some manual commands involved), I cannot drag with three fingers...
