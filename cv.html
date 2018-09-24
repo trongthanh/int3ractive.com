@@ -228,6 +228,10 @@ footer {
 	font-weight: bold;
 }
 
+.u-print-only {
+	display: none;
+}
+
 @media (max-width:950px) {
 	html { font-size: 12px; }
 }
@@ -270,6 +274,10 @@ footer {
 	.u-print-hidden {
 		display: none !important;
 	}
+
+	.u-print-only {
+		display: block;
+	}
 }
 </style>
 
@@ -280,6 +288,11 @@ footer {
 	<div class="media__body">
 		<h1>Tran Trong Thanh <span>résumé</span></h1>
 		<h2>Front End-oriented Full Stack JavaScript Developer</h2>
+		<ul class="h-list u-print-only">
+			<li>Gender: Male</li>
+			<li>YOB: 1984</li>
+			<li>Nationality: Vietnamese</li>
+		</ul>
 		<ul class="h-list">
 			<li>Email: <a href="mailto:trongthanh@gmail.com" target="_blank">trongthanh@gmail.com</a></li>
 			<li>Home page: <a href="https://int3ractive.com/" target="_blank">int3ractive.com</a></li>
@@ -426,10 +439,10 @@ footer {
 		<li>CSS: vanilla CSS, Sass SCSS, PostCSS, BEM notation, CSS frameworks...</li>
 		<li>HTML: HTML5 and related APIs, Handlebars, Google SEO, social network metadata</li>
 		<li>JavaScript: ES5, ES6+, DOM &amp; related APIs</li>
-		<li>Libraries: lodash, momentjs, greensock, three.js, d3.js, and a lot more</li>
-		<li>Framework: Angular 2 (was), React.js, Redux, React Router, Relay...</li>
-		<li>Tooling: Grunt (was), Gulp (was), Webpack, npm scripts, bash script</li>
-		<li>Testing: Karma (was), Jest, Mocha</li>
+		<li>Libraries: lodash, momentjs, greensock, three.js, d3.js, pixi.js and a lot more</li>
+		<li>Framework: Angular 2 (used to), React.js, Redux, React Router, Relay...</li>
+		<li>Tooling: Grunt (used to), Gulp (used to), Webpack, npm scripts, bash script</li>
+		<li>Testing: Karma (used to), Jest, Mocha</li>
 		<li>Mobile app: Phonegap, Mobile First</li>
 		<li>Other: XML, SVG, JSON, YAML, AMD/UMD, ESM, Web extension</li>
 	</ul>
@@ -440,13 +453,13 @@ footer {
 		<li>Web app framework: MeteorJS, Next.js</li>
 		<li>Back end stuff: esm, payment gateways, OAuth, passport.js, GraphQL...</li>
 		<li>Database: MongoDB</li>
-		<li>JAM stack: jekyll, hexo, netlify</li>
+		<li>JAM stack: Jekyll, Hexo, Netlify, Gatsby</li>
 	</ul>
 
 	<h2>Devops</h2>
 	<p>Since we are a small team, I had to get involved in many devops tasks including:</p>
 	<ul>
-		<li>CI configuration: Jenkins (was), Gitlab, Bitbucket, Travis</li>
+		<li>CI configuration: Jenkins (used to), Gitlab, Bitbucket, Travis</li>
 		<li>AWS: CloudFront, S3, EC2, Route 53, IAM</li>
 		<li>Cloud VPS configuration: Ubuntu, CentOS, Windows Server</li>
 		<li>HTTP server configuration: Nginx, Apache</li>
@@ -456,7 +469,7 @@ footer {
 	<h2>Other computer skills</h2>
 	<ul>
 		<li>OS: macOS (very proficient), Linux (OK)</li>
-		<li>Source control: SVN (was), Git</li>
+		<li>Source control: SVN (used to), Git (current and proficient)</li>
 		<li>Office suites: MS Office, Libre Office, Google Docs</li>
 		<li>Presentation tools: Power Point, Keynote, Reveal.js</li>
 		<li>Graphic tools: Photoshop, Illustrator, Sketch app, and am learning to use GIMP, Inkscape</li>
@@ -500,10 +513,10 @@ footer {
 	<p>Developer experience, open web standards, front end web development, web accessibility, web animation, web 3D, data visualization, user experience, UI design, technical writing, knowledge sharing.</p>
 
 	<h2>Hobbies</h2>
-	<p>Movies, music, reading, gaming (was), photography, playing guitar, relax walking.</p>
+	<p>Movies, music, reading, gaming, photography, playing guitar, relax walking.</p>
 
 	<h2>Personality Type</h2>
-	<p>My personality type: <a href="http://www.16personalities.com/intp-personality">“The Logician” (INTP-A)</a></p>
+	<p>My personality type: <a href="https://www.16personalities.com/intp-personality">“The Logician” (INTP-A)</a></p>
 </section>
 
 <footer>
@@ -511,7 +524,7 @@ footer {
 </footer>
 
 <aside class="update-time u-print-hidden">
-	<p>Updated on <time datetime="2018-08-15">15th Aug 2018</time></p>
+	<p>Updated on <time datetime="2018-09-24">24th Sep 2018</time></p>
 </aside>
 
 <!-- I need to know who's viewing my CV -->
