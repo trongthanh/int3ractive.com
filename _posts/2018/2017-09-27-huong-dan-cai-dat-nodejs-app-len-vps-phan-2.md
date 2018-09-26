@@ -30,7 +30,7 @@ Trong bước tiếp theo, khi chạy app như dịch vụ, app sẽ được ch
 
 ## Chạy app như dịch vụ
 
-Tiếp theo chúng ta sẽ cài đặt để chạy app như dịch vụ và tự động chạy lại khi server được restart. Có một số tutorial hướng dẫn chạy app với [**pm2**](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04), nhưng hôm nay tôi sẽ hướng dẫn dùng dịch vụ **systemd** của Ubuntu 16 và các HĐH Linux mới.
+Tiếp theo chúng ta sẽ cài đặt để chạy app như dịch vụ và tự động chạy lại khi server được restart. Có một số tutorial hướng dẫn chạy app với [**pm2**](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04), nhưng hôm nay tôi sẽ hướng dẫn dùng công cụ quản lý ứng dụng dịch vụ **systemd** trên Ubuntu 16 và các HĐH Linux mới.
 
 Đầu tiên, chúng ta sẽ chạy một số lệnh để lấy thông tin cho config systemd:
 
@@ -111,26 +111,26 @@ sudo systemctl enable my-node-app.service
 
 ## Proxy app ra cổng 80 bằng NGINX
 
-**Nginx** sẽ đóng vai trò _reversed proxy_ và _static file server_. Nó sẽ tiếp nhận request từ ngoài Internet thông qua port mặc định 80 (http) và 443 (https) và forward request qua port cùa app là 3000.
+**Nginx** sẽ đóng vai trò _reversed proxy_ và _static file server_. Nó sẽ tiếp nhận request từ ngoài Internet thông qua port mặc định 80 (http) và 443 (https) và forward request qua port của app là 3000.
 
 Đối với Ubuntu[^1], 2 file config chính của Nginx nằm ở: `/etc/nginx/nginx.conf` (config toàn server) và `/etc/nginx/sites-available/default` (config cho từng web host ảo[^2]).
 
-Bước này yêu cầu bạn đã cấu hình DNS của domain trỏ đến địa chỉ IP tĩnh của VPS (VD: mynodeapp.com). Sau đó bạn vào chỉnh sửa file `/etc/nginx/sites-available/default`, thay toàn bộ nội dung mặc định bằng mẫu bên dưới. 
+Bước này yêu cầu bạn đã cấu hình DNS của domain trỏ đến địa chỉ IP tĩnh của VPS (VD: mynodeapp.com). Sau đó bạn vào chỉnh sửa file `/etc/nginx/sites-available/default`, thay toàn bộ nội dung mặc định bằng mẫu bên dưới.
 
 ```nginx
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
-    # File mặc định khi vào thư mục 
+    # File mặc định khi vào thư mục
     index index.html index.htm;
-    
-    # Điều chỉnh kích thước gói upload tối đa 
+
+    # Điều chỉnh kích thước gói upload tối đa
     client_max_body_size 25M;
 
     # Domain name của web app, có thể một hoặc nhiều domain cùng trỏ đến
     server_name mynodeapp.com www.mynodeapp.com;
-    
+
     # Forward toàn bộ request sang web app
     location / {
         # Thay đổi port nếu node-web-app chạy trên port khác 3000
@@ -157,7 +157,7 @@ sudo nginx -t
 Nếu config mới OK, bạn khởi động lại Nginx bằng lệnh sau:
 
 ```sh
-sudo systemctl restart nginx 
+sudo systemctl restart nginx
 ```
 Sau khi Nginx được restart, bạn vào thử website tại domain đã cài đặt ở trên với URL không thêm port (http://my-node-app.com). Nếu website hiện ra thì bạn đã cài đặt thành công. Nếu bạn thấy lỗi "Bad Gateway", tức là cấu hình Nginx vừa rồi chưa thành công và cần phải rà soát lại.
 
@@ -167,26 +167,26 @@ Một trong những lý do tôi hướng dẫn bạn sử dụng Nginx, ngoài v
 
 Nginx serve file tĩnh cực nhanh với lượng kết nối đồng thời cao (concurrency). Việc bật header `cache-ontrol` với Nginx rất dễ dàng sẽ giúp tăng hiệu quả tải trang. Ngoài ra bạn còn có thể bật **gzip** khi serve file tĩnh, là một yêu cầu không thể thiếu khi tối ưu hóa việc tải trang từ phía server.
 
-Để serve file tĩnh, chúng ta sẽ thêm bộ lọc `location` vào block `server` của host config ở trên. Đối với KeystoneJS, chúng ta có một thư mục file tĩnh mặc định đó là `public` và với ví dụ từ đầu đến giờ, đường dẫn đến thư mục này sẽ là `/apps/my-node-app/public`. Ngoài ra, nếu bạn có một thư mục để upload riêng và nằm ngoài thực mục public này, thì bạn cũng cần ghi lại đường dẫn để config như tiếp theo sau đây:
+Để serve file tĩnh, chúng ta sẽ thêm bộ lọc `location` vào block `server` của host config ở trên. Đối với KeystoneJS, chúng ta có một thư mục file tĩnh mặc định đó là `public` và với ví dụ từ đầu đến giờ, đường dẫn đến thư mục này sẽ là `/apps/my-node-app/public`. Ngoài ra, nếu bạn có một thư mục để upload riêng và nằm ngoài thư mục public này, thì bạn cũng cần ghi lại đường dẫn để config như tiếp theo sau đây:
 
 ```nginx
 # thêm directive location trong config /etc/nginx/sites-available/default
 server {
-    # ...Các config khác đã ẩn... 
-	
-    # Hướng dẫn cho Nginx serve tĩnh các file và folder bên trong public, 
+    # ...Các config khác đã ẩn...
+
+    # Hướng dẫn cho Nginx serve tĩnh các file và folder bên trong public,
     # có tên bắt đầu bằng một trong những pattern như bên dưới
     location ~ ^/(fonts/|img/|javascript/|js/|script/|css/|stylesheets/|flash/|media/|static/|upload/|robots.txt|humans.txt|favicon.ico) {
         # đường dẫn tuyệt đối đến thư mục file tĩnh
         root /apps/my-node-app/public;
         access_log off;
         # bật cache-control lên với thời gian expire tối đa
-        expires max; 
+        expires max;
 	}
-	
+
 	# Nếu bạn có thư mục upload bên ngoài, bạn cần thêm một directive `location` đến thư mục này
 	# Xem document của Nginx để biết thêm cách cấu hình location
-	
+
     # Đặt directive location / (app reversed proxy) ở dưới cùng
     location / {
         # ...
@@ -198,8 +198,8 @@ server {
 
 ```nginx
 http {
-    # ...Các config khác đã ẩn... 
-    
+    # ...Các config khác đã ẩn...
+
     ##
     # Gzip Settings
     ##
@@ -230,7 +230,7 @@ sudo apt-get update
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
-sudo apt-get install python-certbot-nginx 
+sudo apt-get install python-certbot-nginx
 ```
 
 Sau khi **certbot** được cài, bạn có thể chạy lệnh sau để bắt đầu tiến trình cài đặt certificate cho website với Nginx plugin:
@@ -257,7 +257,7 @@ Sau đây là một số lệnh tôi thường dùng để xem lại console log
 
 ```sh
 # Xem lại tất cả các log output của app
-# Bạn còn nhớ `SyslogIdentifier` ở trên? 
+# Bạn còn nhớ `SyslogIdentifier` ở trên?
 # Đặt chuỗi đó sau tham số -u để chỉ hiển thị log cho my-node-app
 sudo journalctl -u my-node-app
 # Nếu log quá nhiều, bạn có thể nhảy dòng bằng các phím tắt của vim
@@ -270,8 +270,8 @@ sudo journalctl -u my-node-app --since "2018-09-20" --until "2018-09-26 03:00"
 
 # Hiển thị log gần đây nhất của app, sau đó tiếp tục chờ để
 # hiển thị các log tiếp theo khi app đang chạy
-# `-f` là tiếp tục chờ, 
-# `-o cat` là hiển thị log không có timestamp và id phía trước 
+# `-f` là tiếp tục chờ,
+# `-o cat` là hiển thị log không có timestamp và id phía trước
 sudo journalctl -f -o cat -u my-node-app
 ```
 
@@ -279,9 +279,9 @@ sudo journalctl -f -o cat -u my-node-app
 
 Vậy là chúng ta đã hoàn tất cài đặt một Node Web app lên Ubuntu VPS với cách thức tối ưu nhất và tiết kiệm tài nguyên nhất. Với cấu hình này, bạn có thể chạy nhiều web app trên cùng VPS, bằng cách chạy app thứ hai trên một port mới (VD: 3001) và thêm một web host ảo trong Nginx config như ở trên, với `server_name` là tên domain cho web app thứ hai...
 
-Tuy nhiên đây là cách cài đặt gắn chặt với môi trường của HĐH Ubuntu. Nói như vậy để phân biệt với một số cách cài đặt sản phẩm phần mềm được cho là _hiện đại_ hơn, sử dụng container, mà phổ biến nhất là [Docker](https://www.docker.com/). Theo tôi việc deploy sản phẩm bằng container sẽ giúp quy trình CI[^4] được thực hiện dễ dàng hơn, không còn phụ thuộc vào Linux distro, và developer có thể giao việc deploy hoàn toàn cho devops mà không phải bận tâm. Tuy nhiên nó đòi hỏi developer phải có thêm kiến thức khá sâu về devops cũng như cách sử dụng docker ở vai trò người tạo. 
+Tuy nhiên đây là cách cài đặt gắn chặt với môi trường của HĐH Ubuntu. Nói như vậy để phân biệt với một số cách cài đặt sản phẩm phần mềm được cho là _hiện đại_ hơn, sử dụng container, mà phổ biến nhất là [Docker](https://www.docker.com/). Theo tôi việc deploy sản phẩm bằng container sẽ giúp quy trình CI[^4] được thực hiện dễ dàng hơn, không còn phụ thuộc vào Linux distro, và developer có thể giao việc deploy hoàn toàn cho devops mà không phải bận tâm. Tuy nhiên nó đòi hỏi developer phải có thêm kiến thức khá sâu về devops cũng như cách sử dụng docker ở vai trò người tạo.
 
-Docker vẫn là một thứ khá mới mẻ đối với tôi và tôi vẫn đang nghiên cứu cách thức triển khai sản phẩm Node app trên Docker. Nếu nó thật sự hiệu quả và dễ tiếp cận, tôi sẽ viết tiếp chủ đề này với container.	
+Docker vẫn là một thứ khá mới mẻ đối với tôi và tôi vẫn đang nghiên cứu cách thức triển khai sản phẩm Node app trên Docker. Nếu nó thật sự hiệu quả và dễ tiếp cận, tôi sẽ viết tiếp chủ đề này với container.
 
 
 ---
