@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Hướng dẫn: Cài đặt hoàn chỉnh Nodejs app lên VPS Ubuntu - Phần 1"
-subtitle: Cài đặt NodeJS app sử dụng KeystoneJS + MongoDB + Nginx + Letsencrypt lên server Ubuntu
+subtitle: Cài đặt NGINX, Git, NodeJS, MongoDB, và Keystone app lên server Ubuntu 16.04 LTS
 author: Thanh Tran
 description:
 date: 2017-09-28T01:07:53+07:00
+modified: 2018-09-26T23:12:12+0700 
 tags: [devops, vietnamese, nodejs, webapp]
 image:
 ---
@@ -51,10 +52,12 @@ $ sudo apt install -y nginx git
 
 ### Cài đặt NodeJS VM:
 
-Thêm repository source cho **NodeJS 6 LTS** [(link tham khảo)](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions):
+Tùy vào yêu cầu phiên bản Node của web app, bạn sẽ cài phiên bản Node engine tương ứng. Ở đây chúng ta sẽ dùng Node 8 LTS làm ví dụ.
+
+Thêm repository source cho **NodeJS 8 LTS** [(link tham khảo)](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions):
 
 ```shell
-$ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 ```
 
 Sau đó cài NodeJS lên server:
@@ -62,6 +65,8 @@ Sau đó cài NodeJS lên server:
 ```shell
 $ sudo apt install -y nodejs
 ```
+
+> Hướng dẫn này chỉ sử dụng một phiên bản Node. Nếu có yêu cầu cài đặt nhiều app trên cùng một server và sử dụng nhiều phiên bản Node khác nhau, bạn cân nhắc cài đặt Node thông qua trình quản lý nhiều phiên bản Node như [nvm]( https://github.com/creationix/nvm) hoặc [n package](https://www.npmjs.com/package/n)
 
 ### Cài đặt MongoDB:
 
@@ -99,10 +104,10 @@ Trên đây là hướng dẫn từng bước để các bạn hiểu rõ mình 
 ```shell
 # Thêm quyền thực thi cho file bash script
 $ chmod +x initialize.sh
+
 # Chạy file bash script này
 $ ./intialize.sh
 ```
-
 
 ## Tải mã nguồn của app từ Git host và build app
 
@@ -131,16 +136,22 @@ Tại trang settings của project trên Git host, thêm deploy key và paste n�
 Quay trở lại terminal của server, tạo thư mục để chứa mã nguồn của app sẽ được clone vào:
 
 ```shell
-$ mkdir -p ~/apps/my-node-app
+$ sudo mkdir -p /apps/my-node-app
+# Đổi owner của thư mục về user hiện tại để tiện chạy các lệnh sau đó 
+$ sudo chown -R $USER /apps/my-node-app/
 ```
 
-Lệnh ở trên sẽ tự động tạo 2 cấp thư mục `apps/my-node-app` ở tại thư mục `$HOME` của user hiện tại.
+Lệnh ở trên sẽ tự động tạo 2 cấp thư mục `/apps/my-node-app` tại root. 
+
+> Theo quy ước, các app 3rd-party cài trên Linux thường được cài tại thư mục `/opt`. Tuy nhiên, đây là ứng dụng đặc biệt do chúng ta viết riêng nên chúng ta sẽ cài vào `/apps` để tách bạch.
 
 Tiếp theo, clone Git repo của app vào thư mục vừa tạo (lưu ý sử dụng lệnh clone với giao thức SSH).
 
 ```shell
-$ git clone git@bitbucket.org:<username>/<repo-name>.git ~/apps/my-node-app/
+$ git clone git@bitbucket.org:<username>/<repo-name>.git /apps/my-node-app/
 ```
+
+> Với bản Gitlab mới nhất, bạn còn một lựa chọn nữa để lấy source từ Gitlab đó là dùng [Deploy Token](https://docs.gitlab.com/ee/user/project/deploy_tokens/). Khi đó, URL để clone source có dạng: `https://<username>:<deploy_token>@gitlab.com/user/my-node-app.git`
 
 ### Build app
 
@@ -170,11 +181,11 @@ $ npm run build
 
 Tới đây, chúng ta đã có thể chạy thử app bằng lệnh `node keystone.js` (giả sử `keystone.js` là điểm start của app) và preview tại IP của server và port mặc định 3000 (VD: http://12.34.56.789:3000).
 
-Với những bước cài đặt vừa rồi, bạn đã có thể chạy app cho môi trường STAGING hoặc UAT và có thể demo với khách hàng. Để giữ cho app demo tiếp tục chạy sau khi thoát SSH, bạn có thể dùng dòng lệnh `screen` (xem [hướng dẫn](https://askubuntu.com/questions/904373/how-to-use-screen-command)).
+Với những bước cài đặt vừa rồi, bạn đã có thể chạy app cho môi trường TEST hoặc STAGING và có thể demo với khách hàng. Để giữ cho app demo tiếp tục chạy sau khi thoát SSH, bạn có thể dùng dòng lệnh `screen` (xem [hướng dẫn](https://askubuntu.com/questions/904373/how-to-use-screen-command)).
 
 Trong phần tiếp theo tôi sẽ hướng dẫn chạy app như service, đưa ra ngoài port chuẩn của web, bật mã hóa TLS/SSL... để sẵn sàng cho Production.
 
-(còn tiếp...)
+(Xem tiếp [phần 2](https://int3ractive.com/2018/09/huong-dan-cai-dat-nodejs-app-len-vps-phan-2.html))
 
 ---
 [^1]: Virtual Private Server
