@@ -6,7 +6,8 @@ author: Thanh Tran
 description:
 date: 2018-09-26T23:14:10+07:00
 tags: [devops, vietnamese, nodejs, webapp]
-image:
+image: img/2017/keystone-mongo-node-ubuntu.png
+cover-darken: true
 ---
 
 Tóm tắt [phần 1](https://int3ractive.com/2017/09/huong-dan-cai-dat-nodejs-app-len-vps-phan-1.html):

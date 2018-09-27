@@ -5,9 +5,10 @@ subtitle: Cài đặt NGINX, Git, NodeJS, MongoDB, và Keystone app lên server 
 author: Thanh Tran
 description:
 date: 2017-09-28T01:07:53+07:00
-modified: 2018-09-26T23:12:12+0700 
+modified: 2018-09-26T23:12:12+0700
 tags: [devops, vietnamese, nodejs, webapp]
-image:
+image: img/2017/keystone-mongo-node-ubuntu.png
+cover-darken: true
 ---
 
 ## Giới Thiệu
@@ -137,11 +138,11 @@ Quay trở lại terminal của server, tạo thư mục để chứa mã nguồ
 
 ```shell
 $ sudo mkdir -p /apps/my-node-app
-# Đổi owner của thư mục về user hiện tại để tiện chạy các lệnh sau đó 
+# Đổi owner của thư mục về user hiện tại để tiện chạy các lệnh sau đó
 $ sudo chown -R $USER /apps/my-node-app/
 ```
 
-Lệnh ở trên sẽ tự động tạo 2 cấp thư mục `/apps/my-node-app` tại root. 
+Lệnh ở trên sẽ tự động tạo 2 cấp thư mục `/apps/my-node-app` tại root.
 
 > Theo quy ước, các app 3rd-party cài trên Linux thường được cài tại thư mục `/opt`. Tuy nhiên, đây là ứng dụng đặc biệt do chúng ta viết riêng nên chúng ta sẽ cài vào `/apps` để tách bạch.
 
