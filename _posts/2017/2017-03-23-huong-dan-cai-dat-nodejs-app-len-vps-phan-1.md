@@ -38,7 +38,7 @@ Bạn sẽ truy cập vào server thông qua giao thức SSH và sẽ cấu hìn
 Trước khi tiến hành cài đặt các phần mềm cần thiết, bạn cần cập nhật server Ubuntu với những package mới nhất:
 
 ```shell
-$ sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 ```
 
 ### Cài đặt NGINX và Git
@@ -46,7 +46,7 @@ $ sudo apt update && sudo apt upgrade -y
 Đầu tiên chúng ta sẽ cài 2 phần mềm có sẵn trong repository của Ubuntu: **nginx** & **git**
 
 ```shell
-$ sudo apt install -y nginx git
+sudo apt install -y nginx git
 ```
 
 > **NGINX** sẽ đóng vai trò _reversed proxy_ và _static file server_ để tiếp nhận request thông qua port mặc định 80 (http) và 443 (https). **Git** dùng để lấy source code của app để tiến hành build và deploy.
@@ -58,13 +58,13 @@ Tùy vào yêu cầu phiên bản Node của web app, bạn sẽ cài phiên b�
 Thêm repository source cho **NodeJS 8 LTS** [(link tham khảo)](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions):
 
 ```shell
-$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 ```
 
 Sau đó cài NodeJS lên server:
 
 ```shell
-$ sudo apt install -y nodejs
+sudo apt install -y nodejs
 ```
 
 > Hướng dẫn này chỉ sử dụng một phiên bản Node. Nếu có yêu cầu cài đặt nhiều app trên cùng một server và sử dụng nhiều phiên bản Node khác nhau, bạn cân nhắc cài đặt Node thông qua trình quản lý nhiều phiên bản Node như [nvm]( https://github.com/creationix/nvm) hoặc [n package](https://www.npmjs.com/package/n)
@@ -74,28 +74,28 @@ $ sudo apt install -y nodejs
 KeystoneJS yêu cầu [database MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/). Đầu tiên là thêm PGP key cho MongoDB repository:
 
 ```shell
-$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 ```
 
 Thêm repository source của MongoDB dành riêng cho Ubuntu 16.04:
 
 ```shell
-$ echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
 ```
 
 Tiến hành cài MongoDB:
 
 ```shell
-$ sudo apt update && sudo apt install -y mongodb-org
+sudo apt update && sudo apt install -y mongodb-org
 ```
 
 Khởi động dịch vụ `mongod` lần đầu tiên và đăng ký để nó tự chạy lúc restart server:
 
 ```shell
 # Khởi động mongod service
-$ sudo systemctl start mongod
+sudo systemctl start mongod
 # Bật chức năng tự chạy khi restart Ubuntu
-$ sudo systemctl enable mongod
+sudo systemctl enable mongod
 ```
 
 ### Tất cả trong một
@@ -104,10 +104,10 @@ Trên đây là hướng dẫn từng bước để các bạn hiểu rõ mình 
 
 ```shell
 # Thêm quyền thực thi cho file bash script
-$ chmod +x initialize.sh
+chmod +x initialize.sh
 
 # Chạy file bash script này
-$ ./intialize.sh
+./intialize.sh
 ```
 
 ## Tải mã nguồn của app từ Git host và build app
@@ -117,13 +117,13 @@ Trong hướng dẫn này, chúng ta sẽ lấy mã nguồn của app từ một
 Trước tiên, chúng ta sẽ tạo khóa SSH mặc định trên server bằng các bước sau (Enter mặc định với tất cả các câu hỏi):
 
 ```shell
-$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
 Xuất nội dung của public key ra terminal để copy:
 
 ```shell
-$ cat ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa.pub
 ```
 
 Tại trang settings của project trên Git host, thêm deploy key và paste nội dung của file `id_rsa.pub` vừa mới copy ở trên.
@@ -137,9 +137,9 @@ Tại trang settings của project trên Git host, thêm deploy key và paste n�
 Quay trở lại terminal của server, tạo thư mục để chứa mã nguồn của app sẽ được clone vào:
 
 ```shell
-$ sudo mkdir -p /apps/my-node-app
+sudo mkdir -p /apps/my-node-app
 # Đổi owner của thư mục về user hiện tại để tiện chạy các lệnh sau đó
-$ sudo chown -R $USER /apps/my-node-app/
+sudo chown -R $USER /apps/my-node-app/
 ```
 
 Lệnh ở trên sẽ tự động tạo 2 cấp thư mục `/apps/my-node-app` tại root.
@@ -149,7 +149,7 @@ Lệnh ở trên sẽ tự động tạo 2 cấp thư mục `/apps/my-node-app` 
 Tiếp theo, clone Git repo của app vào thư mục vừa tạo (lưu ý sử dụng lệnh clone với giao thức SSH).
 
 ```shell
-$ git clone git@bitbucket.org:<username>/<repo-name>.git /apps/my-node-app/
+git clone git@bitbucket.org:<username>/<repo-name>.git /apps/my-node-app/
 ```
 
 > Với bản Gitlab mới nhất, bạn còn một lựa chọn nữa để lấy source từ Gitlab đó là dùng [Deploy Token](https://docs.gitlab.com/ee/user/project/deploy_tokens/). Khi đó, URL để clone source có dạng: `https://<username>:<deploy_token>@gitlab.com/user/my-node-app.git`
@@ -159,7 +159,7 @@ $ git clone git@bitbucket.org:<username>/<repo-name>.git /apps/my-node-app/
 Với một Node.js app chuẩn, việc đầu tiên chúng ta cần làm là **cd** vào thư mục gốc của project, và chạy lệnh cài tự động các dependency package được liệt kê trong **package.json**:
 
 ```shell
-$ npm install
+npm install
 ```
 
 Sau đó, tùy vào cài đặt của dự án, ta cần chạy các lệnh để build các thành phần cần biên dịch hoặc tối ưu hóa từ mã nguồn.
@@ -177,7 +177,7 @@ Theo thông lệ chung của các NodeJS app, việc build project sẽ thông q
 Do đó, việc tiếp theo sẽ là chạy script build này bằng npm:
 
 ```shell
-$ npm run build
+npm run build
 ```
 
 Tới đây, chúng ta đã có thể chạy thử app bằng lệnh `node keystone.js` (giả sử `keystone.js` là điểm start của app) và preview tại IP của server và port mặc định 3000 (VD: http://12.34.56.789:3000).
