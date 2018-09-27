@@ -2,6 +2,22 @@
  * Int3ractive.com custom CSS
  */
 
+.intro-header--darken {
+	position: relative;
+}
+
+.intro-header--darken::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000;
+	opacity: 0.5;
+}
+
 /* Unsured if this is desired for all <hr>, so I'm keeping it in custom */
 hr {
 	clear: both;
