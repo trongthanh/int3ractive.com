@@ -2,6 +2,12 @@
  * Int3ractive.com custom CSS
  */
 
+@media screen and (min-width: 768px) {
+	.intro-header .post-heading {
+		padding: 100px 0;
+	}
+}
+
 .intro-header--darken {
 	position: relative;
 }
