@@ -42,7 +42,7 @@ which node
 
 # Lấy đường dẫn tuyệt đối đến thư mục của app
 pwd
-# -> /root/apps/my-node-app
+# -> /apps/my-node-app
 
 # Lấy thông tin user hiện tại (bỏ qua nếu chúng ta đã tạo user ở trên)
 id
@@ -67,8 +67,8 @@ Requires=mongod.service
 After=mongod.service
 
 [Service]
-ExecStart=/usr/bin/node /root/apps/my-node-app/keystone.js
-WorkingDirectory=/root/apps/my-node-app
+ExecStart=/usr/bin/node /apps/my-node-app/keystone.js
+WorkingDirectory=/apps/my-node-app
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
