@@ -15,15 +15,6 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[package.json]
-# package.json adhere to --save-dev manipulation styles
+[*.{json,yml,md}]
 indent_style = space
 indent_size = 2
-
-[*.yml]
-indent_style = space
-indent_size = 2
-
-[*.md]
-indent_style = space
-indent_size = 4

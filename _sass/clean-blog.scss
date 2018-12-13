@@ -1,0 +1,791 @@
+@import 'variables';
+@import 'bootstrap';
+@import 'mixins';
+@import 'pygment-monokai';
+
+// Global Components
+
+body {
+	@include serif;
+
+	font-size: 17px;
+	color: $gray-darker;
+	// reduce boldness of thin text on macOS
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+
+	@media (min-width: $screen-sm) {
+		font-size: 19px;
+	}
+}
+
+// -- Typography
+
+p {
+	line-height: 1.6;
+	margin: 1em 0;
+
+	@media (min-width: $screen-sm) {
+		margin: 1.2em 0;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include sans-serif;
+
+	font-weight: 600;
+
+	/* avoid floating figure image leaked into other sections */
+	clear: both;
+}
+
+a {
+	color: $gray-link;
+	text-decoration: underline;
+	text-decoration-skip: ink;
+
+	h1 > &,
+	h2 > &,
+	h3 > & {
+		text-decoration: none;
+	}
+
+	&:visited {
+		color: $gray;
+	}
+
+	&:hover,
+	&:focus {
+		color: $brand-primary;
+	}
+}
+
+a img {
+	&:hover,
+	&:focus {
+		cursor: zoom-in;
+	}
+}
+
+blockquote {
+	color: $gray;
+	font-style: italic;
+	margin: 1.2em 0;
+
+	> p:first-child {
+		margin-top: 0;
+	}
+}
+
+pre {
+	font-size: 14px;
+}
+
+hr.small {
+	max-width: 100px;
+	margin: 15px auto;
+	border-width: 4px;
+	border-color: white;
+}
+
+/* Make all images inside article responsive */
+article {
+	img {
+		@include img-responsive;
+
+		margin: auto;
+
+		/* Simple image caption with <img><em> */
+		+ em {
+			display: block;
+			text-align: center;
+			font-size: 0.8em;
+		}
+	}
+}
+
+img[align='right'] {
+	margin-left: 10px; /* Add some spacing to floating images */
+	max-width: 50%; /* should not exceed half of body column */
+	+ em {
+		float: right;
+		clear: right;
+		max-width: 40%;
+	}
+}
+
+img[align='left'] {
+	margin-right: 10px;
+	max-width: 50%;
+
+	+ em {
+		float: left;
+		clear: left;
+		max-width: 40%;
+	}
+}
+
+// Navigation
+
+.navbar-custom {
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+
+	a {
+		text-decoration: none;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.nav {
+		@include sans-serif;
+
+		li {
+			a {
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: 600;
+				letter-spacing: 1px;
+			}
+		}
+	}
+	@media only screen and (min-width: $screen-sm-min) {
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0) 100%);
+		border-bottom: 0;
+		-webkit-transition: background-color 0.3s;
+		-moz-transition: background-color 0.3s;
+		transition: background-color 0.3s;
+
+		/* Force Hardware Acceleration in WebKit */
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+		.navbar-brand {
+			color: white;
+			padding: 20px;
+
+			&:hover,
+			&:focus {
+				color: $white-faded;
+			}
+		}
+
+		.nav {
+			li {
+				a {
+					color: white;
+					padding: 20px;
+
+					&:hover,
+					&:focus {
+						color: $white-faded;
+					}
+				}
+			}
+		}
+
+		&.is-fixed {
+			/* when the user scrolls down, we hide the header right above the viewport */
+			position: fixed;
+			top: -63px;
+			background: hsla(0, 100, 100, 0.9);
+			border-bottom: 1px solid darken(white, 5%);
+			-webkit-transition: -webkit-transform 0.3s;
+			-moz-transition: -moz-transform 0.3s;
+			transition: transform 0.3s;
+
+			.navbar-brand {
+				color: $gray-dark;
+
+				&:hover,
+				&:focus {
+					color: $brand-primary;
+				}
+			}
+
+			.nav {
+				li {
+					a {
+						color: $gray-dark;
+
+						&:hover,
+						&:focus {
+							color: $brand-primary;
+						}
+					}
+				}
+			}
+		}
+
+		&.is-visible {
+			/* if the user changes the scrolling direction, we show the header */
+			-webkit-transform: translate3d(0, 100%, 0);
+			-moz-transform: translate3d(0, 100%, 0);
+			-ms-transform: translate3d(0, 100%, 0);
+			-o-transform: translate3d(0, 100%, 0);
+			transform: translate3d(0, 100%, 0);
+		}
+	}
+}
+
+// Header
+
+.intro-header {
+	background: no-repeat center center;
+	background-color: $gray;
+	background-attachment: scroll;
+	@include background-cover;
+	// NOTE: Background images are set within the HTML using inline CSS!
+	margin-bottom: 1.6666666666666667em; /* 30/18 */
+	.site-heading,
+	.post-heading,
+	.page-heading {
+		text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+		padding: 100px 0 50px;
+		color: white;
+		@media only screen and (min-width: 768px) {
+			padding: 150px 0;
+		}
+	}
+
+	.site-heading,
+	.page-heading {
+		text-align: center;
+
+		h1 {
+			margin-top: 0;
+			font-size: 50px;
+		}
+
+		.subheading {
+			font-size: 24px;
+			line-height: 1.1;
+			display: block;
+			@include sans-serif;
+
+			font-weight: 300;
+			margin: 10px 0 0;
+		}
+		@media only screen and (min-width: 768px) {
+			h1 {
+				font-size: 70px;
+			}
+		}
+	}
+
+	.post-heading {
+		h1 {
+			font-size: 35px;
+		}
+
+		.subheading,
+		.meta {
+			line-height: 1.1;
+			display: block;
+		}
+
+		.subheading {
+			@include sans-serif;
+
+			font-size: 20px;
+			margin: 10px 0 30px;
+			font-weight: 300;
+		}
+
+		.meta {
+			@include serif;
+
+			font-style: italic;
+			font-weight: normal;
+			font-size: 18px;
+
+			a {
+				color: white;
+			}
+		}
+		@media only screen and (min-width: 768px) {
+			h1 {
+				font-size: 50px;
+			}
+
+			.subheading {
+				font-size: 28px;
+			}
+		}
+	}
+}
+
+// Post Preview Pages
+
+.post-preview {
+	> a {
+		color: $gray-dark;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: $brand-primary;
+		}
+
+		> .post-title {
+			font-size: 30px;
+			margin-top: 30px;
+			margin-bottom: 10px;
+		}
+
+		> .post-subtitle {
+			margin: 0;
+			font-weight: 300;
+			margin-bottom: 10px;
+		}
+	}
+
+	> .post-meta {
+		color: $gray;
+		font-size: 18px;
+		font-style: italic;
+		margin-top: 0;
+
+		> a {
+			text-decoration: none;
+			color: $gray-dark;
+
+			&:hover,
+			&:focus {
+				color: $brand-primary;
+				text-decoration: underline;
+			}
+		}
+	}
+	@media only screen and (min-width: 768px) {
+		> a {
+			> .post-title {
+				font-size: 36px;
+			}
+		}
+	}
+}
+
+// Sections
+
+.section-heading {
+	font-size: 36px;
+	margin-top: 60px;
+	font-weight: 700;
+}
+
+.caption {
+	text-align: center;
+	font-size: 14px;
+	padding: 10px;
+	font-style: italic;
+	margin: 0;
+	display: block;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.update-note {
+	margin-bottom: 0;
+}
+
+.comments {
+	margin-top: 50px;
+}
+
+footer {
+	padding: 50px 0 65px;
+
+	.list-inline {
+		margin: 0;
+		padding: 0;
+	}
+
+	.copyright {
+		font-size: 14px;
+		text-align: center;
+		margin-bottom: 0;
+	}
+}
+
+.archive {
+	a {
+		text-decoration: none;
+	}
+}
+
+// Contact Form Styles
+
+.floating-label-form-group {
+	font-size: 14px;
+	position: relative;
+	margin-bottom: 0;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid $gray-lighter;
+
+	input,
+	textarea {
+		z-index: 1;
+		position: relative;
+		padding-right: 0;
+		padding-left: 0;
+		border: none;
+		border-radius: 0;
+		font-size: 1.5em;
+		background: none;
+		box-shadow: none !important;
+		resize: none;
+	}
+
+	label {
+		display: block;
+		z-index: 0;
+		position: relative;
+		top: 2em;
+		margin: 0;
+		font-size: 0.85em;
+		line-height: 1.764705882em;
+		vertical-align: middle;
+		vertical-align: baseline;
+		opacity: 0;
+		-webkit-transition: top 0.3s ease, opacity 0.3s ease;
+		-moz-transition: top 0.3s ease, opacity 0.3s ease;
+		-ms-transition: top 0.3s ease, opacity 0.3s ease;
+		transition: top 0.3s ease, opacity 0.3s ease;
+	}
+
+	&::not(:first-child) {
+		padding-left: 14px;
+		border-left: 1px solid $gray-lighter;
+	}
+}
+
+.floating-label-form-group-with-value {
+	label {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.floating-label-form-group-with-focus {
+	label {
+		color: $brand-primary;
+	}
+}
+
+form .row:first-child .floating-label-form-group {
+	border-top: 1px solid $gray-lighter;
+}
+
+// Button Styles
+
+.btn {
+	@include sans-serif;
+
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	border-radius: 0;
+	padding: 15px 25px;
+}
+
+.btn-lg {
+	font-size: 16px;
+	padding: 25px 35px;
+}
+
+.btn-default {
+	&:hover,
+	&:focus {
+		background-color: $brand-primary;
+		border: 1px solid $brand-primary;
+		color: white;
+	}
+}
+
+// Pager Styling
+
+.pager {
+	margin: 20px 0 0;
+
+	li {
+		> a,
+		> span {
+			@include sans-serif;
+
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			padding: 10px 5px;
+			background-color: white;
+			border-radius: 0;
+			text-decoration: none;
+
+			@media only screen and (min-width: 768px) {
+				font-size: 14px;
+				padding: 15px 25px;
+			}
+		}
+
+		> a:hover,
+		> a:focus {
+			color: white;
+			background-color: $brand-primary;
+			border: 1px solid $brand-primary;
+		}
+	}
+
+	.disabled {
+		> a,
+		> a:hover,
+		> a:focus,
+		> span {
+			color: $gray;
+			background-color: $gray-dark;
+			cursor: not-allowed;
+		}
+	}
+}
+
+// -- Highlight Color Customization
+
+::-moz-selection {
+	color: white;
+	text-shadow: none;
+	background: $brand-primary;
+}
+
+::selection {
+	color: white;
+	text-shadow: none;
+	background: $brand-primary;
+}
+
+img::selection {
+	color: white;
+	background: transparent;
+}
+
+img::-moz-selection {
+	color: white;
+	background: transparent;
+}
+
+body {
+	webkit-tap-highlight-color: $brand-primary;
+}
+
+// Google search fields and buttons fixes
+.cse .gsc-search-button input.gsc-search-button-v2,
+input.gsc-search-button-v2,
+.gsc-input .gsc-input-box,
+.gsc-selected-option-container.gsc-inline-block {
+	box-sizing: content-box;
+}
+
+.gsst_b .gscb_a {
+	vertical-align: middle;
+}
+
+.cse .gsc-control-cse,
+.row .gsc-control-cse {
+	padding: 0;
+}
+
+/**
+ * Int3ractive.com custom CSS
+ */
+
+@media screen and (min-width: 768px) {
+	.intro-header .post-heading {
+		padding: 100px 0;
+	}
+}
+
+.intro-header--darken {
+	position: relative;
+}
+
+.intro-header--darken::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000;
+	opacity: 0.5;
+}
+
+/* Unsured if this is desired for all <hr>, so I'm keeping it in custom */
+hr {
+	clear: both;
+}
+
+/* Fixed nav bar in mobile screen (maybe port this back to cleanblog theme?) */
+.navbar-custom {
+	position: fixed;
+}
+
+.drop-cap {
+	color: #0070cf;
+	float: left;
+	font-size: 3em;
+	line-height: 1.06;
+	margin-right: 0.1em;
+}
+
+[data-figure] {
+	cursor: zoom-in;
+}
+
+/* For image caption but image is wrapped with anchor link*/
+[data-figure] + em {
+	display: block;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.footnotes {
+	font-size: 0.8em;
+}
+
+.copyright a {
+	/* avoid wrapping of copyright hyperlink */
+	white-space: nowrap;
+}
+
+/* Illustrated figure block */
+.figure {
+	display: flex;
+	flex-flow: column;
+	-ms-align-items: center;
+	align-items: center;
+	margin: auto;
+	text-align: center;
+}
+
+.figure__image {
+	max-height: 80vh;
+	max-width: 100%;
+}
+
+.figure__caption {
+	display: inline-block;
+	font-style: italic;
+	font-size: 0.8em;
+}
+
+@media screen and (min-width: 768px) {
+	.media-thumbnail {
+		margin-bottom: 1em;
+	}
+
+	.navbar-custom {
+		position: absolute;
+	}
+
+	.figure {
+		margin: 10px 0;
+	}
+
+	.figure__image {
+		max-height: 550px;
+	}
+
+	.figure--left {
+		float: left;
+		margin: 10px;
+		max-width: 50%;
+	}
+
+	.figure--right {
+		float: right;
+		margin: 10px;
+		max-width: 50%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.figure--left {
+		margin-left: -100px;
+	}
+
+	.figure--right {
+		margin-right: -100px;
+	}
+}
+
+/* Custom CSS for speaking section */
+.events {
+	list-style: none;
+	padding: 0;
+}
+
+.events__section {
+	padding: 0.2em 0.5em;
+	background-color: #eee;
+	margin: -1px -15px 1em -15px; /*-1px to cover the bottom border*/
+}
+
+.events__section h2 {
+	margin: 0;
+}
+
+.events__item {
+	border-bottom: 1px solid #eee;
+	margin-top: 0.5em;
+	position: relative;
+}
+
+.events__item__desc {
+	overflow: hidden;
+}
+
+.events__item__title {
+	margin: 0.5em 0;
+}
+
+.events__item__logo {
+	position: absolute;
+	width: 100px;
+	height: auto;
+	right: 0;
+	top: -5px;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 768px) {
+	.events__item__time {
+		float: left;
+		margin-right: 1em;
+		width: 120px;
+	}
+
+	.events__item__logo {
+		width: 120px;
+		left: 0;
+		top: initial;
+		bottom: 20px;
+	}
+}

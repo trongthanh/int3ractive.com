@@ -1,0 +1,22 @@
+// Mixins
+
+@mixin transition-all() {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+@mixin background-cover() {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+
+@mixin serif() {
+	font-family: $font-family-serif;
+}
+
+@mixin sans-serif() {
+	font-family: $font-family-sans-serif;
+}
