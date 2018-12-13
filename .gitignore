@@ -2,6 +2,7 @@
 Gemfile.lock
 _site
 node_modules
+.sass-cache
 *~
 ~*
 .idea

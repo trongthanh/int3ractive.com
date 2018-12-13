@@ -2,9 +2,9 @@
 title: Int3ractive
 image: img/default-bg.jpg
 email: trongthanh@gmail.com
-description: "The writing playground and technical journey of Trần Trọng Thanh, front-end architect, js developer, husband and father, from Ho Chi Minh city, Vietnam"
-baseurl: ""
-url: "https://int3ractive.com"
+description: 'The writing playground and technical journey of Trần Trọng Thanh, front-end architect, js developer, husband and father, from Ho Chi Minh city, Vietnam'
+baseurl: ''
+url: 'https://int3ractive.com'
 twitter_username: trongthanh
 github_username: trongthanh
 codepen_username: trongthanh
@@ -28,13 +28,22 @@ kramdown:
 highlighter: rouge
 permalink: :year/:month/:title.html
 paginate: 10
-exclude: ["README.md", "css/**/*"]
-keep_files: ["flash","javascript"]
+exclude: ['README.md', '.*']
+keep_files: []
+# Commented are github-page default plugins
 plugins:
+  # - jekyll-coffeescript
+  # - jekyll-gist
+  # - jekyll-github-metadata
+  # - jekyll-relative-links
+  # - jekyll-optional-front-matter
+  # - jekyll-readme-index
+  # - jekyll-default-layout
+  # - jekyll-titles-from-headings
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-sass-converter
   - jemoji
-
