@@ -195,6 +195,10 @@ server {
 }
 ```
 
+Một vài vấn đề có thể gặp với việc serve file tĩnh bằng Nginx:
+
+- Nếu bạn bị lỗi 403 Forbidden: khả năng là Nginx chưa có quyền truy cập thư mục của app. Bạn cần thêm quyền truy cập cho thư mục `public` bằng lệnh `sudo chmod o+rx -R public`.
+
 Để bật gzip, bạn có thể vào file `/etc/nginx/nginx.conf`, và bỏ comment (dấu #) ở những dòng config gzip như bên dưới:
 
 ```nginx
