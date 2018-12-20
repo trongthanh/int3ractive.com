@@ -55,68 +55,6 @@ module.exports = router => {
         res.sendRest(err);
       });
   });
-
-  // POST (create)
-  router.post(`/${collection}`, (req, res) => {
-    // req.app.log('create', req.body);
-    // create new document
-    Product.create(req.body)
-      .then(newProduct => {
-        // return one document
-        res.sendRest(newProduct);
-      })
-      .catch(err => {
-        res.sendRest(err);
-      });
-  });
-
-  // GET (get one)
-  router.get(`/${collection}/:id`, (req, res) => {
-    const id = req.params.id;
-
-    Product.findById(id)
-      .exec()
-      .then(product => {
-        // return one document
-        res.sendRest(product);
-      })
-      .catch(err => {
-        res.sendRest(err);
-      });
-  });
-
-  // PATCH (update one)
-  router.patch(`/${collection}/:id`, (req, res) => {
-    const id = req.params.id;
-    // update one document
-    Product.findByIdAndUpdate(id, req.body, { runValidators: true })
-      .exec()
-      .then(product => {
-        // user still keep old values (result of find())
-        // res.sendRest({ ...product.toObject(), ...req.body });
-        res.sendRest(Object.assign(product.toObject(), req.body));
-      })
-      .catch(err => {
-        res.sendRest(err);
-      });
-
-    // Another way is to findById, then in the result, modify model and then save
-  });
-
-  // DELETE (delete one)
-  router.delete(`/${collection}/:id`, (req, res) => {
-    const id = req.params.id;
-    // delete one document
-    Product.findByIdAndRemove(id)
-      .exec()
-      .then(product => {
-        res.sendRest(product);
-      })
-      .catch(err => {
-        res.sendRest(err);
-      });
-  });
-};
 ```
 
 Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
@@ -154,16 +92,16 @@ Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo r
 
 Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
 
-![placeholder](http://placehold.it/800x400 'Large example image')_Caption large image_
+![placeholder](https://placehold.it/800x400 'Large example image')_Caption large image_
 
-<img align="right" src="http://placehold.it/400x200" alt="placeholder" title="Medium example image">_Caption Medium image_
+<img align="right" src="https://placehold.it/400x200" alt="placeholder" title="Medium example image">_Caption Medium image_
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat.
 
-<img align="left" alt="placeholder" src="http://placehold.it/200x200" title="Small example image">_Caption Small image_
+<img align="left" alt="placeholder" src="https://placehold.it/200x200" title="Small example image">_Caption Small image_
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

@@ -1,4 +1,4 @@
-## Source code of my blog at [int3ractive.com](http://int3ractive.com)
+## Source code of my blog at [int3ractive.com](https://int3ractive.com)
 
 **Note**: All blog posts remain **copyrighted** by Tran Trong Thanh (int3ractive.com).
 
