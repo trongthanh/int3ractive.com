@@ -1,16 +1,16 @@
 ---
 layout: post
-title:      "Example Content"
+title: 'Example Content'
 description: This is a modified version of Clean Blog Jekyll to be compatible with GitHub Pages. Modified by Thanh Tran for his own blog.
-date:     2015-09-20T11:29:15+07:00
-author:     "Tran Trong Thanh"
-image: "img/post-bg-02.jpg"
+date: 2015-09-20T11:29:15+07:00
+author: 'Tran Trong Thanh'
+image: 'img/post-bg-02.jpg'
 modified: 2017-03-30T19:17:42+07:00
 ---
 
 Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 
-Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
+Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. _Aenean eu leo quam._ Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
 
 > Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
 
@@ -21,7 +21,7 @@ Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur puru
 HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
 - **To bold text**, use `<strong>`.
-- *To italicize text*, use `<em>`.
+- _To italicize text_, use `<em>`.
 - Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>`, with an optional `title` attribute for the full phrase.
 - Citations, like <cite>&mdash; Mark otto</cite>, should use `<cite>`.
 - <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
@@ -37,16 +37,87 @@ Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est 
 
 Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
 
-{% highlight js %}
-// Example can be run directly in your JavaScript console
+```js
+const Product = require('../models/Product');
+const collection = 'products';
 
-// Create a function that takes two arguments and returns the sum of those arguments
-var adder = new Function("a", "b", "return a + b");
+module.exports = router => {
+  // GET (get all)
+  router.get(`/${collection}`, (req, res) => {
+    // TODO: implement limit and where
+    Product.find({})
+      .populate('category')
+      .exec()
+      .then(products => {
+        res.sendRest(products);
+      })
+      .catch(err => {
+        res.sendRest(err);
+      });
+  });
 
-// Call the function
-adder(2, 6);
-// > 8
-{% endhighlight %}
+  // POST (create)
+  router.post(`/${collection}`, (req, res) => {
+    // req.app.log('create', req.body);
+    // create new document
+    Product.create(req.body)
+      .then(newProduct => {
+        // return one document
+        res.sendRest(newProduct);
+      })
+      .catch(err => {
+        res.sendRest(err);
+      });
+  });
+
+  // GET (get one)
+  router.get(`/${collection}/:id`, (req, res) => {
+    const id = req.params.id;
+
+    Product.findById(id)
+      .exec()
+      .then(product => {
+        // return one document
+        res.sendRest(product);
+      })
+      .catch(err => {
+        res.sendRest(err);
+      });
+  });
+
+  // PATCH (update one)
+  router.patch(`/${collection}/:id`, (req, res) => {
+    const id = req.params.id;
+    // update one document
+    Product.findByIdAndUpdate(id, req.body, { runValidators: true })
+      .exec()
+      .then(product => {
+        // user still keep old values (result of find())
+        // res.sendRest({ ...product.toObject(), ...req.body });
+        res.sendRest(Object.assign(product.toObject(), req.body));
+      })
+      .catch(err => {
+        res.sendRest(err);
+      });
+
+    // Another way is to findById, then in the result, modify model and then save
+  });
+
+  // DELETE (delete one)
+  router.delete(`/${collection}/:id`, (req, res) => {
+    const id = req.params.id;
+    // delete one document
+    Product.findByIdAndRemove(id)
+      .exec()
+      .then(product => {
+        res.sendRest(product);
+      })
+      .catch(err => {
+        res.sendRest(err);
+      });
+  });
+};
+```
 
 Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
 
@@ -54,9 +125,9 @@ Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna m
 
 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 
-* Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-* Donec id elit non mi porta gravida at eget metus.
-* Nulla vitae elit libero, a pharetra augue.
+- Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+- Donec id elit non mi porta gravida at eget metus.
+- Nulla vitae elit libero, a pharetra augue.
 
 Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
 
@@ -83,7 +154,7 @@ Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo r
 
 Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
 
-![placeholder](http://placehold.it/800x400 "Large example image")_Caption large image_
+![placeholder](http://placehold.it/800x400 'Large example image')_Caption large image_
 
 <img align="right" src="http://placehold.it/400x200" alt="placeholder" title="Medium example image">_Caption Medium image_
 
@@ -99,22 +170,21 @@ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ### Tables
 
 Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- 
-| Name | Upvotes | Downvotes |
-| -- | -- | -- |
-| Totals  | 21 | 23 |
-| Alice   | 10 | 11 |
-| Bob     | 4  | 3 |
-| Charlie | 7  | 9 |
 
+| Name    | Upvotes | Downvotes |
+| ------- | ------- | --------- |
+| Totals  | 21      | 23        |
+| Alice   | 10      | 11        |
+| Bob     | 4       | 3         |
+| Charlie | 7       | 9         |
 
 Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.
 
------
+---
 
 Want to see something else added? [Open an issue.](https://github.com/trongthanh/startbootstrap-clean-blog-jekyll)
