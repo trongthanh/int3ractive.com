@@ -25,7 +25,9 @@ twitter:
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: rouge
+  syntax_highlighter_opts:
+    disable: true
+# highlighter: rouge
 permalink: :year/:month/:title.html
 paginate: 10
 exclude: ['README.md', '.*']

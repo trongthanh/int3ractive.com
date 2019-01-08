@@ -37,6 +37,18 @@ Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est 
 
 Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
 
+```html
+<div class="media__body">
+  <h1>Tran Trong Thanh <span>résumé</span></h1>
+  <h2>Front End-oriented Full Stack JavaScript Developer</h2>
+  <ul class="h-list">
+    <li><a href="https://www.linkedin.com/in/trongthanh/" target="_blank">linkedin.com/in/trongthanh</a></li>
+    <li><a href="https://github.com/trongthanh" target="_blank">github.com/trongthanh</a></li>
+    <li class="u-print-hidden"><a href="https://twitter.com/trongthanh" target="_blank">twitter.com/trongthanh</a></li>
+  </ul>
+</div>
+```
+
 ```js
 const Product = require('../models/Product');
 const collection = 'products';
@@ -55,6 +67,26 @@ module.exports = router => {
         res.sendRest(err);
       });
   });
+```
+
+```css
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #65737e;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #5fb3b3;
+}
 ```
 
 Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
