@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'bootstrap';
 @import 'mixins';
-@import 'pygment-ocean';
+@import 'prism';
 
 // Global Components
 
@@ -83,7 +83,7 @@ blockquote {
 }
 
 pre {
-	font-size: 14px;
+	font-size: 80%;
 }
 
 hr.small {
