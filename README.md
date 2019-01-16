@@ -17,6 +17,10 @@ $ bundle install
 
 # and finally execute:
 $ bundle exec jekyll serve --incremental --livereload
+
+# OR preview with SASS files watch and re-compile:
+$ npm install
+$ npm start
 ```
 
 #### Linux / Ubuntu:
@@ -30,13 +34,17 @@ $ bundle install
 
 # and finally execute:
 $ bundle exec jekyll serve --incremental --livereload
+
+# OR preview with SASS files watch and re-compile:
+$ npm start
+$ npm start
 ```
 
 ## The Theme: Clean Blog by Start Bootstrap - GitHub Pages version by Thanh Tran
 
-> This is a modified version of [Clean Blog Jekyll](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll) to be fully compatible with [GitHub Pages](https://help.github.com/articles/using-jekyll-with-pages/) (no pre-compilation needed). Modified by [Thanh Tran](https://github.com/trongthanh) for his own blog.
+This is a modified version of [Clean Blog Jekyll](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) to be fully compatible with [GitHub Pages](https://help.github.com/articles/using-jekyll-with-pages/) (no pre-compilation needed). Modified by [Thanh Tran](https://github.com/trongthanh) for his own blog.
 
-The official Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
+A sample page rendered with all semantic HTML can be [previewed here](http://int3ractive.com/theme-preview).
 
 ### Additional notes on the `kramdown` markdown syntax:
 
@@ -59,13 +67,22 @@ The official Jekyll version of the Clean Blog theme by [Start Bootstrap](http://
 [ ![Alt text](/path/to/small.jpg) ](/path/to/large.jpg){: target="_blank" data-figure="" } \_Caption_
 ```
 
+- Highlight lines in code blocks using Prism line highlight plugin and `kramdown`'s attribute annotation (add right before the code block):
+
+<!-- prettier-ignore -->
+````markdown
+{:data-line="1"}
+```
+// some code here...
+```
+````
+
 ## CHANGELOG
 
 - New choice of typography, remarkably **Open Sans** for titles and **Lora** for body texts.
-- Implement **read-time** partial without plugins, use it in Post meta and blog index.
-- Use SASS (SCSS flavor) instead of LESS, with minimal Bootstrap SCSS bundle.
-- ~~New choice of typography, remarkably Source Sans Pro for titles and Noto Serif for body texts.~~
 - Support Vietnamese texts
+- Implement **read-time** partial without plugins, use it in Post meta and blog index.
+- Use SASS (SCSS flavor) instead of LESS, with minimal Bootstrap bundle.
 - Use client-side [Prism](http://prismjs.com) syntax highlighter (compatible with GitHub-flavored Markdown code fences) instead of pre-rendered Pygments
 - Include Google Analytics script tag. Set your GA ID at `site.gaid`
 - Include [Disqus](http://disqus.com) script to enable commenting. Set your Disqus site's ID at `site.disqus_site_id`. If not set, the comment section is omitted.
@@ -107,6 +124,6 @@ Besides, please visit Clean Blog's template overview page on Start Bootstrap at 
 
 ---
 
-© 2015-2018 Tran Trong Thanh. All rights reserved.
+© 2015-2019 Tran Trong Thanh. All rights reserved.
 
 © 2015 Start Bootstrap (theme source)
