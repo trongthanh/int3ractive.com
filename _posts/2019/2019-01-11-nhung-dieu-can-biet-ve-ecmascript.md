@@ -69,7 +69,7 @@ Phiên bản ECMAScript mới nhất tại thời điểm tôi viết bài này 
 
 ## Hiểu biết về ECMAScript giúp cài đặt Babel hợp lý hơn:
 
-Sự phổ biến của việc dùng Babel để biên dịch các cú pháp ES mới và một số boilerplate / starter-kit lạm dụng Babel stage preset (`@babel/preset-stage-\*`) khiến cho các lập trình viên hay nhầm lẫn các tính năng và đặc tả JavaScript. Bản thân tôi cũng từng nhầm lẫn.
+Sự phổ biến của việc dùng Babel để biên dịch các cú pháp ES mới và một số boilerplate / starter-kit lạm dụng Babel stage preset (`@babel/preset-stage-#`) khiến cho các lập trình viên hay nhầm lẫn các đặc tả chuẩn và thử nghiệm của JavaScript. Bản thân tôi cũng từng nhầm lẫn.
 
 Theo quan sát của tôi khi làm việc với React, có 2 đặc tả hay bị nhầm thuộc ES6 đó là: [`object spread`](https://github.com/tc39/proposal-object-rest-spread) và [`class field`](https://github.com/tc39/proposal-class-fields).
 
