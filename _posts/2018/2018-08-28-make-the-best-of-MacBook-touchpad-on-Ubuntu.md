@@ -71,8 +71,10 @@ Section "InputClass"
         Identifier      "Touchpads"
         MatchDevicePath "/dev/input/event*"
         Driver          "mtrack"
+        # The faster you move, the more distance pointer will travel, using "polynomial" profile
+        Option          "AccelerationProfile" "2"
         # Tweak cursor movement speed with this
-        Option          "Sensitivity" "0.10"
+        Option          "Sensitivity" "0.05"
         # Pressure at which a finger is detected as a touch
         Option          "FingerHigh" "5"
         # Pressure at which a finger is detected as a release
@@ -81,7 +83,7 @@ Section "InputClass"
         Option          "IgnoreThumb" "false"
         Option          "ThumbRatio" "70"
         Option          "ThumbSize" "25"
-        # Ignore palm, with palm takes up to 30% of your touchpad
+        # Ignore palm, with palm takes up to 30% of your touch pad
         Option          "IgnorePalm" "true"
         Option          "PalmSize" "30"
         # Trigger mouse button when tap: 1 finger - left click, 2 finger - right click, 3 - middle click
@@ -92,7 +94,7 @@ Section "InputClass"
         Option          "ClickTime" "25"
         # Disable tap-to-drag, we're using three finger drag instead
         Option          "TapDragEnable" "false"
-        # While touching the touchpad with fingers, press the touchpad physical click button
+        # While touching the touch pad with # fingers, press the touchpad physical click button
         Option          "ClickFinger1" "1"
         Option          "ClickFinger2" "3"
         Option          "ClickFinger3" "2"
@@ -108,7 +110,7 @@ Section "InputClass"
         Option          "ScrollLeftButton" "7"
         Option          "ScrollRightButton" "6"
         # Tweak scroll sensitivity with ScrollDistance, don't touch ScrollSensitivity
-        Option          "ScrollDistance" "150"
+        Option          "ScrollDistance" "250"
         Option          "ScrollClickTime" "10"
         # Three finger drag
         Option          "SwipeDistance" "1"
@@ -117,7 +119,7 @@ Section "InputClass"
         Option          "SwipeUpButton" "1"
         Option          "SwipeDownButton" "1"
         Option          "SwipeClickTime" "0"
-        Option          "SwipeSensitivity" "1000"
+        Option          "SwipeSensitivity" "1500"
         # Four finger swipe, 8 & 9 are for browsers navigating back and forth respectively
         Option          "Swipe4LeftButton" "9"
         Option          "Swipe4RightButton" "8"
@@ -145,12 +147,13 @@ Few things to note from above config file:
 
 If you want further tweaks, head to [the driver's Github README](https://github.com/p2rkw/xf86-input-mtrack) and read the configuration instructions.
 
+**Updated 2019-08-19:** I have added `AccelerationProfile` and tweak `Sensitivity` and `SwipeSensitivity` to make the experience with touchpad even more closer to that on macOS.
+
 **Updated 2018-09-18**: There's another key point in my notes that I forgot to include: During my first setup with `mtrack`, the driver didn't work until I add my current Linux user to the `input` group. Do so with following command:
 
 ```sh
 sudo adduser "`whoami`" input
 ```
-
 
 After that, log out and log in to your desktop. You'll know the driver is being used if you can drag or make selection immediately with three fingers on the touchpad.
 
@@ -159,9 +162,13 @@ After that, log out and log in to your desktop. You'll know the driver is being 
 After using **mtrack** for a while, I notice one of the annoying things is that touchpad is not disabled while typing which make the caret jump if you accidentally tap on it (and because I enabled tap to click). If you have troubles with this, install the `dispad` daemon from the original author of `mtrack`:
 
 ```sh
+# install addition dev dependencies for dispad
+sudo apt install libconfuse-dev libxi-dev
+# get code
 cd /tmp
 git clone https://github.com/BlueDragonX/dispad.git
 cd dispad
+# compile the daemon
 ./configure
 make
 sudo make install
@@ -247,7 +254,7 @@ Finally, don't forget to add this command `/usr/bin/xbindkeys_autostart` to **St
 Thankfully, I've got a hint from a Redditor replying on my post on [Reddit](https://www.reddit.com/r/Ubuntu/comments/9ggqv6/make_the_best_of_macbook_touchpad_on_ubuntu/). The reply points to [this post](https://np.reddit.com/r/linux/comments/72mfv8/psa_for_firefox_users_set_moz_use_xinput21_to/?st=jm8n2iqu&sh=5e7163c1) which I'll quote here:
 
 > I know this works for Firefox 55 or newer, but don't know the earliest version which supports it. I assume it will be enabled by default at some point, but it isn't yet in Firefox 58 (the current nightly).
-> 1. Run this command: 
+> 1. Run this command:
 >    `echo export MOZ_USE_XINPUT2=1 | sudo tee /etc/profile.d/use-xinput2.sh`
 > 2. Log out and back in.
 > 3. Firefox should now use xinput 2.
