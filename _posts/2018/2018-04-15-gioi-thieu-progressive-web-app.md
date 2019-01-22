@@ -72,7 +72,7 @@ Tuy nhiên những khả năng trên vẫn chỉ là sự hỗ trợ đơn lẻ 
 - Khóa hướng xoay màn hình
 - Và một số tùy chỉnh kỹ thuật khác...
 
-[![Một số tùy chỉnh có thể thấy được từ manifest.json](/img/2018/pwa/manifest-customizations.jpg)](/img/2018/pwa/manifest-customizations.jpg){: target="_blank" data-figure="" } _Ảnh chụp từ một [PWA demo do tôi viết](https://pwa-shop.firebaseapp.com/) để minh họa cho một bài thuyết trình về PWA._
+[![Một số tùy chỉnh có thể thấy được từ manifest.json](/img/2018/pwa/manifest-customizations.jpg)](/img/2018/pwa/manifest-customizations.jpg){: target="_blank" role="figure" } _Ảnh chụp từ một [PWA demo do tôi viết](https://pwa-shop.firebaseapp.com/) để minh họa cho một bài thuyết trình về PWA._
 
 ### Banner cài đặt web app và tích hợp sâu hơn trong Android
 
@@ -93,7 +93,7 @@ Theo [Addy Osmani](https://addyosmani.com/blog/getting-started-with-progressive-
 
 Ngoài ra Chrome và Android đang được cải thiện để tích hợp PWA tốt hơn. Kể từ Chrome cho Android phiên bản 57, khi một PWA được lưu lại, icon của nó không chỉ xuất hiện tại home screen mà ở cả trong app drawer (trang danh sách tất cả app) và kết quả tìm kiếm app. Không những thế, Android sẽ hỗ trợ PWA của bạn có riêng một "Intent Filter" để khi có bất kỳ app khác trên Android link đến URL của web app của bạn, PWA sẽ được mở ra thay vì URL mở ở trình duyệt mặc định. [Xem thêm tại đây.](https://developers.google.com/web/updates/2017/02/improved-add-to-home-screen)
 
-[![Một số cải tiến tích hợp vào Android của PWA trên Chrome 57](/img/2018/pwa/pwa-integrated.jpg)](/img/2018/pwa/pwa-integrated.jpg){: target="_blank" data-figure=""} _Một số cải tiến tích hợp vào Android của PWA trên Chrome 57_
+[![Một số cải tiến tích hợp vào Android của PWA trên Chrome 57](/img/2018/pwa/pwa-integrated.jpg)](/img/2018/pwa/pwa-integrated.jpg){: target="_blank" role="figure"} _Một số cải tiến tích hợp vào Android của PWA trên Chrome 57_
 
 ### Hoạt động offline
 
@@ -177,7 +177,7 @@ Một khi chuẩn Web này được áp dụng rộng rãi trên tất cả các
 
 Tin tốt lành là đến thời điểm tôi viết bài này, các trình duyệt phổ biến nhất[^4] đã hỗ trợ **Service Worker**, đặc tả quan trọng nhất của PWA. Bảng bên dưới tóm tắt tiến độ hỗ trợ từng tính năng riêng rẽ của PWA tại các trình duyệt khác nhau.
 
-[![Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau.](/img/2018/pwa/state-of-pwa-2018.jpg)](/img/2018/pwa/state-of-pwa-2018.jpg){: target="_blank" data-figure=""}_Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau. Ảnh chụp từ slide [giới thiệu PWA tại Google I/O 2018](https://www.youtube.com/watch?v=NITk4kXMQDw)_
+[![Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau.](/img/2018/pwa/state-of-pwa-2018.jpg)](/img/2018/pwa/state-of-pwa-2018.jpg){: target="_blank" role="figure"}_Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau. Ảnh chụp từ slide [giới thiệu PWA tại Google I/O 2018](https://www.youtube.com/watch?v=NITk4kXMQDw)_
 
 Tuy nhiên tôi muốn nhắc lại rằng với cơ chế Cải Tiến Tăng Dần, PWA có thể được áp dụng ngay từ bây giờ bất kể tính năng bạn cần chưa được hỗ trợ rộng rãi. Và với tiến độ hiện tại, những tính năng vừa nêu trên sẽ được hỗ trợ hoàn toàn trên hai nền tảng di động quan trọng và phổ biến nhất (Chrome trên Android và Safari trên iOS) trong vài tháng tới đây.
 
