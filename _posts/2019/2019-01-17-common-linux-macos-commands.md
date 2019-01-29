@@ -4,7 +4,7 @@ title: Common Linux / macOS terminal commands in my handbook
 subtitle: You should know if you're a full stack developer
 author: Thanh Tran
 description: Through the years, I had to look up every command that is needed by my job, as a coder, writer, devops and even as casual user, and kept the command usage in a long note. I'm copying and organizing them here for my own reference as well as may it be useful for other peeps.
-date: 2019-01-17T14:02:33+07:00
+date: 2019-01-29T17:12:59+07:00
 tags: [devops, linux, cli, terminal]
 image:
 ---
@@ -13,7 +13,7 @@ This will be a living reference blog post that I'll keep updating.
 
 When I started my software engineering career, I was fully immerged with GUI and mouse pointers by the OS and the tooling I used. With irritation at first, I had to self-taught my terminal skills because some of the tasks demanded. However, the more I advanced in my career, the more I see how powerful and convenient CLI (command line interface) can be. Through the years, I had to look up every command that is needed by my job, as a coder, writer, devops and even as casual user, and kept the command usage in a long note. I'm copying and organizing them here for my own reference as well as may it be useful for other peeps.
 
-Sure you can look up commands in cheat sheets or Google up, but these are the commands I had the need to use as a developer so they may be relevant to other programmers and as a guide to terminal dummies.
+Sure you can look up commands in [cheat sheets](http://cheat.sh/) or Google up, but these are the commands I had the need to use as a developer so they may be relevant to other programmers and as a guide to terminal dummies.
 
 > I'm composing below snippets and headings following [devhints.io](https://devhints.io) markdown structure with intention that this may be re-deployed in that format later.
 
@@ -348,16 +348,41 @@ scp -r uploads/ remote-host:/some/remote/directory
 
 Result will be new folder copied to `/some/remote/directory/uploads` at remote.
 
-## Git and HTTP request client
+## Git and file download
 
-### Download
+### Some Git tips
+
+```sh
+# Check diff change list with a COMMIT hash
+git diff COMMIT^!
+
+# Check diff against last change
+git log -p [--follow] [-1] <path>
+# Use --follow if file renamed
+```
+
+More: [git commands and aliases](https://github.com/trongthanh/dotfiles/blob/master/ubuntu/.git_aliases).
+
+### Download files with `curl`
+
+```sh
+# Download and display file content on terminal
+curl google.com
+# Download a file and specify a new filename
+curl http://example.com/file.zip -o new_file.zip
+# Download multiple files (and save exact file names from remote)
+curl -O URLOfFirstFile -O URLOfSecondFile
+# Download a file and follow redirects
+curl -L http://example.com/file
+# Resume a previously failed download
+curl -C - -o partial_file.zip http://example.com/file.zip
+```
 
 ### Download all URL listed in a text file (each link on a line)
 
 ```sh
 cat photos.txt | xargs -n 1 curl -LO
 ```
-
 
 ## Miscellaneous
 
