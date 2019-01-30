@@ -12,4 +12,184 @@ blogger_id: tag:blogger.com,1999:blog-5363322361445724369.post-59766160720467395
 blogger_orig_url: http://blog.int3ractive.com/2010/07/myth-buster-enterframe-event.html
 ---
 
-<p>When dealing with animation and tweening in ActionScript, EnterFrame event is the most important factor. However, it is also one of the frequent factors to cause performance issue for your application. Using it efficiently is critical for every application.</p> <h3>The myths</h3> <p>The EnterFrame events reportedly generate 1500 – 1800 event objects per minutes. Imagine, in every instance of your component (for e.g. a text marquee), you add an EnterFrame handler to its own, that number of objects generated per minute will multiply. Keep in mind that, creating an object is one of the <a href="http://www.richardlord.net/blog/object-pool-class" target="_blank">slow actions in ActionScript</a>. So avoid creating too many event objects will theoretically improve application performance.</p> <p>When <a href="http://int3ractive.blogspot.com/2010/03/as3signals-new-approach-for-as3-events.html" target="_blank">discussing AS3Signals</a>, I have mentioned an approach (raised by <a title="Rober Penner's 2-frame symbol solution" href="http://gist.github.com/243630" target="_blank">Robert Penner</a> and <a title="Alec's [frame] tag solution" href="http://alecmce.com/as3/replacing-enter_frame" target="_blank">AlecMcE</a>) which uses a two-frame MovieClip which has some script attached to its frames. The MovieClip loops continuously between 2 frames. When the play head reach a frame, the script attached to it will call the handling function, imitating EnterFrame’s events. Some claims that: “The idea behind the approach is that a frame-loop is an internal Flash player structure. It sits underneath the AS3 functionality, and so it doesn’t produce ENTER_FRAME events”.</p> <h3>The experiments</h3> <p><a href="http://lh6.ggpht.com/_47w2iQ8-NcE/TCwoz29C_WI/AAAAAAAACmU/sxCMk_E94lc/s1600-h/demo%5B3%5D.jpg"><img title="demo" style="border-right: 0px; border-top: 0px; display: inline; border-left: 0px; border-bottom: 0px" height="404" alt="demo" src="http://lh5.ggpht.com/_47w2iQ8-NcE/TCwo1dvj-UI/AAAAAAAACmY/kqfzIHIsCyo/demo_thumb%5B1%5D.jpg?imgmax=800" width="554" border="0"></a> </p> <p>To clear the myths about EnterFrame event performance and the 2-frame-loop approach, I have constructed an experiment of moving 5000 objects simultaneously using 4 different approaches:</p><a name='more'></a> <h4>1. A singleton frame-loop Manager. <a title="Singleton frame-loop manager" href="http://thanhtran-sources.googlecode.com/svn/trunk/demos/EnterFrameTest/bin/enter_frame_test.swf?singleton=true&amp;event=false" target="_blank" rel="shadowbox[EnterFrameTest];width=550;height=400">(View demo)</a></h4> <p>This singleton manager will extends a 2-frame movieclip. This movie clip is created before-hand in Flash CS. Attach the same enterFrameHandler to its 2 frames. The moving balls will attach their enterFrameHandler to this manager via Signals:</p> <div class="actionscript3"> <ol> <li class="li1"> <div class="de1"><span class="kw1">public</span> <span class="kw4">class</span> TwoFrameManager <span class="kw1">extends</span> TwoFrameMovie <span class="br0">{</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; static <span class="kw1">private</span> <span class="kw2">var</span> _instance<span class="sy0">:</span> TwoFrameManager = <span class="kw1">new</span> TwoFrameManager<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="kw1">public</span> <span class="kw2">var</span> <span class="kw7">enterFrame</span><span class="sy0">:</span> Signal<span class="sy0">;</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="kw1">public</span> <span class="kw3">function</span> TwoFrameManager<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span></div> <li class="li2"> <div class="de2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kw7">enterFrame</span> = <span class="kw1">new</span> Signal<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; addFrameScript<span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> enterFrameHandler<span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> enterFrameHandler<span class="br0">)</span><span class="sy0">;</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="br0">}</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="kw1">private</span> <span class="kw3">function</span> enterFrameHandler<span class="br0">(</span><span class="br0">)</span><span class="sy0">:</span> <span class="kw1">void</span> <span class="br0">{</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kw7">enterFrame</span><span class="sy0">.</span>dispatch<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div> <li class="li2"> <div class="de2">&nbsp;&nbsp;&nbsp; <span class="br0">}</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; static <span class="kw1">public</span> <span class="kw3">function</span> <span class="kw1">get</span> instance<span class="br0">(</span><span class="br0">)</span><span class="sy0">:</span> TwoFrameManager <span class="br0">{</span> <span class="kw1">return</span> _instance<span class="sy0">;</span> <span class="br0">}</span></div> <li class="li1"> <div class="de1"><span class="br0">}</span></div></li></ol></div> <h4>&nbsp;</h4> <h4>2. A singleton EnterFrame Manager. <a title="Singleton enterFrame manager" href="http://thanhtran-sources.googlecode.com/svn/trunk/demos/EnterFrameTest/bin/enter_frame_test.swf?singleton=true&amp;event=true" target="_blank" rel="shadowbox[EnterFrameTest];width=550;height=400">(View demo)</a></h4> <p>This manager will work the same as previous one except it extends a Shape (the most simple display object that can be created with ‘new‘ statement) and add an event listener to its own EnterFrame event.</p> <div class="actionscript3"> <ol> <li class="li1"> <div class="de1"><span class="kw1">public</span> <span class="kw4">class</span> EnterFrameManager <span class="kw1">extends</span> <a href="http://www.google.com/search?q=shape%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:shape.html"><span class="kw5">Shape</span></a> <span class="br0">{</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; static <span class="kw1">private</span> <span class="kw2">var</span> _instance<span class="sy0">:</span> EnterFrameManager = <span class="kw1">new</span> EnterFrameManager<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="kw1">public</span> <span class="kw2">var</span> <span class="kw7">enterFrame</span><span class="sy0">:</span> Signal<span class="sy0">;</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="kw1">public</span> <span class="kw3">function</span> EnterFrameManager<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span></div> <li class="li2"> <div class="de2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kw7">enterFrame</span> = <span class="kw1">new</span> Signal<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kw7">addEventListener</span><span class="br0">(</span><a href="http://www.google.com/search?q=event%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:event.html"><span class="kw5">Event</span></a><span class="sy0">.</span><span class="kw8">ENTER_FRAME</span><span class="sy0">,</span> enterFrameHandler<span class="br0">)</span><span class="sy0">;</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="br0">}</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="kw1">private</span> <span class="kw3">function</span> enterFrameHandler<span class="br0">(</span>event<span class="sy0">:</span> <a href="http://www.google.com/search?q=event%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:event.html"><span class="kw5">Event</span></a> = <span class="kw1">null</span><span class="br0">)</span><span class="sy0">:</span> <span class="kw1">void</span> <span class="br0">{</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kw7">enterFrame</span><span class="sy0">.</span>dispatch<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div> <li class="li2"> <div class="de2">&nbsp;&nbsp;&nbsp; <span class="br0">}</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; static <span class="kw1">public</span> <span class="kw3">function</span> <span class="kw1">get</span> instance<span class="br0">(</span><span class="br0">)</span><span class="sy0">:</span> EnterFrameManager <span class="br0">{</span> <span class="kw1">return</span> _instance<span class="sy0">;</span> <span class="br0">}</span></div> <li class="li1"> <div class="de1"><span class="br0">}</span></div></li></ol></div> <h4>&nbsp;</h4> <h4>3. Multiple frame-loop instances <a title="Multiple frame-loop instances" href="http://thanhtran-sources.googlecode.com/svn/trunk/demos/EnterFrameTest/bin/enter_frame_test.swf?singleton=false&amp;event=false" target="_blank" rel="shadowbox[EnterFrameTest];width=550;height=400">(View demo)</a></h4> <p>Every moving ball instance will attach its enterFrameHandler to the frames of a new TwoFrameMovie. i.e. there is one TwoFrameMovie for each moving ball.</p> <div class="actionscript3"> <ol> <li class="li1"> <div class="de1"><span class="kw1">public</span> <span class="kw4">class</span> MovingBall <span class="kw1">extends</span> <a href="http://www.google.com/search?q=sprite%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:sprite.html"><span class="kw5">Sprite</span></a> <span class="br0">{</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="kw1">public</span> <span class="kw2">var</span> <span class="kw7">enterFrame</span><span class="sy0">:</span> TwoFrameMovie<span class="sy0">;</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="kw1">public</span> <span class="kw3">function</span> MovingBall<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kw7">enterFrame</span> = <span class="kw1">new</span> TwoFrameMovie<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div> <li class="li2"> <div class="de2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kw7">enterFrame</span><span class="sy0">.</span>addFrameScript<span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> enterFrameHandler<span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> enterFrameHandler<span class="br0">)</span> </div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="br0">}</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="co2">/*...*/</span></div> <li class="li1"> <div class="de1"><span class="br0">}</span> </div></li></ol></div> <h4>&nbsp;</h4> <h4>4. Multiple EnterFrame instances <a title="Multiple enter-frame instances" href="http://thanhtran-sources.googlecode.com/svn/trunk/demos/EnterFrameTest/bin/enter_frame_test.swf?singleton=false&amp;event=true" target="_blank" rel="shadowbox[EnterFrameTest];width=550;height=400">(View demo)</a></h4> <p>Every moving ball will add an EnterFrame event listener to its own instance:</p> <div class="actionscript3"> <ol> <li class="li1"> <div class="de1"><span class="kw1">public</span> <span class="kw4">class</span> MovingBall <span class="kw1">extends</span> <a href="http://www.google.com/search?q=sprite%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:sprite.html"><span class="kw5">Sprite</span></a> <span class="br0">{</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="kw1">public</span> <span class="kw2">var</span> <span class="kw7">enterFrame</span><span class="sy0">:</span> TwoFrameMovie<span class="sy0">;</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="kw1">public</span> <span class="kw3">function</span> MovingBall<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kw7">addEventListener</span><span class="br0">(</span><a href="http://www.google.com/search?q=event%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:event.html"><span class="kw5">Event</span></a><span class="sy0">.</span><span class="kw8">ENTER_FRAME</span><span class="sy0">,</span> enterFrameHandler<span class="br0">)</span><span class="sy0">;</span> </div> <li class="li2"> <div class="de2">&nbsp;&nbsp;&nbsp; <span class="br0">}</span></div> <li class="li1"> <div class="de1">&nbsp;&nbsp;&nbsp; <span class="co2">/*...*/</span></div> <li class="li1"> <div class="de1"><span class="br0">}</span></div></li></ol></div> <h3>&nbsp;</h3> <h3>Results:</h3> <p>Running the demos a few time, I have come up with these average statistics (reported through the same <a href="http://github.com/mrdoob/stats.as" target="_blank">Stats</a> panel):</p> <p>My computer: Intel Core 2 Duo 2.53Ghz, 2GB RAM, Win XP, Firefox 3.6, Flash Player 10.0 debugger.<br>Moving 5000 objects after 70 seconds. Compiled frame rate is 30.  <ol> <li>Singleton frame-loop manager:<br>- Average FPS: <strong>23-24<br></strong>- Max Memory: <strong>~ 20.900</strong> MB  <li>Singleton EnterFrame manager:<br>- Average FPS: <strong>24<br></strong>- Max Memory: <strong>~ 20.900</strong> MB  <li>Multi-instances, frame-loop movie:<br>- Average FPS: <strong>18</strong><br>- Max Memory: <strong>~ 24.300</strong> MB  <li>Multi-instances, EnterFrame event :<br>- Average FPS: <strong>13</strong><br>- Max Memory: <strong>~ 24.000</strong> MB</li></ol> <p>The source code of my demo is <a href="http://thanhtran-sources.googlecode.com/svn/trunk/demos/EnterFrameTest" target="_blank">placed here</a>.</p> <h3>What is learned from those numbers?</h3> <ol> <li>First, with a single event listener or frame-loop, there’s virtually <strong>no difference in performance and memory</strong>.  <li>Multi instances of frame-loops or enterframe handlers will both <strong>significantly reduce our application performance</strong>.  <li>The fact that frame rate of demo 3 higher than demo 4 can be considered a <strong>proof that frame-loop doesn’t generate objects</strong> (hence it’s performance is better).  <li>Although faster, demo 3 consumes more memory due to the fact that it must create a 2-frame MovieClip for its every instance. (I haven’t tried to improved this anyway)  <li><strong>Creating many objects is </strong>really an <strong>‘evil’ </strong>thing to application performance.</li></ol> <h3>Conclusion</h3> <p>The Myth Buster way:</p> <ul> <li>Many event listeners (EnterFrame in particular) will reduce performance: <strong>Confirmed</strong>  <li>Frame-loop doesn’t create EnterFrame objects: <strong>Feasible</strong></li></ul> <p>My way:</p> <ul> <li><strong>It is strongly recommended that you should use an EnterFrameManager or TickManager</strong> (depending on how you call it) for every project needs EnterFrame events. The demo is using Signals to manage handlers. You can implement a non-Signals Manager with ease.  <li>It’s possible to conclude that frame-loop is more efficient than EnterFrame events. However, the fact that 2 singleton approaches don’t have significant difference in performance, you can <strong>safely use the traditional (singleton) event approach for the sake of simplicity</strong>.</li></ul> <p><font size="1">[Vietnamese tag: giải mã những giả thuyết về vấn đề tối ưu tốc độ của sự kiện EnterFrame]</font></p>
+<p>When dealing with animation and tweening in ActionScript, EnterFrame event is the most important factor. However, it is also one of the frequent factors to cause performance issue for your application. Using it efficiently is critical for every application.</p>
+
+<h3>The myths</h3>
+<p>The EnterFrame events reportedly generate 1500 &ndash; 1800 event objects per minutes. Imagine, in every instance of your component (for e.g. a text marquee), you add an EnterFrame handler to its own, that number of objects generated per minute will multiply. Keep in mind that, creating an object is one of the <a href="http://www.richardlord.net/blog/object-pool-class" target="_blank" rel="noopener">slow actions in ActionScript</a>. So avoid creating too many event objects will theoretically improve application performance.</p>
+<p>When <a href="http://int3ractive.blogspot.com/2010/03/as3signals-new-approach-for-as3-events.html" target="_blank" rel="noopener">discussing AS3Signals</a>, I have mentioned an approach (raised by <a title="Rober Penner's 2-frame symbol solution" href="http://gist.github.com/243630" target="_blank" rel="noopener">Robert Penner</a> and <a title="Alec's [frame] tag solution" href="http://alecmce.com/as3/replacing-enter_frame" target="_blank" rel="noopener">AlecMcE</a>) which uses a two-frame MovieClip which has some script attached to its frames. The MovieClip loops continuously between 2 frames. When the play head reach a frame, the script attached to it will call the handling function, imitating EnterFrame&rsquo;s events. Some claims that: &ldquo;The idea behind the approach is that a frame-loop is an internal Flash player structure. It sits underneath the AS3 functionality, and so it doesn&rsquo;t produce ENTER_FRAME events&rdquo;.</p>
+<h3>The experiments</h3>
+<p><a href="http://lh6.ggpht.com/_47w2iQ8-NcE/TCwoz29C_WI/AAAAAAAACmU/sxCMk_E94lc/s1600-h/demo%5B3%5D.jpg"><img title="demo" src="http://lh5.ggpht.com/_47w2iQ8-NcE/TCwo1dvj-UI/AAAAAAAACmY/kqfzIHIsCyo/demo_thumb%5B1%5D.jpg?imgmax=800" alt="demo" width="554" height="404" border="0" /></a></p>
+<p>To clear the myths about EnterFrame event performance and the 2-frame-loop approach, I have constructed an experiment of moving 5000 objects simultaneously using 4 different approaches:</p>
+<p>&nbsp;</p>
+<h4>1. A singleton frame-loop Manager. <a title="Singleton frame-loop manager" href="http://thanhtran-sources.googlecode.com/svn/trunk/demos/EnterFrameTest/bin/enter_frame_test.swf?singleton=true&amp;event=false" target="_blank" rel="noopener shadowbox[EnterFrameTest];width=550;height=400">(View demo)</a></h4>
+<p>This singleton manager will extends a 2-frame movieclip. This movie clip is created before-hand in Flash CS. Attach the same enterFrameHandler to its 2 frames. The moving balls will attach their enterFrameHandler to this manager via Signals:</p>
+<div>
+<ol>
+<li>
+<div>publicclass TwoFrameManager extends TwoFrameMovie {</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; static privatevar _instance: TwoFrameManager = new TwoFrameManager();</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicvarenterFrame: Signal;</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicfunction TwoFrameManager(){</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enterFrame = new Signal();</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; addFrameScript(0, enterFrameHandler,1, enterFrameHandler);</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; }</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; privatefunction enterFrameHandler():void{</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enterFrame.dispatch();</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; }</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; static publicfunctionget instance(): TwoFrameManager {return _instance;}</div>
+</li>
+<li>
+<div>}</div>
+</li>
+</ol>
+</div>
+<h4>2. A singleton EnterFrame Manager. <a title="Singleton enterFrame manager" href="http://thanhtran-sources.googlecode.com/svn/trunk/demos/EnterFrameTest/bin/enter_frame_test.swf?singleton=true&amp;event=true" target="_blank" rel="noopener shadowbox[EnterFrameTest];width=550;height=400">(View demo)</a></h4>
+<p>This manager will work the same as previous one except it extends a Shape (the most simple display object that can be created with &lsquo;new&lsquo; statement) and add an event listener to its own EnterFrame event.</p>
+<div>
+<ol>
+<li>
+<div>publicclass EnterFrameManager extends<a href="http://www.google.com/search?q=shape%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:shape.html">Shape</a>{</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; static privatevar _instance: EnterFrameManager = new EnterFrameManager();</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicvarenterFrame: Signal;</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicfunction EnterFrameManager(){</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enterFrame = new Signal();</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; addEventListener(<a href="http://www.google.com/search?q=event%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:event.html">Event</a>.ENTER_FRAME, enterFrameHandler);</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; }</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; privatefunction enterFrameHandler(event:<a href="http://www.google.com/search?q=event%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:event.html">Event</a> = null):void{</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enterFrame.dispatch();</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; }</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; static publicfunctionget instance(): EnterFrameManager {return _instance;}</div>
+</li>
+<li>
+<div>}</div>
+</li>
+</ol>
+</div>
+<h4>3. Multiple frame-loop instances <a title="Multiple frame-loop instances" href="http://thanhtran-sources.googlecode.com/svn/trunk/demos/EnterFrameTest/bin/enter_frame_test.swf?singleton=false&amp;event=false" target="_blank" rel="noopener shadowbox[EnterFrameTest];width=550;height=400">(View demo)</a></h4>
+<p>Every moving ball instance will attach its enterFrameHandler to the frames of a new TwoFrameMovie. i.e. there is one TwoFrameMovie for each moving ball.</p>
+<div>
+<ol>
+<li>
+<div>publicclass MovingBall extends<a href="http://www.google.com/search?q=sprite%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:sprite.html">Sprite</a>{</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicvarenterFrame: TwoFrameMovie;</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicfunction MovingBall(){</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enterFrame = new TwoFrameMovie();</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enterFrame.addFrameScript(0, enterFrameHandler,1, enterFrameHandler)</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; }</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; /*...*/</div>
+</li>
+<li>
+<div>}</div>
+</li>
+</ol>
+</div>
+<h4>4. Multiple EnterFrame instances <a title="Multiple enter-frame instances" href="http://thanhtran-sources.googlecode.com/svn/trunk/demos/EnterFrameTest/bin/enter_frame_test.swf?singleton=false&amp;event=true" target="_blank" rel="noopener shadowbox[EnterFrameTest];width=550;height=400">(View demo)</a></h4>
+<p>Every moving ball will add an EnterFrame event listener to its own instance:</p>
+<div>
+<ol>
+<li>
+<div>publicclass MovingBall extends<a href="http://www.google.com/search?q=sprite%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:sprite.html">Sprite</a>{</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicvarenterFrame: TwoFrameMovie;</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicfunction MovingBall(){</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; addEventListener(<a href="http://www.google.com/search?q=event%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:event.html">Event</a>.ENTER_FRAME, enterFrameHandler);</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; }</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; /*...*/</div>
+</li>
+<li>
+<div>}</div>
+</li>
+</ol>
+</div>
+<h3>Results:</h3>
+<p>Running the demos a few time, I have come up with these average statistics (reported through the same <a href="http://github.com/mrdoob/stats.as" target="_blank" rel="noopener">Stats</a> panel):</p>
+<p>My computer: Intel Core 2 Duo 2.53Ghz, 2GB RAM, Win XP, Firefox 3.6, Flash Player 10.0 debugger.<br />Moving 5000 objects after 70 seconds. Compiled frame rate is 30.</p>
+<ol>
+<li>Singleton frame-loop manager:<br />- Average FPS: <strong>23-24<br /></strong>- Max Memory: <strong>~ 20.900</strong> MB</li>
+<li>Singleton EnterFrame manager:<br />- Average FPS: <strong>24<br /></strong>- Max Memory: <strong>~ 20.900</strong> MB</li>
+<li>Multi-instances, frame-loop movie:<br />- Average FPS: <strong>18</strong><br />- Max Memory: <strong>~ 24.300</strong> MB</li>
+<li>Multi-instances, EnterFrame event :<br />- Average FPS: <strong>13</strong><br />- Max Memory: <strong>~ 24.000</strong> MB</li>
+</ol>
+<p>The source code of my demo is <a href="http://thanhtran-sources.googlecode.com/svn/trunk/demos/EnterFrameTest" target="_blank" rel="noopener">placed here</a>.</p>
+<h3>What is learned from those numbers?</h3>
+<ol>
+<li>First, with a single event listener or frame-loop, there&rsquo;s virtually <strong>no difference in performance and memory</strong>.</li>
+<li>Multi instances of frame-loops or enterframe handlers will both <strong>significantly reduce our application performance</strong>.</li>
+<li>The fact that frame rate of demo 3 higher than demo 4 can be considered a <strong>proof that frame-loop doesn&rsquo;t generate objects</strong> (hence it&rsquo;s performance is better).</li>
+<li>Although faster, demo 3 consumes more memory due to the fact that it must create a 2-frame MovieClip for its every instance. (I haven&rsquo;t tried to improved this anyway)</li>
+<li><strong>Creating many objects is </strong>really an <strong>&lsquo;evil&rsquo; </strong>thing to application performance.</li>
+</ol>
+<h3>Conclusion</h3>
+<p>The Myth Buster way:</p>
+<ul>
+<li>Many event listeners (EnterFrame in particular) will reduce performance: <strong>Confirmed</strong></li>
+<li>Frame-loop doesn&rsquo;t create EnterFrame objects: <strong>Feasible</strong></li>
+</ul>
+<p>My way:</p>
+<ul>
+<li><strong>It is strongly recommended that you should use an EnterFrameManager or TickManager</strong> (depending on how you call it) for every project needs EnterFrame events. The demo is using Signals to manage handlers. You can implement a non-Signals Manager with ease.</li>
+<li>It&rsquo;s possible to conclude that frame-loop is more efficient than EnterFrame events. However, the fact that 2 singleton approaches don&rsquo;t have significant difference in performance, you can <strong>safely use the traditional (singleton) event approach for the sake of simplicity</strong>.</li>
+</ul>
+<p>[Vietnamese tag: giải m&atilde; những giả thuyết về vấn đề tối ưu tốc độ của sự kiện EnterFrame]</p>
+<p>Visit <a href="https://rubiks-cu.be/" rel="nofollow noopener">www.Rubiks Cu.be</a>, a new website dedicated to the puzzle cube. Try the online simulator, the solver, learn the easiest solution method and measure your solution times.</p>

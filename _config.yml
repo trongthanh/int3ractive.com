@@ -13,6 +13,14 @@ linkedin_username: trongthanh
 gaid: UA-4430452-4
 disqus_site_id: conansblog
 
+# Search engine
+algolia:
+  application_id: U75T9MD1BQ
+  index_name: blog_posts
+  nodes_to_index: 'h2,h3,p,li,blockquote'
+  files_to_exclude:
+    - _drafts/*.*
+
 # SEO & Social networks
 seo_title: Int3ractive - Front End, JavaScript, developer experience, Linux tips in English & Vietnamese
 author: Thanh Tran (int3ractive.com)
