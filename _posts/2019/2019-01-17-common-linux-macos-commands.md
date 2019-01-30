@@ -27,7 +27,7 @@ Sure you can further look up command usage in [cheat sheets](http://cheat.sh/) o
 ```sh
 # list content of current folder
 ls
-# list content (event hidden files) of current folder
+# list content (even hidden files) of current folder
 ls -a
 # list content of current folder with extra metadata columns
 ls -l
@@ -130,10 +130,10 @@ chmod 600 key.pem
 # Add run (execute) permission to all users
 chmod a+x key.pem
 
-# Add read permission to user, remove read permission from group
+# Add write permission to user, remove read permission from group
 chmod u+w,g-r key.pem
 
-# Set exact permission and with recursive
+# Recursively set exact permission
 chmod -R u=r project/
 ```
 
@@ -409,7 +409,7 @@ Need to install [`imagemagick`](https://www.imagemagick.org/) first:
 convert -density 300 -trim test.pdf -quality 100 test.jpg
 ```
 
-### Convert mp4 to webm with FFMPEG on
+### Convert mp4 to webm with FFMPEG
 
 [https://gist.github.com/clayton/6196167](https://gist.github.com/clayton/6196167)
 
