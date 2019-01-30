@@ -14,7 +14,7 @@ This will be a living reference blog post that I'll keep updating.
 
 When I started my software engineering career, I was fully immerged with GUI and mouse pointers by the OS and the tooling I used. With irritation at first, I had to self-taught my terminal skills because some of the tasks demanded. However, the more I advanced in my career, the more I see how powerful and convenient CLI (command line interface) can be. Through the years, I had to look up every command that is needed by my job, as a coder, writer, devops and even as casual user, and kept the command usage in a long note. I'm migrating and organizing them here for my own reference as well as may it be useful for other peeps.
 
-Sure you can further look up command usage in [cheat sheets](http://cheat.sh/) or Google them up if you know what command to use, but for my younger self as CLI noob, I had no ideas what command to use as well as which tasks are possible on the terminal.
+Sure you can further look up command usage in [cheat sheets](http://cheat.sh/) or Google them up if you know what command to use, but for my younger self as CLI noob, I had no ideas what command to use as well as which tasks are possible on the terminal. Therefore, this mini cheat sheet is how I get on with the CLI bandwagon.
 
 > I'm composing below snippets and headings following [devhints.io](https://devhints.io) markdown structure with intention that this may be re-deployed in that format later.
 
