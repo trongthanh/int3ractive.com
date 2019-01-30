@@ -6,14 +6,15 @@ author: Thanh Tran
 description: Through the years, I had to look up every command that is needed by my job, as a coder, writer, devops and even as casual user, and kept the command usage in a long note. I'm copying and organizing them here for my own reference as well as may it be useful for other peeps.
 date: 2019-01-29T17:12:59+07:00
 tags: [devops, linux, cli, terminal]
-image:
+image: img/2019/cli-top.png
+cover-darken: true
 ---
 
 This will be a living reference blog post that I'll keep updating.
 
-When I started my software engineering career, I was fully immerged with GUI and mouse pointers by the OS and the tooling I used. With irritation at first, I had to self-taught my terminal skills because some of the tasks demanded. However, the more I advanced in my career, the more I see how powerful and convenient CLI (command line interface) can be. Through the years, I had to look up every command that is needed by my job, as a coder, writer, devops and even as casual user, and kept the command usage in a long note. I'm copying and organizing them here for my own reference as well as may it be useful for other peeps.
+When I started my software engineering career, I was fully immerged with GUI and mouse pointers by the OS and the tooling I used. With irritation at first, I had to self-taught my terminal skills because some of the tasks demanded. However, the more I advanced in my career, the more I see how powerful and convenient CLI (command line interface) can be. Through the years, I had to look up every command that is needed by my job, as a coder, writer, devops and even as casual user, and kept the command usage in a long note. I'm migrating and organizing them here for my own reference as well as may it be useful for other peeps.
 
-Sure you can look up commands in [cheat sheets](http://cheat.sh/) or Google up, but these are the commands I had the need to use as a developer so they may be relevant to other programmers and as a guide to terminal dummies.
+Sure you can further look up command usage in [cheat sheets](http://cheat.sh/) or Google them up if you know what command to use, but for my younger self as CLI noob, I had no ideas what command to use as well as which tasks are possible on the terminal.
 
 > I'm composing below snippets and headings following [devhints.io](https://devhints.io) markdown structure with intention that this may be re-deployed in that format later.
 
@@ -273,7 +274,7 @@ top
 - Type `o`, then key in `cpu` to sort by CPU
 - Type `o`, then key in `mem` to sort by Memory
 
-### Get CPU, memory info
+### Get CPU, memory info (Linux only)
 
 ```sh
 cat /proc/cpuinfo
@@ -282,13 +283,13 @@ lscpu
 cat /proc/meminfo
 ```
 
-### List all disks on machine
+### List all disks on machine (Linux only)
 
 ```sh
 sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
 ```
 
-### Shows the amount of disk space used and available on Linux file systems
+### Shows the amount of disk space used and available on current machine
 
 ```sh
 df
