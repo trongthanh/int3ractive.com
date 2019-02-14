@@ -5,6 +5,7 @@ subtitle: You should know if you're a full stack developer
 author: Thanh Tran
 description: Through the years, I had to look up every command that is needed by my job, as a coder, writer, devops and even as casual user, and kept the command usage in a long note. I'm copying and organizing them here for my own reference as well as may it be useful for other peeps.
 date: 2019-01-29T17:12:59+07:00
+updated: 2019-02-04T00:14:59+07:00
 tags: [devops, linux, cli, terminal]
 image: img/2019/cli-top.png
 cover-darken: true
@@ -22,6 +23,12 @@ Sure you can further look up command usage in [cheat sheets](http://cheat.sh/) o
 
 ## Navigate file systems
 
+### Display full path of current working directory:
+
+```sh
+pwd
+```
+
 ### List folder content:
 
 ```sh
@@ -32,6 +39,8 @@ ls -a
 # list content of current folder with extra metadata columns
 ls -l
 ```
+
+**Note:** The terms **folder** and **directory** are interchangeable.
 
 ### Change directory (a.k.a cd):
 
@@ -218,7 +227,18 @@ sed -i -e "s/old_text/new_text/g" hello.txt
 
 ### Compress and uncompress
 
-#### Zip a whole folder with tar + gzip
+#### Unzip (uncompress) .zip archives:
+
+```sh
+# unzip and extract to same folder
+unzip file.zip
+# unzip and extract to another folder
+unzip file.zip -d another/folder
+```
+
+> In Ubuntu, if `unzip` command does not exist, install with `sudo apt install unzip`
+
+#### Compress a whole folder with tar + gzip
 
 ```sh
 tar -czvf dump.tar.gz dump/
@@ -226,7 +246,7 @@ tar -czvf dump.tar.gz dump/
 
 Mnemonic for the command flags `-czvf` (with some joking): _**C**ompress **Z**e **V**ucking **F**ile_
 
-#### Unzip a tar.gz file:
+#### Uncompress a tar.gz file:
 
 ```sh
 tar -xzvf dump.tar.gz
@@ -409,9 +429,18 @@ Need to install [`imagemagick`](https://www.imagemagick.org/) first:
 convert -density 300 -trim test.pdf -quality 100 test.jpg
 ```
 
+### Merge multiple jpg files into one PDF document
+
+Need `imagemagick` as well.
+
+```sh
+# jpg files are named so that they appear in correct order
+convert -density 150 *.jpg passport.pdf
+```
+
 ### Convert mp4 to webm with FFMPEG
 
 [https://gist.github.com/clayton/6196167](https://gist.github.com/clayton/6196167)
 
 ---
-That's it. To be updated...
+That's it for now. To be updated...
