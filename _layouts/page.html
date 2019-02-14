@@ -4,17 +4,17 @@ layout: default
 
 <!-- Page Header -->
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>{% if page.title and page.title != 'Home' %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <hr class="small">
-                    <span class="subheading">{{ page.subtitle }}</span>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				<div class="site-heading">
+					<h1>{% if page.title and page.title != 'Home' %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+					<hr class="small">
+					<span class="subheading">{{ page.subtitle }}</span>
+				</div>
+			</div>
+		</div>
+	</div>
 </header>
 
 <!-- Main Content -->
