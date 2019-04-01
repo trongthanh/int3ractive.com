@@ -67,14 +67,14 @@ A sample page rendered with all semantic HTML can be [previewed here](http://int
 [ ![Alt text](/path/to/small.jpg) ](/path/to/large.jpg){: target="_blank" data-figure="" } \_Caption_
 ```
 
-- Highlight lines in code blocks using Prism line highlight plugin and `kramdown`'s attribute annotation (add right before the code block):
+- Highlight lines in code blocks using Prism line highlight plugin and `kramdown`'s attribute annotation (add right after the code block):
 
 <!-- prettier-ignore -->
 ````markdown
-{:data-line="1"}
 ```
 // some code here...
 ```
+{:data-line="1"}
 ````
 
 ## CHANGELOG
@@ -125,5 +125,3 @@ Besides, please visit Clean Blog's template overview page on Start Bootstrap at 
 ---
 
 © 2015-2019 Tran Trong Thanh. All rights reserved.
-
-© 2015 Start Bootstrap (theme source)
