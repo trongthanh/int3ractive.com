@@ -3,16 +3,16 @@ layout: post
 title: Tại sao lại để dư một dấu phẩy
 subtitle: Từ một lỗi cú pháp trong JavaScript, trailing comma trở thành best practice
 author: Thanh Tran
-description:
+description: Từ một lỗi cú pháp trong JavaScript, trailing comma trở thành best practice
 date: 2019-04-12T14:39:08+07:00
 tags: [javascript, ecmascript, best practice]
 image: img/2019/trailing-comma-cover.jpg
 cover-darken: true
 ---
 
-## Trailing comma là gì? Tại sao nó từng là lỗi trong JS?
+## Trailing comma là gì? Tại sao nó từng là lỗi trong JavaScript?
 
-Trailing comma (dấu phẩy đuôi, dấu phẩy cuối) là việc để dư **một dấu phẩy** sau phần tử cuối cùng ở cuối một danh sách. (có thể là phần tử trong Array literal, property trong Object literal, tham số của hàm...).
+Trailing comma (dấu phẩy đuôi, dấu phẩy cuối) là việc để dư **một dấu phẩy** sau phần tử cuối cùng ở cuối một danh sách. (có thể là phần tử trong Array literal, property trong Object literal, tham số của hàm...). Ví dụ:
 
 ```js
 // trailing comma trong Array literal
@@ -35,7 +35,7 @@ function compare(
 ```
 {:data-line="5,11,16"}
 
-Như bạn cũng có thể thấy, dấu phẩy vốn để ngăn cách **giữa** các phần tử trong một danh sách, và dấu phẩy cuối là dư thừa về mặt cú pháp. Ví dụ mảng ở trên nếu viết trên cùng một dòng sẽ là `var categories = ['men', 'women', 'accessories',]`. Trong thực tế, với các trình duyệt cũ chỉ hỗ trợ [ECMAScript 3](https://int3ractive.com/2019/01/nhung-dieu-can-biet-ve-ecmascript.html) trở về trước (IE8), trailing comma sẽ gây ra lỗi cú pháp lúc chạy.
+Như bạn cũng có thể thấy, dấu phẩy vốn để ngăn cách **giữa** các phần tử trong một danh sách, và dấu phẩy cuối là dư thừa về mặt cú pháp. Để dễ hình dung hơn, ví dụ mảng ở trên nếu viết trên cùng một dòng sẽ là `var categories = ['men', 'women', 'accessories',]`. Trong thực tế, với các trình duyệt cũ chỉ hỗ trợ [ECMAScript 3](https://int3ractive.com/2019/01/nhung-dieu-can-biet-ve-ecmascript.html) trở về trước (IE8), trailing comma sẽ gây ra lỗi cú pháp lúc chạy.
 
 ![Trailing comma gây ra lỗi cú pháp lúc chạy trên IE8. Hình screenshot lấy từ StackOverflow](/img/2019/trailing-comma-ie8-error.png)_Trailing comma gây ra lỗi cú pháp lúc chạy trên IE8. Hình screenshot lấy từ [StackOverflow](https://stackoverflow.com/questions/17490014/website-causes-script-error-in-ie8)._
 
@@ -45,7 +45,7 @@ Tuy nhiên, kể từ ECMAScript 5, trailing comma được chấp nhận cho da
 
 ### 1. Phần tử khi thêm vào cuối sẽ luôn đồng nhất và tách bạch
 
-Khi không dùng trailing comma, việc thêm phần tử cuối sẽ gây ảnh hưởng đến phần tử kế cuối vừa được thêm dấu phẩy và commit log của bạn sẽ như thế này:
+Khi không dùng trailing comma, việc thêm phần tử vào cuối danh sách sẽ gây ảnh hưởng đến phần tử kế cuối vừa được thêm dấu phẩy và commit log của bạn sẽ như thế này:
 
 ```diff
   var categories = [
@@ -90,7 +90,7 @@ Như đã nói ở trên, trailing comma được chấp nhận kể từ ECMASc
 
 Với danh sách tham số của hàm, nó chỉ mới được chấp nhận trong ES2017. Nếu JS engine chưa hỗ trợ, và khi chạy trực tiếp nó sẽ gây lỗi cú pháp. Cho nên sẽ an toàn hơn nếu code của bạn được biên dịch thông qua Babel và sử dụng `preset-env`.
 
-Theo kinh nghiệm cá nhân, hiện tôi vẫn tránh dùng trailing comma trong tham số hàm và cũng rất ít khi viết hàm có danh sách tham số quá dài. Thay vào đó, lời khuyên cho bạn là nên dùng object literal để gom danh sách tham số dài vào thành một tham số cho hàm, như ví dụ sau:
+Theo kinh nghiệm cá nhân, hiện tôi vẫn tránh dùng trailing comma trong tham số hàm và cũng rất ít khi viết hàm có danh sách tham số quá dài. Thay vào đó, lời khuyên cho bạn là nên dùng object literal để gom danh sách nhiều tham số vào thành một tham số cho hàm, như ví dụ sau:
 
 ```js
 // Thay vì viết hàm nhận nhiều tham số:
@@ -153,7 +153,7 @@ var a,
     ;
 ```
 
-Dù vậy, đã từ lâu, tôi vẫn áp dụng best practice sau:
+Thay vì vậy, từ lâu tôi vẫn áp dụng best practice cho việc khai báo nhiều biến local như sau:
 
 ```js
 // Với danh sách biến không gán giá trị ban đầu,
@@ -187,4 +187,10 @@ var gender = [
 
 Tuy nhiên, đây là cách viết nhiều người (trong đó có tôi) xem là không chuẩn và vẫn bị một hạn chế đó là dòng đầu tiên không đồng nhất (ngược lại với comma last). Và một khi thành thói quen, có thể bạn sẽ để dư thêm dấu phẩy ở dòng đầu tiên và điều này còn nguy hiểm hơn là để dư dấu phẩy cuối.
 
+## Thay lời kết: luôn thêm ký tự xuống dòng cuối file
 
+Dù không nhìn thấy, các dòng văn bản plain text đều kết thúc bằng ký tự _linefeed_ (`\n`) đối với Linux & macOS và 2 ký tự _carriage return_ và _linefeed_ (`\r\n`) trên Windows. Khi người soạn văn bản (hay code) viết đến cuối file và không gõ Enter lần nữa, dòng cuối cùng của file sẽ không kết thúc bởi ký tự xuống dòng. Do đó khi văn bản mới được đánh vào cuối file, dòng cuối cùng của version trước đó sẽ thay đổi trong change log bởi nó vừa được thêm ký tự xuống dòng.
+
+Do đó cùng nguyên tắc như với trailing comma, lời khuyên là luôn chèn ký tự xuống dòng vào cuối file. Và nếu bạn nghĩ mình sẽ quên, các editor phổ biến (VSCode, SublimeText, Atom...) đều có setting **Insert Final Newline** để tự động làm việc này cho bạn.
+
+Nếu team bạn có sử dụng [editorconfig](https://editorconfig.org/), bạn có thể cài đặt rule này: `insert_final_newline = true` để áp dụng cho cả project.
