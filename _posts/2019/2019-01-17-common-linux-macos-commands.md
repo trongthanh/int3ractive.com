@@ -405,25 +405,21 @@ curl -C - -o partial_file.zip http://example.com/file.zip
 cat photos.txt | xargs -n 1 curl -LO
 ```
 
-## Miscellaneous
+## Media conversion and manipulation
 
-### Generate SSH key
+More often than not, you'll have the need to convert or manipulate photos or even videos on the remote server or on your local machine where installing a full GUI software is restricted or too troublesome. Luckily, there are [`imagemagick`](https://www.imagemagick.org/) and `ffmpeg` CLI tools that can help with most media manipulation needs.
 
-```sh
-ssh-keygen -t rsa -C "your_email@example.com"
-```
+### Convert a PNG to ICO to make favicon.ico
 
-### Tunnel MongoDB connection from remote to local
+Need to install [`imagemagick`](https://www.imagemagick.org/) first:
 
 ```sh
-ssh user@host -i private-key.pem -L 27018:localhost:27017
+convert favicon.png -define icon:auto-resize=64,48,32,16 favicon.ico
 ```
-
-(27018 is local, 27017 is remote server)
 
 ### Convert a PDF to multiple jpg files
 
-Need to install [`imagemagick`](https://www.imagemagick.org/) first:
+Require `imagemagick`:
 
 ```sh
 convert -density 300 -trim test.pdf -quality 100 test.jpg
@@ -441,6 +437,42 @@ convert -density 150 *.jpg passport.pdf
 ### Convert mp4 to webm with FFMPEG
 
 [https://gist.github.com/clayton/6196167](https://gist.github.com/clayton/6196167)
+
+### Convert videos to animated gif with FFMPEG
+
+To make best looking as well as optimized animated gif, you need to run multiple commands, so save below script as `gifmaker.sh`
+
+```sh
+#!/bin/sh
+# Usage: ./gifmaker.sh video.mkv anim.gif
+palette="/tmp/palette.png"
+
+filters="fps=15,scale=640:-1:flags=lanczos"
+
+ffmpeg -v warning -i $1 -vf "$filters,palettegen" -y $palette
+ffmpeg -v warning -i $1 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -y $2
+```
+
+Edit `fps=15` for more or less frame rate; `scale=640` for larger or smaller size based on max width. Add execution permission to  `gifmaker.sh`.
+
+The script is thanks to [this article on blog.pkh.me](http://blog.pkh.me/p/21-high-quality-gif-with-ffmpeg.html).
+
+## Miscellaneous
+
+### Generate SSH key
+
+```sh
+ssh-keygen -t rsa -C "your_email@example.com"
+```
+
+### Tunnel MongoDB connection from remote to local
+
+```sh
+ssh user@host -i private-key.pem -L 27018:localhost:27017
+```
+
+(27018 is local, 27017 is remote server)
+
 
 ---
 That's it for now. To be updated...
