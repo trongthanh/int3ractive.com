@@ -2,14 +2,24 @@
 layout: post
 title: "Nau Tab"
 subtitle: Beautiful new tab page for modern browsers
-description: Here are some of my open source or contributed-to projects through out my career, ordered by date with later ones on top.
-image: "img/projects-bg.jpg"
-date: 2018-08-11T17:30:36+07:00
+description: Take a break from your work with this picturesque new tab extension for modern browsers.
+author: Thanh Tran
+image: "img/nau-tab-bg.jpg"
+date: 2019-06-16T12:37:11+07:00
+cover-darken: true
 ---
 
 [This is a place holder page. Content to be updated.]
 
-Current features:
+![Nau Tab screenshot](/img/nau-tab-bg.jpg)
+
+### Install:
+
+- [Chrome extension](https://chrome.google.com/webstore/detail/nau-tab/pimockeojlggmlnknhicajgckmlggifa?hl=en)
+- [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/nau-tab/)
+- [Or release builds on Github](https://github.com/trongthanh/nau-chrome-tab/releases)
+
+### Current features:
 
 - Clock and period of the day greetings.
 - Quotations for inspiration.
@@ -18,7 +28,7 @@ Current features:
 - You can set your name by clicking on the greeting's name.
 - You can re-select a list quick links (top left) in the settings panel
 
-Planned features:
+### Planned features:
 
 - Monthly calendar widget (with solar-lunar dates)
 - Current and next hour weather forecast (if free service available)
@@ -26,4 +36,4 @@ Planned features:
 - Self-care reminder
 - (Your suggestions...)
 
-Visit github page http://github.com/trongthanh/nau-chrome-tab for more detail and feature roadmap. Or post a comment below.
+Visit [my github page](http://github.com/trongthanh/nau-chrome-tab) for more details and feature roadmap. Or post a comment below.
