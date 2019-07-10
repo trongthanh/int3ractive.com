@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Nau Tab"
+title: "NAU Tab"
 subtitle: Beautiful new tab page for modern browsers
 description: Take a break from your work with this picturesque new tab extension for modern browsers.
 author: Thanh Tran
@@ -13,17 +13,18 @@ cover-darken: true
 
 <a href="https://chrome.google.com/webstore/detail/nau-tab/pimockeojlggmlnknhicajgckmlggifa?hl=en" title="Install this extension from Chrome webstore"><img src="/img/nau-tab/chrome-webstore-badge.png" alt="Install from Chrome Webstore" style="display: inline-block; height: 60px; cursor: pointer"></a> &nbsp; <a href="https://addons.mozilla.org/en-US/firefox/addon/nau-tab/" title="Install this extension from Mozilla Firefox Add-ons"><img src="/img/nau-tab/firefox-addon-badge.png" alt="Install from Mozilla Firefox Add-ons"  style="display: inline-block; height: 60px; cursor: pointer"></a>
 
-Or get the [source code from Github](https://github.com/trongthanh/nau-chrome-tab/releases).
+Or get the [source code from Github](https://github.com/trongthanh/nau-chrome-tab).
 
 ### Current features:
 
 - Clock and period of the day greetings.
 - Quotations for inspiration.
-- The wallpaper is fetched from [Unsplash](https://unsplash.com) and change every hour. Unsplash wallpapers are changed in response to period of the day.
-- You can use your photo as background by select one from settings panel opened at the bottom left corner.
+- The wallpapers are fetched from [Unsplash](https://unsplash.com) and changed every hour. Unsplash wallpapers are changed in response to period of the day.
+- You can use your photo as wallpaper in the settings window.
 - You can personalize the greeting by clicking on the greeting's name.
-- You can re-select or define your own the quick links (top left) in the settings panel
-- Zero tracking (except wallpaper hotlinking statistic required by Unsplash)
+- You can re-select or define your own the quick links (top left) in the settings window.
+- Settings window opened from bottom left cogwheel icon allows customize wallpaper mode, quicklinks, clock positions...
+- Zero tracking. (Yes, I use this for myself and I don't include tracking whatsoever.)
 
 ![Nau Tab screenshot](/img/nau-tab-bg.jpg)_NAU Tab screenshot_
 
