@@ -100,6 +100,8 @@ A sample page rendered with all semantic HTML can be [previewed here](http://int
 - Use `subtitle` for the text below the main title
 - Use `description` for meta and open graph description
 - Use `image` for both post header image and open graph image
+- Use `cover-image`: ONLY for post header (take precedence over `image`)
+    + If no `image` or `cover-image` defined, site-wise `image` (_config.yml) will be used for post's cover.
 
 ## Before You Begin
 
@@ -124,4 +126,4 @@ Besides, please visit Clean Blog's template overview page on Start Bootstrap at 
 
 ---
 
-© 2015-2019 Tran Trong Thanh. All rights reserved.
+© 2015-current Tran Trong Thanh. All rights reserved.
