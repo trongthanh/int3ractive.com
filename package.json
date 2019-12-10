@@ -6,7 +6,8 @@
   "author": "Thanh Tran",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "grunt serve",
+    "start": "bundle exec jekyll serve --incremental --host 0.0.0.0",
+    "dev": "grunt serve",
     "build": "grunt build"
   },
   "devDependencies": {
