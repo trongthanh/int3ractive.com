@@ -3,7 +3,7 @@ layout: post
 title: Things to do after installing Ubuntu Mate 19.10
 subtitle: Specialized for MacBook and PC laptop
 author: Thanh Tran
-description:
+description: Here's my opinionated tweaks to new Unbutu MATE installation to adapt to my preferences as long time MacBook user.
 date: 2019-12-11T01:40:08+07:00
 tags: [linux, ubuntu, ubuntu mate, tutorials]
 image: img/2019/ubuntu-mate-desktop.jpg
