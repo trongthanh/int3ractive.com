@@ -120,11 +120,11 @@ sudo update-alternatives --config x-cursor-theme
 
 ## #9 Install Ulauncher
 
-I'm big fan of **Spotlight**, and more recently, the **Alfred app** on macOS. More or less, both of theme let me search and launch apps quickly without having to browse through the list of icons in launcher menu. They also let me search and open files quickly, and provide some handy actions like calculate arithmetic expression, look up dictionary and even serve as web search.
+I'm a big fan of **Spotlight**, and more recently, the [Alfred app](https://www.alfredapp.com/) on macOS. More or less, both of them let me search and launch apps quickly without having to browse through the list of icons in launcher menu. They also let me search and open files quickly, and provide some handy actions like calculate arithmetic expression, look up dictionary and even search from the web.
 
-When moving to Linux, fortunately, I've found [Ulauncher](https://ulauncher.io/) which does very similarly to Alfred. You can follow install instructions at Ulauncher website.
+When moving to Linux, fortunately, I've found [Ulauncher](https://ulauncher.io/) which does very similarly to Alfred. To install, you can follow instructions at Ulauncher website. (there's a custom ppa for Ubuntu users' convenience.)
 
-Ulauncher default shortcut is similar to macOS Spotlight's, that is `Super + Space`. You can change it from the application's setting.
+Ulauncher's default shortcut is similar to macOS Spotlight's, that is `Super + Space`. You can change it from the application's setting.
 
 ![Screenshot of ULauncher](/img/2019/ubuntu-mate-ulauncher.jpg)_Ulauncher popup with System extension_
 
