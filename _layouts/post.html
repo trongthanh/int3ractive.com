@@ -30,8 +30,8 @@ layout: default
 				<!-- Begin post content -->
 				{{ content }}
 				<!-- End post content -->
-				{% if page.modified %}
-				<p class="text-right update-note"><small class="text-muted">Updated on {{ page.modified | date:"%d/%m/%Y" }}.</small></p>
+				{% if page.updated %}
+				<p class="text-right update-note"><small class="text-muted">Updated on {{ page.updated | date:"%d/%m/%Y" }}.</small></p>
 				{% endif %}
 				<hr>
 

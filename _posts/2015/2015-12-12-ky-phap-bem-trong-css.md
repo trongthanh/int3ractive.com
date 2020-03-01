@@ -8,7 +8,7 @@ created: 2015-11-08T14:39:06+07:00
 date: 2015-12-12T11:41:33+07:00
 tags: [CSS, HTML, Process, Vietnamese, Front End]
 image: img/2015/bem-intro-cover.jpg
-modified: 2015-12-16T22:06:16+07:00
+updated: 2015-12-16T22:06:16+07:00
 redirect_from: "/2015/12/cu-phap-bem-trong-css.html"
 ---
 

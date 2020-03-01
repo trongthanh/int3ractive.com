@@ -5,7 +5,7 @@ description: This is a modified version of Clean Blog Jekyll to be compatible wi
 date: 2015-09-20T11:29:15+07:00
 author: 'Tran Trong Thanh'
 image: 'img/projects-bg.jpg'
-modified: 2017-03-30T19:17:42+07:00
+updated: 2017-03-30T19:17:42+07:00
 ---
 
 Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
