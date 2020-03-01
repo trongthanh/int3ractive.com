@@ -6,7 +6,7 @@ author: Thanh Tran
 description:
 date: 2015-11-04T09:55:22+07:00
 tags: [CSS]
-modified:
+updated:
 ---
 
 Lập trình CSS theo hướng mobile first là gì?
