@@ -5,7 +5,7 @@ subtitle: Specialized for MacBook and PC laptop
 author: Thanh Tran
 description: Here's my opinionated tweaks to new Unbutu MATE installation to adapt to my preferences as long time MacBook user.
 date: 2019-12-11T01:40:08+07:00
-updated: 2020-02-27T23:01:51+07:00
+updated: 2020-04-25T00:42:19+07:00
 tags: [linux, ubuntu, ubuntu mate, tutorials]
 image: img/2019/ubuntu-mate-desktop.jpg
 cover-darken: true
@@ -144,6 +144,21 @@ When switching from macOS to Ubuntu MATE on this same MacBook Air, I noticed tha
 As long time macOS user, I find **this is the most annoying thing about Linux on laptop**. To work around, I shutdown the laptop whenever I leave it overnight or for a long time. Fortunately, Ubuntu MATE is already light-weigh and boots up very fast on SSD. To ease the pain of recovering the opening windows from last session, you can turn on `Automatically remember running applications when logging out` option in **Startup Application** window:
 
 ![Remember running applications when logging out](/img/2019/ubuntu-mate-restore-window.jpg)
+
+## #12 Fix keyboard back lights keep turn up to 100% after restart / re-login
+
+If your laptop has backlight for keyboard, then you'll notice an annoying issue with the power management control which will set the keyboard backlight to maximum whenever you re-login or change from battery to AC power. On this [community thread regarding the issue](https://ubuntu-mate.community/t/keyboard-light-keeps-turning-on-after-login-and-or-unlock/6914), some suggested to edit the Upower.conf but this will also disable the ability to adjust backlight brightness level with media keys.
+
+Adapting from [this post](https://ubuntu-mate.community/t/keyboard-light-keeps-turning-on-after-login-and-or-unlock/6914/24), below are the config I'm currently use as work-around. It will reset backlight to a very dim level which is visible in the dark instead of turn it off completely.
+
+```sh
+# run with terminal
+gsettings set org.mate.power-manager kbd-backlight-battery-reduce on
+gsettings set org.mate.power-manager kbd-brightness-dim-by-on-battery 75
+gsettings set org.mate.power-manager kbd-brightness-on-ac 10
+```
+
+Instead of running above commands, you can edit these config with **dconf Editor** at `/org/mate/power-manager`
 
 ## MacBook tweaks
 
