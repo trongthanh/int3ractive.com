@@ -164,7 +164,7 @@ Instead of running above commands, you can edit these config with **dconf Editor
 
 Below are some additional tweaks specialized for MacBook. These tweaks may be too opinionated and less demanding so I just keep them brief (and because at this point I'm so exhausted writing this long post):
 
-## #12 Correct monitor color with custom ICC profile
+## #13 Correct monitor color with custom ICC profile
 
 My MacBook monitor looks a bit bluish when booting to Linux. This can be fixed by apply correct ICC color profile. Unfortunately, these is no ICC profile chooser on Ubuntu MATE (Ubuntu GNOME does have one). To apply custom ICC color profile on Ubuntu MATE, I need to install a tool named [`xcalib`](https://wiki.archlinux.org/index.php/ICC_profiles#Loading_ICC_profiles).
 
@@ -173,15 +173,15 @@ My MacBook monitor looks a bit bluish when booting to Linux. This can be fixed b
 - If there is error related to _ramp size_, [check out this SO question](https://askubuntu.com/questions/930084/xcalib-error-unsupported-ramp-size).
 
 
-## #13 Swap Fn and Control keys and/or Option and Command keys
+## #14 Swap Fn and Control keys and/or Option and Command keys
 
 Install a kernel module named `hid-apple-patched`. Visit this [Github repo to learn more.](https://github.com/free5lot/hid-apple-patched).
 
-## #14 Install multi touch touchpad driver and config
+## #15 Install multi touch touchpad driver and config
 
 If you want to make the best of your MacBook touch pad, especially wanting native three-finger drag, visit [this article of mine to learn more](https://int3ractive.com/2018/09/make-the-best-of-MacBook-touchpad-on-Ubuntu.html).
 
-## #15 Install `fusehpfs` to mount HPFS disk drive from macOS
+## #16 Install `fusehpfs` to mount HPFS disk drive from macOS
 
 If you're dual-booting Linux and macOS and wanting to mount macOS' [HPFS drive](https://en.wikipedia.org/wiki/High_Performance_File_System), head to [this Github repo](https://github.com/sgan81/apfs-fuse) for instructions to install an APFS FUSE Driver for Linux. Do note that, with this fuse driver, you can only mount the HPFS drive as read-only for now.
 
