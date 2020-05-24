@@ -47,7 +47,7 @@ And from now on, just leave it to the daemon to do its job. For more more info a
 
 **dconf Editor**, if you don't know it yet, is a very handy tool to configure some of very hidden settings of Linux desktop. It is also a required tool for some of the steps below. If you can't find it in the Applications menu > System Tool, install it now:
 
-```sh
+```shell
 sudo apt install dconf-editor
 ```
 
@@ -133,7 +133,7 @@ Ulauncher's default shortcut is similar to macOS Spotlight's, that is `Super + S
 
 **Software Boutique** is the default software center on Ubuntu MATE. However, it has very small selection of applications. To come back to the popular Ubuntu Software center which has more choices, including many updated Snap apps, install following package via terminal:
 
-```sh
+```shell
 sudo apt install ubuntu-software
 ```
 
@@ -151,7 +151,7 @@ If your laptop has backlight for keyboard, then you'll notice an annoying issue 
 
 Adapting from [this post](https://ubuntu-mate.community/t/keyboard-light-keeps-turning-on-after-login-and-or-unlock/6914/24), below are the config I'm currently use as work-around. It will reset backlight to a very dim level which is visible in the dark instead of turn it off completely.
 
-```sh
+```shell
 # run with terminal
 gsettings set org.mate.power-manager kbd-backlight-battery-reduce on
 gsettings set org.mate.power-manager kbd-brightness-dim-by-on-battery 75

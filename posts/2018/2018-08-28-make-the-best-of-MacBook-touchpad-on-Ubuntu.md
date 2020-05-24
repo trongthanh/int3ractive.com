@@ -24,7 +24,7 @@ Compile a Linux package by yourself might be a little scary for newbies so you j
 
 First, open terminal and install the necessary tools and dependencies for the compilation of the driver:
 
-```sh
+```shell
 # Update Ubuntu to latest packages
 sudo apt update && sudo apt upgrade
 
@@ -34,7 +34,7 @@ sudo apt install build-essential git pkg-config libmtdev-dev mtdev-tools xserver
 
 Then we'll clone source code and compile the mtrack driver from its currently active [repo](https://github.com/p2rkw/xf86-input-mtrack):
 
-```sh
+```shell
 # execute line by line:
 cd /tmp
 git clone https://github.com/p2rkw/xf86-input-mtrack.git
@@ -47,7 +47,7 @@ You are most li kely not be able to compile the package at the `sudo make` comma
 
 Finally, install the driver into system:
 
-```sh
+```shell
 sudo make install
 ```
 
@@ -55,14 +55,14 @@ sudo make install
 
 The new driver won't be used until there's a proper config file set up. Create the config file at `/usr/share/X11/xorg.conf.d/50-mtrack.conf` (root or admin permission needed) and edit it with your favorite text editor. Or use these commands:
 
-```sh
+```shell
 sudo touch /usr/share/X11/xorg.conf.d/50-mtrack.conf
 sudo gedit /usr/share/X11/xorg.conf.d/50-mtrack.conf
 ```
 
 This will open the file with Gedit (Text Editor) with proper permission to save. Then, copy and paste my current mtrack config below:
 
-```sh
+```shell
 # Install mtrack driver 0.5.0++
 # Save this file to /usr/share/X11/xorg.conf.d/50-mtrack.conf
 # This config is specialized for MacBook Air 2012 (5,2)
@@ -151,7 +151,7 @@ If you want further tweaks, head to [the driver's Github README](https://github.
 
 **Updated 2018-09-18**: There's another key point in my notes that I forgot to include: During my first setup with `mtrack`, the driver didn't work until I add my current Linux user to the `input` group. Do so with following command:
 
-```sh
+```shell
 sudo adduser "`whoami`" input
 ```
 
@@ -161,7 +161,7 @@ After that, log out and log in to your desktop. You'll know the driver is being 
 
 After using **mtrack** for a while, I notice one of the annoying things is that touchpad is not disabled while typing which make the caret jump if you accidentally tap on it (and because I enabled tap to click). If you have troubles with this, install the `dispad` daemon from the original author of `mtrack`:
 
-```sh
+```shell
 # install addition dev dependencies for dispad
 sudo apt install libconfuse-dev libxi-dev
 # get code
@@ -196,7 +196,7 @@ With above **mtrack** config, I already have these gestures (if it's not obvious
 
 Luckily, there's no need for manual compilation this time. Just open terminal and install via command:
 
-```sh
+```shell
 sudo apt install xbindkeys xdotool
 ```
 
@@ -206,7 +206,7 @@ sudo apt install xbindkeys xdotool
 
 To define the rules, you'll need to open `xbindkeys-config` GUI app, from which you'll define the keys listened and the actions (command). I won't give the how-to here (which you can [look it up here](https://wiki.archlinux.org/index.php/Xbindkeys)), but will provide my current xbindkeys config which you can copy and save it at `~/.xbindkeysrc`:
 
-```sh
+```shell
 # Next Workspace
 "xdotool key super+Page_Down"
    b:11

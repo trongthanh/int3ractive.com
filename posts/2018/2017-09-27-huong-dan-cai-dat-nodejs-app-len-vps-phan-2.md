@@ -20,7 +20,7 @@ Tóm tắt [phần 1](https://int3ractive.com/2017/09/huong-dan-cai-dat-nodejs-a
 
 Đây là bước không bắt buộc, tuy nhiên tôi khuyến cáo không nên bỏ qua, nhất là bạn đang truy cập vào VPS bằng tài khoản root. Chúng ta sẽ tạo một Linux user mới và gán cho thư mục của app.
 
-```sh
+```shell
 # Tạo một Linux user mới, nên dùng tên của app và không để khoảng trắng
 sudo useradd my-node-app
 # Chuyển quyền sở hữu (owner) thư mục app và các thư mục con cho user mới
@@ -94,7 +94,7 @@ Một vài điều lưu ý khi chỉnh sửa file .service trên:
 
 Sau khi bạn đã tạo xong file .service, bạn có thể thử chạy app ngay thông qua lệnh sau:
 
-```sh
+```shell
 # Bắt đầu chạy app như dịch vụ (không cần đường dẫn đến file .service)
 sudo systemctl start my-node-app.service
 
@@ -105,7 +105,7 @@ sudo systemctl status my-node-app.service
 
 Cuối cùng, sau khi app đã được chạy thành công và bạn có thể vào qua port 3000, bật chức năng dịch vụ tự khởi động khi server được restart:
 
-```sh
+```shell
 sudo systemctl enable my-node-app.service
 # -> Created symlink from ... to ...
 ```
@@ -149,7 +149,7 @@ Nếu muốn dùng cùng config cho nhiều web host ảo, bạn có thể chuy�
 
 Sau khi chỉnh sửa xong Nginx config như trên. Bạn có thể thử kiểm tra config mới có hợp lệ hay không bằng lệnh:
 
-```sh
+```shell
 sudo nginx -t
 # -> nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 # -> nginx: configuration file /etc/nginx/nginx.conf test is successful
@@ -157,7 +157,7 @@ sudo nginx -t
 
 Nếu config mới OK, bạn khởi động lại Nginx bằng lệnh sau:
 
-```sh
+```shell
 sudo systemctl restart nginx
 ```
 Sau khi Nginx được restart, bạn vào thử website tại domain đã cài đặt ở trên với URL không thêm port (http://my-node-app.com). Nếu website hiện ra thì bạn đã cài đặt thành công. Nếu bạn thấy lỗi "Bad Gateway", tức là cấu hình Nginx vừa rồi chưa thành công và cần phải rà soát lại.
@@ -229,7 +229,7 @@ Trong danh sách các loại file tĩnh được nén với gzip ở trên (`gzi
 
 Có nhiều cách để cài đặt certificate Let's Encrypt nhưng đơn giản nhất trên Linux kết hợp với Nginx là sử dụng công cụ dòng lệnh [Certbot](https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx). Ở đây tôi sẽ tóm tắt các bước cần thực hiện:
 
-```sh
+```shell
 # Chạy các lệnh sau để cài đặt lệnh certbot kèm plugin Nginx trên Ubuntu
 sudo apt-get update
 sudo apt-get install software-properties-common
@@ -240,7 +240,7 @@ sudo apt-get install python-certbot-nginx
 
 Sau khi **certbot** được cài, bạn có thể chạy lệnh sau để bắt đầu tiến trình cài đặt certificate cho website với Nginx plugin:
 
-```sh
+```shell
 sudo certbot --nginx
 ```
 
@@ -260,7 +260,7 @@ Ngoài lệnh `systemctl status` để biết trạng thái chạy của app, v�
 
 Sau đây là một số lệnh tôi thường dùng để xem lại console log của app trong lúc đang chạy:
 
-```sh
+```shell
 # Xem lại tất cả các log output của app
 # Bạn còn nhớ `SyslogIdentifier` ở trên?
 # Đặt chuỗi đó sau tham số -u để chỉ hiển thị log cho my-node-app

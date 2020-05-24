@@ -25,13 +25,13 @@ Sure you can further look up command usage in [cheat sheets](http://cheat.sh/) o
 
 ### Display full path of current working directory:
 
-```sh
+```shell
 pwd
 ```
 
 ### List folder content:
 
-```sh
+```shell
 # list content of current folder
 ls
 # list content (even hidden files) of current folder
@@ -44,7 +44,7 @@ ls -l
 
 ### Change directory (a.k.a cd):
 
-```sh
+```shell
 # go to a folder with absolute path (start with /)
 cd /home/user/documents
 # go to a child folder from current folder (./ optional)
@@ -57,7 +57,7 @@ cd ~
 
 ### Display byte size of current directory and sub-directories
 
-```sh
+```shell
 # get size of current and its direct sub-directories
 du -chd 1
 
@@ -73,7 +73,7 @@ du -sh node_modules/
 
 #### Find files with name in current directory and its children:
 
-```sh
+```shell
 find . -type f -name "postgis-2.0.0”
 ```
 
@@ -81,7 +81,7 @@ Type: `f` (file); `d` (directory)
 
 #### Find all files in a folder with pattern and execute command on it
 
-```sh
+```shell
 find . -name '*.js' -exec [command] '{}' \;
 ```
 
@@ -90,13 +90,13 @@ Note:
 `\;` is the terminate character
 
 Example:
-```sh
+```shell
 find . -name '*.js' -exec jscodeshift -t migrate-to-modern-1.0.js '{}' \;
 ```
 
 #### Find and remove all `node_modules` folder recursively
 
-```sh
+```shell
 # Dry run:
 find . -name "node_modules" -type d -exec echo "{}" +
 # Do it:
@@ -116,7 +116,7 @@ grep -rnw '/path/to/somewhere/' -e 'pattern'
 
 Along with these, `--exclude`, `--include`, `--exclude-dir` flags could be used for efficient searching:
 
-```sh
+```shell
 # This will only search through those files which have .c or .h extensions:
 grep --include=\*.{c,h} -rnw '/path/to/somewhere/' -e "pattern"
 
@@ -131,7 +131,7 @@ grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/somewhere/' -e "pattern"
 
 #### Changing file permissions
 
-```sh
+```shell
 # Change permission of a file using octal number
 chmod 600 key.pem
 # (note: don't use same octal number on both files and directories)
@@ -148,7 +148,7 @@ chmod -R u=r project/
 
 #### Changing file owner
 
-```sh
+```shell
 # Change owner of files and directories recursively to user:group
 chown -R thanh:admin /usr/local/
 ```
@@ -157,7 +157,7 @@ Note: add `sudo` if needed.
 
 ### Viewing files content:
 
-```sh
+```shell
 # print content of a whole file
 cat file.txt
 
@@ -167,7 +167,7 @@ tail -n 20 errors.log
 
 ### Make new files & directories:
 
-```sh
+```shell
 # Make an empty file
 touch filename
 
@@ -180,7 +180,7 @@ mkdir -p project/private/devops/nginx
 
 ### Copy and link files
 
-```sh
+```shell
 # copy a file
 cp from/path to/path
 
@@ -190,7 +190,7 @@ ln -s source_file target_file
 
 ### Move files and folders
 
-```sh
+```shell
 # Move and rename a file
 mv from_file to_file
 # Move multiple files to a target directory
@@ -199,7 +199,7 @@ mv file1 file2 file3 directory
 
 ### Edit file content:
 
-```sh
+```shell
 # edit a file
 vim README.md
 # Easier editor on Linux
@@ -217,7 +217,7 @@ echo "replication:" | sudo tee -a /etc/mongod.conf
 
 ### Replace text inline inside a text file:
 
-```sh
+```shell
 sed -i -e "s/old_text/new_text/g" hello.txt
 ```
 
@@ -229,7 +229,7 @@ sed -i -e "s/old_text/new_text/g" hello.txt
 
 #### Unzip (uncompress) .zip archives:
 
-```sh
+```shell
 # unzip and extract to same folder
 unzip file.zip
 # unzip and extract to another folder
@@ -240,7 +240,7 @@ unzip file.zip -d another/folder
 
 #### Compress a whole folder with tar + gzip
 
-```sh
+```shell
 tar -czvf dump.tar.gz dump/
 ```
 
@@ -248,7 +248,7 @@ Mnemonic for the command flags `-czvf` (with some joking): _**C**ompress **Z**e 
 
 #### Uncompress a tar.gz file:
 
-```sh
+```shell
 tar -xzvf dump.tar.gz
 tar -xzvf dump.tar.gz -C target/folder/
 ```
@@ -257,7 +257,7 @@ Mnemonic for the command flags `-xzvf` (with some joking): _E**x**tract **Z**e *
 
 ### Remove files & directories
 
-```sh
+```shell
 # Remove a file
 rm file.txt
 
@@ -275,7 +275,7 @@ rm *.html
 
 ### Monitor system resource and workload with `top` command:
 
-```sh
+```shell
 top
 ```
 
@@ -296,7 +296,7 @@ top
 
 ### Get CPU, memory info (Linux only)
 
-```sh
+```shell
 cat /proc/cpuinfo
 lscpu
 
@@ -305,13 +305,13 @@ cat /proc/meminfo
 
 ### List all disks on machine (Linux only)
 
-```sh
+```shell
 sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
 ```
 
 ### Shows the amount of disk space used and available on current machine
 
-```sh
+```shell
 df
 
 #With file system type (EXT4, XFS...)
@@ -322,7 +322,7 @@ df -Th
 
 ### Connect to remote server shell via SSH:
 
-```sh
+```shell
 # Connect via provided username and password
 ssh username@hostdomain.com
 # Connect via secret *.pem key
@@ -333,7 +333,7 @@ Note: `key.pem` must have permission octal less than or equal 600
 
 ### Check which distro & distro version
 
-```sh
+```shell
 # try either
 uname -r
 lsb_release -a
@@ -341,7 +341,7 @@ lsb_release -a
 
 #### For CentOS only:
 
-```sh
+```shell
 rpm --query centos-release
 ```
 
@@ -349,7 +349,7 @@ rpm --query centos-release
 
 #### Copy the file "foobar.tgz" from the remote host to current dir in local host
 
-```sh
+```shell
 scp remote-host:/home/user/foobar.tgz ./
 ```
 
@@ -357,13 +357,13 @@ scp remote-host:/home/user/foobar.tgz ./
 
 #### Copy the file "foobar.tgz" from the local host to a remote host
 
-```sh
+```shell
 scp -i key_file.pem foobar.tgz remote-host:/some/remote/directory
 ```
 
 #### Copy whole directory from the local host to a remote host
 
-```sh
+```shell
 scp -r uploads/ remote-host:/some/remote/directory
 ```
 
@@ -373,7 +373,7 @@ Result will be new folder copied to `/some/remote/directory/uploads` at remote.
 
 ### Some Git tips
 
-```sh
+```shell
 # Check diff change list with a COMMIT hash
 git diff COMMIT^!
 
@@ -386,7 +386,7 @@ More: [git commands and aliases](https://github.com/trongthanh/dotfiles/blob/mas
 
 ### Download files with `curl`
 
-```sh
+```shell
 # Download and display file content on terminal
 curl google.com
 # Download a file and specify a new filename
@@ -401,7 +401,7 @@ curl -C - -o partial_file.zip http://example.com/file.zip
 
 ### Download all URL listed in a text file (each link on a line)
 
-```sh
+```shell
 cat photos.txt | xargs -n 1 curl -LO
 ```
 
@@ -413,7 +413,7 @@ More often than not, you'll have the need to convert or manipulate photos or eve
 
 Need to install [`imagemagick`](https://www.imagemagick.org/) first:
 
-```sh
+```shell
 convert favicon.png -define icon:auto-resize=64,48,32,16 favicon.ico
 ```
 
@@ -421,7 +421,7 @@ convert favicon.png -define icon:auto-resize=64,48,32,16 favicon.ico
 
 Require `imagemagick`:
 
-```sh
+```shell
 convert -density 300 -trim test.pdf -quality 100 test.jpg
 ```
 
@@ -429,7 +429,7 @@ convert -density 300 -trim test.pdf -quality 100 test.jpg
 
 Need `imagemagick` as well.
 
-```sh
+```shell
 # jpg files are named so that they appear in correct order
 convert -density 150 *.jpg passport.pdf
 ```
@@ -442,7 +442,7 @@ convert -density 150 *.jpg passport.pdf
 
 To make best looking as well as optimized animated gif, you need to run multiple commands, so save below script as `gifmaker.sh`
 
-```sh
+```shell
 #!/bin/sh
 # Usage: ./gifmaker.sh video.mkv anim.gif
 palette="/tmp/palette.png"
@@ -461,13 +461,13 @@ The script is thanks to [this article on blog.pkh.me](http://blog.pkh.me/p/21-hi
 
 ### Generate SSH key
 
-```sh
+```shell
 ssh-keygen -t rsa -C "your_email@example.com"
 ```
 
 ### Tunnel MongoDB connection from remote to local
 
-```sh
+```shell
 ssh user@host -i private-key.pem -L 27018:localhost:27017
 ```
 
