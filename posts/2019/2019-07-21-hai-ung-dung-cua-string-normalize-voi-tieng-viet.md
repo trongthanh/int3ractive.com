@@ -6,8 +6,8 @@ author: Thanh Tran
 description: Đôi điều về hai bảng mã Unicode tiếng Việt và hai ứng dụng thú vị của phương thức String.prototype.normalize
 date: 2019-07-25T23:43:28+07:00
 tags: [javascript, unicode, vietnamese]
-image: img/2019/string-normalize-cover-image.jpg
-cover-image: img/code-bg.jpg
+image: images/2019/string-normalize-cover-image.jpg
+cover-image: images/code-bg.jpg
 ---
 
 ## Đôi điều về hai bảng mã Unicode tiếng Việt

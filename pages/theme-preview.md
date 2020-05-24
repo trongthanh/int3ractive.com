@@ -4,7 +4,7 @@ title: 'Example Content'
 description: This is a modified version of Clean Blog Jekyll to be compatible with GitHub Pages. Modified by Thanh Tran for his own blog.
 date: 2015-09-20T11:29:15+07:00
 author: 'Tran Trong Thanh'
-image: 'img/projects-bg.jpg'
+image: 'images/projects-bg.jpg'
 updated: 2017-03-30T19:17:42+07:00
 ---
 

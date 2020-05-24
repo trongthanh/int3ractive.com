@@ -10,7 +10,7 @@ tags: [Vietnamese, Linux, terminal]
 
 [Tizonia](http://tizonia.org) là một phần mềm trên Linux cho phép chơi nhạc online từ Youtube, Spotify, Google Music, SoundCloud bằng... dòng lệnh. Lý do số một mình thích là nó chơi nhạc từ Youtube cực nhẹ vì không cần video và giao diện.
 
-![Tizonia on gnome-terminal](/img/2018/tizonia-terminal.png)
+![Tizonia on gnome-terminal](/images/2018/tizonia-terminal.png)
 
 ## Cài đặt
 

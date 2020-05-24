@@ -6,7 +6,7 @@ author: Thanh Tran
 description: Hướng dẫn chạy Node.js app như dịch vụ, serve app qua Nginx reversed proxy và bật HTTPS
 date: 2018-09-26T23:14:10+07:00
 tags: [devops, vietnamese, nodejs, webapp]
-image: img/2017/keystone-mongo-node-ubuntu.png
+image: images/2017/keystone-mongo-node-ubuntu.png
 cover-darken: true
 ---
 
@@ -177,7 +177,7 @@ server {
 
     # Hướng dẫn cho Nginx serve tĩnh các file và folder bên trong public,
     # có tên bắt đầu bằng một trong những pattern như bên dưới
-    location ~ ^/(fonts/|img/|javascript/|js/|script/|css/|stylesheets/|flash/|media/|static/|upload/|robots.txt|humans.txt|favicon.ico) {
+    location ~ ^/(fonts/|images/|javascript/|js/|script/|css/|stylesheets/|flash/|media/|static/|upload/|robots.txt|humans.txt|favicon.ico) {
         # đường dẫn tuyệt đối đến thư mục file tĩnh
         root /apps/my-node-app/public;
         access_log off;

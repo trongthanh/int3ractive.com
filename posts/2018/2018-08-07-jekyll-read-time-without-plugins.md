@@ -6,7 +6,7 @@ author: Thanh Tran
 description:
 date: 2018-08-07T14:04:35+07:00
 tags: [Jekyll, GitHub Page]
-image: img/code-bg.jpg
+image: images/code-bg.jpg
 ---
 
 Searching the web for a Jekyll / Liquid template helper that show "read time" of a post without plugins (so that it'll work for GitHub Page) will probably land you at [this post](https://carlosbecker.com/posts/jekyll-reading-time-without-plugins/) by Carlos Alexandro Becker. I also tried the solution of that post which I'll quote it here (assuming **180 word-per-minute**):

@@ -7,7 +7,7 @@ description: Knowledge can only lead to ability. Experience can lead to mastery.
 date: 2015-09-19T13:32:14+07:00
 tags: [thoughts, writing]
 ---
-![Knowledge & Experience](/img/2015/knowledge-experience.jpg "Knowledge & Experience")_Image courtesy of [mrichatham.com](http://www.mrichatham.com/2014/01/07/experience-vs-knowledge-and-why-experience-is-more-important/)_
+![Knowledge & Experience](/images/2015/knowledge-experience.jpg "Knowledge & Experience")_Image courtesy of [mrichatham.com](http://www.mrichatham.com/2014/01/07/experience-vs-knowledge-and-why-experience-is-more-important/)_
 
 Recently, I am annoyed with some people thinking they can use their education and training to overcome lack of experience, or in other words, claiming that knowledge can replace experience. Though it has been [said](http://www.mrichatham.com/2014/01/07/experience-vs-knowledge-and-why-experience-is-more-important/) [before](http://robertsontrainingsystems.com/blog/knowledge-vs-experience/), I want to express it again in my own thoughts and from my own experience (not a pun):
 

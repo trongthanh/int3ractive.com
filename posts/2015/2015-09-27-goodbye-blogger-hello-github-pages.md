@@ -7,7 +7,7 @@ description: I just migrate my blog from Blogger to GitHub Pages. Here's why...
 date: 2015-09-27T13:56:17+07:00
 tags: [Thoughts]
 updated: 2015-09-29T21:13:04+07:00
-image: img/2015/markdown-editing.jpg
+image: images/2015/markdown-editing.jpg
 
 ---
 

@@ -6,7 +6,7 @@ author: Thanh Tran
 description: Progressive Web App (PWA) là một dạng ứng dụng web mới đang thu hút rất nhiều sự quan tâm, tuy nhiên nó vẫn còn khá mới mẻ tại Việt Nam. Trong bài viết này tôi sẽ cố gắng giải thích PWA cho những ai không phải lập trình viên vẫn có thể hiểu.
 date: 2018-05-13T17:43:06+07:00
 tags: [Vietnamese, Front End, JavaScript, Mobile Web, Web App]
-image: img/2018/pwa/pwa-logo.png
+image: images/2018/pwa/pwa-logo.png
 ---
 <center><small><em>(Hình cover: logo <a href="https://medium.com/samsung-internet-dev/we-now-have-a-community-approved-progressive-web-apps-logo-823f212f57c9">không chính thức</a> của PWA)</em></small></center>
 
@@ -37,7 +37,7 @@ Những tác giả của khái niệm PWA (đến từ nhóm phát triển trìn
 
 Trước tiên cần hiểu rằng, sự tiến hóa của mobile web app cần sự hợp tác của rất nhiều bên liên quan trong đó có các nhà phát triển trình duyệt, hệ điều hành di động, và cả những chuyên gia về ngôn ngữ lập trình cho Web. Sự tiến hóa của mobile web thường đi cùng với sự phát triển và chuẩn hóa của nền tảng Web do tổ chức **W3C**[^2] chịu trách nhiệm.
 
-[![Sự tiến hóa của nền tảng Web](/img/2018/pwa/evolutionoftheweb.jpg)_Sự tiến hóa của nền tảng Web_](http://www.evolutionoftheweb.com)
+[![Sự tiến hóa của nền tảng Web](/images/2018/pwa/evolutionoftheweb.jpg)_Sự tiến hóa của nền tảng Web_](http://www.evolutionoftheweb.com)
 
 Khi tôi tư vấn và phát triển app cho khách hàng, rất nhiều lần doanh nghiệp từ chối lựa chọn giải pháp web app hoặc hybrid app với lý do chính là _"HTML5 không nhanh bằng native"_. Tuy nhiên điều này không còn đúng tại thời điểm hiện tại.
 
@@ -50,14 +50,14 @@ Nhờ những cải tiến của phần cứng thiết bị, hệ điều hành 
 - Cơ sở dữ liệu (CSDL) tại trình duyệt cho phép tìm kiếm và truy cập nhanh lượng dữ liệu lớn và cho phép người dùng trở lại trang web app nhanh hơn.
 - Đặc tả mới về CSS cho phép designer và front end developer tạo giao diện tùy ứng (responsive design) và giao diện giống app dễ dàng hơn.
 
-![Web app showcase](/img/2018/pwa/web-apps-showcase.jpg)_Từ trái qua, các web app nổi tiếng đã chứng minh được sự thành công của web app trên mobile: <a href="https://app.ft.com">app.ft.com</a>, <a href="https://flipboard.com">flipboard.com</a>, <a href="https://m.aliexpress.com">m.aliexpress.com</a>_
+![Web app showcase](/images/2018/pwa/web-apps-showcase.jpg)_Từ trái qua, các web app nổi tiếng đã chứng minh được sự thành công của web app trên mobile: <a href="https://app.ft.com">app.ft.com</a>, <a href="https://flipboard.com">flipboard.com</a>, <a href="https://m.aliexpress.com">m.aliexpress.com</a>_
 
 Dù vậy, web app vẫn còn một số hạn chế so với native app. Chúng ta hãy xem PWA đã được bổ sung những khả năng gì để có thể xóa dần khoảng cách giữa web và native:
 
 ### Shortcut trên home screen và hỗ trợ theme từ trình duyệt
 
 <figure class="figure figure--right">
-    <img class="figure__image" src="/img/2018/pwa/safari-add-to-home-screen.jpg" alt="Chức năng Add to Home Screen trên Safari">
+    <img class="figure__image" src="/images/2018/pwa/safari-add-to-home-screen.jpg" alt="Chức năng Add to Home Screen trên Safari">
     <figcaption class="figure__caption" style="width:300px">Chức năng Add to Home Screen trên Safari. Ảnh từ <a href="https://www.any-data-recovery.com/iphone-data/how-to-change-safari-default-homepage-on-mac-iphone-and-ipad.html">any-data-recovery.com</a>.
     </figcaption>
 </figure>
@@ -72,12 +72,12 @@ Tuy nhiên những khả năng trên vẫn chỉ là sự hỗ trợ đơn lẻ 
 - Khóa hướng xoay màn hình
 - Và một số tùy chỉnh kỹ thuật khác...
 
-[![Một số tùy chỉnh có thể thấy được từ manifest.json](/img/2018/pwa/manifest-customizations.jpg)](/img/2018/pwa/manifest-customizations.jpg){: target="_blank" role="figure" } _Ảnh chụp từ một [PWA demo do tôi viết](https://pwa-shop.firebaseapp.com/) để minh họa cho một bài thuyết trình về PWA._
+[![Một số tùy chỉnh có thể thấy được từ manifest.json](/images/2018/pwa/manifest-customizations.jpg)](/images/2018/pwa/manifest-customizations.jpg){: target="_blank" role="figure" } _Ảnh chụp từ một [PWA demo do tôi viết](https://pwa-shop.firebaseapp.com/) để minh họa cho một bài thuyết trình về PWA._
 
 ### Banner cài đặt web app và tích hợp sâu hơn trong Android
 
 <figure class="figure figure--right">
-    <video class="figure__image" src="/img/2018/pwa/native-add-to-home-screen.mp4" poster="/img/2018/pwa/native-add-to-home-screen.jpg" controls onclick="this.paused ? this.play() : this.pause();"
+    <video class="figure__image" src="/images/2018/pwa/native-add-to-home-screen.mp4" poster="/images/2018/pwa/native-add-to-home-screen.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
     <figcaption class="figure__caption" style="width:300px">Banner cài đặt web app. Bấm lên hình để play.</figcaption>
 </figure>
@@ -93,12 +93,12 @@ Theo [Addy Osmani](https://addyosmani.com/blog/getting-started-with-progressive-
 
 Ngoài ra Chrome và Android đang được cải thiện để tích hợp PWA tốt hơn. Kể từ Chrome cho Android phiên bản 57, khi một PWA được lưu lại, icon của nó không chỉ xuất hiện tại home screen mà ở cả trong app drawer (trang danh sách tất cả app) và kết quả tìm kiếm app. Không những thế, Android sẽ hỗ trợ PWA của bạn có riêng một "Intent Filter" để khi có bất kỳ app khác trên Android link đến URL của web app của bạn, PWA sẽ được mở ra thay vì URL mở ở trình duyệt mặc định. [Xem thêm tại đây.](https://developers.google.com/web/updates/2017/02/improved-add-to-home-screen)
 
-[![Một số cải tiến tích hợp vào Android của PWA trên Chrome 57](/img/2018/pwa/pwa-integrated.jpg)](/img/2018/pwa/pwa-integrated.jpg){: target="_blank" role="figure"} _Một số cải tiến tích hợp vào Android của PWA trên Chrome 57_
+[![Một số cải tiến tích hợp vào Android của PWA trên Chrome 57](/images/2018/pwa/pwa-integrated.jpg)](/images/2018/pwa/pwa-integrated.jpg){: target="_blank" role="figure"} _Một số cải tiến tích hợp vào Android của PWA trên Chrome 57_
 
 ### Hoạt động offline
 
 <figure class="figure figure--right">
-    <video class="figure__image" src="/img/2018/pwa/offline-viewing.mp4" poster="/img/2018/pwa/offline-viewing.jpg" controls onclick="this.paused ? this.play() : this.pause();"
+    <video class="figure__image" src="/images/2018/pwa/offline-viewing.mp4" poster="/images/2018/pwa/offline-viewing.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
     <figcaption class="figure__caption" style="width:300px">Offline demo. Bấm lên hình để play.</figcaption>
 </figure>
@@ -114,7 +114,7 @@ Một tính năng đáng chú ý nữa của native app mà web app trước đ�
 Cũng nhờ **Service Worker**, là một chương trình nhỏ viết bằng ngôn ngữ Web JavaScript nhưng nó chạy ngầm và độc lập với web app chính, PWA có khả năng nhận push notification như native app. Điều này đồng nghĩa với việc ngay cả khi web app và trình duyệt đã được đóng hẳn, chúng vẫn có thể nhận được notification[^5].
 
 <figure class="figure">
-    <video class="figure__image" src="/img/2018/pwa/push-notification-demo.mp4" poster="/img/2018/pwa/push-notification-demo.jpg" controls onclick="this.paused ? this.play() : this.pause();"
+    <video class="figure__image" src="/images/2018/pwa/push-notification-demo.mp4" poster="/images/2018/pwa/push-notification-demo.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
     <figcaption class="figure__caption">Push notification demo. Bấm lên hình để play.</figcaption>
 </figure>
@@ -126,7 +126,7 @@ Một khả năng khác của Service Worker, đó là hỗ trợ PWA tự độ
 Lấy ví dụ: ứng dụng nhắn tin tức thời, người dùng gửi một tin nhắn đi khi điện thoại của họ mất kết nối. Ngay khi điện thoại của họ có Internet trở lại, Service Worker sẽ tiếp tục gửi tin nhắn đi cho người dùng hoặc bất kỳ tác vụ nào cần đến Internet.
 
 <figure class="figure">
-    <video class="figure__image" src="/img/2018/pwa/background-sync.mp4" poster="/img/2018/pwa/background-sync.jpg" controls onclick="this.paused ? this.play() : this.pause();"
+    <video class="figure__image" src="/images/2018/pwa/background-sync.mp4" poster="/images/2018/pwa/background-sync.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
     <figcaption class="figure__caption">Demo tự động gửi tin sau khi online. Video lấy từ <a href="https://www.youtube.com/watch?v=cmGr0RszHc8">bài thuyết trình của Jake Archibald</a>. Bấm lên hình để play.</figcaption>
 </figure>
@@ -134,7 +134,7 @@ Lấy ví dụ: ứng dụng nhắn tin tức thời, người dùng gửi một
 ### Chia sẻ bằng native banner của hệ điều hành
 
 <figure class="figure figure--right">
-    <video class="figure__image" src="/img/2018/pwa/web-share.mp4" poster="/img/2018/pwa/web-share.jpg" controls onclick="this.paused ? this.play() : this.pause();"
+    <video class="figure__image" src="/images/2018/pwa/web-share.mp4" poster="/images/2018/pwa/web-share.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
     <figcaption class="figure__caption" style="width:300px">Demo share bằng banner native của Android. Bấm lên hình để play.</figcaption>
 </figure>
@@ -148,7 +148,7 @@ Với PWA có sử dụng Web Share, khi bạn bấm vào nút share ngay trong 
 ### Quản lý đăng nhập và tự động đăng nhập
 
 <figure class="figure figure--right">
-    <video class="figure__image" src="/img/2018/pwa/credential-management.mp4" poster="/img/2018/pwa/credential-management.jpg" controls onclick="this.paused ? this.play() : this.pause();"
+    <video class="figure__image" src="/images/2018/pwa/credential-management.mp4" poster="/images/2018/pwa/credential-management.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
     <figcaption class="figure__caption" style="width:300px"><a href="https://credential-management-sample.appspot.com/">Demo login vào app với "1 chạm"</a>. Bấm lên hình để play.</figcaption>
 </figure>
@@ -160,7 +160,7 @@ Với tính năng trên, người dùng sẽ dễ dàng đăng nhập vào các 
 ### Quản lý thanh toán và hỗ trợ thanh toán trực tuyến
 
 <figure class="figure figure--right">
-    <video class="figure__image" src="/img/2018/pwa/web-payment.mp4" poster="/img/2018/pwa/web-payment.jpg" controls onclick="this.paused ? this.play() : this.pause();"
+    <video class="figure__image" src="/images/2018/pwa/web-payment.mp4" poster="/images/2018/pwa/web-payment.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
     <figcaption class="figure__caption" style="width:300px"><a href="https://emerald-eon.appspot.com/">Demo Payment Request API</a>. Bấm lên hình để play.</figcaption>
 </figure>
@@ -177,7 +177,7 @@ Một khi chuẩn Web này được áp dụng rộng rãi trên tất cả các
 
 Tin tốt lành là đến thời điểm tôi viết bài này, các trình duyệt phổ biến nhất[^4] đã hỗ trợ **Service Worker**, đặc tả quan trọng nhất của PWA. Bảng bên dưới tóm tắt tiến độ hỗ trợ từng tính năng riêng rẽ của PWA tại các trình duyệt khác nhau.
 
-[![Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau.](/img/2018/pwa/state-of-pwa-2018.jpg)](/img/2018/pwa/state-of-pwa-2018.jpg){: target="_blank" role="figure"}_Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau. Ảnh chụp từ slide [giới thiệu PWA tại Google I/O 2018](https://www.youtube.com/watch?v=NITk4kXMQDw)_
+[![Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau.](/images/2018/pwa/state-of-pwa-2018.jpg)](/images/2018/pwa/state-of-pwa-2018.jpg){: target="_blank" role="figure"}_Bảng tham khảo tiến độ hỗ trợ PWA từ các trình duyệt khác nhau. Ảnh chụp từ slide [giới thiệu PWA tại Google I/O 2018](https://www.youtube.com/watch?v=NITk4kXMQDw)_
 
 Tuy nhiên tôi muốn nhắc lại rằng với cơ chế Cải Tiến Tăng Dần, PWA có thể được áp dụng ngay từ bây giờ bất kể tính năng bạn cần chưa được hỗ trợ rộng rãi. Và với tiến độ hiện tại, những tính năng vừa nêu trên sẽ được hỗ trợ hoàn toàn trên hai nền tảng di động quan trọng và phổ biến nhất (Chrome trên Android và Safari trên iOS) trong vài tháng tới đây.
 
@@ -195,7 +195,7 @@ PWA đã chứng minh được hiệu quả của mình thông qua một vài co
 
 Xem thêm những con số thống kê về hiệu quả của PWA tại: [PWAStats.com](https://www.pwastats.com/).
 
-![PWA showcase](/img/2018/pwa/pwa-showcase.jpg)_Một số PWA đã chứng minh được hiệu quả, từ trái qua: <a href="https://m.alibaba.com">m.alibaba.com</a>, <a href="https://tinder.com">tinder.com</a>, <a href="https://m.forbes.com">m.forbes.com</a>_
+![PWA showcase](/images/2018/pwa/pwa-showcase.jpg)_Một số PWA đã chứng minh được hiệu quả, từ trái qua: <a href="https://m.alibaba.com">m.alibaba.com</a>, <a href="https://tinder.com">tinder.com</a>, <a href="https://m.forbes.com">m.forbes.com</a>_
 
 ## Kết luận
 
