@@ -1,0 +1,24 @@
+{
+	"items": [
+		{
+			"text": "Blog",
+			"url": "/blog",
+			"external": false
+		},
+		{
+			"text": "About",
+			"url": "/about",
+			"external": false
+		},
+		{
+			"text": "Open Source",
+			"url": "/open-source",
+			"external": false
+		},
+		{
+			"text": "Speaking",
+			"url": "/speaking",
+			"external": false
+		}
+	]
+}

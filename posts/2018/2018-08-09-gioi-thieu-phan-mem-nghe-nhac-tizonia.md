@@ -16,7 +16,7 @@ tags: [Vietnamese, Linux, terminal]
 
 Để cài đặt, bạn có thể tìm cài trong Software của Ubuntu (snap package) hoặc thông qua gói .deb với dòng lệnh:
 
-```sh
+```shell
 # Cho Debian/Ubuntu/Raspbian
 curl -kL https://github.com/tizonia/tizonia-openmax-il/raw/master/tools/install.sh | bash
 ```
@@ -25,7 +25,7 @@ Xem thêm cách cài cho các distro khác [tại đây](http://tizonia.org/docs
 
 Sau khi cài đặt, mở terminal và chạy lệnh:
 
-```sh
+```shell
 # Xem hướng dẫn chung
 tizonia -h
 
@@ -42,7 +42,7 @@ Với Youtube, bạn không cần cài đặt tài khoản gì cả.
 
 Một số dòng lệnh mình thường dùng với YouTube:
 
-```sh
+```shell
 # Nghe một video / bài hát cụ thể (qua URL hoặc ID)
 tizonia --youtube-audio-stream https://www.youtube.com/watch?v=tCV4dSMeQzE
 
@@ -61,7 +61,7 @@ tizonia --youtube-audio-mix-search "Lam Trường"
 
 Một số dòng lệnh mình thường dùng với Spotify:
 
-```sh
+```shell
 # Nghe một danh sách các bài hát theo từ khóa tìm thấy trong tên bài hát
 tizonia --spotify-tracks "Frozen Heart"
 
