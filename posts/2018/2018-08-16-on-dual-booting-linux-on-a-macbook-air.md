@@ -28,7 +28,7 @@ At first I installed the default Ubuntu 18.04 with GNOME Shell and felt **really
 
 ### GNOME Desktop & GNOME Shell (Standard Ubuntu):
 
-![Ubuntu 18.04 default](/img/2018/ubuntu-1804-with-nautilus.jpg)_Default Ubuntu 18.04 with Nautilus_
+![Ubuntu 18.04 default](/images/2018/ubuntu-1804-with-nautilus.jpg)_Default Ubuntu 18.04 with Nautilus_
 
 I tried GNOME 3 desktop with GNOME shell for the first time after long time with the old Unity DE and macOS. I have a lot of irritation with it and God forbid, GNOME shell, on the contrary to its claim, often steps in my way to get things done!
 
@@ -50,7 +50,7 @@ If you'd like some more rants on the problematic GNOME 3, check out [this post](
 
 ### Pantheon Desktop on Ubuntu 18.04:
 
-![Elementary OS with Slingshot application menu](/img/2018/elementary-os.jpg)_Elementary OS with Slingshot application menu_
+![Elementary OS with Slingshot application menu](/images/2018/elementary-os.jpg)_Elementary OS with Slingshot application menu_
 
 I was curious about Elementary OS which has minimalist and similar UI to macOS, so I tried out its **Pantheon DE** on default Ubuntu 18.04.
 
@@ -69,7 +69,7 @@ I was curious about Elementary OS which has minimalist and similar UI to macOS, 
 
 ### Ubuntu MATE:
 
-![Ubuntu MATE Desktop with Mutiny layout ](/img/2018/ubuntu-mate-mutiny.jpg)_Ubuntu MATE Desktop with Mutiny layout_
+![Ubuntu MATE Desktop with Mutiny layout ](/images/2018/ubuntu-mate-mutiny.jpg)_Ubuntu MATE Desktop with Mutiny layout_
 
 I tried **Ubuntu MATE** (with Unity-like layout) solely because I wanted the global menu which, for me, is the best solution of app menu. (Easier to target since it's sticked to top edge; space of top panel is well used; and leave more working area for app window...). I did enjoy Ubuntu MATE and invested some tweaking with it. But after a while, I felt that the MATE experience is not very polished and feel dated.
 
@@ -92,7 +92,7 @@ I tried **Ubuntu MATE** (with Unity-like layout) solely because I wanted the glo
 
 I learned about **Ubuntu Budgie** after I already chose my distro and DE. I did not tried it but viewed its screen cast walk-through. My immediate impression is that it's just like another Elementary OS and still waste the top panel.
 
-![Budgie desktop maximized window](/img/2018/budgie-maximized.png)_Maximized window on Budgie desktop on a 1920x1080 screen. Imagine it runs a traditional app with title, menu... on a 1366x768 laptop screen, the top bar is wasted and how narrow the space left for actual content._
+![Budgie desktop maximized window](/images/2018/budgie-maximized.png)_Maximized window on Budgie desktop on a 1920x1080 screen. Imagine it runs a traditional app with title, menu... on a 1366x768 laptop screen, the top bar is wasted and how narrow the space left for actual content._
 
 ## Settle on GNOME Desktop and GNOME Shell
 
@@ -109,7 +109,7 @@ After actually trying the three different desktops, I decided, though, to settle
 
 That said, I have been using Ubuntu on this MacBook Air for two months non-stop and have got used to it to the level of efficiency that I had with macOS.
 
-![My Ubuntu desktop with Unite extension](/img/2018/ubuntu-1804-unite.jpg)_My current Ubuntu desktop with Unite extension which allows me to move window title and buttons up the top panel for maximized windows, making good use of its space._
+![My Ubuntu desktop with Unite extension](/images/2018/ubuntu-1804-unite.jpg)_My current Ubuntu desktop with Unite extension which allows me to move window title and buttons up the top panel for maximized windows, making good use of its space._
 
 I did a lot of tweaks and configurations wherever I found it make sense and made the transition from macOS to Linux as quick as possible. For alternative software, I have also found most of the needed applications to avoid switching back to macOS.
 

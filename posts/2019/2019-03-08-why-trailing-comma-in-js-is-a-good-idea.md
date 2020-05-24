@@ -6,7 +6,7 @@ author: Thanh Tran
 description: Từ một lỗi cú pháp trong JavaScript, trailing comma trở thành best practice
 date: 2019-04-12T14:39:08+07:00
 tags: [javascript, ecmascript, best practice]
-image: img/2019/trailing-comma-cover.jpg
+image: images/2019/trailing-comma-cover.jpg
 cover-darken: true
 ---
 
@@ -37,7 +37,7 @@ function compare(
 
 Như bạn cũng có thể thấy, dấu phẩy vốn để ngăn cách **giữa** các phần tử trong một danh sách, và dấu phẩy cuối là dư thừa về mặt cú pháp. Để dễ hình dung hơn, ví dụ mảng ở trên nếu viết trên cùng một dòng sẽ là `var categories = ['men', 'women', 'accessories',]`. Trong thực tế, với các trình duyệt cũ chỉ hỗ trợ [ECMAScript 3](https://int3ractive.com/2019/01/nhung-dieu-can-biet-ve-ecmascript.html) trở về trước (IE8), trailing comma sẽ gây ra lỗi cú pháp lúc chạy.
 
-![Trailing comma gây ra lỗi cú pháp lúc chạy trên IE8. Hình screenshot lấy từ StackOverflow](/img/2019/trailing-comma-ie8-error.png)_Trailing comma gây ra lỗi cú pháp lúc chạy trên IE8. Hình screenshot lấy từ [StackOverflow](https://stackoverflow.com/questions/17490014/website-causes-script-error-in-ie8)._
+![Trailing comma gây ra lỗi cú pháp lúc chạy trên IE8. Hình screenshot lấy từ StackOverflow](/images/2019/trailing-comma-ie8-error.png)_Trailing comma gây ra lỗi cú pháp lúc chạy trên IE8. Hình screenshot lấy từ [StackOverflow](https://stackoverflow.com/questions/17490014/website-causes-script-error-in-ie8)._
 
 Tuy nhiên, kể từ ECMAScript 5, trailing comma được chấp nhận cho danh sách phần tử Array và Object property. Việc lấy số phần tử (`array.length`) vẫn đúng với Array có trailing comma.
 
@@ -72,11 +72,11 @@ Khi có trailing comma, commit log của bạn sẽ chỉ hiển thị phần th
 
 Vì tất cả các phần tử đều kết thúc bằng dấu phẩy, sắp xếp lại thứ tự phần tử bất kỳ đơn giản và dễ dàng:
 
-![Sắp xếp lại phần tử trong mảng](/img/2019/trailing-comma-reorder.gif){: width="480"}_Sắp xếp lại phần tử trong mảng_
+![Sắp xếp lại phần tử trong mảng](/images/2019/trailing-comma-reorder.gif){: width="480"}_Sắp xếp lại phần tử trong mảng_
 
 ### 3. Giảm số dòng conflict khi merge với version control
 
-![Conflict code hiển thị khi không dùng và có dùng trailing comma](/img/2019/trailing-comma-conflict.png)_Conflict code hiển thị khi không dùng (trên) và có dùng (dưới) trailing comma_
+![Conflict code hiển thị khi không dùng và có dùng trailing comma](/images/2019/trailing-comma-conflict.png)_Conflict code hiển thị khi không dùng (trên) và có dùng (dưới) trailing comma_
 
 Trong ví dụ không dùng trailing comma, mặc dù phần tử `female` đều thêm cùng một dấu phẩy, Git vẫn không tự động merge dòng này và vẫn báo conflict cùng với dòng thay đổi tiếp theo. Việc theo dõi những dòng conflict vô nghĩa này sẽ gây khó khăn cho người merge và rất dễ gây ra sai sót bị mất code sau khi resolve.
 

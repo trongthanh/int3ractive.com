@@ -6,7 +6,7 @@ author: Thanh Tran
 description: Bạn có thắc mắc vì sao khi nói đến những cải tiến của JavaScript, người ta thường nói về ECMAScript? Hay khi nói về JavaScript hiện đại, người ta thường dùng chữ **ES6+**? Tại sao ECMAScript 6 còn được gọi là ECMAScript 2015?... Bài viết này sẽ giải đáp những thắc mắc đó của bạn.
 date: 2019-01-16T11:09:09+07:00
 tags: [ecmascript, javascript, vietnamese]
-image: img/code-bg.jpg
+image: images/code-bg.jpg
 ---
 
 > Lấy cảm hứng từ trang blog mới của Dan Abramov's [Overreacted.io](https://overreacted.io) và từ trang [the Old New Thing](https://blogs.msdn.microsoft.com/oldnewthing/) mà chính blog của Dan [lấy ý tưởng](https://twitter.com/dan_abramov/status/1069253352180121600), để mở đầu cho những bài viết của năm 2019, tôi sẽ **viết nhiều hơn về những "câu chuyện mới" từ những điều quen thuộc**, **những câu chuyện "tiểu tiết" nhưng thú vị** về những thứ mà lập trình viên vẫn gặp hằng ngày, hay **những ngóc ngách của kỹ thuật** mà chúng ta vẫn thường dùng nhưng quá bận rộn để tìm hiểu tường tận...

@@ -7,7 +7,7 @@ description: Hướng dẫn cài đặt Nginx, Git, Node.js, MongoDB, và sản 
 date: 2017-09-28T01:07:53+07:00
 updated: 2018-09-26T23:12:12+0700
 tags: [devops, vietnamese, nodejs, webapp]
-image: img/2017/keystone-mongo-node-ubuntu.png
+image: images/2017/keystone-mongo-node-ubuntu.png
 cover-darken: true
 ---
 
@@ -33,7 +33,7 @@ Ngoài ra, tùy nhà cung cấp VPS mà bạn sẽ được cấp tài khoản *
 
 Bạn sẽ truy cập vào server thông qua giao thức SSH và sẽ cấu hình server bằng dòng lệnh trong một cửa sổ terminal. Nếu bạn dùng Windows, tham khảo hướng dẫn kết nối SSH vào Linux server tại [đây](https://support.rackspace.com/how-to/connecting-to-linux-from-windows-by-using-putty/){:target="_blank"} và [đây](http://www.wikihow.com/SSH-to-a-Server){:target="_blank"}
 
-![SSH terminal window](/img/2017/ssh-terminal-macos.png)_Giao diện dòng lệnh SSH terminal trên macOS_
+![SSH terminal window](/images/2017/ssh-terminal-macos.png)_Giao diện dòng lệnh SSH terminal trên macOS_
 
 Trước khi tiến hành cài đặt các phần mềm cần thiết, bạn cần cập nhật server Ubuntu với những package mới nhất:
 
@@ -132,7 +132,7 @@ Tại trang settings của project trên Git host, thêm deploy key và paste n�
 - Tại Github, vào Settings > Chọn Deploy Keys
 - Tại Gitlab, vào Settings > Repository > Deploy Keys
 
-![Add deploy key]({{ "img/2017/bitbucket-deploy-key.png" | absolute_url }})_Ảnh chụp popup thêm Access key của Bitbucket._
+![Add deploy key]({{ "images/2017/bitbucket-deploy-key.png" | absolute_url }})_Ảnh chụp popup thêm Access key của Bitbucket._
 
 Quay trở lại terminal của server, tạo thư mục để chứa mã nguồn của app sẽ được clone vào:
 

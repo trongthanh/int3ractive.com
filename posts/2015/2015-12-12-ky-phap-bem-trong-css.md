@@ -7,7 +7,7 @@ description: BEM viết tắt của Blocks, Elements, Modifiers, là một phư�
 created: 2015-11-08T14:39:06+07:00
 date: 2015-12-12T11:41:33+07:00
 tags: [CSS, HTML, Process, Vietnamese, Front End]
-image: img/2015/bem-intro-cover.jpg
+image: images/2015/bem-intro-cover.jpg
 updated: 2015-12-16T22:06:16+07:00
 redirect_from: "/2015/12/cu-phap-bem-trong-css.html"
 ---
@@ -44,7 +44,7 @@ Trong HTML, ký pháp BEM sẽ được dùng như sau:
 </a>
 ```
 
-[![BEM buttons example](/img/2015/bem-btn-example.jpg "BEM buttons example")_Xem demo của ví dụ trên tại CodePen_](http://codepen.io/team/css-tricks/pen/226a65c8f7d64615aabd45048d1d3b6d)
+[![BEM buttons example](/images/2015/bem-btn-example.jpg "BEM buttons example")_Xem demo của ví dụ trên tại CodePen_](http://codepen.io/team/css-tricks/pen/226a65c8f7d64615aabd45048d1d3b6d)
 
 Ấn tượng đầu tiên với bạn có thể là tên class quá xấu và mất thời gian hơn so với việc tạo riêng một class mới cho một kiểu button mới. Tuy nhiên, ký pháp BEM sẽ mang lại nhiều lợi ích mà tôi sẽ phân tích tiếp theo sau đây:
 

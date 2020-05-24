@@ -7,7 +7,7 @@ description: Through the years, I had to look up every command that is needed by
 date: 2019-01-29T17:12:59+07:00
 updated: 2019-02-04T00:14:59+07:00
 tags: [devops, linux, cli, terminal]
-image: img/2019/cli-top.png
+image: images/2019/cli-top.png
 cover-darken: true
 ---
 

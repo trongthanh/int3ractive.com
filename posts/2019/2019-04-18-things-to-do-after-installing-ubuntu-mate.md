@@ -7,7 +7,7 @@ description: Here's my opinionated tweaks to new Unbutu MATE installation to ada
 date: 2019-12-11T01:40:08+07:00
 updated: 2020-04-25T00:42:19+07:00
 tags: [linux, ubuntu, ubuntu mate, tutorials]
-image: img/2019/ubuntu-mate-desktop.jpg
+image: images/2019/ubuntu-mate-desktop.jpg
 cover-darken: true
 redirect_from:
   - /2019/12/things-to-do-after-installing-ubuntu-mate-19-10.html
@@ -25,7 +25,7 @@ Ubuntu MATE uses the [MATE Desktop Environment](https://mate-desktop.org/) and i
 
 However, tweaking the panels is tedious, so starting from Ubuntu Mate 19.10, you'll have the Desktop Layout option on the Welcome screen where you can choose the preset of the panels that will resemble any popular desktops:
 
-![](/img/2019/ubuntu-mate-pick-layout.png)
+![](/images/2019/ubuntu-mate-pick-layout.png)
 
 If you miss this screen, you can still search and re-open **Welcome** app from the applications menu.
 
@@ -55,7 +55,7 @@ sudo apt install dconf-editor
 
 The Cupertino (macOS style) layout use Plank dock. By default it has the plank icon always appear on the dock (clicking it will open Plank preferences) which looks redundant for me.
 
-![Dock with plank icon highlighted](/img/2019/ubuntu-mate-plank-dock.jpg)_Dock with Plank icon_
+![Dock with plank icon highlighted](/images/2019/ubuntu-mate-plank-dock.jpg)_Dock with Plank icon_
 
 So to hide it, open dconf Editor, click on the 🔍 (search) icon, search for `plank`, then select the path `/net/launchpad/plank`, then `dock` > `dock1` (Since there is only one dock on the screen).
 
@@ -107,7 +107,7 @@ Icons also have big impact on look & feel of the desktop. However I've tried man
 - Faenza MATE Icon (`mate-icon-theme-faenza`)
 - Flat Remix icons ([installation instructions](https://drasite.com/flat-remix-gtk))
 
-![Screenshot of my current desktop](/img/2019/ubuntu-mate-desktop.jpg)_My current desktop featuring default Ambiant MATE Dark theme with Flat-Remix-GTK window decoration._
+![Screenshot of my current desktop](/images/2019/ubuntu-mate-desktop.jpg)_My current desktop featuring default Ambiant MATE Dark theme with Flat-Remix-GTK window decoration._
 
 ## #8 Switch to use dark cursors
 
@@ -127,7 +127,7 @@ When moving to Linux, fortunately, I've found [Ulauncher](https://ulauncher.io/)
 
 Ulauncher's default shortcut is similar to macOS Spotlight's, that is `Super + Space`. You can change it from the application's setting.
 
-![Screenshot of ULauncher](/img/2019/ubuntu-mate-ulauncher.jpg)_Ulauncher popup with System extension_
+![Screenshot of ULauncher](/images/2019/ubuntu-mate-ulauncher.jpg)_Ulauncher popup with System extension_
 
 ## #10 Install Ubuntu Software application
 
@@ -143,7 +143,7 @@ When switching from macOS to Ubuntu MATE on this same MacBook Air, I noticed tha
 
 As long time macOS user, I find **this is the most annoying thing about Linux on laptop**. To work around, I shutdown the laptop whenever I leave it overnight or for a long time. Fortunately, Ubuntu MATE is already light-weigh and boots up very fast on SSD. To ease the pain of recovering the opening windows from last session, you can turn on `Automatically remember running applications when logging out` option in **Startup Application** window:
 
-![Remember running applications when logging out](/img/2019/ubuntu-mate-restore-window.jpg)
+![Remember running applications when logging out](/images/2019/ubuntu-mate-restore-window.jpg)
 
 ## #12 Fix keyboard back lights keep turn up to 100% after restart / re-login
 
