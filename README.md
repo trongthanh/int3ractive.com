@@ -1,10 +1,19 @@
 ## Source code of my blog at [int3ractive.com](https://int3ractive.com)
 
+New URL scheme:
+
 ```
-int3ractive.com/posts/ -> archive page (all posts)
-int3ractive.com/posts/2019/ -> archive posts filtered for 2019
-int3ractive.com/tags/javascript/
-int3ractive.com/posts/2019/hai-ung-dung-cua-string-normalize-voi-tieng-viet/
+int3ractive.com              -> Home page
+int3ractive.com/blog/        -> Blog page containing all posts (archive)
+int3ractive.com/blog/2019/   -> Posts list filtered for 2019
+int3ractive.com/blog/2019/nhung-dieu-can-biet-ve-ecmascript/ -> post page
+int3ractive.com/blog/tags/   -> all tags available
+int3ractive.com/blog/tags/javascript/ -> Posts list filtered by a tag
+int3ractive.com/about/       -> my full bio page
+int3ractive.com/speaking/    -> speaking page
+int3ractive.com/nau-tab/     -> nau-tab project pages
+int3ractive.com/open-source/ -> open source page
+int3ractive.com/slides/      -> map to all slides repo
 ```
 
 

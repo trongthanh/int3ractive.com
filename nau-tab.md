@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: "NAU Tab"
 subtitle: Beautiful new tab page for modern browsers
 description: Take a break from your work with this picturesque new tab extension for modern browsers.

@@ -1,0 +1,37 @@
+---
+title: Blog posts by year
+pagination:
+  data: global.years
+  size: 1
+  alias: year
+permalink: /blog/{{ year }}/
+---
+{% extends 'layouts/base.njk' %}
+
+{# Intro content #}
+{% set introHeading %}Posts published in {{ year }}{% endset %}
+{% set introHeadingLevel = '2' %}
+
+{# Post list content #}
+{% set postListHeadingLevel = '2' %}
+{% set postListHeading = 'Posts' %}
+{% set postListItems = helpers.filterPostsByYear(collections.posts, year) %}
+
+{# Pagination #}
+{% if year > global.years | first %}
+  {% set paginationPrevText = 'Posts in ' + (year - 1) %}
+  {% set paginationPrevUrl %}/blog/{{year - 1}}/{% endset %}
+{% endif %}
+{% if year < global.years | last %}
+  {% set paginationNextText = 'Posts in ' + (year + 1) %}
+  {% set paginationNextUrl %}/blog/{{year + 1}}/{% endset %}
+{% endif %}
+
+
+{% block content %}
+  <main id="main-content" tabindex="-1">
+    {% include "partials/components/intro.njk" %}
+    {% include "partials/components/post-list.njk" %}
+    {% include "partials/components/pagination.njk" %}
+  </main>
+{% endblock %}

@@ -1,5 +1,5 @@
 ---
-permalink: "blog/{{ page.fileSlug }}/"
+permalink: "blog/{{ page.date | yearFilter }}/{{ page.fileSlug }}/"
 ---
 {% extends 'layouts/base.njk' %}
 
