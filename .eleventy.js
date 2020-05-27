@@ -4,6 +4,7 @@ const fs = require('fs');
 
 // Import filters
 const dateFilter = require('./_11ty/filters/date-filter.js');
+const yearFilter = require('./_11ty/filters/year-filter.js');
 const markdownFilter = require('./_11ty/filters/markdown-filter.js');
 const w3DateFilter = require('./_11ty/filters/w3-date-filter.js');
 
@@ -17,6 +18,7 @@ const site = require('./_data/site.json');
 module.exports = function(config) {
 	// Filters
 	config.addFilter('dateFilter', dateFilter);
+	config.addFilter('yearFilter', yearFilter);
 	config.addFilter('markdownFilter', markdownFilter);
 	config.addFilter('w3DateFilter', w3DateFilter);
 
