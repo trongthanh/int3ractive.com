@@ -15,4 +15,11 @@ module.exports = {
 
 		return posts.filter((post) => post.date.getFullYear() === yearNum);
 	},
+	filterUserTags(collections) {
+		const tags = Object.keys(collections);
+		const ignoredTags = ['all', 'nav', 'post', 'posts', 'tagList', 'postFeed'];
+		return tags.filter((tag) => {
+			return !ignoredTags.includes(tag);
+		});
+	},
 };

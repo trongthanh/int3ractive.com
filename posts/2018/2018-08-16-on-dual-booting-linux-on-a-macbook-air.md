@@ -5,7 +5,7 @@ subtitle: And on choosing a modern Ubuntu desktop environment
 author: Thanh Tran
 description: I have been using a MacBook Air for both personal use and work since 2012. But in 2018, Apple is not itself anymore. I'm dual booting a Linux distro along with macOS on my MBA, to get familiar with modern Linux desktop experience, and to explore the tools and software that can replace my current ones on macOS.
 date: 2018-08-28T01:19:44+07:00
-tags: [Linux, macOS, Macbook Air]
+tags: [linux, macos, macbook air]
 ---
 
 I have been using a MacBook Air for both personal use and work since 2012. Apple's hardware back then was top notch and reliable. When I did a feature and price comparison between a MacBook Air and other ultrabook offers, MacBook Air can easily rise up to the number one choice for a laptop that is portable, well-built and powerful enough at a reasonable price.

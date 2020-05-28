@@ -12,7 +12,7 @@ pagination:
     - tagList
     - postFeed
   addAllPagesToCollections: true
-permalink: /blog/tags/{{ tag }}/
+permalink: /blog/tags/{{ tag | slug }}/
 ---
 
 {% extends 'layouts/base.njk' %}
@@ -26,10 +26,14 @@ permalink: /blog/tags/{{ tag }}/
 {% set postListHeading = 'Posts' %}
 {% set postListItems = collections[tag] %}
 
+{# Other tag list content #}
+{% set tagListHeading = 'Other tags' %}
+{% set tagListItems = helpers.filterUserTags(collections) | skipTag(tag) %}
+
 {% block content %}
   <main id="main-content" tabindex="-1">
     {% include "partials/components/intro.njk" %}
     {% include "partials/components/post-list.njk" %}
-    {% include "partials/components/pagination.njk" %}
+    {% include "partials/components/tag-list.njk" %}
   </main>
 {% endblock %}

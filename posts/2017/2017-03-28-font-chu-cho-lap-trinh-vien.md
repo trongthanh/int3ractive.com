@@ -5,7 +5,7 @@ subtitle: Và xu hướng ligature trong code font
 author: Thanh Tran
 description:
 date: 2017-03-28T06:37:03+07:00
-tags: [Tools, Vietnamese, Front End]
+tags: [tools, vietnamese, front end]
 image: images/2017/ligature-vscode.png
 updated: 2020-03-01T23:51:52+07:00
 ---

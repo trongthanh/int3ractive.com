@@ -5,7 +5,7 @@ subtitle: Implement blog posts "read time" indicator for GitHub Page
 author: Thanh Tran
 description:
 date: 2018-08-07T14:04:35+07:00
-tags: [Jekyll, GitHub Page]
+tags: [jekyll, github page]
 image: images/code-bg.jpg
 ---
 
