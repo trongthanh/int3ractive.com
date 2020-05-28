@@ -5,7 +5,7 @@ subtitle: Nghe nhạc online Youtube, Spotify... bằng dòng lệnh
 author: Thanh Tran
 description:
 date: 2018-08-09T11:31:14+07:00
-tags: [Vietnamese, Linux, terminal]
+tags: [vietnamese, linux, terminal]
 ---
 
 [Tizonia](http://tizonia.org) là một phần mềm trên Linux cho phép chơi nhạc online từ Youtube, Spotify, Google Music, SoundCloud bằng... dòng lệnh. Lý do số một mình thích là nó chơi nhạc từ Youtube cực nhẹ vì không cần video và giao diện.

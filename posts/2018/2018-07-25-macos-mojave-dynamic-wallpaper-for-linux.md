@@ -5,7 +5,7 @@ subtitle: Backgrounds that will change based on time of the day.
 author: Thanh Tran
 description: I has crafted a Linux built-in background slideshow XML that replicate macOS Mojave dynamic wallpaper in which the images are changed based on the time of the day.
 date: 2018-07-25T15:05:40+07:00
-tags: [Linux, macOS]
+tags: [linux, macos]
 image: images/2018/linux-mojave-bg.jpg
 ---
 

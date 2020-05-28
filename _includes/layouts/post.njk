@@ -35,7 +35,7 @@ permalink: "blog/{{ page.date | yearFilter }}/{{ page.fileSlug }}/"
               <ul class="[ nav__list ] [ box-flex align-center pad-left-400 ] [ p-category ]">
                 {% for item in tags %}
                   <li class="nav__item">
-                    <a href="/tags/{{ item }}">{{ item }}</a>
+                    <a href="/blog/tags/{{ item | slug }}">{{ item }}</a>
                   </li>
                 {% endfor %}
               </ul>

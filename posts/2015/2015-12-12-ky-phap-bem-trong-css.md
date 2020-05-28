@@ -6,7 +6,7 @@ author: Thanh Tran
 description: BEM viết tắt của Blocks, Elements, Modifiers, là một phương pháp đặt tên class cho HTML và CSS. Được phát triển tại Yandex giúp lập trình viên hiểu rõ hơn mối quan hệ giữa HTML và CSS trong dự án front end.
 created: 2015-11-08T14:39:06+07:00
 date: 2015-12-12T11:41:33+07:00
-tags: [CSS, HTML, Process, Vietnamese, Front End]
+tags: [css, html, process, vietnamese, front end]
 image: images/2015/bem-intro-cover.jpg
 updated: 2015-12-16T22:06:16+07:00
 redirect_from: "/2015/12/cu-phap-bem-trong-css.html"

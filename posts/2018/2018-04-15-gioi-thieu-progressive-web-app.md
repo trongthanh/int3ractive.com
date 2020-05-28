@@ -5,7 +5,7 @@ subtitle: Tương lai của web app trên thiết bị di động.
 author: Thanh Tran
 description: Progressive Web App (PWA) là một dạng ứng dụng web mới đang thu hút rất nhiều sự quan tâm, tuy nhiên nó vẫn còn khá mới mẻ tại Việt Nam. Trong bài viết này tôi sẽ cố gắng giải thích PWA cho những ai không phải lập trình viên vẫn có thể hiểu.
 date: 2018-05-13T17:43:06+07:00
-tags: [Vietnamese, Front End, JavaScript, Mobile Web, Web App]
+tags: [vietnamese, front end, javascript, mobile web, web app]
 image: images/2018/pwa/pwa-logo.png
 ---
 <center><small><em>(Hình cover: logo <a href="https://medium.com/samsung-internet-dev/we-now-have-a-community-approved-progressive-web-apps-logo-823f212f57c9">không chính thức</a> của PWA)</em></small></center>
