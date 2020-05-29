@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hai ứng dụng của String.prototype.normalize trong tiếng Việt
 subtitle: Và đôi điều về bảng mã Unicode tiếng Việt
 author: Thanh Tran

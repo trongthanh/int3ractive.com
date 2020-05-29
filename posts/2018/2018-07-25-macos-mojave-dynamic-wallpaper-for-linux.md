@@ -1,5 +1,4 @@
 ---
-layout: post
 title: macOS Mojave dynamic wallpaper for Linux
 subtitle: Backgrounds that will change based on time of the day.
 author: Thanh Tran

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Những điều cần biết về ECMAScript
 subtitle: Và những câu chuyện bên lề về JavaScript
 author: Thanh Tran

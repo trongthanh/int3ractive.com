@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Giới thiệu phần mềm nghe nhạc Tizonia
 subtitle: Nghe nhạc online Youtube, Spotify... bằng dòng lệnh
 author: Thanh Tran

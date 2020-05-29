@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Making the best of MacBook Air touchpad on Ubuntu
 subtitle: A guide to mtrack driver and make use of the multi-touch touchpad on Linux
 author: Thanh Tran

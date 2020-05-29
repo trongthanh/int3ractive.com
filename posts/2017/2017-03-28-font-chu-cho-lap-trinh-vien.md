@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Font chữ cho Lập Trình Viên
 subtitle: Và xu hướng ligature trong code font
 author: Thanh Tran

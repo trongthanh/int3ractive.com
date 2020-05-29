@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Jekyll Read Time Helper without Plugins
 subtitle: Implement blog posts "read time" indicator for GitHub Page
 author: Thanh Tran

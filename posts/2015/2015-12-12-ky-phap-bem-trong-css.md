@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Sử dụng ký pháp BEM cho CSS
 subtitle: Một phương pháp đặt tên class mới cho Front End
 author: Thanh Tran

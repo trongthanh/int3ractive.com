@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Things to do after installing Ubuntu Mate
 subtitle: Specialized for MacBook and PC laptop
 author: Thanh Tran
