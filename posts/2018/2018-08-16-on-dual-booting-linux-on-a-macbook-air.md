@@ -1,5 +1,4 @@
 ---
-layout: post
 title: On dual booting Linux on a Macbook Air
 subtitle: And on choosing a modern Ubuntu desktop environment
 author: Thanh Tran

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Hướng dẫn: Cài đặt hoàn chỉnh Nodejs app lên VPS Ubuntu - Phần 2"
 subtitle: Chạy app như dịch vụ, serve app qua Nginx reversed proxy và bật HTTPS
 author: Thanh Tran

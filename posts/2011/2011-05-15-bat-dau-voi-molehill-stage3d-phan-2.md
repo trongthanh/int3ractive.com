@@ -1,12 +1,8 @@
 ---
-layout: post
 title: Bắt đầu với Molehill (Stage3D) - Phần 2
 date: '2011-05-15T20:15:00.004+07:00'
 author: Thanh Tran
-tags:
-- Tutorial
-- Flash 3D
-- Flash
+tags: [tutorial, 3d, flash, molehill]
 modified_time: '2011-05-15T23:01:23.199+07:00'
 thumbnail: https://lh6.googleusercontent.com/w_7lTWqtB7I26bDvcJT1Mc32UgZWDtLkdB3IkYwhjfbNdNfEwa_11njE9cJSr2CtlugalajRkl5oUqUaYShLOgPqq9K0EQuKXzEcuutsueG5NLkU2Ig=s72-c
 blogger_id: tag:blogger.com,1999:blog-5363322361445724369.post-8852363903243147177

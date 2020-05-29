@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Hướng dẫn: Cài đặt hoàn chỉnh Nodejs app lên VPS Ubuntu - Phần 1"
 subtitle: Cài đặt NGINX, Git, NodeJS, MongoDB, và Keystone app lên server Ubuntu 16.04 LTS
 author: Thanh Tran

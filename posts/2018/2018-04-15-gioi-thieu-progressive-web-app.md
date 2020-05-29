@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Giới thiệu Progressive Web App
 subtitle: Tương lai của web app trên thiết bị di động.
 author: Thanh Tran

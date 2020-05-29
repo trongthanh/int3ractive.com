@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Common Linux / macOS terminal commands in my handbook
 subtitle: You should know if you're a full stack developer
 author: Thanh Tran

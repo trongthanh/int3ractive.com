@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Goodbye Blogger.<br> Hello GitHub Pages.
 subtitle: Time for a new refresh.
 author: Thanh Tran

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Tại sao lại để dư một dấu phẩy
 subtitle: Từ một lỗi cú pháp trong JavaScript, trailing comma trở thành best practice
 author: Thanh Tran
