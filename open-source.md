@@ -13,7 +13,7 @@ Here are some of my open source or contributed-to projects through out my career
 
 ## Data visualization collections
 
-[![Data viz collection screenshot](/images/projects/data-viz.png){: align="left" width="200" class="media-thumbnail"}](https://viz.int3ractive.com)
+[![Data viz collection screenshot](/images/projects/data-viz.png)](https://viz.int3ractive.com)
 
 My next interest in Web Front End is data visualization in which it demands key expertises of a FE engineer such as drawing, animation, interaction and layout. I'm practicing _data viz_ and show them at [viz.int3ractive.com](https://viz.int3ractive.com).
 
@@ -21,7 +21,7 @@ My next interest in Web Front End is data visualization in which it demands key 
 
 ## [node-vn-payments](https://github.com/naustudio/node-vn-payments)
 
-[![node-vn-payment screenshot](/images/projects/node-vn-payments.png){: align="left" width="200" class="media-thumbnail"}](https://github.com/naustudio/node-vn-payments)
+[![node-vn-payment screenshot](/images/projects/node-vn-payments.png)](https://github.com/naustudio/node-vn-payments)
 
 My team and I have gathered a set of JavaScript classes (written in ES6) that help NodeJS apps exchange data with some common Vietnamese payment gateways with more confidence and ease by validating payload object and normalize multiple gateways specs into a common API.
 
@@ -29,7 +29,7 @@ My team and I have gathered a set of JavaScript classes (written in ES6) that he
 
 ## [VueJS Shopping Cart, a PWA demo](https://github.com/trongthanh/vuejs-firebase-shopping-cart)
 
-[![VueJS Shopping Cart screenshot](/images/projects/vue-shop.png){: align="left" width="200" class="media-thumbnail"}](https://github.com/trongthanh/vuejs-firebase-shopping-cart)
+[![VueJS Shopping Cart screenshot](/images/projects/vue-shop.png)](https://github.com/trongthanh/vuejs-firebase-shopping-cart)
 
 My daylight job is mainly focused on ReactJS. VueJS is new, and I wanted learn more about it via an exercise. I've enhanced a VueJS shopping cart with PWA capabilities to learn and also do demo for my talks.
 
@@ -37,7 +37,7 @@ My daylight job is mainly focused on ReactJS. VueJS is new, and I wanted learn m
 
 ## [date-fns vi locale](https://date-fns.org/)
 
-[![date-fns thumbnail](/images/projects/date-fns.png){: align="left" width="200" class="media-thumbnail"}](https://date-fns.org/)
+[![date-fns thumbnail](/images/projects/date-fns.png)](https://date-fns.org/)
 
 One of my projects used `date-fns` in stead of `momentjs` because it has better tree-shaking. However, by the time I looked at it, it didn't have Vietnamese locale yet. So I has contributed the [**vi** locale package](https://github.com/date-fns/date-fns/tree/v2.0.0-alpha.7/src/locale/vi) for this project.
 
@@ -45,7 +45,7 @@ One of my projects used `date-fns` in stead of `momentjs` because it has better 
 
 ## [Nau Chrome Tab](https://github.com/trongthanh/nau-chrome-tab/)
 
-[![Nau chrome tab screenshot](/images/projects/nau-chrome-tab.jpg){: align="left" width="200" class="media-thumbnail"}](https://github.com/trongthanh/nau-chrome-tab/)
+[![Nau chrome tab screenshot](/images/projects/nau-chrome-tab.jpg)](https://github.com/trongthanh/nau-chrome-tab/)
 
 A browser extension which replace new tab page with full screen wallpaper, quick links, inspired quotations and clock. Yeah, it's a copy of Momentum extension, but this one is light weight, no tracking, and I wrote it from scratch.
 
@@ -53,7 +53,7 @@ A browser extension which replace new tab page with full screen wallpaper, quick
 
 ## [Nau Jukebox](https://github.com/naustudio/nau-jukebox)
 
-[![Nau Jukebox screenshot](/images/projects/nau-jukebox.png){: align="left" width="200" class="media-thumbnail"}](https://github.com/naustudio/nau-jukebox)
+[![Nau Jukebox screenshot](/images/projects/nau-jukebox.png)](https://github.com/naustudio/nau-jukebox)
 
 A [MeteorJS](https://www.meteor.com/) real-time jukebox in which users can collectively book songs from various sources to listen together. This web app is live at [jukebox.naustud.io](https://jukebox.naustud.io) and our team is using it regularly.
 
@@ -61,7 +61,7 @@ A [MeteorJS](https://www.meteor.com/) real-time jukebox in which users can colle
 
 ## [Nau Studio's Code Hub](https://code.naustud.io)
 
-[![Nau Studio's Code Hub screenshot](/images/projects/nau-code.png){: align="left" width="200" class="media-thumbnail"}](https://code.naustud.io)
+[![Nau Studio's Code Hub screenshot](/images/projects/nau-code.png)](https://code.naustud.io)
 
 I have gathered a set of conventions and workflow tooling for my team. They include linter's config, editor's config, style guide documentation, yeoman generators and dotfiles. Check out [Nau's code standards site](https://code.naustud.io) for more info.
 
@@ -69,7 +69,7 @@ I have gathered a set of conventions and workflow tooling for my team. They incl
 
 ## [Fish boid in 3D](https://github.com/trongthanh/labs.int3ractive.com/tree/gh-pages/javascript/canvas/fish-boids)
 
-[![Fish boid in 3D screenshot](/images/projects/fish-boids-3d.jpg){: align="left" width="200" class="media-thumbnail"}](https://github.com/trongthanh/labs.int3ractive.com/tree/gh-pages/javascript/canvas/fish-boids)
+[![Fish boid in 3D screenshot](/images/projects/fish-boids-3d.jpg)](https://github.com/trongthanh/labs.int3ractive.com/tree/gh-pages/javascript/canvas/fish-boids)
 
 As part of buddy Justin's portfolio site, this fish boid simulation is derived from ThreeJS birds demo.
 
@@ -79,7 +79,7 @@ As part of buddy Justin's portfolio site, this fish boid simulation is derived f
 
 ## [In2 Office 360 Demo](https://github.com/trongthanh/labs.int3ractive.com/tree/gh-pages/javascript/webgl/panorama)
 
-[![In2 Office 360 Demo screenshot](/images/projects/in2-office-360.jpg){: align="left" width="200" class="media-thumbnail"}](https://github.com/trongthanh/labs.int3ractive.com/tree/gh-pages/javascript/webgl/panorama)
+[![In2 Office 360 Demo screenshot](/images/projects/in2-office-360.jpg)](https://github.com/trongthanh/labs.int3ractive.com/tree/gh-pages/javascript/webgl/panorama)
 
 One of my earliest code doodle with JavaScript and [THREE.JS](link-to-threejs). This is a virtual walk-through of my _then_ office in 360 view.
 
