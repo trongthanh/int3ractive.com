@@ -23,8 +23,7 @@ Here's what you need to do, after install it successfully and on the first start
 Ubuntu MATE uses the [MATE Desktop Environment](https://mate-desktop.org/) and it has system of panels affixed to the sides of the screen. These panels are so flexible that with them, MATE desktop can mimic any popular desktop layouts, including the traditional GTK2 layout, or Windows, or current Ubuntu GNOME or even Mac OSX...
 
 However, tweaking the panels is tedious, so starting from Ubuntu Mate 19.10, you'll have the Desktop Layout option on the Welcome screen where you can choose the preset of the panels that will resemble any popular desktops:
-
-![](/images/2019/ubuntu-mate-pick-layout.png)
+![Screenshot of Ubuntu MATE Welcome window](/images/2019/ubuntu-mate-pick-layout.png "Ubuntu MATE Welcome window")
 
 If you miss this screen, you can still search and re-open **Welcome** app from the applications menu.
 
