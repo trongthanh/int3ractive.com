@@ -5,13 +5,14 @@ const getSize = require('image-size');
 const { JSDOM } = jsdom;
 const minify = require('../utils/minify.js');
 
-module.exports = function(value, outputPath) {
+module.exports = function(content, outputPath) {
 	if (outputPath.endsWith('.html')) {
-		const DOM = new JSDOM(value, {
+		const DOM = new JSDOM(content, {
 			resources: 'usable',
 		});
 
 		const document = DOM.window.document;
+
 		const articleImages = [...document.querySelectorAll('main article img, .intro img')];
 		const articleHeadings = [...document.querySelectorAll('main article h2, main article h3')];
 		const articleEmbeds = [...document.querySelectorAll('main article iframe')];
@@ -34,9 +35,23 @@ module.exports = function(value, outputPath) {
 					image.setAttribute('height', dimensions.height);
 				}
 
-				// If an image has a title it means that the user added a caption
-				// so replace the image with a figure containing that image and a caption
-				if (image.hasAttribute('title')) {
+				const imgParent = image.parentElement;
+				// Handle my special MD notation: ![alt](image/url)_image caption_
+				const emCaption = imgParent.querySelector('img + em');
+				if (emCaption) {
+					const figure = document.createElement('figure');
+					const figCaption = document.createElement('figcaption');
+
+					figCaption.innerHTML = emCaption.innerHTML;
+
+					figure.appendChild(image.cloneNode(true));
+					figure.appendChild(figCaption);
+
+					image.replaceWith(figure);
+					imgParent.removeChild(emCaption);
+				} else if (image.hasAttribute('title')) {
+					// If an image has a title it means that the user added a caption
+					// so replace the image with a figure containing that image and a caption
 					const figure = document.createElement('figure');
 					const figCaption = document.createElement('figcaption');
 
@@ -86,7 +101,15 @@ module.exports = function(value, outputPath) {
 			});
 		}
 
+		// p cannot contain figure, so after we swap img with figure above this often leave some empty p
+		const paragraphs = [...document.querySelectorAll('main article p')];
+		paragraphs.forEach((p) => {
+			if (!p.textContent.trim()) {
+				p.remove();
+			}
+		});
+
 		return '<!DOCTYPE html>\r\n' + document.documentElement.outerHTML;
 	}
-	return value;
+	return content;
 };
