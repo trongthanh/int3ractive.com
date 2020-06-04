@@ -6,10 +6,10 @@
 		"@11ty/eleventy": "^0.11.0",
 		"@11ty/eleventy-plugin-rss": "^1.0.7",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-		"@tbranyen/jsdom": "^13.0.0",
 		"concurrently": "^5.2.0",
 		"html-minifier": "^4.0.0",
 		"image-size": "^0.8.3",
+		"jsdom": "^16.2.2",
 		"json-to-scss": "^1.5.0",
 		"sass": "^1.26.5",
 		"semver": "^7.3.2",
@@ -24,8 +24,10 @@
 	"scripts": {
 		"sass:tokens": "json-to-scss _data/tokens.json _includes/scss/_tokens.scss",
 		"sass:process": "npm run sass:tokens && sass _includes/scss/global.scss _includes/assets/css/global.css --style=compressed",
-		"start": "concurrently \"npm run sass:process -- --watch\" \"npm run serve\"",
+		"dev": "concurrently \"npm run sass:process -- --watch\" \"npm run serve\"",
 		"serve": "cross-env ELEVENTY_ENV=development eleventy --serve",
+		"prestart": "rm -rf _site/",
+		"start": "eleventy --serve",
 		"build": "npm run sass:process && eleventy"
 	},
 	"repository": {

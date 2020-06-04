@@ -1,4 +1,4 @@
-const jsdom = require('@tbranyen/jsdom');
+const jsdom = require('jsdom');
 const slugify = require('slugify');
 const getSize = require('image-size');
 
