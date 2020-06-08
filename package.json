@@ -10,8 +10,7 @@
 		"html-minifier": "^4.0.0",
 		"image-size": "^0.8.3",
 		"jsdom": "^16.2.2",
-		"json-to-scss": "^1.5.0",
-		"sass": "^1.26.5",
+		"sass": "^1.26.8",
 		"semver": "^7.3.2",
 		"slugify": "^1.4.0",
 		"stalfos": "github:hankchizljaw/stalfos#c8971d22726326cfc04089b2da4d51eeb1ebb0eb"
@@ -22,13 +21,12 @@
 		"make-dir-cli": "^2.0.0"
 	},
 	"scripts": {
-		"sass:tokens": "json-to-scss _data/tokens.json _includes/scss/_tokens.scss",
-		"sass:process": "npm run sass:tokens && sass _includes/scss/global.scss _includes/assets/css/global.css --style=compressed",
-		"dev": "concurrently \"npm run sass:process -- --watch\" \"npm run serve\"",
+		"sass": "sass _includes/scss/global.scss _site/css/global.css --style=compressed",
+		"dev": "concurrently \"npm run sass -- --watch\" \"npm run serve\"",
 		"serve": "cross-env ELEVENTY_ENV=development eleventy --serve",
 		"prestart": "rm -rf _site/",
 		"start": "eleventy --serve",
-		"build": "npm run sass:process && eleventy"
+		"build": "npm run sass &&  eleventy"
 	},
 	"repository": {
 		"type": "git",
