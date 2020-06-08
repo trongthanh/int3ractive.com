@@ -3,8 +3,8 @@
 		--flow-space: #{get-size(800)};
 
 		/**
-     * Generic HTML styles 
-     */
+		 * Generic HTML styles
+		 */
 		h2 + *,
 		h3 + * {
 			--flow-space: #{get-size(500)};
@@ -19,30 +19,28 @@
 		}
 
 		a:not([class]) {
-			color: var(--color-dark);
+			color: var(--color-theme-primary);
 			position: relative;
 			display: inline-block;
-			background: var(--color-theme-highlight);
-			padding: 0.2rem 0.4rem 0.3rem 0.4rem;
-			text-decoration: none;
+			text-decoration: underline;
 			word-break: break-word;
 
 			@include apply-utility('leading', 'tight');
 		}
 
 		a:not([class]):hover {
-			text-decoration: underline;
+			color: var(--color-theme-primary-glare);
 		}
 
 		code {
-			font-size: 1.2em;
-			color: var(--color-theme-primary);
-			font-weight: 600;
-			margin-left: 0.01ch;
-			margin-right: 0.01ch;
+			font-size: 1em;
+			color: var(--color-code);
+			background: var(--color-theme-highlight-block);
+			font-weight: normal;
 		}
 
 		pre > code {
+			color: var(--color-light);
 			margin-right: 0;
 			border: 1px solid rgba(255, 255, 255, 0.1);
 			overflow-x: auto;
@@ -54,7 +52,6 @@
 			margin-left: 0;
 			padding-left: get-size(500);
 			font-style: italic;
-			font-size: get-size(600);
 
 			p {
 				opacity: 0.85;
