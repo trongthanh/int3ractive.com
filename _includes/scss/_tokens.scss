@@ -4,16 +4,17 @@ $tokens: (
     500: 1.25rem,
     600: 1.56rem,
     700: 1.95rem,
-    800: 2.44rem,
+    800: 2.31rem,
     900: 3.05rem,
     base: 1rem,
     max: 4rem
   ),
   colors: (
+  	brand: #1177cc,
     primary: #173854,
     primary-shade: #102538,
     primary-glare: #22547c,
-    highlight: #fedb8b,
+    highlight: lighten(#1177cc, 45%),
     light: #ffffff,
     mid: #cccccc,
     dark: #333333,
@@ -21,6 +22,7 @@ $tokens: (
   ),
   fonts: (
     base: "Lora, Georgia, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
-    sans: "Open Sans, Helvetica, Verdana, sans-serif"
+    sans: "Open Sans, Helvetica, Verdana, sans-serif",
+    mono: "IBM Plex Mono, Menlo, SF Mono, Consolas, Cascadia Code, monospace"
   )
 );
