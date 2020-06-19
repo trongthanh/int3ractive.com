@@ -25,8 +25,8 @@
 		"dev": "concurrently \"npm run sass -- --watch\" \"npm run serve\"",
 		"serve": "cross-env ELEVENTY_ENV=development eleventy --serve",
 		"prestart": "rm -rf _site/",
-		"start": "eleventy --serve",
-		"build": "npm run sass &&  eleventy"
+		"start": "npm run dev",
+		"build": "npm run sass && eleventy"
 	},
 	"repository": {
 		"type": "git",
