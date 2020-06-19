@@ -18,6 +18,15 @@
 			@include apply-utility('leading', 'tight');
 		}
 
+		h2, h3, h4 {
+			a:not([class]) {
+				text-decoration: none;
+			}
+			a:not([class]):hover {
+				text-decoration: underline;
+			}
+		}
+
 		a:not([class]) {
 			color: var(--color-theme-primary);
 			position: relative;
@@ -30,13 +39,15 @@
 
 		a:not([class]):hover {
 			color: var(--color-theme-primary-glare);
+			text-decoration-style: dashed;
 		}
 
 		code {
-			font-size: 1em;
+			font-size: 0.9em;
 			color: var(--color-code);
 			background: var(--color-theme-highlight-block);
 			font-weight: normal;
+			padding: 0 0.25em;
 		}
 
 		pre > code {
@@ -101,6 +112,11 @@
 			z-index: 1;
 		}
 
+		figure {
+			/* keep image and caption center */
+			text-align: center;
+		}
+
 		figcaption {
 			font-size: 0.8em;
 			font-style: italic;
@@ -113,7 +129,7 @@
 			display: block;
 			background: var(--color-dark);
 			padding: get-size(700);
-			font-size: get-size(500);
+			font-size: 0.8em;
 		}
 	}
 

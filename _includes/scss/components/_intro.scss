@@ -9,7 +9,8 @@
 			color: currentColor;
 
 			&:hover {
-				text-decoration: none;
+				color: var(--color-theme-primary-glare);
+				text-decoration-style: dashed;
 			}
 		}
 	}

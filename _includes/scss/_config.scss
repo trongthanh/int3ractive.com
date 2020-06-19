@@ -10,14 +10,14 @@ $stalfos-size-scale: map-get($tokens, 'size-scale');
 
 /**
  * COLORS
- * Colors are shared between backgrounds and text by default. 
+ * Colors are shared between backgrounds and text by default.
  * You can also use them to power borders, fills or shadows, for example.
  */
 $stalfos-colors: map-get($tokens, 'colors');
 
 /**
  * UTIL PREFIX
- * All pre-built, framework utilities will have this prefix. 
+ * All pre-built, framework utilities will have this prefix.
  * Example: the wrapper utility is '.sf-wrapper' because the default
  * prefix is 'sf-'.
  */
