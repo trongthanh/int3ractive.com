@@ -101,14 +101,6 @@ module.exports = function(content, outputPath) {
 			});
 		}
 
-		// p cannot contain figure, so after we swap img with figure above this often leave some empty p
-		const paragraphs = [...document.querySelectorAll('main article p')];
-		paragraphs.forEach((p) => {
-			if (!p.textContent.trim()) {
-				p.remove();
-			}
-		});
-
 		return '<!DOCTYPE html>\r\n' + document.documentElement.outerHTML;
 	}
 	return content;
