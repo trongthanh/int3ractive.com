@@ -10,6 +10,7 @@
 		"html-minifier": "^4.0.0",
 		"image-size": "^0.8.3",
 		"jsdom": "^16.2.2",
+		"markdown-it-attrs": "^3.0.3",
 		"sass": "^1.26.8",
 		"semver": "^7.3.2",
 		"slugify": "^1.4.0",
