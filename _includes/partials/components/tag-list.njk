@@ -2,12 +2,14 @@
   <section class="[ post-list ] [ pad-top-700 gap-bottom-900 ]">
     <div class="[ inner-wrapper ] [ sf-flow ]">
       <h2 class="[ post-list__heading ] [ text-700 md:text-800 ]">{{ tagListHeading }}</h2>
-      <p class="[ sf-flow ] [ pad-top-300 ]">
+      <ul class="[ tags ] [ sf-flow ] [ pad-top-300 ]">
         {% set sortedTagList = tagListItems | sort %}
         {% for item in sortedTagList %}
+          <li class="tags__item font-base leading-tight text-600 weight-mid">
             <a href="/blog/tags/{{ item | slug}}">{{ item }}</a>
+          </li>
         {% endfor %}
-      </p>
+      </ul>
     </div>
   </section>
 {% endif %}
