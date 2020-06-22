@@ -6,13 +6,43 @@
 
 	a {
 		color: currentColor;
+	}
 
-		&:hover {
-			text-decoration: none;
+	&__social {
+		list-style: none;
+		text-align: center;
+
+		& li {
+			display: inline-block;
+
+			& a {
+				display: block;
+				padding: #{get-size(300)};
+				color: var(--color-action-text);
+
+
+				&:hover {
+					& path {
+						fill: var(--color-theme-primary);
+					}
+				}
+			}
+		}
+
+
+		& svg {
+			width: #{get-size(500)};
+			& path {
+				fill: var(--color-action-bg);
+			}
 		}
 	}
 
 	&__credit {
 		text-align: center;
+
+		& a:hover {
+			text-decoration-style: dashed;
+		}
 	}
 }
