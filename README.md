@@ -33,6 +33,9 @@ $ npm start
 
 ## CHANGELOG
 
+- Added `markdown-it-attrs` and use `{: ... }` delimiters (similar to Ruby Kramdown) to add custom attributes to generated HTML elements.
+- Added **all tags** page and **other tags** under posts list by tag
+
 
 ---
 
