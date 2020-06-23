@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: page
 title: 'Example Content'
-description: This is a modified version of Clean Blog Jekyll to be compatible with GitHub Pages. Modified by Thanh Tran for his own blog.
+description: This is a modified version of Hylia 11ty theme by Thanh Tran for his own blog.
 date: 2015-09-20T11:29:15+07:00
 author: 'Tran Trong Thanh'
 image: 'images/projects-bg.jpg'
@@ -10,7 +10,7 @@ updated: 2017-03-30T19:17:42+07:00
 
 Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 
-Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. _Aenean eu leo quam._ Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
+Xin chào! Đây là trang xem trước theme của <a href="/">blog này</a>. Theme này do Trần Trọng Thanh _chỉnh sửa lại_ từ bộ starter kit có tên **Hylia Starter Kit** cho Eleventy. Eleventy là một nền tảng tạo website tĩnh thế hệ mới tương tự Jekyll, Hexo, Hugo... được viết bằng JavaScript với hệ thống plugin & filter được thiết kế thuận tiện và cách tiếp cận dữ liệu bài viết và phân trang khá linh hoạt.
 
 > Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
 
@@ -49,9 +49,9 @@ Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridic
 </div>
 ```
 
-{:data-line="6,8-11"}
+Code with lines being highlighted:
 
-```js
+```js/3,7-9
 const Product = require('../models/Product');
 const collection = 'products';
 

@@ -13,7 +13,7 @@ cover-darken: true
 
 Trailing comma (dấu phẩy đuôi, dấu phẩy cuối) là việc để dư **một dấu phẩy** sau phần tử cuối cùng ở cuối một danh sách. (có thể là phần tử trong Array literal, property trong Object literal, tham số của hàm...). Ví dụ:
 
-```js
+```js/4,10
 // trailing comma trong Array literal
 var categories = [
   'men',
@@ -32,7 +32,6 @@ function compare(
   param2,
 ) { /* ... */ }
 ```
-{:data-line="5,11,16"}
 
 Như bạn cũng có thể thấy, dấu phẩy vốn để ngăn cách **giữa** các phần tử trong một danh sách, và dấu phẩy cuối là dư thừa về mặt cú pháp. Để dễ hình dung hơn, ví dụ mảng ở trên nếu viết trên cùng một dòng sẽ là `var categories = ['men', 'women', 'accessories',]`. Trong thực tế, với các trình duyệt cũ chỉ hỗ trợ [ECMAScript 3](https://int3ractive.com/2019/01/nhung-dieu-can-biet-ve-ecmascript.html) trở về trước (IE8), trailing comma sẽ gây ra lỗi cú pháp lúc chạy.
 

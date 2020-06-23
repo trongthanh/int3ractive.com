@@ -131,6 +131,29 @@ pre[class*='language-'] {
 	font-style: italic;
 }
 
+// line highlight
+.highlight-line-active {
+	background: transparent;
+	color: inherit;
+}
+
+.highlight-line-active::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 1.5em;
+	background: hsla(24, 20%, 50%, 0.1);
+	border-left: solid 3px #6699cc;
+
+	pointer-events: none;
+
+	line-height: inherit;
+	white-space: pre;
+}
+
+
 @media screen and (-ms-high-contrast: active) {
 	code[class*='language-'],
 	pre[class*='language-'] {
