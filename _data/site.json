@@ -12,7 +12,7 @@
 	"linkedinUsername": "trongthanh",
 	"gaid": "UA-4430452-4",
 	"disqusId": "conansblog",
-	"enableThirdPartyComments": false,
+	"enableThirdPartyComments": true,
 	"maxPostsPerPage": 10,
 	"paymentPointer": "",
 	"faviconPath": "/images/favicon.png"
