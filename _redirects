@@ -1,0 +1,107 @@
+# Netlify redirect & proxy instructions
+# Refer to https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
+
+# proxies
+/2019-state-of-pwa/*                     https://trongthanh.github.io/2019-state-of-pwa                     200
+/animation-for-front-end-developers/*    https://trongthanh.github.io/animation-for-front-end-developers    200
+/animation-for-front-end-developers/*    https://trongthanh.github.io/animation-for-front-end-developers    200
+/augmented-reality-in-webxr/*            https://trongthanh.github.io/augmented-reality-in-webxr            200
+/front-end-optimization-for-spa/*        https://trongthanh.github.io/front-end-optimization-for-spa        200
+/future-of-mobile-web/*                  https://trongthanh.github.io/future-of-mobile-web                  200
+/internet-safety/*                       https://trongthanh.github.io/internet-safety                       200
+/mobile-web-app-howto/*                  https://trongthanh.github.io/mobile-web-app-howto                  200
+/Presentation--Progressive-Enhancement/* https://trongthanh.github.io/Presentation--Progressive-Enhancement 200
+/secrets-of-front-end-ninja-2017/*       https://trongthanh.github.io/secrets-of-front-end-ninja-2017       200
+/ultimate-solution-to-web-layout/*       https://trongthanh.github.io/ultimate-solution-to-web-layout       200
+
+# old blog posts maps to new URL (assumed 301)
+/archive	/blog
+/2008/02/flickrcloud-flickr-api-papervision-3d.html            /blog/2008/flickrcloud-flickr-api-papervision-3d
+/2008/03/actionscript-3-sound-player.html                      /blog/2008/actionscript-3-sound-player
+/2008/09/project-spa-water-coach.html                          /blog/2008/project-spa-water-coach
+/2009/08/google-map-for-flash-with-daylight.html               /blog/2009/google-map-for-flash-with-daylight
+/2009/08/project-female-form-factor.html                       /blog/2009/project-female-form-factor
+/2009/08/project-offset-evil.html                              /blog/2009/project-offset-evil
+/2009/09/project-shiho.html                                    /blog/2009/project-shiho
+/2009/12/my-contact-information.html                           /blog/2009/my-contact-information
+/2009/12/openzoom-library-sdk.html                             /blog/2009/openzoom-library-sdk
+/2009/12/pyco-flash-framework-beta.html                        /blog/2009/pyco-flash-framework-beta
+/2009/12/red5-data-mapping.html                                /blog/2009/red5-data-mapping
+/2010/01/3d-paper-flip-effect-first-attempt.html               /blog/2010/3d-paper-flip-effect-first-attempt
+/2010/01/quick-note-on-local-to-global-in.html                 /blog/2010/quick-note-on-local-to-global-in
+/2010/02/happy-vietnamese-new-year-2010.html                   /blog/2010/happy-vietnamese-new-year-2010
+/2010/03/as3-type-conversion-common-mistakes.html              /blog/2010/as3-type-conversion-common-mistakes
+/2010/03/as3signals-new-approach-for-as3-events.html           /blog/2010/as3signals-new-approach-for-as3-events
+/2010/03/case-study-isometric-multi-player.html                /blog/2010/case-study-isometric-multi-player
+/2010/03/featured-presentation-moving-from-flex.html           /blog/2010/featured-presentation-moving-from-flex
+/2010/03/project-asb-minisites.html                            /blog/2010/project-asb-minisites
+/2010/03/project-smile-shutter.html                            /blog/2010/project-smile-shutter
+/2010/03/ubuntu-for-flash-developers.html                      /blog/2010/ubuntu-for-flash-developers
+/2010/04/links-about-flash-vs-others.html                      /blog/2010/links-about-flash-vs-others
+/2010/04/simple-as3-line-smoothing.html                        /blog/2010/simple-as3-line-smoothing
+/2010/05/demystify-root-property-of.html                       /blog/2010/demystify-root-property-of
+/2010/05/demystify-root-property-of_18.html                    /blog/2010/demystify-root-property-of_18
+/2010/05/featured-presentation-quick-as-flash.html             /blog/2010/featured-presentation-quick-as-flash
+/2010/05/sans-serif-font-improves-code-editor.html             /blog/2010/sans-serif-font-improves-code-editor
+/2010/05/using-flash-proxy-class.html                          /blog/2010/using-flash-proxy-class
+/2010/06/optimal-unicode-range-for-vietnamese.html             /blog/2010/optimal-unicode-range-for-vietnamese
+/2010/06/project-pop-rox.html                                  /blog/2010/project-pop-rox
+/2010/07/myth-buster-enterframe-event.html                     /blog/2010/myth-buster-enterframe-event
+/2010/08/announcing-as3-karaoke-player-my-first.html           /blog/2010/announcing-as3-karaoke-player-my-first
+/2010/08/dark-color-scheme-for-fdt-flashdevelop.html           /blog/2010/dark-color-scheme-for-fdt-flashdevelop
+/2010/08/how-to-run-flash-cs5-on-ubuntu-with.html              /blog/2010/how-to-run-flash-cs5-on-ubuntu-with
+/2010/09/quick-as3-language-reference-search.html              /blog/2010/quick-as3-language-reference-search
+/2010/10/presentation-introduction-to-tdd.html                 /blog/2010/presentation-introduction-to-tdd
+/2010/10/using-flash-builder-4-on-ubuntu.html                  /blog/2010/using-flash-builder-4-on-ubuntu
+/2010/12/flash-camp-hanoi-2010.html                            /blog/2010/flash-camp-hanoi-2010
+/2010/12/project-snow-fight.html                               /blog/2010/project-snow-fight
+/2011/01/tips-on-encoding-videos-for-android.html              /blog/2011/tips-on-encoding-videos-for-android
+/2011/02/as3-wordle-tag-cloud.html                             /blog/2011/as3-wordle-tag-cloud
+/2011/02/flash-on-multiple-screen-demo.html                    /blog/2011/flash-on-multiple-screen-demo
+/2011/03/playing-with-wallaby.html                             /blog/2011/playing-with-wallaby
+/2011/05/bat-au-voi-molehill-phan-1.html                       /blog/2011/bat-au-voi-molehill-phan-1
+/2011/05/bat-au-voi-molehill-stage3d-phan-2.html               /blog/2011/bat-au-voi-molehill-stage3d-phan-2
+/2011/06/project-training-credits-estimator.html               /blog/2011/project-training-credits-estimator
+/2011/09/project-turbo-race-track.html                         /blog/2011/project-turbo-race-track
+/2011/11/case-study-in2-profile.html                           /blog/2011/case-study-in2-profile
+/2011/12/case-study-webgl-360-panorama.html                    /blog/2011/case-study-webgl-360-panorama
+/2012/01/demo-stage3d-fireworks-with-flare3d.html              /blog/2012/demo-stage3d-fireworks-with-flare3d
+/2012/03/project-j-html-template.html                          /blog/2012/project-j-html-template
+/2012/03/project-justin-portfolio.html                         /blog/2012/project-justin-portfolio
+/2012/04/geany-open-source-sublimetext-for-front.html          /blog/2012/geany-open-source-sublimetext-for-front
+/2012/04/project-j-html-template.html                          /blog/2012/project-j-html-template
+/2012/04/tutorial-realistic-waterfall-with-css3.html           /blog/2012/tutorial-realistic-waterfall-with-css3
+/2012/05/cave-3d-stereo-images-2-state-looping.html            /blog/2012/cave-3d-stereo-images-2-state-looping
+/2012/05/fish-boids-threejs-demo.html                          /blog/2012/fish-boids-threejs-demo
+/2012/06/flash-camp-hanoi-2010.html                            /blog/2012/flash-camp-hanoi-2010
+/2012/06/project-iss-2012.html                                 /blog/2012/project-iss-2012
+/2012/06/project-justin-portfolio.html                         /blog/2012/project-justin-portfolio
+/2012/06/project-training-credits-estimator.html               /blog/2012/project-training-credits-estimator
+/2012/08/google-app-engine-for-static-websites.html            /blog/2012/google-app-engine-for-static-websites
+/2012/08/html5-wordle-tag-cloud.html                           /blog/2012/html5-wordle-tag-cloud
+/2012/11/portfolio-in2ideas-html5-website.html                 /blog/2012/portfolio-in2ideas-html5-website
+/2013/07/fixing-web-fonts-padding-issues-on-linux-mac.html     /blog/2013/fixing-web-fonts-padding-issues-on-linux-mac
+/2015/06/baseline-for-modern-front-end-developers.html         /blog/2015/baseline-for-modern-front-end-developers
+/2015/08/muc-toi-thieu-cua-lap-trinh-vien-font-end.html        /blog/2015/muc-toi-thieu-cua-lap-trinh-vien-font-end
+/2015/08/muc-toi-thieu-cua-lap-trinh-vien-front-end.html       /blog/2015/muc-toi-thieu-cua-lap-trinh-vien-front-end
+/2015/09/goodbye-blogger-hello-github-pages.html               /blog/2015/goodbye-blogger-hello-github-pages
+/2015/09/knowledge-vs-experience.html                          /blog/2015/knowledge-vs-experience
+/2015/09/this-blog-is-moved.html                               /blog/2015/this-blog-is-moved
+/2015/12/cu-phap-bem-trong-css.html                            /blog/2015/cu-phap-bem-trong-css
+/2015/12/ky-phap-bem-trong-css.html                            /blog/2015/ky-phap-bem-trong-css
+/2017/03/font-chu-cho-lap-trinh-vien.html                      /blog/2017/font-chu-cho-lap-trinh-vien
+/2017/09/huong-dan-cai-dat-nodejs-app-len-vps-phan-1.html      /blog/2017/huong-dan-cai-dat-nodejs-app-len-vps-phan-1
+/2018/05/gioi-thieu-progressive-web-app.html                   /blog/2018/gioi-thieu-progressive-web-app
+/2018/07/macos-mojave-dynamic-wallpaper-for-linux.html         /blog/2018/macos-mojave-dynamic-wallpaper-for-linux
+/2018/08/gioi-thieu-phan-mem-nghe-nhac-tizonia.html            /blog/2018/gioi-thieu-phan-mem-nghe-nhac-tizonia
+/2018/08/jekyll-read-time-without-plugins.html                 /blog/2018/jekyll-read-time-without-plugins
+/2018/08/on-dual-booting-linux-on-a-macbook-air.html           /blog/2018/on-dual-booting-linux-on-a-macbook-air
+/2018/09/huong-dan-cai-dat-nodejs-app-len-vps-phan-2.html      /blog/2018/huong-dan-cai-dat-nodejs-app-len-vps-phan-2
+/2018/09/make-the-best-of-MacBook-touchpad-on-Ubuntu.html      /blog/2018/make-the-best-of-MacBook-touchpad-on-Ubuntu
+/2019/01/common-linux-macos-commands.html                      /blog/2019/common-linux-macos-commands
+/2019/01/nhung-dieu-can-biet-ve-ecmascript.html                /blog/2019/nhung-dieu-can-biet-ve-ecmascript
+/2019/04/why-trailing-comma-in-js-is-a-good-idea.html          /blog/2019/why-trailing-comma-in-js-is-a-good-idea
+/2019/07/hai-ung-dung-cua-string-normalize-voi-tieng-viet.html /blog/2019/hai-ung-dung-cua-string-normalize-voi-tieng-viet
+/2019/12/things-to-do-after-installing-ubuntu-mate-19-10.html  /blog/2019/things-to-do-after-installing-ubuntu-mate-19-10
+/2019/12/things-to-do-after-installing-ubuntu-mate.html        /blog/2019/things-to-do-after-installing-ubuntu-mate
+
