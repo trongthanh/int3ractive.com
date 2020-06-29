@@ -36,6 +36,7 @@ module.exports = function(config) {
 	config.addTransform('parse', parseTransform);
 
 	// Passthrough copy
+	config.addPassthroughCopy('./_redirects');
 	config.addPassthroughCopy('./fonts');
 	config.addPassthroughCopy('./images');
 	config.addPassthroughCopy('./js');
