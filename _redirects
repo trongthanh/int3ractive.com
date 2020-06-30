@@ -4,7 +4,6 @@
 # proxies
 /2019-state-of-pwa/*                     https://trongthanh.github.io/2019-state-of-pwa                     200
 /animation-for-front-end-developers/*    https://trongthanh.github.io/animation-for-front-end-developers    200
-/animation-for-front-end-developers/*    https://trongthanh.github.io/animation-for-front-end-developers    200
 /augmented-reality-in-webxr/*            https://trongthanh.github.io/augmented-reality-in-webxr            200
 /front-end-optimization-for-spa/*        https://trongthanh.github.io/front-end-optimization-for-spa        200
 /future-of-mobile-web/*                  https://trongthanh.github.io/future-of-mobile-web                  200
@@ -13,6 +12,7 @@
 /Presentation--Progressive-Enhancement/* https://trongthanh.github.io/Presentation--Progressive-Enhancement 200
 /secrets-of-front-end-ninja-2017/*       https://trongthanh.github.io/secrets-of-front-end-ninja-2017       200
 /ultimate-solution-to-web-layout/*       https://trongthanh.github.io/ultimate-solution-to-web-layout       200
+/family-tree/*                           https://trongthanh.github.io/family-tree                           200
 
 # old blog posts maps to new URL (assumed 301)
 /archive	/blog
