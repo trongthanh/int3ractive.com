@@ -1,12 +1,11 @@
 ---
 layout: home
-title: A simple starter kit for Eleventy
-postsHeading: Latest posts
+title: Int3ractive
+postsHeading: Latest blog posts
 archiveButtonText: See all posts
-metaDesc: 'Hylia is a lightweight Eleventy starter kit to help you to create your own blog or personal website.'
-socialImage: ''
+metaTitle: 'Home page of Trần Trọng Thanh - Int3ractive'
+metaDesc: The writing playground and technical journal of Trần Trọng Thanh, Front End architect, JS developer, speaker, husband and father, from Ho Chi Minh city, Vietnam
+socialImage: /images/home-bg.jpg
 ---
 
-Hylia is a lightweight [Eleventy](https://11ty.io) starter kit with [Netlify CMS](https://www.netlifycms.org/) pre-configured, so that you can one-click install a progressive, accessible blog in minutes. It also gives you a well organised starting point to extend yourself. It’s by [Andy Bell](https://twitter.com/hankchizljaw) and [friends](https://github.com/aarongustafson/hylia/graphs/contributors).
-
-Get started now by [deploying Hylia to Netlify.](https://app.netlify.com/start/deploy?repository=https://github.com/hankchizljaw/hylia&stack=cms)
+Welcome! I am Trần Trọng Thanh and this is my home page and blog. I was co-founder of [Nau Studio](https://naustud.io). Currently, I'm a principal web engineer at [Chotot](https://chotot.com).

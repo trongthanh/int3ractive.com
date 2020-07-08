@@ -8,6 +8,7 @@ const yearFilter = require('./_11ty/filters/year-filter.js');
 const markdownConfig = require('./_11ty/filters/markdown-filter.js');
 const w3DateFilter = require('./_11ty/filters/w3-date-filter.js');
 const skipTag = require('./_11ty/filters/skip-tag.js');
+const prepend = require('./_11ty/filters/prepend.js');
 
 // Import transforms
 const htmlMinTransform = require('./_11ty/transforms/html-min-transform.js');
@@ -24,6 +25,7 @@ module.exports = function(config) {
 	config.addFilter('markdownFilter', markdownConfig.filter);
 	config.addFilter('w3DateFilter', w3DateFilter);
 	config.addFilter('skipTag', skipTag);
+	config.addFilter('prepend', prepend);
 
 	// Layout aliases
 	config.addLayoutAlias('home', 'layouts/home.njk');
