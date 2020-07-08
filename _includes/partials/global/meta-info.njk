@@ -19,8 +19,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ currentUrl }}" />
 
-{% if site.authorHandle %}
-  <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
+{% if site.twitterUsername %}
+  <meta name="twitter:creator" content="@{{ site.twitterUsername | replace('@', '') }}" />
 {% endif %}
 
 {% if metaDesc %}
@@ -29,9 +29,9 @@
   <meta property="og:description" content="{{ metaDesc }}" />
 {% endif %}
 
-{% if socialImage %}  
-  <meta property="og:image" content="{{ socialImage }}" />
-  <meta name="twitter:image" content="{{ socialImage }}" />
+{% if socialImage %}
+  <meta property="og:image" content="{{ socialImage | prepend(site.url) }}" />
+  <meta name="twitter:image" content="{{ socialImage | prepend(site.url) }}" />
   <meta property="og:image:alt" content="Page image for {{ site.name }}" />
   <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
 {% endif %}
