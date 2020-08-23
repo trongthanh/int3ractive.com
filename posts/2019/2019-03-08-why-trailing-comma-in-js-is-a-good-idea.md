@@ -2,10 +2,10 @@
 title: Tại sao lại để dư một dấu phẩy
 subtitle: Từ một lỗi cú pháp trong JavaScript, trailing comma trở thành best practice
 author: Thanh Tran
-description: Từ một lỗi cú pháp trong JavaScript, trailing comma trở thành best practice
+metaDesc: Từ một lỗi cú pháp trong JavaScript, trailing comma trở thành best practice
 date: 2019-04-12T14:39:08+07:00
 tags: [javascript, ecmascript, best practice]
-image: images/2019/trailing-comma-cover.jpg
+coverImage: /images/2019/trailing-comma-cover.jpg
 cover-darken: true
 ---
 

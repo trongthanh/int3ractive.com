@@ -2,10 +2,10 @@
 title: macOS Mojave dynamic wallpaper for Linux
 subtitle: Backgrounds that will change based on time of the day.
 author: Thanh Tran
-description: I has crafted a Linux built-in background slideshow XML that replicate macOS Mojave dynamic wallpaper in which the images are changed based on the time of the day.
+metaDesc: I has crafted a Linux built-in background slideshow XML that replicate macOS Mojave dynamic wallpaper in which the images are changed based on the time of the day.
 date: 2018-07-25T15:05:40+07:00
 tags: [linux, macos]
-image: images/2018/linux-mojave-bg.jpg
+coverImage: /images/2018/linux-mojave-bg.jpg
 ---
 
 I'm a Mac owner but also a Linux enthusiast and currently dual boot macOS and Linux. That's why when I learned about new [dynamic wallpaper feature](https://www.cultofmac.com/553577/grab-all-16-macos-mojave-dynamic-wallpapers-right-here/) of macOS Mojave, and recalled Ubuntu / Linux has a similar feature (note built-in) called [wallpaper slideshow](https://help.ubuntu.com/community/SlideshowWallpapers), I realized "Hey why not recreate the dynamic Mojave sand dune backgrounds on Linux with each image reflect the right moment of the day?".

@@ -1,14 +1,9 @@
 {% set pageTitle = title + ' - ' + site.name %}
-{% set pageDesc = '' %}
 {% set siteTitle = site.name %}
 {% set currentUrl = site.url + page.url %}
 
 {% if metaTitle %}
   {% set pageTitle = metaTitle %}
-{% endif %}
-
-{% if metaDesc %}
-  {% set pageDesc = metaDesc %}
 {% endif %}
 
 <title>{{ pageTitle }}</title>
@@ -29,11 +24,18 @@
   <meta property="og:description" content="{{ metaDesc }}" />
 {% endif %}
 
+{% if image %}
+  {% set socialImage = image %}
+{% elif coverImage %}
+  {# Use coverImage for both post cover and preview photo in social networks #}
+  {% set socialImage = coverImage %}
+{% endif %}
+
 {% if socialImage %}
   <meta property="og:image" content="{{ socialImage | prepend(site.url) }}" />
   <meta name="twitter:image" content="{{ socialImage | prepend(site.url) }}" />
-  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
-  <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+  <meta property="og:image:alt" content="Page image for {{ pageTitle }}" />
+  <meta name="twitter:image:alt" content="Page image for {{ pageTitle }}" />
 {% endif %}
 
 {% if site.paymentPointer %}

@@ -2,11 +2,11 @@
 title: Common Linux / macOS terminal commands in my handbook
 subtitle: You should know if you're a full stack developer
 author: Thanh Tran
-description: Through the years, I had to look up every command that is needed by my job, as a coder, writer, devops and even as casual user, and kept the command usage in a long note. I'm copying and organizing them here for my own reference as well as may it be useful for other peeps.
+metaDesc: Through the years, I had to look up every command that is needed by my job, as a coder, writer, devops and even as casual user, and kept the command usage in a long note. I'm copying and organizing them here for my own reference as well as may it be useful for other peeps.
 date: 2019-01-29T17:12:59+07:00
 updated: 2019-02-04T00:14:59+07:00
 tags: [devops, linux, cli, terminal]
-image: images/2019/cli-top.png
+coverImage: /images/2019/cli-top.png
 cover-darken: true
 ---
 

@@ -2,7 +2,7 @@
 title: Knowledge vs. Experience
 subtitle: Knowledge can only lead to ability. Experience can lead to mastery.
 author: Thanh Tran
-description: Knowledge can only lead to ability. Experience can lead to mastery.
+metaDesc: Knowledge can only lead to ability. Experience can lead to mastery.
 date: 2015-09-19T13:32:14+07:00
 tags: [thoughts, writing]
 ---

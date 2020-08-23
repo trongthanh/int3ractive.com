@@ -6,6 +6,6 @@
  * @example
  * 	{ 'images/favicon.png' | prepend(site.url) }
  */
-module.exports = function siteUrl(input = '', value = '') {
+module.exports = function prepend(input = '', value = '') {
 	return value + input;
 };

@@ -3,7 +3,7 @@ layout: page
 title: "Open Source"
 subtitle: Open source, contributed and personal projects.
 description: Here are some of my open source or contributed-to projects through out my career, ordered by date with later ones on top.
-image: "images/projects-bg.jpg"
+image: /images/projects-bg.jpg
 date: 2018-08-11T17:30:36+07:00
 ---
 

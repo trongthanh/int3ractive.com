@@ -2,10 +2,10 @@
 title: Making the best of MacBook Air touchpad on Ubuntu
 subtitle: A guide to mtrack driver and make use of the multi-touch touchpad on Linux
 author: Thanh Tran
-description: In this post, I'm detailing my touchpad setup that I feel best so far and that it is as close to MacOS experience as I can get on Ubuntu 18.04 dual booted on a MacBook Air
+metaDesc: In this post, I'm detailing my touchpad setup that I feel best so far and that it is as close to MacOS experience as I can get on Ubuntu 18.04 dual booted on a MacBook Air
 date: 2018-09-17T00:07:16+07:00
 tags: [linux, macbook air, ubuntu, touchpad]
-image: images/2018/macbookair-touchpad.jpg
+coverImage: /images/2018/macbookair-touchpad.jpg
 ---
 <center><small><em>Cover photo by Katarina Šikuljak on Unsplash</em></small></center>
 

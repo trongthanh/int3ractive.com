@@ -2,11 +2,11 @@
 title: Things to do after installing Ubuntu Mate
 subtitle: Specialized for MacBook and PC laptop
 author: Thanh Tran
-description: Here's my opinionated tweaks to new Unbutu MATE installation to adapt to my preferences as long time MacBook user.
+metaDesc: Here's my opinionated tweaks to new Unbutu MATE installation to adapt to my preferences as long time MacBook user.
 date: 2019-12-11T01:40:08+07:00
 updated: 2020-04-25T00:42:19+07:00
 tags: [linux, ubuntu, ubuntu mate, tutorials]
-image: images/2019/ubuntu-mate-desktop.jpg
+coverImage: /images/2019/ubuntu-mate-desktop.jpg
 cover-darken: true
 redirect_from:
   - /2019/12/things-to-do-after-installing-ubuntu-mate-19-10.html
@@ -23,6 +23,7 @@ Here's what you need to do, after install it successfully and on the first start
 Ubuntu MATE uses the [MATE Desktop Environment](https://mate-desktop.org/) and it has system of panels affixed to the sides of the screen. These panels are so flexible that with them, MATE desktop can mimic any popular desktop layouts, including the traditional GTK2 layout, or Windows, or current Ubuntu GNOME or even Mac OSX...
 
 However, tweaking the panels is tedious, so starting from Ubuntu Mate 19.10, you'll have the Desktop Layout option on the Welcome screen where you can choose the preset of the panels that will resemble any popular desktops:
+
 ![Screenshot of Ubuntu MATE Welcome window](/images/2019/ubuntu-mate-pick-layout.png "Ubuntu MATE Welcome window")
 
 If you miss this screen, you can still search and re-open **Welcome** app from the applications menu.

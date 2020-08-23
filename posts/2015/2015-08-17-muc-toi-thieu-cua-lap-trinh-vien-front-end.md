@@ -1,7 +1,7 @@
 ---
 title: Mức Tối Thiểu Của Lập Trình Viên Front End
 subtitle: Có rất nhiều thứ phải học để làm được Front End, bạn có muốn đi đến cùng?
-description: Hệ thống kỹ năng và kiến thức tối thiểu của một lập trình viên Front End cần có để có làm việc trong nhóm một cách hiệu quả và không cần nhiều sự trợ giúp.
+metaDesc: Hệ thống kỹ năng và kiến thức tối thiểu của một lập trình viên Front End cần có để có làm việc trong nhóm một cách hiệu quả và không cần nhiều sự trợ giúp.
 date: 2015-08-17T14:55:00.000+07:00
 author: Thanh Tran
 tags: [thoughts, front end, process]
