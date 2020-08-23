@@ -67,6 +67,22 @@ module.exports = function(content, outputPath) {
 			});
 		}
 
+		// unwrap figures from p because p cannot contains figure
+		const figures = [...document.querySelectorAll('figure')];
+		figures.forEach((figure) => {
+			const outerP = figure.closest('p');
+			if (outerP) {
+				outerP.removeChild(figure);
+				if (outerP.textContent.trim()) {
+					// if p contains some texts, insert figure after it
+					outerP.insertAdjacentElement('afterend', figure);
+				} else {
+					// if p contains no texts, just replace it
+					outerP.replaceWith(figure);
+				}
+			}
+		});
+
 		if (articleHeadings.length) {
 			// Loop each heading and add a little anchor and an ID to each one
 			articleHeadings.forEach((heading) => {
