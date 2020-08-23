@@ -2,7 +2,7 @@
 title: Giới thiệu phần mềm nghe nhạc Tizonia
 subtitle: Nghe nhạc online Youtube, Spotify... bằng dòng lệnh
 author: Thanh Tran
-description:
+metaDesc:
 date: 2018-08-09T11:31:14+07:00
 tags: [vietnamese, linux, terminal]
 ---

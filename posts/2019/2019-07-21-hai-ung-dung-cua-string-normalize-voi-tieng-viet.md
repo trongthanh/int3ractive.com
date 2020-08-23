@@ -2,11 +2,10 @@
 title: Hai ứng dụng của String.prototype.normalize trong tiếng Việt
 subtitle: Và đôi điều về bảng mã Unicode tiếng Việt
 author: Thanh Tran
-description: Đôi điều về hai bảng mã Unicode tiếng Việt và hai ứng dụng thú vị của phương thức String.prototype.normalize
+metaDesc: Đôi điều về hai bảng mã Unicode tiếng Việt và hai ứng dụng thú vị của phương thức String.prototype.normalize
 date: 2019-07-25T23:43:28+07:00
 tags: [javascript, unicode, vietnamese]
-image: images/2019/string-normalize-cover-image.jpg
-cover-image: images/code-bg.jpg
+image: /images/2019/string-normalize-cover-image.jpg
 ---
 
 ## Đôi điều về hai bảng mã Unicode tiếng Việt

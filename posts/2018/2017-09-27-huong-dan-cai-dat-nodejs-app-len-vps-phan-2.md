@@ -2,10 +2,10 @@
 title: "Hướng dẫn: Cài đặt hoàn chỉnh Nodejs app lên VPS Ubuntu - Phần 2"
 subtitle: Chạy app như dịch vụ, serve app qua Nginx reversed proxy và bật HTTPS
 author: Thanh Tran
-description: Hướng dẫn chạy Node.js app như dịch vụ, serve app qua Nginx reversed proxy và bật HTTPS
+metaDesc: Hướng dẫn chạy Node.js app như dịch vụ, serve app qua Nginx reversed proxy và bật HTTPS
 date: 2018-09-26T23:14:10+07:00
 tags: [devops, vietnamese, nodejs, webapp]
-image: images/2017/keystone-mongo-node-ubuntu.png
+coverImage: /images/2017/keystone-mongo-node-ubuntu.png
 cover-darken: true
 ---
 

@@ -2,7 +2,7 @@
 title: On dual booting Linux on a Macbook Air
 subtitle: And on choosing a modern Ubuntu desktop environment
 author: Thanh Tran
-description: I have been using a MacBook Air for both personal use and work since 2012. But in 2018, Apple is not itself anymore. I'm dual booting a Linux distro along with macOS on my MBA, to get familiar with modern Linux desktop experience, and to explore the tools and software that can replace my current ones on macOS.
+metaDesc: I have been using a MacBook Air for both personal use and work since 2012. But in 2018, Apple is not itself anymore. I'm dual booting a Linux distro along with macOS on my MBA, to get familiar with modern Linux desktop experience, and to explore the tools and software that can replace my current ones on macOS.
 date: 2018-08-28T01:19:44+07:00
 tags: [linux, macos, macbook air]
 ---

@@ -4,7 +4,7 @@ title: "NAU Tab"
 subtitle: Beautiful new tab page for modern browsers
 description: Take a break from your work with this picturesque new tab extension for modern browsers.
 author: Thanh Tran
-image: "images/nau-tab-bg.jpg"
+image: /images/nau-tab-bg.jpg
 date: 2019-06-16T12:37:11+07:00
 cover-darken: true
 ---

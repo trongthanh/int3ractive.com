@@ -17,6 +17,8 @@ const parseTransform = require('./_11ty/transforms/parse-transform.js');
 // Import data files
 const site = require('./_data/site.json');
 
+const prodMode = process.env.ELEVENTY_ENV !== 'development';
+
 module.exports = function(config) {
 	config.setLibrary('md', markdownConfig.library);
 	// Filters
@@ -34,8 +36,8 @@ module.exports = function(config) {
 	config.addLayoutAlias('archive', 'layouts/archive.njk');
 
 	// Transforms
-	config.addTransform('htmlmin', htmlMinTransform);
 	config.addTransform('parse', parseTransform);
+	if (prodMode) config.addTransform('htmlmin', htmlMinTransform);
 
 	// Passthrough copy
 	config.addPassthroughCopy('./_redirects');
