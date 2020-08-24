@@ -36,7 +36,7 @@ Những tác giả của khái niệm PWA (đến từ nhóm phát triển trìn
 
 Trước tiên cần hiểu rằng, sự tiến hóa của mobile web app cần sự hợp tác của rất nhiều bên liên quan trong đó có các nhà phát triển trình duyệt, hệ điều hành di động, và cả những chuyên gia về ngôn ngữ lập trình cho Web. Sự tiến hóa của mobile web thường đi cùng với sự phát triển và chuẩn hóa của nền tảng Web do tổ chức **W3C**[^2] chịu trách nhiệm.
 
-[![Sự tiến hóa của nền tảng Web](/images/2018/pwa/evolutionoftheweb.jpg)_Sự tiến hóa của nền tảng Web_](http://www.evolutionoftheweb.com)
+[![Sự tiến hóa của nền tảng Web](/images/2018/pwa/evolutionoftheweb.jpg "Sự tiến hóa của nền tảng Web")](http://www.evolutionoftheweb.com)
 
 Khi tôi tư vấn và phát triển app cho khách hàng, rất nhiều lần doanh nghiệp từ chối lựa chọn giải pháp web app hoặc hybrid app với lý do chính là _"HTML5 không nhanh bằng native"_. Tuy nhiên điều này không còn đúng tại thời điểm hiện tại.
 

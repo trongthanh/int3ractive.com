@@ -35,35 +35,35 @@ module.exports = function(content, outputPath) {
 					image.setAttribute('height', dimensions.height);
 				}
 
+				const figure = document.createElement('figure');
+				const figCaption = document.createElement('figcaption');
+
 				const imgParent = image.parentElement;
-				// Handle my special MD notation: ![alt](image/url)_image caption_
-				const emCaption = imgParent.querySelector('img + em');
+				// Handle my special MD notation: ![alt](image/url) _image caption_
+				const emCaption =
+					imgParent.querySelector('img + em') ||
+					(imgParent.nextElementSibling &&
+						imgParent.nextElementSibling.tagName === 'EM' &&
+						imgParent.nextElementSibling);
 				if (emCaption) {
-					const figure = document.createElement('figure');
-					const figCaption = document.createElement('figcaption');
-
 					figCaption.innerHTML = emCaption.innerHTML;
-
-					figure.appendChild(image.cloneNode(true));
-					figure.appendChild(figCaption);
-
-					image.replaceWith(figure);
-					imgParent.removeChild(emCaption);
+					emCaption.parentElement.removeChild(emCaption);
 				} else if (image.hasAttribute('title')) {
 					// If an image has a title it means that the user added a caption
 					// so replace the image with a figure containing that image and a caption
-					const figure = document.createElement('figure');
-					const figCaption = document.createElement('figcaption');
-
 					figCaption.innerHTML = image.getAttribute('title');
-
 					image.removeAttribute('title');
+				}
 
+				if (imgParent.tagName === 'A') {
+					// image with anchor wrapper
+					figure.appendChild(imgParent.cloneNode(true));
+					imgParent.replaceWith(figure);
+				} else {
 					figure.appendChild(image.cloneNode(true));
-					figure.appendChild(figCaption);
-
 					image.replaceWith(figure);
 				}
+				figure.appendChild(figCaption);
 			});
 		}
 
@@ -71,8 +71,9 @@ module.exports = function(content, outputPath) {
 		const figures = [...document.querySelectorAll('figure')];
 		figures.forEach((figure) => {
 			const outerP = figure.closest('p');
+
 			if (outerP) {
-				outerP.removeChild(figure);
+				if (figure.parentElement === outerP) outerP.removeChild(figure); // in case img is not direct child of outerP
 				if (outerP.textContent.trim()) {
 					// if p contains some texts, insert figure after it
 					outerP.insertAdjacentElement('afterend', figure);
@@ -114,6 +115,14 @@ module.exports = function(content, outputPath) {
 
 					embed.replaceWith(player);
 				}
+			});
+		}
+
+		// add rel=noopener to all anchors with targer=_blank
+		const blankLinks = [...document.querySelectorAll('main article a[target=_blank]')];
+		if (blankLinks.length) {
+			blankLinks.forEach((link) => {
+				link.setAttribute('rel', 'noopener');
 			});
 		}
 
