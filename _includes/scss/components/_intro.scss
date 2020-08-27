@@ -1,5 +1,23 @@
 .intro {
+	position: relative;
 	background: var(--color-theme-highlight-block);
+
+	&--with-cover {
+		background: none;
+
+		& .intro__wrapper {
+			background: var(--color-theme-highlight-block);
+			padding: 1.25rem;
+
+			@media screen and (min-width: 48rem)  {
+				padding: 0.75rem 1.25rem;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
 
 	&__summary {
 		--flow-space: #{get-size(500)};
@@ -21,6 +39,39 @@
 
 		&--compact {
 			max-width: 20ex;
+		}
+	}
+}
+
+.cover-image {
+	position: relative;
+
+	&__frame {
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__img {
+		width: 100%;
+		display: block;
+		object-fit: cover;
+		max-height: calc(100vh - 80px);
+	}
+
+	& figcaption {
+		background: var(--color-theme-highlight-block);
+		opacity: 0.6;
+		position: absolute;
+		text-align: center;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		font-style: italic;
+
+		@media screen and (min-width: 48rem) {
+			opacity: 1;
+			background: none;
+			bottom: initial;
 		}
 	}
 }

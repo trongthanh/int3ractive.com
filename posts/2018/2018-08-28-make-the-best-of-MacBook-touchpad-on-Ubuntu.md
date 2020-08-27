@@ -6,8 +6,8 @@ metaDesc: In this post, I'm detailing my touchpad setup that I feel best so far 
 date: 2018-09-17T00:07:16+07:00
 tags: [linux, macbook air, ubuntu, touchpad]
 coverImage: /images/2018/macbookair-touchpad.jpg
+coverCaption: Cover photo by Katarina Šikuljak on Unsplash
 ---
-<center><small><em>Cover photo by Katarina Šikuljak on Unsplash</em></small></center>
 
 If you are a long time MacBook (Air) user and recently switch to Linux, I bet one of the things you'll miss most is the multi-touch touchpad. As I have [blogged earlier](https://int3ractive.com/2018/08/on-dual-booting-linux-on-a-macbook-air.html) that I decided to dual boot Ubuntu on this MacBook Air, at first, I also struggled to find the best setup for the touchpad to retain my productivity while not having to rely much on mouse.
 
