@@ -80,15 +80,6 @@
 		}
 
 		figure,
-		figure + *,
-		pre > code,
-		.video-player,
-		.video-player + *,
-		video {
-			--flow-space: #{get-size('max')};
-		}
-
-		figure,
 		pre > code,
 		.video-player,
 		video {
@@ -108,6 +99,8 @@
 		}
 
 		figure img {
+			display: block;
+			margin: auto;
 			position: relative;
 			z-index: 1;
 		}

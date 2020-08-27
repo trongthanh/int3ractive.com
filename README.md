@@ -19,6 +19,7 @@ $ npm start
 - `metaDesc`: Optional, set for meta descriptions
 - `image`: Optional, set for `og:image` and social network sharing image
 - `coverImage`: Optional, set for the post's cover photo, will also be used as social image if `image` is not provided.
+- `coverCaption`: Optional, set the caption for post's cover photo
 - `updated`: Optional, set to display an updated date
 
 Some legacy front matter fields not currently in used but may be in the future:

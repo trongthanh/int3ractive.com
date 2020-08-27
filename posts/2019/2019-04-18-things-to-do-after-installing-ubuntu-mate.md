@@ -7,6 +7,7 @@ date: 2019-12-11T01:40:08+07:00
 updated: 2020-04-25T00:42:19+07:00
 tags: [linux, ubuntu, ubuntu mate, tutorials]
 coverImage: /images/2019/ubuntu-mate-desktop.jpg
+coverCaption: Screenshot of my current Ubuntu MATE desktop
 cover-darken: true
 redirect_from:
   - /2019/12/things-to-do-after-installing-ubuntu-mate-19-10.html

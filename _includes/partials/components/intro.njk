@@ -1,6 +1,14 @@
-<header class="[ intro ] [ pad-top-900 pad-bottom-max ]">
-  <div class="[ inner-wrapper ] [ sf-flow ]">
-    <h1 class="[ intro__heading{{ ' intro__heading--compact' if page.url === '/' }} ] [ text-800 md:text-900 leading-tight ] [ p-name ]">{{ introHeading }}</h1>
+<header class="intro {{ 'intro--with-cover' if coverImage else '[ pad-top-900 pad-bottom-max ]' }}">
+  {% if coverImage %}
+  <figure class="cover-image">
+    <div class="cover-image__frame no-replace">
+      <img src="{{ coverImage }}" alt="{{ coverCaption }}" class="cover-image__img">
+    </div>
+    {% if coverCaption %}<figcaption>{{ coverCaption }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+  <div class="[ intro__wrapper ] [ inner-wrapper ] [ sf-flow ]">
+    <h1 class="[ intro__heading{{ ' intro__heading--compact' if page.url === '/' }} ] [ text-800 {{'md:text-900' if not coverImage}} leading-tight ] [ p-name ]">{{ introHeading }}</h1>
     {% if introSummary %}
       <div class="[ intro__summary ] [ sf-flow ] [ leading-mid measure-short ]">{{ introSummary | safe }}</div>
     {% endif %}

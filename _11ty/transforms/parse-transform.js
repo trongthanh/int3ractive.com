@@ -1,11 +1,13 @@
+const path = require('path');
 const jsdom = require('jsdom');
 const slugify = require('slugify');
-const getSize = require('image-size');
+const getImageInfo = require('../utils/image-info.js');
 
 const { JSDOM } = jsdom;
 const minify = require('../utils/minify.js');
+const pngReg = /\.png/i;
 
-module.exports = function(content, outputPath) {
+module.exports = async function(content, outputPath) {
 	if (outputPath.endsWith('.html')) {
 		const DOM = new JSDOM(content, {
 			resources: 'usable',
@@ -13,58 +15,87 @@ module.exports = function(content, outputPath) {
 
 		const document = DOM.window.document;
 
-		const articleImages = [...document.querySelectorAll('main article img, .intro img')];
+		const articleImages = [...document.querySelectorAll('main article img')];
 		const articleHeadings = [...document.querySelectorAll('main article h2, main article h3')];
 		const articleEmbeds = [...document.querySelectorAll('main article iframe')];
 
 		if (articleImages.length) {
-			articleImages.forEach((image) => {
-				image.setAttribute('loading', 'lazy');
+			await Promise.all(
+				articleImages
+					.filter((image) => {
+						return !image.classList.contains('events__item__logo');
+					})
+					.map(async (image) => {
+						// assign loading lazy to optimize above the fold load size and time
+						image.setAttribute('loading', 'lazy');
 
-				const file = image.getAttribute('src');
+						const file = image.getAttribute('src');
 
-				if (file.indexOf('http') < 0) {
-					let dimensions = { width: 20, height: 20 };
-					try {
-						dimensions = getSize('./' + file);
-					} catch (err) {
-						console.log(`image not found ${file}`);
-					}
+						// append size to images to prevent layout shift and let lazy loading work
+						if (!file.includes('http')) {
+							// let dimensions = { width: 20, height: 20 };
+							// [red, green, blue, alpha, width, height]
+							let info = [127, 127, 127, 255, 50, 50];
+							try {
+								info = await getImageInfo(path.resolve('.' + file));
+								console.log('Processing image', file);
+								// this image processing maybe costly but OK for now,
+								// I'll consider go back to `image-size` if needed and use a single neutral color
+								// const getSize = require('image-size');
+								// dimensions = getSize('./' + file);
+							} catch (err) {
+								console.log(err);
+							}
 
-					image.setAttribute('width', dimensions.width);
-					image.setAttribute('height', dimensions.height);
-				}
+							image.setAttribute('width', info[4]);
+							image.setAttribute('height', info[5]);
 
-				const figure = document.createElement('figure');
-				const figCaption = document.createElement('figcaption');
+							// apply background color as placeholder, but not for transparent png
+							if (!pngReg.test(file)) {
+								image.style.backgroundColor = `rgb(${info[0]}, ${info[1]}, ${info[2]})`;
+							}
+						}
 
-				const imgParent = image.parentElement;
-				// Handle my special MD notation: ![alt](image/url) _image caption_
-				const emCaption =
-					imgParent.querySelector('img + em') ||
-					(imgParent.nextElementSibling &&
-						imgParent.nextElementSibling.tagName === 'EM' &&
-						imgParent.nextElementSibling);
-				if (emCaption) {
-					figCaption.innerHTML = emCaption.innerHTML;
-					emCaption.parentElement.removeChild(emCaption);
-				} else if (image.hasAttribute('title')) {
-					// If an image has a title it means that the user added a caption
-					// so replace the image with a figure containing that image and a caption
-					figCaption.innerHTML = image.getAttribute('title');
-					image.removeAttribute('title');
-				}
+						const imgParent = image.parentElement;
 
-				if (imgParent.tagName === 'A') {
-					// image with anchor wrapper
-					figure.appendChild(imgParent.cloneNode(true));
-					imgParent.replaceWith(figure);
-				} else {
-					figure.appendChild(image.cloneNode(true));
-					image.replaceWith(figure);
-				}
-				figure.appendChild(figCaption);
-			});
+						// skip figure transform for some known parent
+						if (
+							imgParent.tagName === 'FIGURE' ||
+							imgParent.classList.contains('no-replace')
+						)
+							return;
+
+						// selectively convert post img to figure
+						const figure = document.createElement('figure');
+						const figCaption = document.createElement('figcaption');
+
+						// Handle my special MD notation: ![alt](image/url) _image caption_
+						const emCaption =
+							imgParent.querySelector('img + em') ||
+							(imgParent.nextElementSibling &&
+								imgParent.nextElementSibling.tagName === 'EM' &&
+								imgParent.nextElementSibling);
+						if (emCaption) {
+							figCaption.innerHTML = emCaption.innerHTML;
+							emCaption.parentElement.removeChild(emCaption);
+						} else if (image.hasAttribute('title')) {
+							// If an image has a title it means that the user added a caption
+							// so replace the image with a figure containing that image and a caption
+							figCaption.innerHTML = image.getAttribute('title');
+							image.removeAttribute('title');
+						}
+
+						if (imgParent.tagName === 'A') {
+							// image with anchor wrapper
+							figure.appendChild(imgParent.cloneNode(true));
+							imgParent.replaceWith(figure);
+						} else {
+							figure.appendChild(image.cloneNode(true));
+							image.replaceWith(figure);
+						}
+						figure.appendChild(figCaption);
+					})
+			);
 		}
 
 		// unwrap figures from p because p cannot contains figure
