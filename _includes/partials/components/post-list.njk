@@ -11,6 +11,7 @@
               </h3>
               <p class="text-500 gap-top-300 weight-mid">
                 <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
+                <span>— {{ helpers.getReadingTime(item.templateContent) }} minute read</span>
               </p>
             </li>
           {% endif %}

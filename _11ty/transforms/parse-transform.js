@@ -9,9 +9,7 @@ const pngReg = /\.png/i;
 
 module.exports = async function(content, outputPath) {
 	if (outputPath.endsWith('.html')) {
-		const DOM = new JSDOM(content, {
-			resources: 'usable',
-		});
+		const DOM = new JSDOM(content);
 
 		const document = DOM.window.document;
 
@@ -44,7 +42,7 @@ module.exports = async function(content, outputPath) {
 								// const getSize = require('image-size');
 								// dimensions = getSize('./' + file);
 							} catch (err) {
-								console.log(err);
+								console.log('Cannot getImageInfo', file);
 							}
 
 							image.setAttribute('width', info[4]);
