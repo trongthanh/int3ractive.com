@@ -5,9 +5,10 @@ author: Thanh Tran
 metaDesc: Progressive Web App (PWA) là một dạng ứng dụng web mới đang thu hút rất nhiều sự quan tâm, tuy nhiên nó vẫn còn khá mới mẻ tại Việt Nam. Trong bài viết này tôi sẽ cố gắng giải thích PWA cho những ai không phải lập trình viên vẫn có thể hiểu.
 date: 2018-05-13T17:43:06+07:00
 tags: [vietnamese, front end, javascript, mobile web, web app]
-coverImage: /images/2018/pwa/pwa-logo.png
+image: /images/2018/pwa/pwa-logo.png
 ---
-<center><small><em>(Hình cover: logo <a href="https://medium.com/samsung-internet-dev/we-now-have-a-community-approved-progressive-web-apps-logo-823f212f57c9">không chính thức</a> của PWA)</em></small></center>
+
+![logo không chính thức của PWA](/images/2018/pwa/pwa-logo.png) _logo [không chính thức](https://medium.com/samsung-internet-dev/we-now-have-a-community-approved-progressive-web-apps-logo-823f212f57c9) của PWA_
 
 **P**{:.drop-cap}rogressive Web App (PWA) là một dạng ứng dụng web (web app) mới đang thu hút rất nhiều sự quan tâm từ các nhà phát triển web khắp thế giới đặc biệt là các doanh nghiệp hoạt động trực tuyến, tuy nhiên nó vẫn còn khá mới mẻ tại Việt Nam.
 
@@ -112,10 +113,10 @@ Một tính năng đáng chú ý nữa của native app mà web app trước đ�
 
 Cũng nhờ **Service Worker**, là một chương trình nhỏ viết bằng ngôn ngữ Web JavaScript nhưng nó chạy ngầm và độc lập với web app chính, PWA có khả năng nhận push notification như native app. Điều này đồng nghĩa với việc ngay cả khi web app và trình duyệt đã được đóng hẳn, chúng vẫn có thể nhận được notification[^5].
 
-<figure class="figure">
-    <video class="figure__image" src="/images/2018/pwa/push-notification-demo.mp4" poster="/images/2018/pwa/push-notification-demo.jpg" controls onclick="this.paused ? this.play() : this.pause();"
+<figure>
+    <video src="/images/2018/pwa/push-notification-demo.mp4" poster="/images/2018/pwa/push-notification-demo.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
-    <figcaption class="figure__caption">Push notification demo. Bấm lên hình để play.</figcaption>
+    <figcaption>Push notification demo. Bấm lên hình để play.</figcaption>
 </figure>
 
 ### Tự động đồng bộ khi có mạng trở lại
@@ -124,10 +125,10 @@ Một khả năng khác của Service Worker, đó là hỗ trợ PWA tự độ
 
 Lấy ví dụ: ứng dụng nhắn tin tức thời, người dùng gửi một tin nhắn đi khi điện thoại của họ mất kết nối. Ngay khi điện thoại của họ có Internet trở lại, Service Worker sẽ tiếp tục gửi tin nhắn đi cho người dùng hoặc bất kỳ tác vụ nào cần đến Internet.
 
-<figure class="figure">
-    <video class="figure__image" src="/images/2018/pwa/background-sync.mp4" poster="/images/2018/pwa/background-sync.jpg" controls onclick="this.paused ? this.play() : this.pause();"
+<figure>
+    <video src="/images/2018/pwa/background-sync.mp4" poster="/images/2018/pwa/background-sync.jpg" controls onclick="this.paused ? this.play() : this.pause();"
     ></video>
-    <figcaption class="figure__caption">Demo tự động gửi tin sau khi online. Video lấy từ <a href="https://www.youtube.com/watch?v=cmGr0RszHc8">bài thuyết trình của Jake Archibald</a>. Bấm lên hình để play.</figcaption>
+    <figcaption>Demo tự động gửi tin sau khi online. Video lấy từ <a href="https://www.youtube.com/watch?v=cmGr0RszHc8">bài thuyết trình của Jake Archibald</a>. Bấm lên hình để play.</figcaption>
 </figure>
 
 ### Chia sẻ bằng native banner của hệ điều hành
