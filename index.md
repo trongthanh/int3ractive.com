@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Int3ractive
+title: Xin chào!
 postsHeading: Latest blog posts
 archiveButtonText: See all posts
 metaTitle: 'Home page of Trần Trọng Thanh - Int3ractive'
@@ -8,4 +8,4 @@ metaDesc: The writing playground and technical journal of Trần Trọng Thanh, 
 image: /images/home-bg.jpg
 ---
 
-Welcome! I am Trần Trọng Thanh and this is my home page and blog. I co-founded [Nau Studio](https://naustud.io) and [Goalify.plus](https://goalify.plus/). Currently, I am the principal web engineer at [Chotot.com](https://chotot.com).
+Welcome to the writing playground and technical journal by [Trần Trọng Thanh](https://int3ractive.com/about).
