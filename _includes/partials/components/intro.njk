@@ -4,7 +4,7 @@
     <div class="cover-image__frame no-replace">
       <img src="{{ coverImage }}" alt="{{ coverCaption }}" class="cover-image__img">
     </div>
-    {% if coverCaption %}<figcaption>{{ coverCaption }}</figcaption>{% endif %}
+    {% if coverCaption %}<figcaption>{{ coverCaption | safe }}</figcaption>{% endif %}
   </figure>
   {% endif %}
   <div class="[ intro__wrapper ] [ inner-wrapper ] [ sf-flow ]">
