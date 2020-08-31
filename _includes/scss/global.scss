@@ -1,0 +1,133 @@
+@import 'config';
+
+// Pull in the stalfos lib
+@import '../../node_modules/stalfos/stalfos.scss';
+
+// Local mixins
+@import 'mixins/dark-mode';
+
+@import 'theme';
+
+// Local dependencies
+@import 'typography';
+
+/**
+ * GLOBAL STYLES
+ */
+html,
+body {
+	height: 100%;
+}
+
+body {
+	scroll-behavior: smooth;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+	&:focus {
+		outline: none;
+	}
+}
+
+hr {
+	display: block;
+	height: 1px;
+	max-width: 500px;
+	background: var(--color-stroke);
+	border: none;
+	margin: get-size(900) auto;
+}
+
+// For when metric attributes are added to img elements
+img {
+	height: auto;
+}
+
+:focus {
+	outline: 1px solid var(--color-theme-primary-glare);
+	outline-offset: 0.25rem;
+}
+
+/**
+ * PROJECT IMPORTS
+ */
+
+// Utils
+@import 'utilities/inner-wrapper';
+@import 'utilities/visually-hidden';
+@import 'utilities/wrapper';
+
+// Components
+@import 'components/button';
+@import 'components/form';
+@import 'components/heading-permalink';
+@import 'components/intro';
+@import 'components/nav';
+@import 'components/pagination';
+@import 'components/post';
+@import 'components/post-list';
+@import 'components/site-head';
+@import 'components/site-foot';
+@import 'components/skip-link';
+@import 'components/syntax-highlighting';
+@import 'components/video-player';
+
+/* Custom CSS for speaking section */
+.events {
+	list-style: none;
+	padding: 0;
+}
+
+.events__section {
+	padding: 0.5rem 1.25rem;
+	color: var(--color-theme-feature-text);
+	background-color: var(--color-theme-highlight-block);
+	margin: -1px -1.25rem 1.25rem -1.25rem; /*-1px to cover the bottom border*/
+}
+
+.events__section h2 {
+	margin: 0;
+}
+
+.events__item {
+	border-bottom: 1px solid var(--color-stroke);
+	margin-top: 0.5em;
+	padding-bottom: 1em;
+	position: relative;
+}
+
+.events__item__desc {
+	overflow: hidden;
+}
+
+.events__item__title {
+	margin: 0.5em 0;
+}
+
+.events__item__logo {
+	position: absolute;
+	background-color: #fff;
+	width: 100px;
+	height: auto;
+	right: 0;
+	top: 0;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 768px) {
+	.events__item__time {
+		float: left;
+		margin-right: 1em;
+		width: 120px;
+	}
+
+	.events__item__logo {
+		width: 120px;
+		left: 0;
+		top: 58px;
+		bottom: initial;
+	}
+}

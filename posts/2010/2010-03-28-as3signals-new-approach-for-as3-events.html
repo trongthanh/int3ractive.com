@@ -1,0 +1,150 @@
+---
+title: 'as3signals: new approach for AS3 Events'
+date: '2010-03-28T22:24:00.002+07:00'
+author: Thanh Tran
+tags: [flash, flash library]
+modified_time: '2011-05-06T12:49:32.892+07:00'
+blogger_id: tag:blogger.com,1999:blog-5363322361445724369.post-4028328242571488603
+blogger_orig_url: http://blog.int3ractive.com/2010/03/as3signals-new-approach-for-as3-events.html
+---
+
+<p>There are times you may find that the built-in events of AS3 are limited and even troublesome. Here are some circumstances that EventDispatchers turn against developers:</p>
+
+<ol>
+	<li><strong>Objects MUST extend EventDispatcher</strong> in order to be able to dispatch events. Implementing IEventDispatcher alone is impossible because the event target is read-only and you cannot change it from outside of EventDispatcher.</li>
+	<li><strong>It&rsquo;s difficult to manage events</strong>. There&rsquo;s no way you can remove all event handlers attached to an event dispatcher at once. So in some cases, you don&rsquo;t remove them properly and they start causing bugs. (BTW, using weak references is not reliable and not recommended.)</li>
+	<li>You<strong> cannot pass extra data to you listener</strong> unless you extends a new Event object</li>
+	<li>You<strong> cannot set up your interface</strong> in a way that it can enforce implementing classes to dispatch the required events.</li>
+	<li>On performance perspective, creating objects is one of the most evil things. That&rsquo;s why any advanced programmers must know and practically use objects pool. However, we are still<strong> wasting a lot of resources creating event objects</strong>, especially repetitive events like mouse move or enter frame.</li>
+	<li>Read <a href="http://robertpenner.com/flashblog/2009/09/my-critique-of-as3-events-part-2.html" target="_blank" rel="noopener">here</a> for more critiques on AS3 events</li>
+</ol>
+<p>So in order to address those issues, <a href="http://robertpenner.com/flashblog/" target="_blank" rel="noopener">Robert Penner</a> has adopted an alternative to AS3 events namely <a href="http://github.com/robertpenner/as3-signals" target="_blank" rel="noopener">as3signals</a>. (Follow the link for more info and get the library) <br />Here&rsquo;s the briefing from <a href="http://wiki.github.com/robertpenner/as3-signals/" target="_blank" rel="noopener">as3signals wiki page</a>:</p>
+<blockquote><strong>Signals: Think Outside the Event.</strong><br />Signals are light-weight, strongly-typed AS3 messaging tools. <br />Wire your application with better APIs and less boilerplate than AS3 Events. <br /><strong>Concept</strong><br />
+<ul>
+	<li>A Signal is essentially a mini-dispatcher specific to one event, with its own array of listeners.</li>
+	<li>A Signal gives an event a concrete membership in a class.</li>
+	<li>Listeners subscribe to real objects, not to string-based channels.</li>
+	<li>Event string constants are no longer needed.</li>
+	<li>Signals are inspired by C# events and signals/slots in Qt.</li>
+</ul>
+</blockquote>
+<p>Let&rsquo;s see how as3signals gains advantages over AS3 events:</p>
+<h4>1. Any object can dispatch events</h4>
+<p>Here&rsquo;s how you create an event dispatching object with Signals:</p>
+<div>
+<ol>
+<li>
+<div>import org.osflash.signals.Signal;</div>
+</li>
+<li>
+<div>publicclass Radio {</div>
+</li>
+<li></li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; // This is the public API to which listeners subscribe.</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicvar messageChanged:Signal;</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; privatevar _message:<a href="http://www.google.com/search?q=string%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:string.html">String</a>;</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicfunction Radio(){</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Create a Signal that dispatches a String.</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; messageChanged = new Signal(<a href="http://www.google.com/search?q=string%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:string.html">String</a>);</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; }</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicfunctiongetmessage():<a href="http://www.google.com/search?q=string%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:string.html">String</a>{return _message;}</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; // The setter uses the Signal to dispatch the changed value.</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; publicfunctionsetmessage(value:<a href="http://www.google.com/search?q=string%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:string.html">String</a>):void{</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _message = value;</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; messageChanged.dispatch(_message);</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; }</div>
+</li>
+<li>
+<div>}</div>
+</li>
+</ol>
+</div>
+<p>Here&rsquo;s how you add event listeners:</p>
+<div>
+<ol>
+<li>
+<div>var radio: Radio = new Radio();</div>
+</li>
+<li>
+<div>// Hook the listener up to the Radio's Signal.</div>
+</li>
+<li>
+<div>radio.messageChanged.add(messageChangedHandler);</div>
+</li>
+<li></li>
+<li>
+<div>function messageChangedHandler(message:<a href="http://www.google.com/search?q=string%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:string.html">String</a>):void{</div>
+</li>
+<li>
+<div>&nbsp;&nbsp;&nbsp; trace("heard message: "+message);</div>
+</li>
+<li>
+<div>}</div>
+</li>
+</ol>
+</div>
+<h4>2. With signals, managing events is much less hassle</h4>
+<p>You can remove all event handlers with one convenient method:</p>
+<div>signal.removeAll();</div>
+<p>You can retrieve number of listeners:</p>
+<div>signal.numListeners;</div>
+<p>You can add a listener that will be removed automatically after just one event:</p>
+<div>signal.addOnce(theListener);// result: signal has one listener<br />signal.dispatch(theEvent);&nbsp;&nbsp; // result: theListener is called, signal now has no listeners</div>
+<h4>3. You can dispatch with any number of arguments to listener</h4>
+<p>You can define types for your arguments</p>
+<div>// A Signal that will dispatch a String and an integer:<br />progress = new Signal(<a href="http://www.google.com/search?q=string%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:string.html">String</a>,<a href="http://www.google.com/search?q=int%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:int.html">int</a>);</div>
+<p>Later on, when you dispatch events, as3signals can detect and notify argument error</p>
+<div>//later:<br />progress.dispatch();// will throw ArgumentError <br />progress.dispatch('The Answer');// will throw ArgumentError <br />progress.dispatch('The Answer',42.5);// will throw ArgumentError <br />progress.dispatch('The Answer',42);// will succeed</div>
+<p>When adding listeners, they are all so checked for argument types.</p>
+<h4>4. It&rsquo;s possible that you enforce events in interface</h4>
+<p>To see an example, please follow this link <a title="http://snipt.org/wSm" href="http://snipt.org/wSm">http://snipt.org/wSm</a></p>
+<h4>5. It&rsquo;s performance gain because no event object is created in Signals</h4>
+<p>But that&rsquo;s not everything yet. The ultimate deal is to replace ENTER_FRAME event. <br />As we know that ENTER_FRAME event is the key to time-based animations and are widely used. Normally, ENTER_FRAME event can create 25 &ndash; 30 objects per second, that&rsquo;s 1500-1800 objects per minute. But we are aware that that creating objects is evil. So some guys have tried to replace the ENTER_FRAME event with Signals. Read <a href="http://alecmce.com/as3/replacing-enter_frame" target="_blank" rel="noopener">this blog</a> for more info. (The site is currently down, so please use this <a href="http://74.125.153.132/search?q=cache:z4_I5r8RVZkJ:alecmce.com/as3/replacing-enter_frame+http://alecmce.com/as3/replacing-enter_frame&amp;cd=1&amp;hl=vi&amp;ct=clnk&amp;gl=vn" target="_blank" rel="noopener">cache from Google</a>)</p>
+<h4>6. Signals only projects</h4>
+<p>Signals can wrap the native events of AS3 so that the whole project will use a consistent messaging system for communication between components. For example:</p>
+<div>varclick:NativeSignal = new NativeSignal(this,<a href="http://www.google.com/search?q=mouseevent%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:mouseevent.html">MouseEvent</a>.CLICK,<a href="http://www.google.com/search?q=mouseevent%20inurl:http://livedocs.adobe.com/flex/201/langref/%20inurl:mouseevent.html">MouseEvent</a>);</div>
+<p>The author also claimed that he&rsquo;s experimenting <a href="http://wiki.github.com/robertpenner/as3-signals/features" target="_blank" rel="noopener">the bubble feature</a> (the ability to forward events among objects in display list).</p>
+<h4>Conclusion</h4>
+<p>It is still under development and improvement but as3signals&rsquo; current feature set can satisfy most common project&rsquo;s needs. Some guys even love it so much that they branch some frameworks to work purely with Signals, for example:</p>
+<ul>
+<li><a href="http://github.com/piercer/puremvc-as3-multicore/tree/as3Signals" target="_blank" rel="noopener">PureMVC AS3 Multicore &ndash; as3signal branch</a></li>
+<li><a href="http://richtextformat.co.uk/blog/?p=445" target="_blank" rel="noopener">RobotSignals &ndash; RobotLegs &amp; as3signals combination</a></li>
+<li><a href="http://www.kilometer0.com/blog/code/swfaddress-and-as3signals/" target="_blank" rel="noopener">SWFAddress as3signals version</a></li>
+<li>See more examples <a href="http://wiki.github.com/robertpenner/as3-signals/community-examples" target="_blank" rel="noopener">here</a></li>
+</ul>
+<p>For now, I see no shortcomings of signals but I&rsquo;m still skeptical that there might be some disadvantages compared to AS3 events because nothing is perfect. (Please help me pointing them out) <br />Anyway, it is worth trying as3signals in my upcoming projects to see if it really &lsquo;shines&rsquo; in real applications. <br />(Credit: some of the sample code are revised from this <a href="http://wiki.github.com/robertpenner/as3-signals/hello-world" target="_blank" rel="noopener">Hello World example</a>) <br />[Vietnamese tags: as3signals: c&aacute;ch tiếp cận mới cho sự kiện (event) trong AS3]</p>
+<p>Generate div table elements with <a href="https://divtable.com/table-styler/" target="_blank" rel="noopener">this table generator</a>, a free online tool! It is also capable of generating and convert grid elements.</p>

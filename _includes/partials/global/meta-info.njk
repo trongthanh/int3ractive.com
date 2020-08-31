@@ -1,0 +1,43 @@
+{% set pageTitle = title + ' - ' + site.name %}
+{% set siteTitle = site.name %}
+{% set currentUrl = site.url + page.url %}
+
+{% if metaTitle %}
+  {% set pageTitle = metaTitle %}
+{% endif %}
+
+<title>{{ pageTitle }}</title>
+<link rel="canonical" href="{{ currentUrl }}" />
+
+<meta property="og:site_name" content="{{ siteTitle }}" />
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ currentUrl }}" />
+
+{% if site.twitterUsername %}
+  <meta name="twitter:creator" content="@{{ site.twitterUsername | replace('@', '') }}" />
+{% endif %}
+
+{% if metaDesc %}
+  <meta name="description" content="{{ metaDesc }}" />
+  <meta name="twitter:description" content="{{ metaDesc }}" />
+  <meta property="og:description" content="{{ metaDesc }}" />
+{% endif %}
+
+{% if image %}
+  {% set socialImage = image %}
+{% elif coverImage %}
+  {# Use coverImage for both post cover and preview photo in social networks #}
+  {% set socialImage = coverImage %}
+{% endif %}
+
+{% if socialImage %}
+  <meta property="og:image" content="{{ socialImage | prepend(site.url) }}" />
+  <meta name="twitter:image" content="{{ socialImage | prepend(site.url) }}" />
+  <meta property="og:image:alt" content="Page image for {{ pageTitle }}" />
+  <meta name="twitter:image:alt" content="Page image for {{ pageTitle }}" />
+{% endif %}
+
+{% if site.paymentPointer %}
+  <meta name="monetization" content="{{ site.paymentPointer }}" />
+{% endif %}

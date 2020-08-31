@@ -1,6 +1,3 @@
-_drafts
-.jekyll-metadata
-Gemfile.lock
 _site
 node_modules
 .sass-cache

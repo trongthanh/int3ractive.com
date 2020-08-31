@@ -1,0 +1,21 @@
+---
+title: A Cave, 3D Stereo Images & 2-State Looping Animation
+date: '2012-05-10T14:43:00.001+07:00'
+author: Thanh Tran
+tags: [labs, html5, css]
+modified_time: '2013-07-04T09:59:34.179+07:00'
+thumbnail: https://4.bp.blogspot.com/-mskGDxFUVco/T6tuynEL1OI/AAAAAAAAEiI/f8kZWprPZ20/s72-c/DSC_0192.jpg
+blogger_id: tag:blogger.com,1999:blog-5363322361445724369.post-2774511024287033573
+blogger_orig_url: http://blog.int3ractive.com/2012/05/cave-3d-stereo-images-2-state-looping.html
+---
+
+When I visited <a href="http://en.wikipedia.org/wiki/Thien_Duong_Cave" target="_blank">this cave</a> during the trip to the central provinces of Viet Nam. I wanted to capture it magnificence and beauty but the cave's texture was too complex to visualize its depth and space on 2D photos. I recalled this <a href="http://www.cambridgeincolour.com/tutorials/animated-3d-stereo-photography.htm" target="_blank">3D photography technique</a> and tried to take some stereo photos of the scenes (take 2 photos of the same scene from 2 slightly different position) and made them into 3D stereo animation when I get back.<br />
+<br />
+
+Traditionally, these 3D stereo images are presented by a 2-frame animated GIF. But GIF images are not efficient for live photographs and they normally take up more bytes than JPG for large pictures so I decided to use CSS and JavaScript to reproduce the animation with JPG photos.<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://4.bp.blogspot.com/-mskGDxFUVco/T6tuynEL1OI/AAAAAAAAEiI/f8kZWprPZ20/s1600/DSC_0192.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="300" src="http://4.bp.blogspot.com/-mskGDxFUVco/T6tuynEL1OI/AAAAAAAAEiI/f8kZWprPZ20/s400/DSC_0192.jpg" width="400" /></a></div>
+<br />
+Basically, the JPG is set as background of a div which has dimensions of half of the image. JS will shift the background-position at intervals revealing half of the background one at a time. And <a href="http://labs.int3ractive.com/javascript/effects/stereo-images/index.html" target="_blank">here's the results</a>.<br />
+<br />
+During the making of the effect, I also explored its possibility with CSS3 animation and steps() function. The result is the same without any coding. But for the sake of compatibility for the audience, the said demo still use JS. I put the CSS3 solution on Dabblet for later reference of similar 2-state animation. <a href="http://dabblet.com/gist/5582401" target="_blank">Check it out</a>.

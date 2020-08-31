@@ -1,0 +1,27 @@
+---
+title: HTML5 Wordle Tag Cloud
+date: '2012-08-28T12:27:00.000+07:00'
+author: Thanh Tran
+tags: [javascript, labs, html5]
+modified_time: '2012-08-28T12:27:35.079+07:00'
+thumbnail: https://4.bp.blogspot.com/-1mx7fdnE-AU/UDwyOfgRS7I/AAAAAAAAE-A/62e_6ffT5Yg/s72-c/preview.jpg
+blogger_id: tag:blogger.com,1999:blog-5363322361445724369.post-1238003897961001065
+blogger_orig_url: http://blog.int3ractive.com/2012/08/html5-wordle-tag-cloud.html
+---
+
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://labs.int3ractive.com/javascript/effects/wordle-tag-cloud" target="_blank"><img alt="Wordle JS" border="0" height="320" src="http://4.bp.blogspot.com/-1mx7fdnE-AU/UDwyOfgRS7I/AAAAAAAAE-A/62e_6ffT5Yg/s320/preview.jpg" title="" width="320" /></a></div>
+<br />
+This is a direct port of my <a href="http://blog.int3ractive.com/2011/02/as3-wordle-tag-cloud.html" target="_blank">AS3 Wordle Tag Cloud</a>&nbsp;to HTML5. Please read my old blog post for some background.<br />
+<br />
+Some technical notes:<br />
+<ul>
+<li>Thanks to Canvas' RenderingContext2D.measureText(), I can calculate size of the words off browser's stage.</li>
+<li>Initially, I was using Canvas as rendering stage for the tag cloud. However, it demands extra work to make the words interactive. So I decided to use normal block text with CSS3's transform/rotate. The result is texts are searchable and out-of-the-box hyperlinks.</li>
+<li>The position checking process may cause browser hang momentarily if run through all of the words. I have split the process of each word into each RequestAnimationFrame to avoid the script hang.</li>
+</ul>
+<div>
+However, there is still room to improve, for example, enhancing the intersection check and using any angle rotation...</div>
+<div>
+<br /></div>
+There you go! Check out the <a href="http://labs.int3ractive.com/javascript/effects/wordle-tag-cloud" target="_blank">live demo</a> and <a href="https://github.com/trongthanh/labs.int3ractive.com/tree/gh-pages/javascript/effects/wordle-tag-cloud" target="_blank">source code</a>.
