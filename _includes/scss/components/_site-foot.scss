@@ -1,0 +1,48 @@
+.site-foot {
+	// Reverse whatever the theme colors are
+	background: var(--color-bg-glare);
+	color: var(--color-text);
+	border-top: 1px solid var(--color-stroke);
+
+	a {
+		color: currentColor;
+	}
+
+	&__social {
+		list-style: none;
+		text-align: center;
+
+		& li {
+			display: inline-block;
+
+			& a {
+				display: block;
+				padding: #{get-size(300)};
+				color: var(--color-action-text);
+
+
+				&:hover {
+					& path {
+						fill: var(--color-theme-primary);
+					}
+				}
+			}
+		}
+
+
+		& svg {
+			width: #{get-size(500)};
+			& path {
+				fill: var(--color-action-bg);
+			}
+		}
+	}
+
+	&__credit {
+		text-align: center;
+
+		& a:hover {
+			text-decoration-style: dashed;
+		}
+	}
+}

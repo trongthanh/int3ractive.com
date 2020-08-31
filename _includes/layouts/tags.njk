@@ -1,0 +1,15 @@
+{% extends 'layouts/base.njk' %}
+
+{# Intro content #}
+{% set introHeading = title %}
+{% set introSummary %}{{ content | safe }}{% endset %}
+
+{% set tagListHeading = 'All tags' %}
+{% set tagListItems = helpers.filterUserTags(collections) %}
+
+{% block content %}
+  <main id="main-content" tabindex="-1">
+    {% include "partials/components/intro.njk" %}
+    {% include "partials/components/tag-list.njk" %}
+  </main>
+{% endblock %}

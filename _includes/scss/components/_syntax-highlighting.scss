@@ -1,0 +1,199 @@
+/**
+ * Ocean theme for Prism.js
+ * Based on Atom's `atom-dark` theme: https://github.com/atom/atom-dark-syntax
+ * @author Thanh Tran (int3ractiave.com)
+ */
+code[class*='language-'],
+pre[class*='language-'] {
+	color: #c5c8c6;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	// font-family: IBM Plex Mono, Menlo, SF Mono, Consolas, Cascadia Code, monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+	padding: 0.1em;
+	border-radius: 0.3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #65737e;
+	font-style: italic;
+}
+
+.token.punctuation {
+	color: #5fb3b3;
+}
+
+.namespace {
+	opacity: 0.7;
+}
+
+.token.keyword,
+.token.selector,
+.token.attr-name {
+	color: #c594c5;
+}
+
+.token.property,
+.token.class-name {
+	color: #fac863;
+}
+
+.token.boolean,
+.token.constant,
+.token.parameter {
+	color: #f99157;
+}
+
+.token.tag,
+.token.symbol,
+.token.deleted {
+	color: #ec5f67;
+}
+
+.token.number {
+	color: #f99157;
+}
+
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.attr-value {
+	color: #99c794;
+}
+
+.token.variable {
+	color: #f07178;
+}
+
+.token.operator {
+	color: #5fb3b3;
+}
+
+.token.entity {
+	color: #f07178;
+	cursor: help;
+}
+
+.token.url {
+	color: #6699cc;
+}
+
+.language-css .token.string,
+.style .token.string {
+	color: #99c794;
+}
+
+.token.atrule {
+	color: #f99157;
+}
+
+.token.function {
+	color: #6699cc;
+}
+
+.token.regex {
+	color: #5fb3b3;
+}
+
+.token.important {
+	color: #f99157;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+// line highlight
+.highlight-line-active {
+	background: transparent;
+	color: inherit;
+}
+
+.highlight-line-active::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 1.5em;
+	background: hsla(24, 20%, 50%, 0.1);
+	border-left: solid 3px #6699cc;
+
+	pointer-events: none;
+
+	line-height: inherit;
+	white-space: pre;
+}
+
+
+@media screen and (-ms-high-contrast: active) {
+	code[class*='language-'],
+	pre[class*='language-'] {
+		color: windowText;
+		background: window;
+	}
+
+	:not(pre) > code[class*='language-'],
+	pre[class*='language-'] {
+		background: window;
+	}
+
+	.token.important {
+		background: highlight;
+		color: window;
+		font-weight: normal;
+	}
+
+	.token.atrule,
+	.token.attr-value,
+	.token.function,
+	.token.keyword,
+	.token.operator,
+	.token.selector {
+		font-weight: bold;
+	}
+
+	.token.attr-value,
+	.token.comment,
+	.token.doctype,
+	.token.function,
+	.token.keyword,
+	.token.operator,
+	.token.property,
+	.token.string {
+		color: highlight;
+	}
+
+	.token.attr-value,
+	.token.url {
+		font-weight: normal;
+	}
+}

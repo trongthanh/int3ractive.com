@@ -1,0 +1,88 @@
+/* Form */
+
+form {
+	max-width: 35rem;
+}
+
+form br {
+	display: none;
+}
+
+label {
+	display: block;
+	font-weight: 600;
+}
+
+input,
+select {
+	line-height: 1;
+}
+
+input,
+textarea,
+select {
+	background-color: #fff;
+	font: inherit;
+	border: 1px solid var(--color-text);
+	margin-top: 0.15rem;
+	padding: 0.5rem 1rem;
+	width: 100%;
+
+	@include apply-utility('font', 'base');
+}
+
+label input {
+	margin: -0.25rem 0.5rem 0 0;
+	width: auto;
+	vertical-align: middle;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+legend {
+	display: block;
+	font-weight: bold;
+}
+
+.field-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.field-list__field-group {
+	margin-bottom: 2rem;
+	transition: transform 150ms;
+
+	&__description {
+		display: block;
+		margin-top: 0.3rem;
+		font-size: 0.875rem;
+		line-height: 1.25;
+	}
+
+	textarea + &__description {
+		margin-top: 0;
+	}
+
+	&--confirm {
+		font-weight: normal;
+	}
+
+	&__list {
+		list-style: none;
+		margin: 0;
+
+		label {
+			font-weight: normal;
+		}
+
+		.field-list__field-group__description {
+			margin: 0 0 0 1.35rem;
+		}
+	}
+}

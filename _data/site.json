@@ -1,0 +1,18 @@
+{
+	"name": "Int3ractive",
+	"shortDesc": "The writing playground and technical journal by Trần Trọng Thanh — Front End architect, JS developer from Ho Chi Minh city, Vietnam",
+	"url": "https://int3ractive.com",
+	"authorEmail": "trongthanh@gmail.com",
+	"authorName": "Thanh Tran",
+	"twitterUsername": "trongthanh",
+	"githubUsername": "trongthanh",
+	"codepenUsername": "trongthanh",
+	"facebookUsername": "trongthanh",
+	"linkedinUsername": "trongthanh",
+	"gaid": "UA-4430452-4",
+	"disqusId": "conansblog",
+	"enableThirdPartyComments": true,
+	"maxPostsPerPage": 10,
+	"paymentPointer": "",
+	"faviconPath": "/images/favicon.png"
+}

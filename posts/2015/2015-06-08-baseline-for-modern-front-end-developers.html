@@ -1,0 +1,130 @@
+---
+title: Baseline for Modern Front End Developers
+subtitle: My own take on the matter, adapted for 2015
+description: Inspired by this popular article by Rebecca Murphey, A Baseline for Front-End Developers, I'm presenting Baseline for Modern Front End Developers (Not-Just-JavaScript edition) which is tailored to target juniors and more updated with latest trends.
+date: '2015-06-08T08:47:00.003+07:00'
+author: Thanh Tran
+tags: [workflow, front end, thoughts]
+modified_time: '2015-06-08T08:47:49.121+07:00'
+thumbnail: https://2.bp.blogspot.com/-mF8YcFrCO8Q/VXPniJnFrZI/AAAAAAAABDY/T7PQ5bKPoYs/s72-c/front-end-baseline.png
+blogger_id: tag:blogger.com,1999:blog-5363322361445724369.post-6228156097723815741
+blogger_orig_url: http://blog.int3ractive.com/2015/06/baseline-for-modern-front-end-developers.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-mF8YcFrCO8Q/VXPniJnFrZI/AAAAAAAABDY/T7PQ5bKPoYs/s1600/front-end-baseline.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="300" src="http://2.bp.blogspot.com/-mF8YcFrCO8Q/VXPniJnFrZI/AAAAAAAABDY/T7PQ5bKPoYs/s640/front-end-baseline.png" width="610" /></a></td></tr>
+<tr><td class="tr-caption" style="text-align: right;">word cloud by wordle.net</td></tr>
+</tbody></table>
+From my own experiences working in small and large development teams, I learned that setting a baseline of skills and workflow know-how among the people in a technical team is as much important as the coding conventions.<span id="goog_1142196189"></span><br />
+
+<br />
+Without a doubt, raising team members' skills (esp. juniors) to a standard will not only enhance collaboration (as they should know what others are doing) but also improve their productivity.<br />
+<br />
+When forming up my front-end team at Nau Studio, I thought a lot about what are the most essential skills and technical knowledge which will become my team's baseline and focus of basic training.<br />
+<br />
+Inspired by this popular article by Rebecca Murphey, <a href="http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/" target="_blank">A Baseline for Front-End Developers</a>, I'm presenting Baseline for Modern Front End Developers (Not-Just-JavaScript edition) which is tailored to target juniors and more updated with latest trends:<br />
+<br />
+<a name='more'></a><br />
+To begin, let's talk about the three pillars of Web Front End:<br />
+<h2 style="text-align: left;">
+HTML</h2>
+Many developers take HTML for granted. But the more they work with it, the more they'll realize that authoring HTML that is clear and lean requires great skills and I dare to say that it is kind of an art.<br />
+<br />
+To become a successful developer with HTML, you must know how to combine elements semantically yet effectively. This involves good understanding of all common HTML elements in terms of not just default layout rules and styling but also their semantic and contextual usage. Part of this is gained by experience, but the principles can be taught and guided.<br />
+<br />
+Helper resources:<br />
+<ul style="text-align: left;">
+<li><a href="http://html5doctor.com/" target="_blank">HTML5 Doctor</a>: Reliable reference to HTML5 elements' usage, especially in a semantic way.</li>
+<li><a href="https://docs.webplatform.org/wiki/html/tutorials" target="_blank">HTML basic tutorial</a>: Basic HTML tutorials</li>
+</ul>
+<h2 style="text-align: left;">
+CSS</h2>
+Many CSS beginners, especially IT students in Viet Nam, have very brief lessons about CSS at web dev classes and related textbooks are outdated. Most will practice trial-and-error tinkering and master CSS very inefficiently. (Or at least it was my case at the beginning)<br />
+<br />
+This is not the case in my team. Fundamental concepts of CSS like cascading, specificity rules, selectors, inheritance, box model and stacking context must be well understood.<br />
+<br />
+After the basics, you must then have some ideas of <a href="https://github.com/stubbornella/oocss/wiki" target="_blank">OOCSS</a> or start practicing some points from&nbsp;<a href="http://cssguidelin.es/" target="_blank">CSS guidelines</a>.<br />
+<br />
+Besides, front-end developers who do CSS well always have a few common tricks up their sleeves. For instance, they must know all the tricks to vertically align contents while Flex box is not yet mainstream. They must also know when to use <a href="https://css-tricks.com/pseudo-element-roundup/" target="_blank">pseudo-elements</a>, <a href="https://css-tricks.com/examples/ShapesOfCSS/" target="_blank">CSS shape tricks</a>, icon fonts, or sprite sheet, etc. to achieve the UI designs with best performance and compatibility results.<br />
+<br />
+And last but not least, a modern front-end developer should be able to use a CSS preprocessor (our favorite is <a href="http://sass-lang.com/" target="_blank">SASS</a> - SCSS flavor) to enhance maintainability and productivity of your work.<br />
+<br />
+You might ask about CSS3 and cutting-edge features? It will be a piece of cake once you've mastered the basics.<br />
+<br />
+<ul style="text-align: left;">
+<li><a href="https://docs.webplatform.org/wiki/css/tutorials" target="_blank">CSS Tutorials</a>&nbsp;from webplatform.org</li>
+<li><a href="https://github.com/stubbornella/oocss/wiki" target="_blank">OOCSS</a>: Object-Oriented CSS methodology by Nicole Sullivan</li>
+<li><a href="http://cssguidelin.es/" target="_blank">CSS Guidelines</a>&nbsp;by CSS Wizardry - Harry Robert</li>
+<li><a href="http://css-tricks.com/" target="_blank">CSS Tricks</a>: Who does CSS and hasn't visited this site before? :)</li>
+</ul>
+<h2 style="text-align: left;">
+JavaScript</h2>
+jQuery may be <a href="http://youmightnotneedjquery.com/" target="_blank">not an entrance requirement</a> to Web Front End anymore but I think it is still a very helpful lead-in for beginners to the fragmented world of web browser scripting.<br />
+<br />
+Like Rebecca has made it clear, learning vanilla (pure) JavaScript is essential and if you haven’t read JavaScript: The Good Parts, it’s totally fine as long as you’ll learn from Eloquent Javascript or JavaScript Enlightenment and the like.<br />
+<br />
+At any level, I believe, there are three key features of JavaScript that are crucial to your comprehension of the language; they are prototype chain, closures, and 'this' keyword. Other “interesting” features of the language such as dynamic typing, literals, variable and function hoisting... should be understood as well.<br />
+<br />
+When you get more advanced in JS, and wanting to get a more structured and maintainable approach of doing it, you’ll learn JS idioms, patterns, modules and may be an MV* framework all along.<br />
+<br />
+2015 is the year the next generation of JavaScript, ECMAScript 6 (AKA ES 2015), is finalized in specs and there is a huge <a href="https://www.youtube.com/watch?v=PlmsweSNhTw" target="_blank">rise of adoptions and use of es6-to-5 compilers</a>. As one of the main users of the language, you don’t want to stand out of this trend. Get ready by learning ES6 new features and adopt the compile-to-es5 workflow as soon as you have the chance.<br />
+<br />
+In my opinion, NodeJS is not in the baseline of Front End developers. Eventually, however, you will get to know it by using one of its many tools in the workflow or having to do some server-side coding using JS.<br />
+<br />
+<ul style="text-align: left;">
+<li><a href="http://eloquentjavascript.net/" target="_blank">Eloquent JavaScript</a>: Very good book for JS newbie, and it’s free.</li>
+<li><a href="http://www.javascriptenlightenment.com/" target="_blank">JavaScript Enlightenment</a>: Another good book for newbie.</li>
+<li><a href="https://github.com/rwaldron/idiomatic.js/" target="_blank">Idiomatic JavaScript</a>: Sometimes you read others' JS code and can’t get it. Those “cypher” may be decoded here. ;)</li>
+<li><a href="http://todomvc.com/" target="_blank">TodoMVC</a>: A go-to site for MVC frameworks evaluation and comparison</li>
+<li><a href="http://addyosmani.com/writing-modular-js/" target="_blank">Writing Modular JS</a>: More details on modern JS modules</li>
+<li><a href="https://leanpub.com/understandinges6" target="_blank">Understanding ES6</a>: Learn ECMAScript 6 with Nicholas C. Zakas</li>
+</ul>
+<h2 style="text-align: left;">
+The Modern Workflow</h2>
+As I mentioned before, good team work is also affected by how well team members comply to conventions and coding style guides. In this modern age, however, it is not necessary for new joiners to learn by heart all those rules as long as they use linters (<a href="http://jshint.com/" target="_blank">JSHint</a>, <a href="http://csslint.net/" target="_blank">CSSLint</a>, <a href="https://github.com/brigade/scss-lint" target="_blank">SCSS-lint</a>) and code styles checkers (<a href="http://jscs.info/" target="_blank">JSCS</a>), to impose and shape their coding styles.<br />
+<br />
+In my team, we have a <a href="https://github.com/naustudio/dotfiles" target="_blank">dotfiles repository</a> which covers editor’s defaults and plugins, code linter config, most frequently used code snippets and some command line aliases and functions.<br />
+<br />
+Since you develop for the Web, the browsers are undoubtedly your best sidekicks. Two know-hows I would strongly recommend are using the in-browser developer tools and so-called live reload software. All modern browsers have decent built-in devtools, but the most sophisticated and useful one, to me, is Chrome's. For live reload software, I recommend looking at <a href="http://www.browsersync.io/" target="_blank">Browsersync</a>.<br />
+<br />
+Next to browsers, the code editor plays as much an important role. Whatever you choose, make sure it has decent code completion with live feedback linting. The other highly recommended features of modern front end editors are multiple cursors and fuzzy file search. If you ask me, I suggest checking <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a> or <a href="https://atom.io/" target="_blank">Atom</a>. Besides, don’t miss out <a href="http://emmet.io/" target="_blank">Emmet</a>, the plugin that will “greatly improves HTML &amp; CSS workflow”.<br />
+<br />
+The Front End workflow can't be completed without mentioning automation tools like the command-line-based <a href="http://gruntjs.com/" target="_blank">Grunt</a> or <a href="http://gulpjs.com/" target="_blank">Gulp</a> or the GUI-based counter parts namely&nbsp;<a href="http://incident57.com/codekit/" target="_blank">CodeKit</a> or <a href="http://livereload.com/" target="_blank">LiveReload</a>. Modern web front-end process targeting performance is becoming so complicated that it is very <a href="https://developers.google.com/speed/docs/insights/rules" target="_blank">tedious to handle manually</a>. Being able to use a process automation tool is becoming the baseline standard.<br />
+<br />
+Other skills and knowledge that are too obvious to talk into details: version control system, software development process, agile methodologies, communication tooling and the OS platform you choose to work on.<br />
+<br />
+<ul style="text-align: left;">
+<li><a href="https://github.com/naustudio/dotfiles" target="_blank">Nau's Front End Dotfiles</a>: A set of tools and config for our team’s workflow.</li>
+<li><a href="https://youtu.be/38D6SW26mn0" target="_blank">Automation with Grunt tutorial</a>&nbsp;(screencast in Vietnamese): I’ll guide you through using one of the most popular automation tools for Front End dev.</li>
+<li><a href="https://youtu.be/sBNkiuDkILA" target="_blank">Front End Project Settings &amp; Linters</a> (screencast in Vietnamese): Part of our scaffolding workflow, semi-manual for now, but will be automated with Yeoman later.</li>
+<li><a href="http://blog.chartbeat.com/2014/01/30/modern-front-end-workflow-start-finish/" target="_blank">Modern Front End workflow from start to finish</a>: An insightful read or current Front End workflow.</li>
+<li><a href="https://youtu.be/f7AU2Ozu8eo" target="_blank">JavaScript Development Workflow of 2013</a> by Paul Irish. Although it's 2 year old, there are a lot of demos of tools that are still applicable by now.</li>
+</ul>
+<h2 style="text-align: left;">
+Progressive Enhancement</h2>
+Knowing <a href="http://en.wikipedia.org/wiki/Progressive_enhancement" target="_blank">Progressive Enhancement</a> is now a must for modern Front End developers. It is not about the knowledge to implement websites exactly the same across browsers anymore, but ability to leverage the capability of each browser to provide the best experience on it. This requires developers to know how to use <a href="http://caniuse.com/">caniuse.com</a>, <a href="http://modernizr.com/" target="_blank">Modernizr</a>, <a href="https://html5boilerplate.com/" target="_blank">html5boilerplate</a> as well as knowing when a polyfill / fallback is required.<br />
+<br />
+<ul style="text-align: left;">
+<li><a href="https://youtu.be/hdTxeR90_1E" target="_blank">Progressive Enhancement 2.0</a> by Nicholas Zakas, this is one of my eye-openers to PE</li>
+<li><a href="http://www.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/" target="_blank">Progressive Enhancement: What Is It and How to Use It</a>&nbsp;from Smashing Magazine</li>
+</ul>
+<h2 style="text-align: left;">
+UI Skills Set</h2>
+You should have some understanding of typography, UI and animation concepts and can speak UI jargon fluently with your UX/UI designer fellows. (i.e: hamburger button, hero banner, the fold…)<br />
+<br />
+Besides, you should be able to open a Photoshop file to get the necessary assets for your UI development as well as extract parameters (opacity, gradient, colors…) that are applicable for CSS authoring. These manual tasks may finally be replaced by auto CSS extraction with modern design tools (Photoshop CC 2014, Sketch…), but those know-hows will still benefit you as one day you are able to make some minor adjustment to the PSD without the help of designers.<br />
+<br />
+In 2015, a new skill you should also get a grasp of is using a vector graphic editing tool (Illustrator, Inkscape…) to manipulate and extract vector images which are essential for scalable graphics in modern flat designs.<br />
+<h2 style="text-align: left;">
+Conclusion</h2>
+There you go! If you are a Front End rookie or a back-end-to-front-end convert, you may feel there are a lot to learn just to meet the baseline. It is indeed. Some even compare us with kind of programming <a href="http://jjperezaguinaga.com/2014/03/19/why-cant-we-find-front-end-developers/" target="_blank">masochists</a>. But we still go for it because we enjoy making beautiful and useful UI and we feel greatly rewarded when our creations are released to the whole world to see and experience.<br />
+<br />
+My 2 cents, not every programmer is suitable with the web front end path. What makes a good front end dev different from back end or full stack one, I believe, is that we are more visual sensitive, we can work with pixels painstakingly and possess some characteristics of perfectionists.<br />
+<h3 style="text-align: left;">
+P.S:</h3>
+During the time I was writing this blog, Murphey published a new blog post about <a href="http://rmurphey.com/blog/2015/03/23/a-baseline-for-front-end-developers-2015/" target="_blank">baseline for 2015 front end developers</a>. I told myself not to read it until I finish this article to see how our ideas may collide or differ from one another.<br />
+<br />
+I read Murphey’s post and I’m still glad I wrote this down. My target audience of this article are mostly mid-weight and below, and it aims to give you a good head start into Front End development and to collaborate better within a team. By all means, you will learn more advanced techniques through your progress with this career, but you can get away without first knowing how to write a NodeJS package or writing unit tests with Karma.<br />
+<br />
+Anyway, I hope both articles can give very good insights of this career path that is quite picky of its followers, and that is very new and demanding in Viet Nam too.</div>
