@@ -18,23 +18,18 @@
 			& a {
 				display: block;
 				padding: #{get-size(300)};
-				color: var(--color-action-text);
-
+				color: var(--color-action-bg);
 
 				&:hover {
-					& path {
-						fill: var(--color-theme-primary);
-					}
+					color: var(--color-theme-primary-glare);
 				}
 			}
 		}
 
 
 		& svg {
+			display: block;
 			width: #{get-size(500)};
-			& path {
-				fill: var(--color-action-bg);
-			}
 		}
 	}
 
