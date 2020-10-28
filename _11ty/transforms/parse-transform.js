@@ -5,7 +5,7 @@ const getImageInfo = require('../utils/image-info.js');
 
 const { JSDOM } = jsdom;
 const minify = require('../utils/minify.js');
-const pngReg = /\.png/i;
+const solidImgReg = /\.(jpg|jpeg)/i;
 
 module.exports = async function(content, outputPath) {
 	if (outputPath.endsWith('.html')) {
@@ -48,8 +48,8 @@ module.exports = async function(content, outputPath) {
 							image.setAttribute('width', info[4]);
 							image.setAttribute('height', info[5]);
 
-							// apply background color as placeholder, but not for transparent png
-							if (!pngReg.test(file)) {
+							// apply background color as placeholder, but not for transparent images
+							if (solidImgReg.test(file)) {
 								image.style.backgroundColor = `rgb(${info[0]}, ${info[1]}, ${info[2]})`;
 							}
 						}
