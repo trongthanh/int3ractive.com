@@ -44,8 +44,10 @@ module.exports = function(config) {
 	config.addPassthroughCopy('./fonts');
 	config.addPassthroughCopy('./images');
 	config.addPassthroughCopy('./js');
-	config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
 	config.addPassthroughCopy('./robots.txt');
+	config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
+	// submodule pass through
+	config.addPassthroughCopy('./slides');
 
 	const now = new Date();
 
