@@ -1,6 +1,6 @@
 {
 	"name": "blog-int3ractive",
-	"version": "2.0.0-11ty.0",
+	"version": "2.0.0",
 	"description": "A simple Eleventy starter kit to help you have a blog of your own",
 	"dependencies": {
 		"@11ty/eleventy": "^0.11.1",
@@ -11,9 +11,9 @@
 		"html-minifier": "^4.0.0",
 		"jsdom": "^16.4.0",
 		"markdown-it-attrs": "^3.0.3",
-		"sass": "^1.27.0",
+		"sass": "^1.29.0",
 		"semver": "^7.3.2",
-		"slugify": "^1.4.5",
+		"slugify": "^1.4.6",
 		"stalfos": "github:hankchizljaw/stalfos#c8971d22726326cfc04089b2da4d51eeb1ebb0eb"
 	},
 	"devDependencies": {

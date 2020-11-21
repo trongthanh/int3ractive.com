@@ -36,6 +36,8 @@
 	&__heading {
 		max-width: 40ex;
 		color: var(--color-theme-feature-text);
+		word-wrap: break-word;
+		hyphens: auto;
 
 		&--compact {
 			max-width: 20ex;
