@@ -1,17 +1,18 @@
 ---
 layout: page
-title: "NAU Tab"
+title: "Browser Extension: NAU Tab"
 subtitle: Beautiful new tab page for modern browsers
 description: Take a break from your work with this picturesque new tab extension for modern browsers.
 author: Thanh Tran
-image: /images/nau-tab-bg.jpg
+coverImage: /images/nau-tab-bg.jpg
 date: 2019-06-16T12:37:11+07:00
-cover-darken: true
 ---
+
+An light-weight extension that replaces browser's default new tab with a custom tab with beautiful wallpaper fetched from Unsplash or your own photos.
 
 ### Install:
 
-<a href="https://chrome.google.com/webstore/detail/nau-tab/pimockeojlggmlnknhicajgckmlggifa?hl=en" title="Install this extension from Chrome webstore"><img src="/images/nau-tab/chrome-webstore-badge.png" alt="Install from Chrome Webstore" style="display: inline-block; height: 60px; cursor: pointer"></a> &nbsp; <a href="https://addons.mozilla.org/en-US/firefox/addon/nau-tab/" title="Install this extension from Mozilla Firefox Add-ons"><img src="/images/nau-tab/firefox-addon-badge.png" alt="Install from Mozilla Firefox Add-ons"  style="display: inline-block; height: 60px; cursor: pointer"></a>
+<a href="https://chrome.google.com/webstore/detail/nau-tab/pimockeojlggmlnknhicajgckmlggifa?hl=en" title="Install this extension from Chrome webstore" class="no-replace"><img src="/images/nau-tab/chrome-webstore-badge.png" alt="Install from Chrome Webstore" style="display: inline-block; height: 60px; width: auto; cursor: pointer"></a> &nbsp; <a href="https://addons.mozilla.org/en-US/firefox/addon/nau-tab/" title="Install this extension from Mozilla Firefox Add-ons" class="no-replace"><img src="/images/nau-tab/firefox-addon-badge.png" alt="Install from Mozilla Firefox Add-ons"  style="display: inline-block; height: 60px; width: auto; cursor: pointer"></a>
 
 Or get the [source code from Github](https://github.com/trongthanh/nau-chrome-tab).
 

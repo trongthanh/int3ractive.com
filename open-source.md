@@ -43,9 +43,9 @@ One of my projects used `date-fns` in stead of `momentjs` because it has better 
 
 ---
 
-## [Nau Chrome Tab](https://github.com/trongthanh/nau-chrome-tab/)
+## [Nau Chrome Tab](https://int3ractive.com/nau-tab/)
 
-[![Nau chrome tab screenshot](/images/projects/nau-chrome-tab.jpg)](https://github.com/trongthanh/nau-chrome-tab/)
+[![Nau chrome tab screenshot](/images/projects/nau-chrome-tab.jpg)](https://int3ractive.com/nau-tab/)
 
 A browser extension which replace new tab page with full screen wallpaper, quick links, inspired quotations and clock. Yeah, it's a copy of Momentum extension, but this one is light weight, no tracking, and I wrote it from scratch.
 
