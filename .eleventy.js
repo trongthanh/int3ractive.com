@@ -1,6 +1,6 @@
+const fs = require('fs');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const fs = require('fs');
 
 // Import filters
 const dateFilter = require('./_11ty/filters/date-filter.js');
@@ -19,7 +19,11 @@ const site = require('./_data/site.json');
 
 const prodMode = process.env.ELEVENTY_ENV !== 'development';
 
-module.exports = function(config) {
+module.exports = function (config) {
+	// revert options changed since 1.0
+	config.setDataDeepMerge(false);
+	config.setLiquidOptions({ strictFilters: false, dynamicPartials: false });
+
 	config.setLibrary('md', markdownConfig.library);
 	// Filters
 	config.addFilter('dateFilter', dateFilter);
@@ -72,7 +76,7 @@ module.exports = function(config) {
 	// 404
 	config.setBrowserSyncConfig({
 		callbacks: {
-			ready: function(err, browserSync) {
+			ready: function (err, browserSync) {
 				const content_404 = fs.readFileSync('_site/404.html');
 
 				browserSync.addMiddleware('*', (req, res) => {

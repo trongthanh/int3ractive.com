@@ -131,7 +131,7 @@ Tại trang settings của project trên Git host, thêm deploy key và paste n�
 - Tại Github, vào Settings > Chọn Deploy Keys
 - Tại Gitlab, vào Settings > Repository > Deploy Keys
 
-![Add deploy key]({{ "images/2017/bitbucket-deploy-key.png" | absolute_url }})_Ảnh chụp popup thêm Access key của Bitbucket._
+![Add deploy key]({{ "/images/2017/bitbucket-deploy-key.png" | url }})_Ảnh chụp popup thêm Access key của Bitbucket._
 
 Quay trở lại terminal của server, tạo thư mục để chứa mã nguồn của app sẽ được clone vào:
 
