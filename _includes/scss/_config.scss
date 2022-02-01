@@ -163,9 +163,9 @@ $stalfos-config: (
 	'width': (
 		'items': (
 			'full': '100%',
-			'half': percentage(1/2),
-			'quarter': percentage(1/4),
-			'third': percentage(1/3),
+			'half': percentage(0.5),
+			'quarter': percentage(0.25),
+			'third': percentage(0.333333),
 		),
 		'output': 'responsive',
 		'property': 'width',

@@ -11,7 +11,7 @@
 		"html-minifier": "^4.0.0",
 		"jsdom": "^16.4.0",
 		"markdown-it-attrs": "^3.0.3",
-		"sass": "^1.29.0",
+		"sass": "^1.49.4",
 		"semver": "^7.3.2",
 		"slugify": "^1.4.6",
 		"stalfos": "github:hankchizljaw/stalfos#c8971d22726326cfc04089b2da4d51eeb1ebb0eb"
