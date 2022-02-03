@@ -13,6 +13,7 @@
 /secrets-of-front-end-ninja-2017/*        https://trongthanh.github.io/secrets-of-front-end-ninja-2017/:splat        200
 /ultimate-solution-to-web-layout/*        https://trongthanh.github.io/ultimate-solution-to-web-layout/:splat        200
 /family-tree/*                            https://trongthanh.github.io/family-tree/:splat                            200
+/yahoo360-rachel/*                        https://trongthanh.github.io/yahoo360-rachel/:splat                        200
 
 # old blog posts maps to new URL (assumed 301)
 /archive	/blog
