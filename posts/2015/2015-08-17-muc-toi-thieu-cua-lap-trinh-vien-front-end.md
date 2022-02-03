@@ -7,7 +7,7 @@ author: Thanh Tran
 tags: [thoughts, front end, process]
 updated: 2015-11-07T12:42:30+07:00
 ---
-![Tag Cloud](http://2.bp.blogspot.com/-mF8YcFrCO8Q/VXPniJnFrZI/AAAAAAAABDY/T7PQ5bKPoYs/s640/front-end-baseline.png "Tag Cloud được tạo bằng Wordle.net")
+![Tag Cloud](https://2.bp.blogspot.com/-mF8YcFrCO8Q/VXPniJnFrZI/AAAAAAAABDY/T7PQ5bKPoYs/s640/front-end-baseline.png "Tag Cloud được tạo bằng Wordle.net")
 
 ### Mức kỹ năng tối thiểu (baseline) là gì?
 
@@ -24,7 +24,7 @@ Lấy cảm hứng từ bài viết [A Baseline for Front End Developers](http:/
 Để bắt đầu, tôi sẽ bàn về 3 trụ cột của Web Front End:
 
 ## HTML
-![Hình minh hoạ cho phần HTML](http://4.bp.blogspot.com/-EVKCwQoon_g/VdGOAEWdqaI/AAAAAAAARiY/YhGiwwAihW8/s400/html-for-baby.jpg "HTML for baby")
+![Hình minh hoạ cho phần HTML](https://4.bp.blogspot.com/-EVKCwQoon_g/VdGOAEWdqaI/AAAAAAAARiY/YhGiwwAihW8/s400/html-for-baby.jpg "HTML for baby")
 
 Thực tế cho thấy có rất nhiều lập trình viên xem nhẹ HTML. Theo quan sát của tôi, nhiều lập trình viên dùng tag HTML rất tuỳ tiện, thêm các thẻ bao ngoài một cách vô tội vạ và kết quả là việc xử lý giao diện tuỳ ứng (responsive) cũng như canh lề rất vất vả. Khi làm càng nhiều, bạn sẽ nhận ra rằng HTML được viết gọn gàng và súc tích sẽ giúp ích rất nhiều cho việc xử lý CSS và cải thiện tốc độ website trên trình duyệt (đặc biệt là trên thiết bị di động). Làm được như vậy đòi hỏi một kỹ năng tuyệt vời, và tôi dám nói rằng viết HTML là cả một nghệ thuật.
 
@@ -59,7 +59,7 @@ Tài liệu tham khảo:
 
 ## JavaScript
 
-<img align="right" src="http://2.bp.blogspot.com/-bhkZ88s-OXg/VdGOraNblLI/AAAAAAAARig/U7fH8-C9UbU/s320/eloquent-javascript-cover.png " alt="Eloquent JavaScript book cover" />
+<img align="right" src="https://2.bp.blogspot.com/-bhkZ88s-OXg/VdGOraNblLI/AAAAAAAARig/U7fH8-C9UbU/s320/eloquent-javascript-cover.png " alt="Eloquent JavaScript book cover" />
 
 Nếu như vài năm trước, jQuery là yêu cầu bắt buộc để nhập môn Giao Diện Web thì bây giờ [không còn nữa](http://youmightnotneedjquery.com/). Tuy nhiên theo tôi nó vẫn rất hữu ích cho những người mới bắt đầu thực hành JavaScript trong bối cảnh tính năng và sự tương thích giữa các trình duyệt vẫn chưa đồng nhất.
 
@@ -101,7 +101,7 @@ Các kỹ năng và kiến thức hiển nhiên khác mà bạn cần phải có
 - [JavaScript Development Workflow of 2013 (video)](https://youtu.be/f7AU2Ozu8eo) bởi Paul Irish. Mặc dù đã được trình bày cách đây 2 năm, nhưng những công cụ được đề cập vẫn được áp dụng trong thời điểm hiện tại.
 
 ## Sự Cải Tiến Tăng Dần (Progressive Enhancement)
-![Minh hoạ Progressive Enhancement](http://4.bp.blogspot.com/-eR_7opxpffU/VdGP9krUTaI/AAAAAAAARis/oIe-p6ZAjAo/s640/page-120.jpg "Minh hoạ progressive enhancement")
+![Minh hoạ Progressive Enhancement](https://4.bp.blogspot.com/-eR_7opxpffU/VdGP9krUTaI/AAAAAAAARis/oIe-p6ZAjAo/s640/page-120.jpg "Minh hoạ progressive enhancement")
 Hiểu biết về [Cải Tiến Tăng Dần](http://en.wikipedia.org/wiki/Progressive_enhancement) đã trở thành một yêu cầu bắt buộc đối với các lập trình viên Front End hiện đại. Đã qua rồi cái thời mà lập trình viên phải cố gắng hiện thực trang web cho giống y đúc trên mọi trình duyệt hoặc loại bỏ hoàn toàn những trình duyệt mà đặc tả không yêu cầu hỗ trợ. Phương pháp được khuyến khích như một chuẩn mực hiện nay là Cải Tiến Tăng Dần (Progressive Enhancement), trong đó lập trình viên Front End sẽ hiện thực website với trải nghiệm tốt nhất có thể tuỳ theo khả năng của từng loại trình duyệt khác nhau. Điều này yêu cầu bạn phải có hiểu biết về các phiên bản khác nhau của JS / CSS / HTML mà các trình duyệt hỗ trợ; biết sử dụng [caniuse.com](http://caniuse.com/), [Modernizr](http://modernizr.com/), [html5boilerplate](https://html5boilerplate.com/); cũng như biết khi nào cần áp dụng polyfill hoặc bỏ qua một hiệu ứng (nhưng nội dung vẫn đầy đủ) trên một trình duyệt nào đó.
 
 Tham khảo thêm:
@@ -137,4 +137,4 @@ Lý Quang Diệu khi đến thăm Việt Nam đã chia sẻ về [tầm quan tr�
 
 Theo tôi, không phải lập trình viên nào cũng phù hợp với con đường Front End. Có những phẩm chất tạo nên sự khác biệt giữa người yêu thích Front End với người yêu thích Back End, đó là sự nhạy cảm những với thiết kế trực quan, khả năng làm việc tỉ mỉ, chi tiết đến từng pixel, và phẩm chất của một người yêu thích sự hoàn hảo.
 
-![How back end and front end dev see each other](http://2.bp.blogspot.com/-H-9aEPUi3Kg/VdGRb22AhGI/AAAAAAAARi4/dOa4ycz34qg/s640/Strips-front-end-vs-le-back-end-650-finalenglish.jpg "How back end and front end dev see each other")
+![How back end and front end dev see each other](https://2.bp.blogspot.com/-H-9aEPUi3Kg/VdGRb22AhGI/AAAAAAAARi4/dOa4ycz34qg/s640/Strips-front-end-vs-le-back-end-650-finalenglish.jpg "How back end and front end dev see each other")
