@@ -36,7 +36,7 @@ Các tài liệu hỗ trợ:
 - [HTML basic tutorials](https://docs.webplatform.org/wiki/html/tutorials): Tài liệu hướng dẫn HTML căn bản, phù hợp cho người mới bắt đầu.
 
 ## CSS
-![CSS!!!](http://i.imgur.com/Q3cUg29.gif "CSS!!!")
+![CSS!!!](https://i.imgur.com/Q3cUg29.gif "CSS!!!")
 
 Rất nhiều người mới bắt đầu với Web, đặc biệt là sinh viên CNTT ở Việt Nam, được học rất sơ sài về CSS trên lớp và các sách, giáo trình liên quan đều đã lỗi thời. Đa số các bạn sẽ học CSS bằng phép thử-và-sai (trial and error) và đó là một cách học cực kỳ kém hiệu quả.
 
