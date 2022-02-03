@@ -1,0 +1,16 @@
+/**
+ * BOUNCE SCROLL
+ * An overflow helper that gives you bouncy/intertia overflow scrolling
+ * in WebKit (iOS) browsers.
+ */
+@mixin bounce-scroll($direction: 'horizontal') {
+  @if ($direction == 'vertical') {
+    overflow-x: auto;
+    overflow-y: hidden;
+  } @else {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,10 @@
+// Note: Inlining github:hankchizljaw/stalfos#c8971d22726326cfc04089b2da4d51eeb1ebb0eb
+
+// Import the default config as the fallback for if
+// the user hasn't yet set a config for their project
+@import 'default-config';
+
+@import 'functions/functions';
+@import 'utilities/utilities';
+@import 'mixins/mixins';
+@import 'generator/generator';

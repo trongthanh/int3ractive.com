@@ -1,0 +1,26 @@
+/**
+ * FLOW UTILITY
+ * Add space between sibling elements in a (default selector) .sf-flow parent. 
+ * The default space value is 1em which will be the font-size of the element that
+ * has the margin-top applied to it. The `flow-space` custom property means that the 
+ * cascade can be utilised if needed. 
+ * Block and prefix can be configured below.
+ */
+
+// Config items
+$stalfos-utility-flow__space: 1em !default;
+$stalfos-utility-flow__enabled: get-config-value('flow', 'utilities') !default;
+$stalfos-utility-flow__prefix: $stalfos-util-prefix !default;
+$stalfos-utility-flow__block: 'flow';
+
+// Block starts if enabled in your `$stalfos-config`
+@if ($stalfos-utility-flow__enabled == 'on') {
+  #{ '.' + $stalfos-utility-flow__prefix + $stalfos-utility-flow__block } {
+    --flow-space: #{$stalfos-utility-flow__space};
+  }
+
+  #{ '.' + $stalfos-utility-flow__prefix + $stalfos-utility-flow__block } > * + * {
+    margin-top: $stalfos-utility-flow__space; // Fallback for if var not available
+    margin-top: var(--flow-space);
+  }
+}

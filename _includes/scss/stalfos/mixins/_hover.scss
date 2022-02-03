@@ -1,0 +1,21 @@
+/**
+ * HOVER MIXIN
+ * A mixin that fences hover styles in a media query. You can also wrap a focus style
+ * which is applied outside of the media query. Pointer accuracy is also applied.
+ *
+ * @param {bool} $include-focus - A flag that adds a '&:focus' selector if true. Default: false
+ * @param {string} $pointer-accuracy - The value for the `pointer` media-query. Default: 'fine'
+ */
+@mixin hover($include-focus: false, $pointer-accuracy: 'fine') {
+  @if ($include-focus == true) {
+    &:focus {
+      @content;
+    }
+  }
+
+  @media (hover: hover) and (pointer: #{ $pointer-accuracy }) {
+    &:hover {
+      @content;
+    }
+  }
+}

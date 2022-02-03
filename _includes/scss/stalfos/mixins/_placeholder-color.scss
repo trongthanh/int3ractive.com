@@ -1,0 +1,25 @@
+/**
+ * PLACEHOLDER COLOR MIXIN
+ * Apply text color an input’s placeholder attribute
+ *
+ * @param {string} $color - The color (hex,rgb(a),hsl(a) that you want the placeholder to be
+ */
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
