@@ -1,20 +1,6 @@
 # Netlify redirect & proxy instructions
 # Refer to https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
 
-# add trailing slashes
-/2019-state-of-pwa                        /2019-state-of-pwa/
-/animation-for-front-end-developers       /animation-for-front-end-developers/
-/augmented-reality-in-webxr               /augmented-reality-in-webxr/
-/front-end-optimization-for-spa           /front-end-optimization-for-spa/
-/future-of-mobile-web                     /future-of-mobile-web/
-/internet-safety                          /internet-safety/
-/mobile-web-app-howto                     /mobile-web-app-howto/
-/Presentation--Progressive-Enhancement    /Presentation--Progressive-Enhancement/
-/secrets-of-front-end-ninja-2017          /secrets-of-front-end-ninja-2017/
-/ultimate-solution-to-web-layout          /ultimate-solution-to-web-layout/
-/family-tree                              /family-tree/
-/yahoo360-rachel                          /yahoo360-rachel/
-
 # proxies
 /2019-state-of-pwa/*                      https://trongthanh.github.io/2019-state-of-pwa/:splat                      200
 /animation-for-front-end-developers/*     https://trongthanh.github.io/animation-for-front-end-developers/:splat     200
