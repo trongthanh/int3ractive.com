@@ -1,20 +1,6 @@
 # Netlify redirect & proxy instructions
 # Refer to https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
 
-# proxies
-/2019-state-of-pwa/*                      https://trongthanh.github.io/2019-state-of-pwa/:splat                      200
-/animation-for-front-end-developers/*     https://trongthanh.github.io/animation-for-front-end-developers/:splat     200
-/augmented-reality-in-webxr/*             https://trongthanh.github.io/augmented-reality-in-webxr/:splat             200
-/front-end-optimization-for-spa/*         https://trongthanh.github.io/front-end-optimization-for-spa/:splat         200
-/future-of-mobile-web/*                   https://trongthanh.github.io/future-of-mobile-web/:splat                   200
-/internet-safety/*                        https://trongthanh.github.io/internet-safety/:splat                        200
-/mobile-web-app-howto/*                   https://trongthanh.github.io/mobile-web-app-howto/:splat                   200
-/Presentation--Progressive-Enhancement/*  https://trongthanh.github.io/Presentation--Progressive-Enhancement/:splat  200
-/secrets-of-front-end-ninja-2017/*        https://trongthanh.github.io/secrets-of-front-end-ninja-2017/:splat        200
-/ultimate-solution-to-web-layout/*        https://trongthanh.github.io/ultimate-solution-to-web-layout/:splat        200
-/family-tree/*                            https://trongthanh.github.io/family-tree/:splat                            200
-/yahoo360-rachel/*                        https://trongthanh.github.io/yahoo360-rachel/:splat                        200
-
 # add trailing slashes
 /2019-state-of-pwa                        /2019-state-of-pwa/
 /animation-for-front-end-developers       /animation-for-front-end-developers/
@@ -28,6 +14,20 @@
 /ultimate-solution-to-web-layout          /ultimate-solution-to-web-layout/
 /family-tree                              /family-tree/
 /yahoo360-rachel                          /yahoo360-rachel/
+
+# proxies
+/2019-state-of-pwa/*                      https://trongthanh.github.io/2019-state-of-pwa/:splat                      200
+/animation-for-front-end-developers/*     https://trongthanh.github.io/animation-for-front-end-developers/:splat     200
+/augmented-reality-in-webxr/*             https://trongthanh.github.io/augmented-reality-in-webxr/:splat             200
+/front-end-optimization-for-spa/*         https://trongthanh.github.io/front-end-optimization-for-spa/:splat         200
+/future-of-mobile-web/*                   https://trongthanh.github.io/future-of-mobile-web/:splat                   200
+/internet-safety/*                        https://trongthanh.github.io/internet-safety/:splat                        200
+/mobile-web-app-howto/*                   https://trongthanh.github.io/mobile-web-app-howto/:splat                   200
+/Presentation--Progressive-Enhancement/*  https://trongthanh.github.io/Presentation--Progressive-Enhancement/:splat  200
+/secrets-of-front-end-ninja-2017/*        https://trongthanh.github.io/secrets-of-front-end-ninja-2017/:splat        200
+/ultimate-solution-to-web-layout/*        https://trongthanh.github.io/ultimate-solution-to-web-layout/:splat        200
+/family-tree/*                            https://trongthanh.github.io/family-tree/:splat                            200
+/yahoo360-rachel/*                        https://trongthanh.github.io/yahoo360-rachel/:splat                        200
 
 # old blog posts maps to new URL (assumed 301)
 /archive	/blog
