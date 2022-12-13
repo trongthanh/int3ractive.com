@@ -10,6 +10,7 @@
   <link rel="pingback" href="https://webmention.io/{{ site.webmentionio }}/xmlrpc" />
   <link rel="webmention" href="https://webmention.io/{{ site.webmentionio }}/webmention" />
   {% endif %}
+  {% if site.mastodonUrl %}<link rel="me" href="{{ site.mastodonUrl }}" />{% endif %}
   {% include "partials/global/meta-info.njk" %}
   {% if site.gaid %}
   <script>
