@@ -6,6 +6,9 @@
 /family-tree/*                            https://trongthanh.github.io/family-tree/:splat     200
 /slides/*                                 https://trongthanh.github.io/:splat                 200
 
+# redirect short URL
+/r/chotot-webauthn/*                      /slides/passwordless-authentication-with-webauthn/:splat
+
 # redirect slides github pages
 /2019-state-of-pwa/*                      /slides/2019-state-of-pwa/:splat
 /animation-for-front-end-developers/*     /slides/animation-for-front-end-developers/:splat
