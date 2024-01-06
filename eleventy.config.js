@@ -59,12 +59,18 @@ module.exports = function (config) {
 	const livePosts = (post) => post.date <= now && !post.data.draft;
 	config.addCollection('posts', (collection) => {
 		return [
-			...collection.getFilteredByGlob('./posts/**/*.{md,html}').filter(livePosts),
+			...collection
+				.getFilteredByGlob('./posts/**/*.{md,html}')
+				.filter(livePosts),
 		].reverse();
 	});
 
 	config.addCollection('postFeed', (collection) => {
-		return [...collection.getFilteredByGlob('./posts/**/*.{md,html}').filter(livePosts)]
+		return [
+			...collection
+				.getFilteredByGlob('./posts/**/*.{md,html}')
+				.filter(livePosts),
+		]
 			.reverse()
 			.slice(0, site.maxPostsPerPage);
 	});

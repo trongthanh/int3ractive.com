@@ -13,12 +13,12 @@ function $(selector) {
 }
 
 // this script is loaded in the middle, so the event sure will not fired yet
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 	var today = new Date();
 	var hasUpcoming = false;
 	var pastAdded = false;
 
-	$('.events__item__time').forEach(function(el, index) {
+	$('.events__item__time').forEach(function (el) {
 		var timeStr = el.getAttribute('datetime');
 		var time = new Date(0);
 

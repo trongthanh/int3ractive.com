@@ -1,3 +1,4 @@
+/* global VERSION */
 const CACHE_KEYS = {
 	PRE_CACHE: `precache-${VERSION}`,
 	RUNTIME: `runtime-${VERSION}`,
@@ -24,11 +25,11 @@ const IGNORED_HOSTS = ['localhost', 'unpkg.com'];
  * @param {String} cacheName
  * @param {Array} items=[]
  */
-const addItemsToCache = function(cacheName, items = []) {
+const addItemsToCache = function (cacheName, items = []) {
 	caches.open(cacheName).then((cache) => cache.addAll(items));
 };
 
-self.addEventListener('install', (evt) => {
+self.addEventListener('install', (/* evt */) => {
 	self.skipWaiting();
 
 	addItemsToCache(CACHE_KEYS.PRE_CACHE, PRE_CACHE_URLS);
@@ -40,7 +41,9 @@ self.addEventListener('activate', (evt) => {
 		caches
 			.keys()
 			.then((cacheNames) => {
-				return cacheNames.filter((item) => !Object.values(CACHE_KEYS).includes(item));
+				return cacheNames.filter(
+					(item) => !Object.values(CACHE_KEYS).includes(item)
+				);
 			})
 			.then((itemsToDelete) => {
 				return Promise.all(
@@ -78,11 +81,13 @@ self.addEventListener('fetch', (evt) => {
 				return fetch(evt.request)
 					.then((response) => {
 						// Put the new response in cache and return it
-						return cache.put(evt.request, response.clone()).then(() => {
-							return response;
-						});
+						return cache
+							.put(evt.request, response.clone())
+							.then(() => {
+								return response;
+							});
 					})
-					.catch((ex) => {
+					.catch((/*ex*/) => {
 						return;
 					});
 			});

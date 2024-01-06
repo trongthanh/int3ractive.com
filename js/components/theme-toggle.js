@@ -14,11 +14,13 @@ class ThemeToggle extends HTMLElement {
 	}
 
 	getCSSCustomProp(propKey) {
-		let response = getComputedStyle(document.documentElement).getPropertyValue(propKey);
+		let response = getComputedStyle(
+			document.documentElement
+		).getPropertyValue(propKey);
 
 		// Tidy up the string if there’s something to work with
 		if (response.length) {
-			response = response.replace(/\'|"/g, '').trim();
+			response = response.replace(/'|"/g, '').trim();
 		}
 
 		// Return the string response by default
@@ -26,13 +28,19 @@ class ThemeToggle extends HTMLElement {
 	}
 
 	applySetting(passedSetting) {
-		let currentSetting = passedSetting || localStorage.getItem(this.STORAGE_KEY);
+		let currentSetting =
+			passedSetting || localStorage.getItem(this.STORAGE_KEY);
 
 		if (currentSetting) {
-			document.documentElement.setAttribute('data-user-color-scheme', currentSetting);
+			document.documentElement.setAttribute(
+				'data-user-color-scheme',
+				currentSetting
+			);
 			this.setButtonLabelAndStatus(currentSetting);
 		} else {
-			this.setButtonLabelAndStatus(this.getCSSCustomProp(this.COLOR_MODE_KEY));
+			this.setButtonLabelAndStatus(
+				this.getCSSCustomProp(this.COLOR_MODE_KEY)
+			);
 		}
 	}
 
@@ -41,7 +49,10 @@ class ThemeToggle extends HTMLElement {
 
 		switch (currentSetting) {
 			case null:
-				currentSetting = this.getCSSCustomProp(this.COLOR_MODE_KEY) === 'dark' ? 'light' : 'dark';
+				currentSetting =
+					this.getCSSCustomProp(this.COLOR_MODE_KEY) === 'dark'
+						? 'light'
+						: 'dark';
 				break;
 			case 'light':
 				currentSetting = 'dark';
@@ -57,15 +68,22 @@ class ThemeToggle extends HTMLElement {
 	}
 
 	setButtonLabelAndStatus(currentSetting) {
-		this.modeToggleButton.innerText = `${currentSetting === 'dark' ? 'Light' : 'Dark'} theme`;
+		this.modeToggleButton.innerText = `${
+			currentSetting === 'dark' ? 'Light' : 'Dark'
+		} theme`;
 		this.modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
 	}
 
 	render() {
 		this.innerHTML = html`
 			<div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
-				<div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
-				<button class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]">
+				<div
+					role="status"
+					class="[ visually-hidden ][ js-mode-status ]"
+				></div>
+				<button
+					class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]"
+				>
 					Dark theme
 				</button>
 			</div>

@@ -1,17 +1,16 @@
 {
 	"root": true,
 	"extends": ["eslint:recommended"],
-	"env": { "browser": true, "es6": true },
+	"env": { "browser": true, "es6": true, "node": true },
 	"parserOptions": {
 		"ecmaVersion": 2018,
 		"sourceType": "module",
 		"impliedStrict": true,
-		"ecmaFeatures": {
-		}
+		"ecmaFeatures": {}
 	},
+	"ignorePatterns": ["slides/", "_site/"],
 	"rules": {
 		"no-console": "off"
 	},
-	"settings": {
-	}
+	"settings": {}
 }

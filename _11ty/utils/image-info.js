@@ -1,5 +1,5 @@
 const { createCanvas, loadImage } = require('canvas');
-const FastAverageColor = require('fast-average-color');
+const { FastAverageColor } = require('fast-average-color');
 
 const fac = new FastAverageColor();
 
