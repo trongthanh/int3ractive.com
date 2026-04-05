@@ -11,6 +11,18 @@ Here are some of my open source or contributed-to projects through out my career
 
 ---
 
+## [Tra Cứu Đơn Vị Hành Chính Việt Nam](https://github.com/trongthanh/wx-tra-cuu-dvhcvn)
+
+[![Tra Cứu ĐVHCVN screenshot](/images/projects/wx-tra-cuu-dvhcvn.png)](https://github.com/trongthanh/wx-tra-cuu-dvhcvn)
+
+A browser extension that helps users look up Vietnam's new and old administrative units following the 2025 reorganization — when Vietnam restructured from a 3-level system (provinces → districts → wards) to a 2-level system (provinces → wards), reducing province count from 63 to 34 and merging thousands of wards.
+
+What makes it stand out: it works **fully offline**. All data is bundled with the extension and indexed in IndexedDB for instant lookups. It also annotates web pages automatically — underlining new ward names and showing a tooltip with the corresponding old district and province on hover. Search supports accent-insensitive input and phrase queries like `tan binh, HCM`.
+
+Try it at [tracuudvhc.thanh.im](https://tracuudvhc.thanh.im), or install it from the [Chrome Web Store](https://chromewebstore.google.com/detail/kandeagnnilmlpbdlkadajdiempibkdd) and [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tra-cuu-dvhcvn/).
+
+---
+
 ## Data visualization collections
 
 [![Data viz collection screenshot](/images/projects/data-viz.png)](https://viz.int3ractive.com)
