@@ -6,6 +6,6 @@
  * @example
  * 	{ 'images/favicon.png' | prepend(site.url) }
  */
-module.exports = function prepend(input = '', value = '') {
+export default function prepend(input = '', value = '') {
 	return value + input;
-};
+}

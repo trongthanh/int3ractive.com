@@ -4,6 +4,6 @@
  * @param  {string}        currentTag current tag
  * @return {Array<string>}            new array
  */
-module.exports = function skipTag(tags, currentTag) {
+export default function skipTag(tags, currentTag) {
 	return tags.filter((tag) => tag !== currentTag);
-};
+}

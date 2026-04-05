@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	getNextHeadingLevel(currentLevel) {
 		return parseInt(currentLevel, 10) + 1;
 	},

@@ -1,8 +1,9 @@
 // define markdown-it option in one place and use it
 // for both md library and filter
-const markdownItAttrs = require('markdown-it-attrs');
-// const markdownItTitle = require('markdown-it-title-extract');
-const markdownIt = require('markdown-it')({
+import markdownItAttrs from 'markdown-it-attrs';
+import MarkdownIt from 'markdown-it';
+
+const markdownIt = new MarkdownIt({
 	html: true,
 	breaks: false,
 	linkify: true,
@@ -17,11 +18,8 @@ markdownIt.use(markdownItAttrs, {
 	allowedAttributes: [], // empty array = all attributes are allowed
 });
 
-// markdownIt.use(markdownItTitle);
+export const library = markdownIt;
 
-module.exports = {
-	library: markdownIt,
-	filter: function markdown(value) {
-		return markdownIt.render(value);
-	},
-};
+export function filter(value) {
+	return markdownIt.render(value);
+}

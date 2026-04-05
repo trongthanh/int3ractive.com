@@ -1,5 +1,5 @@
 /* eslint-disable no-bitwise */
-module.exports = {
+export default {
 	get years() {
 		const thisYear = new Date().getFullYear();
 		const years = [];

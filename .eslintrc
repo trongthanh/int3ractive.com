@@ -1,12 +1,10 @@
 {
 	"root": true,
 	"extends": ["eslint:recommended"],
-	"env": { "browser": true, "es6": true, "node": true },
+	"env": { "browser": true, "es2020": true, "node": true },
 	"parserOptions": {
-		"ecmaVersion": 2018,
-		"sourceType": "module",
-		"impliedStrict": true,
-		"ecmaFeatures": {}
+		"ecmaVersion": 2022,
+		"sourceType": "module"
 	},
 	"ignorePatterns": ["slides/", "_site/"],
 	"rules": {

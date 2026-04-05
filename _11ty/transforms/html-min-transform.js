@@ -1,8 +1,8 @@
-const htmlmin = require('html-minifier');
+import { minify } from 'html-minifier-terser';
 
-module.exports = function htmlMinTransform(value, outputPath) {
+export default async function htmlMinTransform(value, outputPath) {
 	if (outputPath.indexOf('.html') > -1) {
-		let minified = htmlmin.minify(value, {
+		let minified = await minify(value, {
 			useShortDoctype: true,
 			removeComments: true,
 			collapseWhitespace: true,
@@ -11,4 +11,4 @@ module.exports = function htmlMinTransform(value, outputPath) {
 		return minified;
 	}
 	return value;
-};
+}

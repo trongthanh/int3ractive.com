@@ -1,34 +1,29 @@
-const fs = require('fs');
-const rssPlugin = require('@11ty/eleventy-plugin-rss');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+import rssPlugin from '@11ty/eleventy-plugin-rss';
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 
 // Import filters
-const dateFilter = require('./_11ty/filters/date-filter.js');
-const yearFilter = require('./_11ty/filters/year-filter.js');
-const markdownConfig = require('./_11ty/filters/markdown-filter.js');
-const w3DateFilter = require('./_11ty/filters/w3-date-filter.js');
-const skipTag = require('./_11ty/filters/skip-tag.js');
-const prepend = require('./_11ty/filters/prepend.js');
+import dateFilter from './_11ty/filters/date-filter.js';
+import yearFilter from './_11ty/filters/year-filter.js';
+import { library as markdownLibrary, filter as markdownFilter } from './_11ty/filters/markdown-filter.js';
+import w3DateFilter from './_11ty/filters/w3-date-filter.js';
+import skipTag from './_11ty/filters/skip-tag.js';
+import prepend from './_11ty/filters/prepend.js';
 
 // Import transforms
-const htmlMinTransform = require('./_11ty/transforms/html-min-transform.js');
-const parseTransform = require('./_11ty/transforms/parse-transform.js');
+import htmlMinTransform from './_11ty/transforms/html-min-transform.js';
+import parseTransform from './_11ty/transforms/parse-transform.js';
 
 // Import data files
-const site = require('./_data/site.json');
+import site from './_data/site.json' with { type: 'json' };
 
 const prodMode = process.env.ELEVENTY_ENV !== 'development';
 
-module.exports = function (config) {
-	// revert options changed since 1.0
-	config.setDataDeepMerge(false);
-	config.setLiquidOptions({ strictFilters: false, dynamicPartials: false });
-
-	config.setLibrary('md', markdownConfig.library);
+export default function (config) {
+	config.setLibrary('md', markdownLibrary);
 	// Filters
 	config.addFilter('dateFilter', dateFilter);
 	config.addFilter('yearFilter', yearFilter);
-	config.addFilter('markdownFilter', markdownConfig.filter);
+	config.addFilter('markdownFilter', markdownFilter);
 	config.addFilter('w3DateFilter', w3DateFilter);
 	config.addFilter('skipTag', skipTag);
 	config.addFilter('prepend', prepend);
@@ -79,26 +74,10 @@ module.exports = function (config) {
 	config.addPlugin(rssPlugin);
 	config.addPlugin(syntaxHighlight);
 
-	// 404
-	config.setBrowserSyncConfig({
-		callbacks: {
-			ready: function (err, browserSync) {
-				const content_404 = fs.readFileSync('_site/404.html');
-
-				browserSync.addMiddleware('*', (req, res) => {
-					// Provides the 404 content without redirect.
-					res.write(content_404);
-					res.end();
-				});
-			},
-		},
-	});
-
 	return {
 		dir: {
 			input: '.',
 			output: '_site',
 		},
-		passthroughFileCopy: true,
 	};
-};
+}

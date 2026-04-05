@@ -1,13 +1,12 @@
-const path = require('path');
-const jsdom = require('jsdom');
-const slugify = require('slugify');
-const getImageInfo = require('../utils/image-info.js');
+import path from 'path';
+import { JSDOM } from 'jsdom';
+import slugify from 'slugify';
+import getImageInfo from '../utils/image-info.js';
+import minify from '../utils/minify.js';
 
-const { JSDOM } = jsdom;
-const minify = require('../utils/minify.js');
 const solidImgReg = /\.(jpg|jpeg)/i;
 
-module.exports = async function(content, outputPath) {
+export default async function(content, outputPath) {
 	if (outputPath.endsWith('.html')) {
 		const DOM = new JSDOM(content);
 
@@ -158,4 +157,4 @@ module.exports = async function(content, outputPath) {
 		return '<!DOCTYPE html>\r\n' + document.documentElement.outerHTML;
 	}
 	return content;
-};
+}

@@ -1,5 +1,5 @@
-const { createCanvas, loadImage } = require('canvas');
-const { FastAverageColor } = require('fast-average-color');
+import { createCanvas, loadImage } from 'canvas';
+import { FastAverageColor } from 'fast-average-color';
 
 const fac = new FastAverageColor();
 
@@ -23,18 +23,7 @@ async function getImageInfo(filename) {
 	imageInfo.push(height);
 	imageInfo.push(filename);
 
-	// console.log(`Filename: ${filename}, size: ${width}×${height}`);
-	// console.log(imageInfo);
-	// [
-	//   48,  // red
-	//   49,  // green
-	//   53,  // blue
-	//   255, // opacity
-	//   1399, // width
-	//   877, // height
-	//   'cli-top.png' // filename
-	// ]
 	return imageInfo;
 }
 
-module.exports = getImageInfo;
+export default getImageInfo;
