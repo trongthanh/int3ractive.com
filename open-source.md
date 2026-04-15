@@ -23,6 +23,18 @@ Try it at [tracuudvhc.thanh.im](https://tracuudvhc.thanh.im), or install it from
 
 ---
 
+## [ÂmLịch.app](https://github.com/trongthanh/amlich.app)
+
+[![amlich.app screenshot](/images/projects/amlich-app.png)](https://amlich.app)
+
+A Vietnamese lunisolar calendar web app and `<lunar-cal>` custom element (Web Component). Shows both solar and lunar dates with daily details including auspicious hours, solar terms, and lunar month info.
+
+What makes it stand out: it also works as a terminal calendar — `curl -L amlich.app` returns a colorful ANSI calendar with today highlighted, similar to `wttr.in`. It supports deep-linkable URLs for sharing specific dates, installable as a PWA, and adapts to dark/light mode. The `<lunar-cal>` custom element can be embedded in any HTML page with configurable timezone and public holidays.
+
+Try it at [amlich.app](https://amlich.app), or use it from the terminal: `curl -L amlich.app`.
+
+---
+
 ## Data visualization collections
 
 [![Data viz collection screenshot](/images/projects/data-viz.png)](https://viz.int3ractive.com)
